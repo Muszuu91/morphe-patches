@@ -16,7 +16,6 @@ import app.morphe.patcher.extensions.InstructionExtensions.replaceInstruction
 import app.morphe.patcher.literal
 import app.morphe.patcher.methodCall
 import app.morphe.patcher.patch.bytecodePatch
-import app.morphe.patcher.util.getReference
 import app.morphe.patches.shared.layout.branding.startupAnimationResourcePatch
 import app.morphe.patches.shared.misc.lottie.LOTTIE_ANIMATION_VIEW_CLASS_TYPE
 import app.morphe.patches.shared.misc.lottie.LottieAnimationViewSetAnimationIntFingerprint
@@ -36,7 +35,6 @@ import app.morphe.util.fiveRegisters
 import app.morphe.util.insertLiteralOverride
 import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
 import com.android.tools.smali.dexlib2.iface.instruction.TwoRegisterInstruction
-import com.android.tools.smali.dexlib2.iface.reference.FieldReference
 
 private const val EXTENSION_CLASS =
     "Lapp/morphe/extension/youtube/patches/theme/ThemePatch;"
@@ -202,7 +200,7 @@ val splashAnimationPatch = bytecodePatch {
             // shown quickly closes the animation before it has drawn anything. On the first
             // start the animation is instead closed by the timeout of the app.
             val riveAnimationShownField = RiveSplashScreenViewFingerprint.instructionMatches[1]
-                .instruction.getReference<FieldReference>()!!
+                .fieldReference
 
             SplashScreenOnStartFingerprint.method.addInstructionsWithLabels(
                 0,
