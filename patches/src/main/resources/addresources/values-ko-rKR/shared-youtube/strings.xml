@@ -23,7 +23,7 @@ Second \"item\" text"</string>
   <string name="morphe_splash_screen_style_entry_2">컬러</string>
   <string name="morphe_splash_screen_style_entry_3">컬러 Morphe</string>
   <string name="morphe_splash_screen_style_entry_4">흑백</string>
-  <string name="morphe_splash_screen_style_entry_5">모노크롬 Morphe</string>
+  <string name="morphe_splash_screen_style_entry_5">흑백 Morphe</string>
   <!-- misc.initialization.initializationPatch -->
   <string name="morphe_restart_first_run">설정을 완료하려면 다시 시작하세요</string>
   <!-- layout.branding.baseCustomBrandingPatch -->

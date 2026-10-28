@@ -113,6 +113,7 @@ Dəyişikliklər ehtiva edir:
   <string name="morphe_hide_surveys_title">Təftişləri gizlət</string>
   <string name="morphe_hide_surveys_summary">Axın tövsiyəsi dəqiqliyi haqqında təftişləri və xatırlatmaları gizlət</string>
   <string name="morphe_hide_ticket_shelf_title">Bilet bölməsin gizlət</string>
+  <!-- 'Unavailable videos are hidden' should be translated using the same localized wording YouTube displays for the banner in playlists. -->
   <string name="morphe_hide_upload_time_title">Yüklənilmə vaxtını gizlət</string>
   <!-- Translations should match the language used in 'morphe_hide_view_count_summary'. -->
   <string name="morphe_hide_upload_time_summary">"Məhdudiyyətlər:
@@ -1249,6 +1250,7 @@ Məhdudiyyət: 'Köhnə video fəaliyyət cizgisini bərpa et' qapadılıbsa, 'D
   <string name="morphe_fix_status_bar_layout_summary">Status zolağının tərtibatını sabit saxlayır, beləliklə o, yuxarı zolaqları örtmür və oynadıcı yuxarısında boş yer saxlamır. Tətbiq çöksə və ya yuxarı zolaqlar yanlış görünsə, bunu qapat</string>
   <!-- layout.theme.themePatch -->
   <string name="morphe_splash_screen_style_entry_6">Parlama</string>
+  <string name="morphe_splash_screen_style_glow_not_supported">Parlaq effektli ekran bu cihaz tərəfindən dəstəklənmir</string>
   <string name="morphe_theme_color_light_title">İşıqlı kolorit fonu</string>
   <string name="morphe_theme_color_light_entry_2">Ağ</string>
   <string name="morphe_theme_color_light_entry_3">Material You (Ağ)</string>

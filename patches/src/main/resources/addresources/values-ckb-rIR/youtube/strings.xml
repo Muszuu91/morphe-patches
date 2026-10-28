@@ -57,6 +57,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_subscribed_channels_bar_title">شانڵی سەرقاڵکراوەکان بشارەوە</string>
   <string name="morphe_hide_surveys_title">خاوێن کردنەوەی ڕێنمایەکان</string>
   <string name="morphe_hide_ticket_shelf_title">خاوێن کردنەوەی پەلیک دەبێت</string>
+  <!-- 'Unavailable videos are hidden' should be translated using the same localized wording YouTube displays for the banner in playlists. -->
   <string name="morphe_hide_upload_time_title">خه‌ڵه‌ت‌نووس قایم بکه</string>
   <!-- Translations should match the language used in 'morphe_hide_view_count_summary'. -->
   <!-- 'Auto-dubbed', 'Earns commission', 'Hyped', 'People also watched' and 'You might also like' should be translated using the same localized wording YouTube displays for the label. -->

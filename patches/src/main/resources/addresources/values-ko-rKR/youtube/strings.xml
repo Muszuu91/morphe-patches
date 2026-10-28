@@ -113,6 +113,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_surveys_title">설문 조사 숨기기</string>
   <string name="morphe_hide_surveys_summary">피드 추천 정확도에 대한 설문 조사 및 안내 메시지를 숨깁니다</string>
   <string name="morphe_hide_ticket_shelf_title">콘서트 선반 숨기기</string>
+  <!-- 'Unavailable videos are hidden' should be translated using the same localized wording YouTube displays for the banner in playlists. -->
+  <string name="morphe_hide_unavailable_videos_hidden_banner_title">\'사용할 수 없는 동영상이 숨겨졌습니다\' 배너 숨기기</string>
+  <string name="morphe_hide_unavailable_videos_hidden_banner_summary">재생목록에서 \'사용할 수 없는 동영상이 숨겨졌습니다\' 배너를 숨깁니다</string>
   <string name="morphe_hide_upload_time_title">업로드 시간 숨기기</string>
   <!-- Translations should match the language used in 'morphe_hide_view_count_summary'. -->
   <string name="morphe_hide_upload_time_summary">"제한 사항:
@@ -1250,6 +1253,7 @@ API 키는 절대로 다른 사람과 공유해서는 안 됩니다. API 키에 
   <string name="morphe_fix_status_bar_layout_summary">상태 표시줄 레이아웃을 일정하게 유지하여 상단 바가 덮이지 않도록 하고 플레이어 위에 빈 공간이 생기지 않습니다. 앱이 강제 종료되거나 상단 바가 잘못 보이는 경우 이 기능을 끄세요</string>
   <!-- layout.theme.themePatch -->
   <string name="morphe_splash_screen_style_entry_6">글로우</string>
+  <string name="morphe_splash_screen_style_glow_not_supported">이 기기에서는 Glow 스플래시 화면을 지원하지 않습니다</string>
   <string name="morphe_theme_color_light_title">밝은 테마 배경 색상</string>
   <string name="morphe_theme_color_light_entry_2">하얀색</string>
   <string name="morphe_theme_color_light_entry_3">Material You (하얀색)</string>
@@ -1272,7 +1276,7 @@ API 키는 절대로 다른 사람과 공유해서는 안 됩니다. API 키에 
   <string name="morphe_seekbar_custom_color_accent_summary">동영상 진행률의 보조 색상을 설정할 수 있습니다</string>
   <string name="morphe_seekbar_custom_color_invalid">잘못된 재생바 색상입니다</string>
   <!-- layout.branding.customBrandingPatch -->
-  <string name="morphe_custom_branding_icon_entry_8">원본 아날로그</string>
+  <string name="morphe_custom_branding_icon_entry_8">오리지널 아날로그</string>
   <string name="morphe_custom_branding_icon_entry_9">오리지널 케이크</string>
   <string name="morphe_custom_branding_icon_entry_10">오리지널 메탈</string>
   <!-- layout.branding.header.changeHeaderPatch -->

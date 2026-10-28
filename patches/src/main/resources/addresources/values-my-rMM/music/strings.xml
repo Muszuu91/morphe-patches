@@ -17,58 +17,677 @@ Second \"item\" text"</string>
 -->
 <resources>
   <!-- misc.androidauto.androidAutoPatch -->
+  <string name="morphe_music_android_auto_last_played">နောက်ဆုံးဖွင့်ခဲ့သည်</string>
+  <string name="morphe_music_android_auto_subscriptions">စာရင်းသွင်းမှုများ</string>
+  <string name="morphe_music_android_auto_videos">ဗီဒီယိုများ</string>
+  <string name="morphe_music_android_auto_other_results">အခြားရလဒ်များ</string>
+  <string name="morphe_music_android_auto_uploaded_songs">တင်ထားသော သီချင်းများ</string>
+  <string name="morphe_music_android_auto_uploaded_albums">တင်ထားသော အယ်လ်ဘမ်များ</string>
+  <string name="morphe_music_android_auto_uploaded_artists">တင်ထားသော အနုပညာရှင်များ</string>
   <!-- app.morphe.patches.music.interaction.jam -->
+  <string name="morphe_music_jam_update_host_controls">ခေတ္တရပ်နားခြင်းနှင့် ပြန်လည်စတင်ခြင်းတို့ကို အသုံးပြုရန် host ၏ Jam patch ကို အပ်ဒိတ်လုပ်ပါ</string>
+  <string name="morphe_music_jam_probe_title">Jam queue မျှဝေခြင်း</string>
+  <string name="morphe_music_jam_probe_summary">အနီးနားရှိ Jam တစ်ခုကို host လုပ်ပါ သို့မဟုတ် ပူးပေါင်းပါ၊ ထို့နောက် Jam Layer မှတစ်ဆင့် ၎င်း၏ queue ကို တည်းဖြတ်ပါ</string>
+  <string name="morphe_music_jam_enabled_title">Jam queue မျှဝေခြင်းကို ဖွင့်ရန်</string>
+  <string name="morphe_music_jam_enabled_summary">YouTube Music ပြန်လည်စတင်ပြီးနောက် Jam ပေါင်းစည်းမှုကို အသုံးပြုနိုင်စေသည်</string>
+  <string name="morphe_music_jam_download_title">အသုံးပြုနိုင်ရန် Jam Layer ကို ဒေါင်းလုဒ်လုပ်ပါ</string>
+  <string name="morphe_music_jam_download_summary">သင်၏ browser တွင် နောက်ဆုံးထွက် Jam Layer ဗားရှင်းကို ဖွင့်ပါ</string>
+  <string name="morphe_music_jam_controls_title">Jam ထိန်းချုပ်မှုများ</string>
+  <string name="morphe_music_jam_controls_summary">အနီးနားရှိ Jam တစ်ခုကို host လုပ်ပါ သို့မဟုတ် ပူးပေါင်းပါ၊ ထို့နောက် session ကို စီမံခန့်ခွဲပါ</string>
+  <string name="morphe_music_jam_companion_package_title">Jam Layer ပက်ကေ့ချ်</string>
+  <string name="morphe_music_jam_companion_package_summary">အနီးနားရှိ queue မျှဝေခြင်းအတွက် အသုံးပြုမည့် တပ်ဆင်ထားသော companion app ကို ရွေးချယ်ပါ</string>
+  <string name="morphe_music_jam_package_message">တပ်ဆင်ထားသော companion package တစ်ခုကို အသုံးပြုပါ။ Pairing ပြုလုပ်ရန် သင်၏ သဘောတူညီချက်နှင့် local capability token လိုအပ်သည်</string>
+  <string name="morphe_music_jam_wifi_title">Wi-Fi ကို ဖွင့်မလား?</string>
+  <string name="morphe_music_jam_wifi_message">Wi-Fi ကို ဖွင့်ပါ၊ ထို့နောက် Jam ကို စတင်ရန် သို့မဟုတ် ပူးပေါင်းရန် ထပ်မံကြိုးစားပါ</string>
+  <string name="morphe_music_jam_wifi_settings">Wi-Fi ဆက်တင်များကို ဖွင့်ပါ</string>
+  <string name="morphe_music_jam_cancel">ပယ်ဖျက်ရန်</string>
+  <string name="morphe_music_jam_use_package">ပက်ကေ့ချ်ကို အသုံးပြုပါ</string>
+  <string name="morphe_music_jam_invalid_package">မှန်ကန်သော Android package အမည်ကို ထည့်သွင်းပါ</string>
+  <string name="morphe_music_jam_package_saved">Package ကို သိမ်းဆည်းပြီးပါပြီ။ ချိတ်ဆက်ရန် Jam Layer ကို သတ်မှတ်ပါ</string>
+  <string name="morphe_music_jam_disconnected">Jam ပြတ်တောက်သွားသည်</string>
+  <string name="morphe_music_jam_enable_layer_first">Jam Layer ကို အရင်ဦးဆုံး အသက်သွင်းပါ</string>
+  <string name="morphe_music_jam_enable_patch_first">ဆက်တင်များတွင် Jam queue sharing ကို အသက်သွင်းပြီးနောက် YouTube Music ကို ပြန်ဖွင့်ပါ</string>
+  <string name="morphe_music_jam_install_layer_first">ရွေးချယ်ထားသော Jam Layer package ကို အရင်ဦးဆုံး တပ်ဆင်ပါ</string>
+  <string name="morphe_music_jam_join_hint">Host တွင် ပြထားသော ကုဒ်ကို ရိုက်ထည့်ပါ။ Wi-Fi Aware သည် LAN များ မတူညီသော်လည်း အနီးရှိ စက်ပစ္စည်းများကို ချိတ်ဆက်ပေးနိုင်သည်</string>
+  <string name="morphe_music_jam_join_with_code">ကုတ်ဖြင့် ပါဝင်ပါ</string>
+  <string name="morphe_music_jam_join">ပါဝင်ပါ</string>
+  <string name="morphe_music_jam_scan_qr">QR ကို စကင်ဖတ်ပါ</string>
+  <string name="morphe_music_jam_invalid_invite">စာလုံး ရှစ်လုံးပါသော ကုတ်ကို ထည့်ပါ သို့မဟုတ် ဖိတ်ကြားချက်ကို ပူးကူးပြီး ထည့်ပါ</string>
+  <string name="morphe_music_jam_join_your_jam">သင်၏ Jam တွင် ပါဝင်ပါ</string>
+  <string name="morphe_music_jam_copy_code">ကုဒ်ကို ကူးယူပါ</string>
+  <string name="morphe_music_jam_code_clip">Jam ကုဒ်</string>
+  <string name="morphe_music_jam_show_qr">QR ပြပါ</string>
+  <string name="morphe_music_jam_done">ပြီးပြီ</string>
+  <string name="morphe_music_jam_invite_title">သင့်ရဲ့ Jam သို့ ဖိတ်ခေါ်ပါ</string>
+  <string name="morphe_music_jam_invite_message">ဤ queue တွင် ပူးပေါင်းရန်နှင့် ပြင်ဆင်ရန် scan ဖတ်ပါ။ Jam ကို အဆုံးသတ်လိုက်ပါက ဖိတ်ခေါ်မှုကို ပယ်ဖျက်မည်ဖြစ်သည်</string>
+  <string name="morphe_music_jam_copy_link">လင့်ခ်ကို ကူးယူပါ</string>
+  <string name="morphe_music_jam_invitation_clip">Jam ဖိတ်ကြားချက်</string>
+  <string name="morphe_music_jam_reconnecting_toast">Jam ကို ပြန်လည်ချိတ်ဆက်နေသည်၊ ခေတ္တစောင့်ပြီးမှ ထပ်မံကြိုးစားပါ</string>
+  <string name="morphe_music_jam_added_to_jam">Jam သို့ ထည့်သွင်းပြီးပါပြီ</string>
+  <string name="morphe_music_jam_unavailable_toast">Jam ကို အသုံးပြု၍မရပါ၊ သီချင်းကို ထည့်သွင်းနိုင်ခြင်းမရှိပါ</string>
+  <string name="morphe_music_jam_your_jam">သင်၏ Jam</string>
+  <string name="morphe_music_jam_listening_together">အတူတူ နားထောင်နေသည်</string>
+  <string name="morphe_music_jam_joining_jam">Jam သို့ ပူးပေါင်းနေသည်</string>
+  <string name="morphe_music_jam_listen_together">အတူတူ နားထောင်ပါ</string>
+  <string name="morphe_music_jam_updating">Jam ကို အပ်ဒိတ်လုပ်နေသည်…</string>
+  <string name="morphe_music_jam_finding_host">Wi-Fi ပေါ်တွင် သင့် host ကို ရှာဖွေနေသည်…</string>
+  <string name="morphe_music_jam_waiting_people">လူများကို စောင့်ဆိုင်းနေသည်</string>
+  <string name="morphe_music_jam_one_connected">%s ဦး ချိတ်ဆက်ထားသည်</string>
+  <string name="morphe_music_jam_many_connected">%s ဦး ချိတ်ဆက်ထားသည်</string>
+  <string name="morphe_music_jam_code_expires">ဤကုဒ်ကို အနီးရှိစက်တစ်ခုတွင် ရိုက်ထည့်ပါ။ Wi-Fi Aware သည် အထောက်အပံ့ရှိပါက သီးခြား LAN များကြားတွင် အလုပ်လုပ်ပါသည်။ %s မိနစ်အတွင်း သက်တမ်းကုန်ဆုံးမည်</string>
+  <string name="morphe_music_jam_seek_to">%s သို့ ရှာဖွေမလား?</string>
+  <string name="morphe_music_jam_edits_open">တည်းဖြတ်မှုများ ဖွင့်ထားသည်</string>
+  <string name="morphe_music_jam_edits_locked">တည်းဖြတ်မှုများ ပိတ်ထားသည်</string>
+  <string name="morphe_music_jam_connected_aware">Wi-Fi Aware မှတစ်ဆင့် ချိတ်ဆက်ထားသည်</string>
+  <string name="morphe_music_jam_connected_wifi">Wi-Fi မှတစ်ဆင့် ချိတ်ဆက်ထားသည်</string>
+  <string name="morphe_music_jam_connected_bluetooth">Bluetooth မှတစ်ဆင့် ချိတ်ဆက်ထားသည်</string>
+  <string name="morphe_music_jam_unsupported">Jam လုပ်ဆောင်နေစဉ်အတွင်း အထောက်အပံ့မပေးပါ</string>
+  <string name="morphe_music_jam_cancelled">ပူးပေါင်းခြင်းကို ပယ်ဖျက်လိုက်သည်</string>
+  <string name="morphe_music_jam_reconnecting_host">သင့် Host ထံသို့ ပြန်လည်ချိတ်ဆက်နေသည်…</string>
+  <string name="morphe_music_jam_share_prompt">တန်းစီမှုကို မျှဝေပါ။ လူတိုင်းကို သီချင်းများ ထည့်သွင်းခွင့်ပေးပါ</string>
+  <string name="morphe_music_jam_invite_people">လူများကို ဖိတ်ခေါ်ပါ</string>
+  <string name="morphe_music_jam_guest_edits">ဧည့်သည်များ တေးသွားစီစဉ်မှုကို ပြင်ဆင်နိုင်သည်</string>
+  <string name="morphe_music_jam_end_jam">Jam ကို အဆုံးသတ်ရန်</string>
+  <string name="morphe_music_jam_participant_help">Host က သီချင်းများကို ဖွင့်ပါမည်။ YouTube Music queue တွင် သီချင်းများကို တိုက်ရိုက်ထည့်ခြင်း၊ ရွှေ့ခြင်း သို့မဟုတ် ဖယ်ရှားခြင်းများ ပြုလုပ်နိုင်သည်</string>
+  <string name="morphe_music_jam_joining_help">စက်နှစ်ခုလုံးကို အနီးအနားတွင်ထားပါ။ Host ကို ရှာဖွေနေစဉ်အတွင်း ပယ်ဖျက်နိုင်သည်</string>
+  <string name="morphe_music_jam_cancel_joining">ပူးပေါင်းခြင်းကို ပယ်ဖျက်ရန်</string>
+  <string name="morphe_music_jam_leave_jam">Jam မှထွက်ရန်</string>
+  <string name="morphe_music_jam_start_jam">Jam တစ်ခုစတင်ရန်</string>
+  <string name="morphe_music_jam_setup_layer">Jam Layer ကိုသတ်မှတ်ရန်</string>
+  <string name="morphe_music_jam_manage">စီမံခန့်ခွဲရန်</string>
+  <string name="morphe_music_jam_details">အသေးစိတ်</string>
+  <string name="morphe_music_jam_open">ဖွင့်ရန်</string>
+  <string name="morphe_music_jam_loading_song_options">သီချင်းရွေးချယ်စရာများကို တင်နေသည်…</string>
+  <string name="morphe_music_jam_song_options_unavailable">သီချင်းရွေးချယ်စရာများကို မရရှိနိုင်ပါ၊ ထပ်မံကြိုးစားကြည့်ပါ</string>
+  <string name="morphe_music_jam_song_options_failed">သီချင်းရွေးချယ်စရာများကို ဖွင့်၍မရပါ</string>
+  <string name="morphe_music_jam_no_browser">Jam Layer ကိုဒေါင်းလုဒ်လုပ်ရန် ဘရောက်ဆာမရှိပါ</string>
+  <string name="morphe_music_jam_waiting_host_queue">Host ၏ အစီအစဉ်ကို စောင့်ဆိုင်းနေသည်</string>
+  <string name="morphe_music_jam_open_song_first">YouTube Music တွင် သီချင်းတစ်ပုဒ်ကို အရင်ဖွင့်ပါ</string>
+  <string name="morphe_music_jam_play_on_host">Host တွင် ဖွင့်ပါ</string>
+  <string name="morphe_music_jam_quit_and_play">Jam မှ ထွက်ပြီး locally ဖွင့်ပါ</string>
+  <string name="morphe_music_jam_play_next">Jam တွင် နောက်တစ်ခုကို ဖွင့်ပါ</string>
+  <string name="morphe_music_jam_add_to_queue">Jam တေးသွားစီစဉ်မှုတွင် ထည့်ရန်</string>
+  <string name="morphe_music_jam_play_track">ဤ Jam သီချင်းကို ဖွင့်ပါ</string>
+  <string name="morphe_music_jam_choose_playback">မည်သည့်နေရာတွင် ဖွင့်မည်ကို ရွေးချယ်ပါ</string>
+  <string name="morphe_music_jam_move_host_here">Host ကို ဤနေရာသို့ ရွှေ့ပါ</string>
+  <string name="morphe_music_jam_seek_not_ready">သီချင်းသည် ရှာဖွေရန် အဆင်သင့်မဖြစ်သေးပါ</string>
+  <string name="morphe_music_jam_queue_changed_gesture">Queue ပြောင်းလဲသွားသည်၊ gesture ကို ထပ်မံကြိုးစားကြည့်ပါ</string>
   <!-- layout.branding.customBrandingPatch -->
   <!-- layout.branding.header.changeHeaderPatch -->
+  <string name="morphe_header_logo_title">ခေါင်းစီးလိုဂို</string>
+  <string name="morphe_header_logo_entry_1">ပုံသေ</string>
+  <string name="morphe_header_logo_entry_3">စိတ်ကြိုက်</string>
   <!-- misc.album.albumMusicVideoPatch -->
+  <string name="morphe_music_play_album_songs_title">အယ်လ်ဘမ်ရှိ အသံသီချင်းများကို ဖွင့်ပါ</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title' -->
+  <string name="morphe_music_play_album_songs_summary">ဂီတဗီဒီယိုအစား အယ်လ်ဘမ်၏ အသံသီးသန့်ဗားရှင်း သီချင်းများကို ဖွင့်ပါ။ \'ဗီဒီယို စတြီပြီးများကို အတုပြုလုပ်ခြင်း\' လိုအပ်သည်</string>
   <!-- misc.audiovideoswitch.enableAudioVideoSwitchPatch -->
+  <string name="morphe_music_enable_audio_video_switch_title">အသံ/ဗီဒီယို အပြောင်းအလဲကို အသုံးပြုမည်</string>
+  <string name="morphe_music_enable_audio_video_switch_summary">Audio Track Version နှင့် Official Music Video ကို ပြောင်းလဲရန် ကြိုးစားပါ</string>
   <!-- interaction.downloads.downloadsPatch -->
+  <string name="morphe_external_downloader_screen_summary">ပြင်ပဒေါင်းလုဒ်အက်ပ်များဖြင့် တေးဂီတဗီဒီယိုများ၊ ပေါ့တ်ကတ်စ်များ သို့မဟုတ် သီချင်းများကို ဒေါင်းလုဒ်လုပ်ပါ</string>
   <!-- 'Download' should be translated using the same localized wording YouTube displays for the menu. -->
+  <string name="morphe_external_downloader_menu_title">ဒေါင်းလုဒ်မီနူးအတွက် ပြင်ပဒေါင်းလုဒ်လုပ်သူကို အသုံးပြုပါ</string>
+  <string name="morphe_external_downloader_menu_summary">မီနူးများရှိ ဒေါင်းလုဒ်ရွေးချယ်မှုသည် သင်၏ပြင်ပဒေါင်းလုဒ်လုပ်သူကို အစားထိုးဖွင့်ပေးပါမည်</string>
+  <string name="morphe_music_downloads_screen_title">ဒေါင်းလုဒ်များ</string>
+  <string name="morphe_music_downloads_empty">"ဒေါင်းလုဒ်များမရှိပါ
+ဒေါင်းလုဒ်လုပ်ထားသော သီချင်းများကို ဤနေရာတွင် တွေ့နိုင်သည်"</string>
+  <string name="morphe_music_downloads_track_subtitle">%1$s • %2$s • %3$s MB</string>
+  <string name="morphe_music_downloads_summary">သီချင်း %1$s ပုဒ် • %2$s MB</string>
+  <string name="morphe_music_downloads_search_hint">ဒေါင်းလုဒ်များကို ရှာဖွေရန်</string>
+  <string name="morphe_music_downloads_sort">စီစစ်ရန်</string>
+  <string name="morphe_music_downloads_sort_artist">အဆိုတော်အလိုက် စီစစ်ရန်</string>
+  <string name="morphe_music_downloads_sort_title">ခေါင်းစဉ်အလိုက် စီစစ်ရန်</string>
+  <string name="morphe_music_downloads_sort_size">အရွယ်အစားအလိုက် စီစစ်ရန်</string>
+  <string name="morphe_music_downloads_delete_all">ဒေါင်းလုဒ်အားလုံးကို ဖျက်ရန်</string>
+  <string name="morphe_music_downloads_delete_all_title">ဒေါင်းလုဒ်အားလုံးကို ဖျက်မည်လား?</string>
+  <string name="morphe_music_downloads_delete_all_message">ဒေါင်းလုဒ်လုပ်ထားသော သီချင်းအားလုံးကို ဤစက်မှ ဖျက်ပစ်မည်ဖြစ်သည်</string>
+  <string name="morphe_music_downloads_all_deleted">ဒေါင်းလုဒ်များကို ဖျက်ပြီးပါပြီ</string>
+  <string name="morphe_music_downloads_nothing_found">ဘာမှမတွေ့ရှိပါ</string>
+  <string name="morphe_music_downloads_actions_for">%s အတွက် လုပ်ဆောင်ချက်များ</string>
+  <string name="morphe_music_downloads_play">ဖွင့်ပါ</string>
+  <string name="morphe_music_downloads_play_pause">ဖွင့်ရန် သို့မဟုတ် ခေတ္တရပ်ရန်</string>
+  <string name="morphe_music_downloads_previous">ယခင်</string>
+  <string name="morphe_music_downloads_next">နောက်တစ်ခု</string>
+  <string name="morphe_music_downloads_pause">ခေတ္တရပ်ရန်</string>
+  <string name="morphe_music_downloads_close">ပိတ်ရန်</string>
+  <string name="morphe_music_downloads_delete">ဖျက်ရန်</string>
+  <string name="morphe_music_downloads_delete_track">ဒေါင်းလုဒ်ကို ဖျက်ပါ</string>
+  <string name="morphe_music_downloads_delete_track_title">ဒေါင်းလုဒ်ကို ဖျက်မလား?</string>
+  <string name="morphe_music_downloads_delete_track_message">%s ကို ဤစက်မှ ဖျက်ပစ်မည်ဖြစ်သည်</string>
+  <string name="morphe_music_downloads_track_deleted">ဒေါင်းလုဒ်ကို ဖျက်ပြီးပါပြီ</string>
+  <string name="morphe_music_downloads_track_delete_failed">ဒေါင်းလုဒ်ကို မဖျက်နိုင်ပါ</string>
+  <string name="morphe_music_downloads_play_failed">ဒေါင်းလုဒ်ကို မဖွင့်နိုင်ပါ</string>
+  <string name="morphe_music_downloads_notification_channel">အသံဖိုင်များ ဒေါင်းလုဒ်လုပ်ခြင်း</string>
+  <string name="morphe_music_downloads_playback_channel">အော့ဖ်လိုင်း ဖွင့်ခြင်း</string>
+  <string name="morphe_music_downloads_unknown_track">ဒေါင်းလုဒ်လုပ်မည့် သီချင်းကို မခွဲခြားနိုင်ပါ</string>
+  <string name="morphe_music_downloads_already_running">ဒေါင်းလုဒ် လုပ်ဆောင်နေပြီ ဖြစ်သည်</string>
+  <string name="morphe_music_downloads_already_saved">ဒေါင်းလုဒ် လုပ်ပြီးပြီ ဖြစ်သည်</string>
+  <string name="morphe_music_downloads_started">ဒေါင်းလုဒ် စတင်ပါပြီ</string>
+  <string name="morphe_music_downloads_starting">ဒေါင်းလုဒ် စတင်နေသည်…</string>
+  <string name="morphe_music_downloads_progress">%s%% ဒေါင်းလုဒ် လုပ်နေသည်</string>
+  <string name="morphe_music_downloads_complete">ဒေါင်းလုဒ်လုပ်ခြင်း ပြီးဆုံးပါပြီ</string>
+  <string name="morphe_music_downloads_failed">ဒေါင်းလုဒ်လုပ်ခြင်း မအောင်မြင်ပါ</string>
   <!-- misc.settings.settingsPatch -->
   <!-- In languages where "About" is ambiguous, translate this as "About Morphe" (i.e., About this app). -->
+  <string name="morphe_settings_music_screen_0_about_title">Morphe အကြောင်း</string>
+  <string name="morphe_settings_music_screen_1_ads_title">ကြော်ငြာများ</string>
+  <string name="morphe_settings_music_screen_2_feed_title">ဖိဒ်</string>
+  <string name="morphe_settings_music_screen_3_general_title">အထွေထွေ</string>
+  <string name="morphe_settings_music_screen_4_player_title">ပလေယာ</string>
+  <string name="morphe_settings_music_screen_5_lyrics_title">သီချင်းစာသားများ</string>
+  <string name="morphe_settings_music_screen_9_misc_title">အထွေထွေ</string>
+  <string name="morphe_music_app_language_title">YouTube Music ဘာသာစကား</string>
+  <string name="morphe_music_app_language_summary_default">စနစ်ဘာသာစကား</string>
+  <string name="morphe_music_app_language_summary_unsupported">Android 13 သို့မဟုတ် နောက်ပိုင်းဗားရှင်း လိုအပ်သည်</string>
   <!-- ad.hideAdsPatch -->
+  <string name="morphe_music_hide_get_premium_label_title">\'Get Music Premium\' အညွှန်းကို ဖျောက်ထားပါ</string>
+  <string name="morphe_music_hide_music_premium_promotions_title">Music Premium ပရိုမိုးရှင်းများကို ဖျောက်ထားပါ</string>
+  <string name="morphe_music_hide_video_ads_title">ဗီဒီယိုကြော်ငြာများကို ဖျောက်ထားပါ</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
+  <string name="morphe_music_hide_audio_video_toggle_title">အသံ / ဗီဒီယို အဖွင့်အပိတ်ခလုတ်ကို ဖျောက်ပါ</string>
+  <string name="morphe_music_hide_podcast_episode_download_button_title">ဒေါင်းလုဒ်ခလုတ်ကို ဖျောက်ထားပါ</string>
+  <string name="morphe_music_hide_podcast_episode_download_button_summary">ပေါ်ဒ်ကတ်စ်ရှိုးတွင် ဒေါင်းလုဒ်ခလုတ်ကို ဖျောက်ထားပေးသည်</string>
+  <string name="morphe_music_hide_explore_shelf_title">Explore shelf ကို ဖျောက်ပါ</string>
+  <string name="morphe_music_hide_filter_bar_title">စစ်ထုတ်မှုဘားကို ဖျောက်ရန်</string>
+  <string name="morphe_music_hide_grid_shelves_title">Grid shelf များကို ဖျောက်ပါ</string>
+  <string name="morphe_music_hide_horizontal_shelves_title">Horizontal shelf များကို ဖျောက်ပါ</string>
+  <string name="morphe_music_hide_list_shelves_title">List shelf များကို ဖျောက်ပါ</string>
+  <string name="morphe_music_hide_lyrics_panel_category_title">စာသားပြဘောင်</string>
+  <string name="morphe_music_hide_lyrics_share_button_title">Share ခလုတ်ကို ဖျောက်ရန်</string>
+  <string name="morphe_music_hide_lyrics_translate_button_title">Translate ခလုတ်ကို ဖျောက်ရန်</string>
+  <string name="morphe_music_hide_new_from_shelf_title">\'New from\' shelf ကို ဖျောက်ပါ</string>
+  <string name="morphe_music_hide_playlist_shelves_title">ပလေလစ်စင်ဘောင်များကို ဖျောက်ပါ</string>
+  <string name="morphe_music_hide_repeat_button_title">Repeat ခလုတ်ကို ဖျောက်ပါ</string>
+  <string name="morphe_music_hide_shuffle_button_title">Shuffle ခလုတ်ကို ဖျောက်ပါ</string>
+  <string name="morphe_music_hide_speed_dial_shelf_title">\'Speed dial\' ဘောင်ကို ဖျောက်ပါ</string>
+  <string name="morphe_music_comments_screen_title">မှတ်ချက်များ</string>
+  <string name="morphe_music_comments_screen_summary">မှတ်ချက်များကဏ္ဍတွင် မည်သည့်အစိတ်အပိုင်းများ ပေါ်လာမည်ကို ရွေးချယ်ပါ</string>
+  <string name="morphe_music_hide_comments_community_guidelines_title">Community Guidelines များကို ဖျောက်ပါ</string>
+  <string name="morphe_music_hide_comments_context_title">အကြောင်းအရာစာသားကို ဖျောက်ထားပါ</string>
+  <string name="morphe_music_hide_comments_emoji_button_title">Emoji ခလုတ်ကို ဖျောက်ပါ</string>
+  <string name="morphe_music_hide_comments_info_button_title">Info ခလုတ်ကို ဖျောက်ပါ</string>
+  <string name="morphe_music_hide_comments_timestamp_button_title">Timestamp ခလုတ်ကို ဖျောက်ပါ</string>
   <!-- interaction.crossfade.crossfadePatch -->
+  <string name="morphe_music_crossfade_screen_title">Crossfade</string>
+  <string name="morphe_music_crossfade_screen_summary">သီချင်းများကို တစ်ပုဒ်နှင့်တစ်ပုဒ် ချောမွေ့စွာ ပေါင်းစပ်ပေးပါ</string>
+  <string name="morphe_music_crossfade_enabled_title">Crossfade အား ဖွင့်ပါ</string>
+  <string name="morphe_music_crossfade_curve_title">မှိန်သွားမှု မျဉ်းကွေး</string>
+  <string name="morphe_music_crossfade_curve_entry_equal_power">ညီမျှသော ပါဝါ</string>
+  <string name="morphe_music_crossfade_curve_entry_ease_out_cubic">နူးညံ့စွာထိန်းထားမှု</string>
+  <string name="morphe_music_crossfade_curve_entry_ease_out_quad">ညင်သာသောease</string>
+  <string name="morphe_music_crossfade_curve_entry_smoothstep">ချောမွေ့သော S-curve</string>
   <!-- Empty string because custom preference handles the title itself -->
+  <string name="morphe_music_crossfade_curve_preview_outgoing">ထွက်ခွာမှု</string>
+  <string name="morphe_music_crossfade_curve_preview_incoming">ဝင်ရောက်မှု</string>
+  <string name="morphe_music_crossfade_duration_title">Crossfade ကြာချိန်</string>
+  <string name="morphe_crossfade_duration_250ms">၂၅၀ မီလီစက္ကန့်</string>
+  <string name="morphe_crossfade_duration_500ms">၅၀၀ မီလီစက္ကန့်</string>
+  <string name="morphe_crossfade_duration_750ms">၇၅၀ မီလီစက္ကန့်</string>
+  <string name="morphe_crossfade_duration_1000ms">၁ စက္ကန့်</string>
+  <string name="morphe_crossfade_duration_2000ms">၂ စက္ကန့်</string>
+  <string name="morphe_crossfade_duration_3000ms">၃ စက္ကန့်</string>
+  <string name="morphe_crossfade_duration_4000ms">၄ စက္ကန့်</string>
+  <string name="morphe_crossfade_duration_5000ms">၅ စက္ကန့်</string>
+  <string name="morphe_crossfade_duration_6000ms">၆ စက္ကန့်</string>
+  <string name="morphe_crossfade_duration_7000ms">၇ စက္ကန့်</string>
+  <string name="morphe_crossfade_duration_8000ms">၈ စက္ကန့်</string>
+  <string name="morphe_crossfade_duration_9000ms">၉ စက္ကန့်</string>
+  <string name="morphe_crossfade_duration_10000ms">၁၀ စက္ကန့်</string>
+  <string name="morphe_crossfade_duration_11000ms">၁၁ စက္ကန့်</string>
+  <string name="morphe_crossfade_duration_12000ms">၁၂ စက္ကန့်</string>
+  <string name="morphe_music_crossfade_on_skip_title">ကိုယ်တိုင်ကျော်သွားချိန်တွင် Crossfade ပြုလုပ်ရန်</string>
+  <string name="morphe_music_crossfade_on_skip_summary">နောက်ထပ်သီချင်းတစ်ပုဒ်သို့ ကိုယ်တိုင်ကျော်သွားသောအခါ crossfade အကျိုးသက်ရောက်မှုကို အသုံးပြုသည်</string>
+  <string name="morphe_music_crossfade_on_auto_advance_title">အလိုအလျောက်ကျော်သွားချိန်တွင် Crossfade ပြုလုပ်ရန်</string>
+  <string name="morphe_music_crossfade_on_auto_advance_summary">သီချင်းတစ်ပုဒ် ပုံမှန်အတိုင်းပြီးဆုံးသောအခါ crossfade အကျိုးသက်ရောက်မှုကို အသုံးပြုသည်</string>
+  <string name="morphe_music_crossfade_session_control_title">ဆက်ရှင်ထိန်းချုပ်မှု</string>
+  <string name="morphe_music_crossfade_session_control_summary">Crossfade ကို ခေတ္တရပ်နားရန် သို့မဟုတ် ပြန်လည်စတင်ရန် shuffle ခလုတ်ကို ဖိထားပါ</string>
+  <string name="morphe_music_crossfade_paused_toast">ဤဆက်ရှင်အတွက် Crossfade ကို ခေတ္တရပ်နားထားသည်</string>
+  <string name="morphe_music_crossfade_resumed_toast">Crossfade ကို ပြန်လည်စတင်သည်</string>
+  <string name="morphe_music_crossfade_video_mode_disabled_toast">Crossfade ဖွင့်ထားချိန်တွင် ဗီဒီယိုမုဒ်ကို အသုံးမပြုနိုင်ပါ</string>
+  <string name="morphe_music_crossfade_sabr_toast">SABR ပြန်ဖွင့်ခြင်းဖြင့် Crossfade ကို ပိတ်ထားသည်</string>
+  <string name="morphe_music_crossfade_cast_unstable_toast">Casting ပြုလုပ်နေစဉ် Crossfade ကို ပိတ်ထားသည်</string>
+  <string name="morphe_music_crossfade_about_how_title">အလုပ်လုပ်ပုံ</string>
+  <string name="morphe_music_crossfade_about_how_summary">"Crossfade သည် သီချင်းတစ်ပုဒ်၏အဆုံးနှင့် နောက်တစ်ပုဒ်၏အစကို သင်သတ်မှတ်ထားသော ကြာချိန်နှင့် curve ကို အသုံးပြု၍ ထပ်တူကျစေသည်
+
+၎င်းသည် အလိုအလျောက် အဆင့်မြှင့်တင်ခြင်း auto-advance နှင့် လက်ဖြင့်ကျော်ခြင်း manual skip တို့တွင် အလုပ်လုပ်ပြီး တစ်ခုချင်းစီအတွက် ပိတ်/ဖွင့် ခလုတ်များရှိသည်။ အလိုအလျောက် အဆင့်မြှင့်တင်ခြင်းတွင် သီချင်းမပြီးဆုံးမီ စက္ကန့်အနည်းငယ်အလို၌ ပေါင်းစပ်မှု စတင်ပါသည်"</string>
+  <string name="morphe_music_crossfade_about_quirks_title">ကန့်သတ်ချက်များ</string>
+  <string name="morphe_music_crossfade_about_quirks_summary">"Crossfade ဖွင့်ထားစဉ် တေးဂီတဗီဒီယိုများကို အသံဖြင့်သာ ဖွင့်မည်ဖြစ်သည်။ Crossfade ကို ရပ်တန့်ပြီး ဗီဒီယိုကြည့်ရှုရန် shuffle ကို ဖိထားပါ
+
+ပြန်ဖွင့်ထားသော တေးဂီတဗီဒီယိုတစ်ခုသည် နောက်တစ်ပုဒ်မရောက်မချင်း ဗီဒီယိုမုဒ်တွင် ရှိနေမည်ဖြစ်သည်
+
+Fade ကြာချိန်ထက်တိုသော သီချင်းများကို crossfade ပြုလုပ်မည်မဟုတ်ပါ
+
+အကူးအပြောင်းကာလအတွင်း lock screen သို့မဟုတ် အသိပေးချက်တွင် အခြေအနေဟောင်းကို ခေတ္တပြသနိုင်သည်
+
+တေးဂီတဗီဒီယိုကြည့်ရန် crossfade ကို ရပ်တန့်ခြင်းသည် အချို့သောဗီဒီယိုများကို အမည်းရောင်ဖြစ်သွားစေနိုင်သည်။ သီချင်းမရွေးချယ်မီ crossfade ကို ရပ်တန့်ခြင်းဖြင့် ၎င်းကို ရှောင်ရှားနိုင်သည်"</string>
+  <string name="morphe_music_crossfade_about_unsupported_title">အထောက်အပံ့မပေးပါ</string>
+  <string name="morphe_music_crossfade_about_unsupported_summary">"အသံကို Casting လုပ်ခြင်း သို့မဟုတ် mirroring လုပ်ခြင်း (Chromecast၊ screen သို့မဟုတ် audio mirroring)
+
+SABR playback (Spoof video streams ပိတ်ထားသည်)"</string>
+  <string name="morphe_music_crossfade_about_credit_title">ဂုဏ်ပြုမှတ်တမ်း</string>
+  <string name="morphe_music_crossfade_about_credit_summary">VazerOG မှ ဖန်တီးထားသော Crossfade လုပ်ဆောင်ချက်</string>
   <!-- interaction.remember.repeatstate.rememberRepeatStatePatch-->
+  <string name="morphe_music_remember_repeat_state_title">ထပ်ခါတလဲလဲ အခြေအနေကို မှတ်သားထားပါ</string>
   <!-- interaction.remember.shufflestate.rememberShuffleStatePatch -->
+  <string name="morphe_music_remember_shuffle_state_title">ကျပွတ်ကျပွတ် အခြေအနေကို မှတ်သားထားပါ</string>
   <!-- video.speed.playbackSpeedPatch -->
+  <string name="morphe_music_playback_speed_title">ပြန်ဖွင့်မှု အရှိန်နှုန်း</string>
+  <string name="morphe_music_playback_speed_summary">သီချင်းအားလုံးအတွက် အသုံးပြုမည့် အရှိန်နှုန်းဖြစ်သည်။ ၁၀၀% တွင် အက်ပ်၏ ပုံသေအရှိန်နှုန်းဖြစ်သည့် ပေါ့ဒ်ကတ် ပြန်ဖွင့်မှုအရှိန်နှုန်းကဲ့သို့သော အရှိန်နှုန်းကို အသုံးပြုပါသည်</string>
+  <string name="morphe_music_playback_speed_change_pitch_title">အရှိန်နှုန်းနှင့်အတူ အသံပင်တိုင်ကို ပြောင်းလဲရန်</string>
   <!-- interaction.dislikeredirection.disableDislikeRedirectionPatch -->
+  <string name="morphe_music_disable_dislike_redirection_title">Dislike ပြန်လွှဲခြင်းကို ပိတ်ရန်</string>
+  <string name="morphe_music_disable_dislike_redirection_summary">Dislike ခလုတ်ကို နှိပ်သည့်အခါ နောက်ထပ်သီချင်းသို့ ကျော်သွားခြင်းကို တားဆီးပေးသည်</string>
   <!-- interaction.playlisttracktap.playlistTrackTapPatch -->
+  <string name="morphe_music_playlist_track_tap_action_title">Playlist သီချင်းကို နှိပ်သည့် လုပ်ဆောင်ချက်</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_default">Playlist ကို ဖွင့်မည်</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_play_single_track">ရွေးချယ်ထားသော သီချင်းကိုသာ ဖွင့်မည်</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_add_to_queue">ရွေးချယ်ထားသော သီချင်းကို အစီအစဉ်တွင် ထည့်မည်</string>
   <!-- 'Added to queue' should be translated using the same localized wording YouTube Music displays for the toast. -->
+  <string name="morphe_music_playlist_track_tap_added_to_queue">အစီအစဉ်တွင် ထည့်ပြီးပါပြီ</string>
   <!-- layout.buttons.hideButtonsPatch -->
+  <string name="morphe_music_hide_cast_button_title">Cast ခလုတ်ကို ဖျောက်ရန်</string>
+  <string name="morphe_music_hide_history_button_title">History ခလုတ်ကို ဖျောက်ရန်</string>
+  <string name="morphe_music_hide_notification_button_title">Notification ခလုတ်ကို ဖျောက်ရန်</string>
+  <string name="morphe_music_hide_search_button_title">Search ခလုတ်ကို ဖျောက်ရန်</string>
+  <string name="morphe_music_hide_voice_search_button_title">အသံဖြင့် ရှာဖွေရေးခလုတ်ကို ဖျောက်ထားပါ</string>
+  <string name="morphe_music_hide_sound_search_button_title">အသံဖမ်း ရှာဖွေရေးခလုတ်ကို ဖျောက်ထားပါ</string>
+  <string name="morphe_music_hide_library_new_button_title">New ခလုတ်ကို ဖျောက်ထားပါ</string>
+  <string name="morphe_music_hide_library_new_button_summary">Library tab ရှိ New ခလုတ်ကို ဖျောက်ထားသည်</string>
   <!-- layout.hide.actionbuttons.hideActionButtonsPatch -->
+  <string name="morphe_music_action_buttons_screen_title">လုပ်ဆောင်ချက်ခလုတ်များ</string>
+  <string name="morphe_music_action_buttons_screen_summary">Player အောက်တွင် မည်သည့်လုပ်ဆောင်ချက်ခလုတ်များကို ပြသမည်ကို ရွေးချယ်ပါ</string>
+  <string name="morphe_music_hide_action_bar_title">Action bar ကို ဖျောက်ရန်</string>
+  <string name="morphe_music_hide_like_dislike_button_title">Like နှင့် Dislike ခလုတ်ကို ဖျောက်ရန်</string>
+  <string name="morphe_music_hide_comments_button_title">Comments ခလုတ်ကို ဖျောက်ရန်</string>
   <!-- 'Live chat replay' should be translated using the same localized wording YouTube Music displays for the button. -->
+  <string name="morphe_music_hide_live_chat_replay_button_title">\'တိုက်ရိုက်ချက်တင် ပြန်ဖွင့်ခြင်း\' ခလုတ်ကို ဖျောက်ပါ</string>
   <!-- 'Lyrics' should be translated using the same localized wording YouTube Music displays for the button. -->
+  <string name="morphe_music_hide_lyrics_button_title">စာသားများ ခလုတ်ကို ဖျောက်ရန်</string>
   <!-- 'Share' should be translated using the same localized wording YouTube Music displays for the button. -->
+  <string name="morphe_music_hide_share_button_title">မျှဝေရန် ခလုတ်ကို ဖျောက်ရန်</string>
   <!-- 'Save' should be translated using the same localized wording YouTube Music displays for the button. -->
+  <string name="morphe_music_hide_save_button_title">သိမ်းဆည်းရန် ခလုတ်ကို ဖျောက်ရန်</string>
   <!-- 'Download' should be translated using the same localized wording YouTube Music displays for the button. -->
+  <string name="morphe_music_hide_download_button_title">ဒေါင်းလုဒ်လုပ်ရန် ခလုတ်ကို ဖျောက်ရန်</string>
   <!-- 'Start radio' should be translated using the same localized wording YouTube Music displays for the button. -->
+  <string name="morphe_music_hide_radio_button_title">\'ရေဒီယို စတင်ပါ\' ခလုတ်ကို ဖျောက်ပါ</string>
   <!-- flyoutmenu.components.hideFlyoutMenuComponentsPatch -->
+  <string name="morphe_music_hide_flyout_menu_components_screen_title">Flyout မီနူး</string>
+  <string name="morphe_music_hide_flyout_menu_components_screen_summary">Player နှင့် Queue flyout မီနူးများတွင် မည်သည့်အစိတ်အပိုင်းများ ပေါ်လာမည်ကို ရွေးချယ်ပါ</string>
+  <string name="morphe_music_hide_flyout_menu_3_column_component_title">၃ ကော်လံပါသော အစိတ်အပိုင်းကို ဖျောက်ရန်</string>
+  <string name="morphe_music_hide_flyout_menu_like_dislike_title">Like နှင့် Dislike ခလုတ်များကို ဖျောက်ရန်</string>
+  <string name="morphe_music_hide_flyout_menu_taste_match_title">\'နှစ်သက်မှု တိုက်ဆိုင်စစ်ဆေးချက်\' မီနူးကို ဖျောက်ရန်</string>
+  <string name="morphe_music_hide_flyout_menu_add_to_listen_later_title">\'နောက်မှနားထောင်ရန်\' ပလေးလစ်တွင်ထည့်ပါ မီနူးကို ဖျောက်ထားပါ</string>
+  <string name="morphe_music_hide_flyout_menu_add_to_queue_title">\'စီတန်းမှုတွင်ထည့်ပါ\' မီနူးကို ဖျောက်ထားပါ</string>
+  <string name="morphe_music_hide_flyout_menu_captions_title">စာတန်းထိုး မီနူးကို ဖျောက်ရန်</string>
+  <string name="morphe_music_hide_flyout_menu_delete_playlist_title">\'ပလေးလစ်ဖျက်ပါ\' မီနူးကို ဖျောက်ထားပါ</string>
+  <string name="morphe_music_hide_flyout_menu_dismiss_queue_title">\'စီတန်းမှုကို ပယ်ဖျက်ပါ\' မီနူးကို ဖျောက်ထားပါ</string>
+  <string name="morphe_music_hide_flyout_menu_dont_recommend_artist_title">\'ဤအနုပညာရှင်ကို အကြံမပြုပါနှင့်\' မီနူးကို ဖျောက်ထားပါ</string>
+  <string name="morphe_music_hide_flyout_menu_download_title">ဒေါင်းလုဒ် မီနူးကို ဖျောက်ရန်</string>
+  <string name="morphe_music_hide_flyout_menu_edit_playlist_title">\'ပလေးလစ်ကို တည်းဖြတ်ပါ\' မီနူးကို ဖျောက်ထားပါ</string>
+  <string name="morphe_music_hide_flyout_menu_go_to_album_title">\'အယ်လ်ဘမ်သို့သွားပါ\' မီနူးကို ဖျောက်ထားပါ</string>
+  <string name="morphe_music_hide_flyout_menu_go_to_artist_title">\'အနုပညာရှင်ထံသို့သွားပါ\' မီနူးကို ဖျောက်ထားပါ</string>
+  <string name="morphe_music_hide_flyout_menu_go_to_episode_title">\'အပိုင်းသို့သွားရန်\' မီနူးကို ဖျောက်ထားပါ</string>
+  <string name="morphe_music_hide_flyout_menu_go_to_podcast_title">\'ပေါ့ဒ်ကတ်စ်သို့သွားရန်\' မီနူးကို ဖျောက်ထားပါ</string>
+  <string name="morphe_music_hide_flyout_menu_help_title">အကူအညီ မီနူးကို ဖျောက်ရန်</string>
+  <string name="morphe_music_hide_flyout_menu_mark_episode_as_played_title">\'အပိုင်းကို နားထောင်ပြီးကြောင်း မှတ်သားရန်\' မီနူးကို ဖျောက်ထားပါ</string>
+  <string name="morphe_music_hide_flyout_menu_not_interested_title">\'စိတ်မဝင်စားပါ\' မီနူးကို ဖျောက်ထားပါ</string>
+  <string name="morphe_music_hide_flyout_menu_pin_to_speed_dial_title">\'Speed dial တွင် ပင်ပိုင်ထားပါ\' မီနူးကို ဖျောက်ထားပါ</string>
+  <string name="morphe_music_hide_flyout_menu_play_next_title">\'နောက်တစ်ခု ဖွင့်ပါ\' မီနူးကို ဖျောက်ထားပါ</string>
+  <string name="morphe_music_hide_flyout_menu_quality_title">အရည်အသွေး မီနူးကို ဖျောက်ရန်</string>
+  <string name="morphe_music_hide_flyout_menu_remove_from_library_title">\'Library မှ ဖယ်ရှားပါ\' မီနူးကို ဖျောက်ထားပါ</string>
+  <string name="morphe_music_hide_flyout_menu_remove_from_playlist_title">\'Playlist မှ ဖယ်ရှားပါ\' မီနူးကို ဖျောက်ထားပါ</string>
+  <string name="morphe_music_hide_flyout_menu_report_title">တိုင်ကြားချက် မီနူးကို ဖျောက်ရန်</string>
+  <string name="morphe_music_hide_flyout_menu_save_episode_for_later_save_to_library_title">\'အပိုင်းကို နောက်မှကြည့်ရန် သိမ်းဆည်းပါ\' / \'Library သို့ သိမ်းဆည်းပါ\' မီနူးကို ဖျောက်ထားပါ</string>
+  <string name="morphe_music_hide_flyout_menu_save_to_playlist_title">\'Playlist သို့ သိမ်းဆည်းပါ\' မီနူးကို ဖျောက်ထားပါ</string>
+  <string name="morphe_music_hide_flyout_menu_share_title">မျှဝေရန် မီနူးကို ဖျောက်ရန်</string>
+  <string name="morphe_music_hide_flyout_menu_shuffle_play_title">\'ကျပန်းဖွင့်ပါ\' မီနူးကို ဖျောက်ထားပါ</string>
+  <string name="morphe_music_hide_flyout_menu_sleep_timer_title">\'အိပ်စက်ချိန် သတ်မှတ်ချက်\' မီနူးကို ဖျောက်ရန်</string>
+  <string name="morphe_music_hide_flyout_menu_start_radio_title">\'ရေဒီယို စတင်ရန်\' မီနူးကို ဖျောက်ရန်</string>
+  <string name="morphe_music_hide_flyout_menu_stats_for_nerds_title">\'ကျွမ်းကျင်သူများအတွက် အချက်အလက်များ\' မီနူးကို ဖျောက်ရန်</string>
+  <string name="morphe_music_hide_flyout_menu_subscribe_title">စာရင်းသွင်းရန် မီနူးကို ဖျောက်ရန်</string>
+  <string name="morphe_music_hide_flyout_menu_unpin_from_speed_dial_title">\'အမြန်ခေါ်ဆိုမှုမှ ပယ်ဖျက်ရန်\' မီနူးကို ဖျောက်ရန်</string>
+  <string name="morphe_music_hide_flyout_menu_view_song_credit_title">\'သီချင်းအချက်အလက် ကြည့်ရန်\' မီနူးကို ဖျောက်ရန်</string>
   <!-- layout.startpage.changeStartPagePatch -->
+  <string name="morphe_change_start_page_title">စတင်စာမျက်နှာ</string>
+  <string name="morphe_change_start_page_entry_default">ပုံသေ</string>
+  <string name="morphe_change_start_page_entry_charts">ဇယားများ</string>
+  <string name="morphe_change_start_page_entry_episodes_for_later">နောက်မှနားဆင်ရန်အပိုင်းများ</string>
+  <string name="morphe_change_start_page_entry_explore">ရှာဖွေလေ့လာရန်</string>
+  <string name="morphe_change_start_page_entry_history">မှတ်တမ်း</string>
+  <string name="morphe_change_start_page_entry_library">စာကြည့်တိုက်</string>
+  <string name="morphe_change_start_page_entry_liked_music">ကြိုက်နှစ်သက်သောတေးဂီတများ</string>
+  <string name="morphe_change_start_page_entry_playlists">စာရင်းများ</string>
+  <string name="morphe_change_start_page_entry_search">ရှာဖွေရန်</string>
+  <string name="morphe_change_start_page_entry_subscriptions">စာရင်းသွင်းမှုများ</string>
   <!-- layout.orientation.forcePortraitOrientationPatch -->
+  <string name="morphe_music_force_portrait_orientation_title">Portrait ပုံစံအား အတင်းအကျပ် သတ်မှတ်ရန်</string>
+  <string name="morphe_music_force_portrait_orientation_summary">စက်ပစ္စည်းကို လှည့်လိုက်သည့်တိုင် အက်ပ်ကို Portrait ပုံစံတွင်သာ ရှိနေစေပါသည်</string>
   <!-- layout.miniplayer.changeMiniplayerColorPatch -->
+  <string name="morphe_music_change_miniplayer_color_title">Miniplayer အရောင်ကို ပြောင်းပါ</string>
+  <string name="morphe_music_change_miniplayer_color_summary">Miniplayer အရောင်ကို ဖန်သားပြင်အပြည့် player အရောင်နှင့် ကိုက်ညီအောင် ပြုလုပ်သည်</string>
+  <string name="morphe_music_change_navigation_bar_color_title">လမ်းညွှန်ဘားအရောင်ကို ပြောင်းရန်</string>
+  <string name="morphe_music_change_navigation_bar_color_summary">Fullscreen player နှင့် လိုက်ဖော်ရန် navigation bar အရောင်ကို ပြောင်းလဲပေးသည်</string>
   <!-- layout.miniplayer.miniplayerNextPreviousButtonsPatch -->
+  <string name="morphe_music_miniplayer_next_button_title">Miniplayer တွင် နောက်တစ်ခုခလုတ်ကို ပြပါ</string>
+  <string name="morphe_music_miniplayer_previous_button_title">Miniplayer တွင် ရှေ့တစ်ခုခလုတ်ကို ပြပါ</string>
   <!-- layout.miniplayer.enableForcedMiniplayerPatch -->
+  <string name="morphe_music_enable_forced_miniplayer_title">Miniplayer ကို အတင်းအကြပ်အသုံးပြုခြင်းအား ဖွင့်ပါ</string>
+  <string name="morphe_music_enable_forced_miniplayer_summary">သီချင်းအသစ်တစ်ခု စတင်ချိန်တွင် player ကို ဖန်သားပြင်အပြည့်သို့ အလိုအလျောက် ပြောင်းလဲခြင်းမှ တားဆီးသည်</string>
   <!-- layout.miniplayer.enableSwipeToDismissMiniplayerPatch -->
+  <string name="morphe_music_enable_swipe_to_dismiss_miniplayer_title">Miniplayer ကို ပွတ်ဆွဲ၍ ပိတ်ရန် အသုံးပြုမည်</string>
+  <string name="morphe_music_enable_swipe_to_dismiss_miniplayer_summary">Miniplayer ကို အောက်သို့ဆွဲချ၍ ပိတ်နိုင်သည်</string>
   <!-- layout.navigationbar.navigationBarPatch -->
+  <string name="morphe_music_navigation_bar_screen_title">လမ်းညွှန်ဘား</string>
+  <string name="morphe_music_navigation_bar_screen_summary">အောက်ခြေ လမ်းညွှန်ဘားတွင် မည်သည့်ခလုတ်များ ပေါ်လာမည်ကို ရွေးချယ်ပါ</string>
   <!-- 'Home' should be translated using the same localized wording YouTube Music displays for the tab. -->
+  <string name="morphe_music_hide_navigation_bar_home_button_title">ပင်မစာမျက်နှာ ခလုတ်ကို ဖျောက်ရန်</string>
   <!-- 'Samples' should be translated using the same localized wording YouTube Music displays for the tab. -->
+  <string name="morphe_music_hide_navigation_bar_samples_button_title">နမူနာများ ခလုတ်ကို ဖျောက်ရန်</string>
   <!-- 'Explore' should be translated using the same localized wording YouTube Music displays for the tab. -->
+  <string name="morphe_music_hide_navigation_bar_explore_button_title">ရှာဖွေ လေ့လာရန် ခလုတ်ကို ဖျောက်ရန်</string>
   <!-- 'Library' should be translated using the same localized wording YouTube Music displays for the tab. -->
+  <string name="morphe_music_hide_navigation_bar_library_button_title">စာကြည့်တိုက် ခလုတ်ကို ဖျောက်ရန်</string>
   <!-- 'Upgrade' should be translated using the same localized wording YouTube Music displays for the tab. -->
+  <string name="morphe_music_hide_navigation_bar_upgrade_button_title">အဆင့်မြှင့်တင်ရန် ခလုတ်ကို ဖျောက်ရန်</string>
+  <string name="morphe_music_hide_navigation_bar_title">လမ်းညွှန်ဘားကို ဖျောက်ထားပါ</string>
+  <string name="morphe_music_hide_navigation_bar_labels_title">လမ်းညွှန်ခလုတ် အညွှန်းများကို ဖျောက်ထားပါ</string>
   <!-- interaction.scrobbling.scrobblingPatch -->
+  <string name="morphe_music_scrobbling_summary_logged_out">လော့ဂ်အင် မဝင်ထားပါ။ ပြင်ဆင်ရန် နှိပ်ပါ</string>
+  <string name="morphe_music_scrobbling_log_out">လော့ဂ်အောက်လုပ်မည်</string>
+  <string name="morphe_music_scrobbling_logged_out_toast">လော့ဂ်အောက် လုပ်ပြီးပါပြီ</string>
   <!-- 'scrobbling' must be kept untranslated -->
+  <string name="morphe_music_scrobbling_enabled_title">scrobbling ကို အသုံးပြုရန်</string>
+  <string name="morphe_music_scrobbling_now_playing_title">\'ယခုဖွင့်နေသည်\' အခြေအနေကို ပေးပို့ရန်</string>
+  <string name="morphe_music_scrobbling_min_song_duration_title">သီချင်း၏ အနည်းဆုံးကြာချိန်</string>
   <!-- 'scrobbled' must be kept untranslated -->
+  <string name="morphe_music_scrobbling_min_song_duration_summary">ဤကြာချိန်ထက်တိုသော သီချင်းများကို scrobbled ပြုမည်မဟုတ်ပါ</string>
   <!-- 'scrobble' must be kept untranslated -->
+  <string name="morphe_music_scrobbling_delay_percent_title">Scrobble ကြာချိန်နှောင့်နှေးမှု ရာခိုင်နှုန်း</string>
   <!-- 'scrobble' must be kept untranslated -->
+  <string name="morphe_music_scrobbling_delay_percent_summary">သီချင်း၏ ဤရာခိုင်နှုန်းအထိ နားထောင်ပြီးနောက် scrobble ကို စတင်မည်</string>
   <!-- 'scrobble' must be kept untranslated -->
+  <string name="morphe_music_scrobbling_delay_seconds_title">scrobble ကြာမြင့်ချိန် စက္ကန့်များ</string>
   <!-- 'scrobble' must be kept untranslated -->
+  <string name="morphe_music_scrobbling_delay_seconds_summary">ဤစက္ကန့်များအထိ နားဆင်ပြီးနောက် scrobble ကို စတင်စေပါ</string>
+  <string name="morphe_music_listenbrainz_token_title">ListenBrainz အကောင့်</string>
+  <string name="morphe_music_listenbrainz_token_summary_logged_in">ဝင်ရောက်ထားပါသည်။ အကောင့်ကို စီမံရန် နှိပ်ပါ</string>
   <!-- 'scrobbling' must be kept untranslated -->
+  <string name="morphe_music_listenbrainz_token_dialog_instruction">scrobbling ကို အသုံးပြုနိုင်ရန် သင်၏ ListenBrainz User Token ကို ထည့်ပါ</string>
+  <string name="morphe_music_listenbrainz_token_dialog_hint">တိုကင်</string>
+  <string name="morphe_music_listenbrainz_token_dialog_verify">စစ်ဆေးမည်</string>
+  <string name="morphe_music_listenbrainz_token_status_empty">ကျေးဇူးပြု၍ token တစ်ခု ထည့်ပါ</string>
+  <string name="morphe_music_listenbrainz_token_status_validating">စစ်ဆေးနေသည်…</string>
+  <string name="morphe_music_listenbrainz_token_status_valid">မှန်ကန်သော token ဖြစ်သည်! အသုံးပြုသူ- %s</string>
+  <string name="morphe_music_listenbrainz_token_status_invalid">မှားယွင်းသော token- %s</string>
+  <string name="morphe_music_listenbrainz_token_status_invalid_unknown">မသိရှိပါ</string>
+  <string name="morphe_music_listenbrainz_token_status_failed">စစ်ဆေးမှု မအောင်မြင်ပါ- %s</string>
+  <string name="morphe_music_listenbrainz_token_toast_cleared">Token ကို ရှင်းလင်းပြီးပါပြီ</string>
+  <string name="morphe_music_listenbrainz_token_toast_saved">Token ကို သိမ်းဆည်းပြီးပါပြီ</string>
+  <string name="morphe_music_listenbrainz_token_toast_invalid_warning">သတိပေးချက်- သိမ်းဆည်းထားသော token သည် မမှန်ကန်ပါ!</string>
+  <string name="morphe_music_lastfm_love_on_like_title">ကြိုက်နှစ်သက်သော သီချင်းများကို Love ပြုလုပ်ရန်</string>
+  <string name="morphe_music_lastfm_love_on_like_summary">YouTube Music တွင် သီချင်းများကို Like လုပ်သည့်အခါ Last.fm တွင် အလိုအလျောက် Love ပြုလုပ်ပေးမည် (Like ပြန်ဖြုတ်ခြင်း သို့မဟုတ် Dislike လုပ်ခြင်းပြုလုပ်ပါက Love ကို ပြန်ဖယ်ရှားမည်)</string>
+  <string name="morphe_music_lastfm_token_title">Last.fm အကောင့်</string>
+  <string name="morphe_music_lastfm_token_summary_logged_in">%s အဖြစ် လော့ဂ်အင်ဝင်ထားပါသည်။ အကောင့်ကို စီမံခန့်ခွဲရန် နှိပ်ပါ</string>
+  <string name="morphe_music_lastfm_token_dialog_instruction">လော့ဂ်အင်ဝင်ရန် သင်၏ Last.fm အချက်အလက်များကို ရိုက်ထည့်ပါ</string>
+  <string name="morphe_music_lastfm_token_dialog_username_hint">အသုံးပြုသူအမည်</string>
+  <string name="morphe_music_lastfm_token_dialog_password_hint">စကားဝှက်</string>
+  <string name="morphe_music_lastfm_token_dialog_login">ဝင်ရောက်ပါ</string>
+  <string name="morphe_music_lastfm_token_status_empty">ကျေးဇူးပြု၍ အသုံးပြုသူအမည်နှင့် စကားဝှက်ကို ထည့်သွင်းပါ</string>
+  <string name="morphe_music_lastfm_token_status_logging_in">ဝင်ရောက်နေသည်…</string>
+  <string name="morphe_music_lastfm_token_status_success">အောင်မြင်စွာ ဝင်ရောက်ပြီးပါပြီ!</string>
+  <string name="morphe_music_lastfm_token_status_no_session">Last.fm မှ session ရယူရန် မအောင်မြင်ပါ</string>
+  <string name="morphe_music_lastfm_token_status_failed">ဝင်ရောက်မှု မအောင်မြင်ပါ- %s</string>
+  <string name="morphe_music_lastfm_token_toast_saved">Last.fm အချက်အလက်များကို သိမ်းဆည်းပြီးပါပြီ!</string>
+  <string name="morphe_settings_music_scrobbling_metadata_title">Metadata များကို ရှင်းလင်းခြင်း</string>
+  <string name="morphe_music_scrobbling_metadata_cleanup_title">Metadata များကို ရှင်းလင်းပါ</string>
+  <string name="morphe_music_scrobbling_metadata_cleanup_summary">scrobbling မပြုလုပ်မီ သီချင်းခေါင်းစဉ်၊ အနုပညာရှင်နှင့် အယ်လ်ဘမ်များမှ အသုံးများသော အပိုစာသားများ (ဥပမာ- \"Official Video\", \"Remaster\", \"Live\") ကို အလိုအလျောက် ရှင်းလင်းပေးမည်</string>
+  <string name="morphe_music_scrobbling_custom_regex_title">စိတ်ကြိုက် regex ဖြင့် ရှင်းလင်းခြင်း</string>
+  <string name="morphe_music_scrobbling_custom_regex_summary">သီချင်းခေါင်းစဉ်များ၊ အနုပညာရှင်များ သို့မဟုတ် အယ်လ်ဘမ်များမှ နောက်ထပ်စာသားများကို ဖယ်ရှားရန် စိတ်ကြိုက် regular expression တစ်ခုကို ထည့်သွင်းပါ။ ဥပမာ- (?i)\\s*\\((clean|explicit)\\)</string>
+  <string name="morphe_music_scrobbling_parse_title_title">ခေါင်းစဉ်မှ အနုပညာရှင်နှင့် သီချင်းကို ခွဲထုတ်ပါ</string>
+  <string name="morphe_music_scrobbling_parse_title_summary">ဗီဒီယိုခေါင်းစဉ်မှ အနုပညာရှင်နှင့် သီချင်းအမည်ကို \" - \" ခွဲခြားမှုသင်္ကေတကို အသုံးပြု၍ ထုတ်ယူပါ။ ၎င်းသည် channel အမည်ကို အနုပညာရှင်အဖြစ် အသုံးပြုထားသော ပြန်တင်ထားသည့် content များအတွက် အသုံးဝင်သည်</string>
+  <string name="morphe_music_scrobbling_guess_album_title">ပျောက်ဆုံးနေသော အယ်လ်ဘမ်ကို ဖြည့်စွက်ပါ</string>
+  <string name="morphe_music_scrobbling_guess_album_summary">တေးဂီတတွင် အယ်လ်ဘမ် မပါဝင်ပါက၊ သင်၏ scrobble ပြည့်စုံစေရန် Last.fm တွင် ရှာဖွေပါ</string>
   <!-- 'scrobbling' must be kept untranslated -->
+  <string name="morphe_music_scrobbling_about_summary">"scrobbling သည် သင်၏ YouTube Music အသုံးပြုမှုကို သင်၏ Last.fm သို့မဟုတ် ListenBrainz ပရိုဖိုင်နှင့် အလိုအလျောက် စာရင်းသွင်းပေးပါသည်
+
+နောက်ကွယ်တွင် ဖွင့်ထားစဉ် scrobbling ကို စာရင်းသွင်းပေးနိုင်စေရန် YouTube Music ၏ app battery အသုံးပြုမှုကို \"Unrestricted\" ဟု သတ်မှတ်ထားကြောင်း သေချာပါစေ"</string>
   <!-- layout.lyrics.lyricsPatch -->
+  <string name="morphe_music_lyrics_enabled_title">ပြင်ပသီချင်းစာသားများကို အသုံးပြုပါ</string>
+  <string name="morphe_music_lyrics_enabled_summary">ပြင်ပဝန်ဆောင်မှုတစ်ခုမှ သီချင်းစာသားများကို ပြသပေးမည်ဖြစ်ပြီး၊ ရှာမတွေ့ပါက ပင်ကိုယ်ပါရှိသော သီချင်းစာသားများကို ပြသပေးမည်ဖြစ်သည်</string>
+  <string name="morphe_music_lyrics_keep_screen_on_title">စာသားများကို ကြည့်ရှုနေစဉ် မျက်နှာပြင်ကို ဖွင့်ထားပါ</string>
+  <string name="morphe_music_lyrics_keep_screen_on_summary">စာသားပြပန်နယ် ဖွင့်ထားစဉ် မျက်နှာပြင် ပိတ်သွားခြင်းကို တားဆီးပေးသည်</string>
+  <string name="morphe_music_lyrics_section_service_title">စာသား ဝန်ဆောင်မှု</string>
+  <string name="morphe_music_lyrics_section_display_title">ပြသမှု</string>
+  <string name="morphe_music_lyrics_section_sync_title">စိနခရိုနိုက်ဇေးရှင်း</string>
+  <string name="morphe_music_lyrics_section_panel_title">ပန်နယ်</string>
+  <string name="morphe_music_lyrics_section_ai_endpoint_title">AI အဆုံးသတ်မှတ် (endpoint)</string>
+  <string name="morphe_music_lyrics_source_all_disabled">ပံ့ပိုးပေးသူအားလုံးကို ပိတ်ထားသည် - ပါရှိပြီးသား စာသားများနှင့် ပေါင်းစပ်ထားသော စာသားများ</string>
+  <string name="morphe_music_lyrics_source_reset_title">ပံ့ပိုးသူ အစီအစဉ်ကို ပြန်လည်သတ်မှတ်မလား?</string>
+  <string name="morphe_music_lyrics_source_reset_message">ပံ့ပိုးသူများကို မူလဦးစားပေး အစီအစဉ်အတိုင်း ပြန်လည်သတ်မှတ်ပါ</string>
+  <string name="morphe_music_lyrics_clear_cache_title">သိမ်းဆည်းထားသော သီချင်းစာသားများကို ရှင်းလင်းရန်</string>
+  <string name="morphe_music_lyrics_clear_cache_summary">ဤစက်တွင် သိမ်းဆည်းထားသော သီချင်းစာသားများကို ဖျက်ပါ</string>
+  <string name="morphe_music_lyrics_clear_cache_done">%1$s MB ကို ရှင်းလင်းပြီးပါပြီ</string>
+  <string name="morphe_music_token_dialog_get_token">တိုကင် ရယူရန်</string>
+  <string name="morphe_music_apple_music_token_title">Apple Music Media-user-token</string>
+  <string name="morphe_music_apple_music_token_dialog_instruction">"music.apple.com မှ media-user-token ကွတ်ကီကို ဤနေရာတွင် ပေးပို့ပါ
+
+အဆင့်များ-
+၁။ music.apple.com တွင် အဖွဲ့ဝင်အဖြစ် အကောင့်ဝင်ပါ
+၂။ DevTools → Application → Cookies → music.apple.com ကို ဖွင့်ပါ
+၃။ \"media-user-token\" ၏ တန်ဖိုးကို ကူးယူပါ"</string>
+  <string name="morphe_music_apple_music_token_toast_saved">Apple Music: media-user-token ကို သိမ်းဆည်းပြီးပါပြီ</string>
+  <string name="morphe_music_apple_music_token_toast_cleared">Apple Music: media-user-token ကို ဖျက်လိုက်ပါပြီ</string>
+  <string name="morphe_music_apple_music_token_toast_invalid">Apple Music: media-user-token မမှန်ကန်ပါ - ကျေးဇူးပြု၍ စစ်ဆေးပြီး ထပ်မံကြိုးစားပါ</string>
+  <string name="morphe_music_spotify_token_title">Spotify SpDc</string>
+  <string name="morphe_music_spotify_token_dialog_instruction">"Spotify မှ sp_dc ကွတ်ကီကို ဤနေရာတွင် ပေးပို့ပါ
+
+အဆင့်များ-
+၁။ open.spotify.com တွင် အကောင့်ဝင်ပါ
+၂။ DevTools → Application → Cookies → open.spotify.com ကို ဖွင့်ပါ
+၃။ \"sp_dc\" ၏ တန်ဖိုးကို ကူးယူပါ"</string>
+  <string name="morphe_music_spotify_token_toast_saved">Spotify: sp_dc ကို သိမ်းဆည်းပြီးပါပြီ</string>
+  <string name="morphe_music_spotify_token_toast_cleared">Spotify: sp_dc ကို ဖျက်လိုက်ပါပြီ</string>
+  <string name="morphe_music_spotify_token_toast_invalid">Spotify: sp_dc မမှန်ကန်ပါ - ကျေးဇူးပြု၍ စစ်ဆေးပြီး ထပ်မံကြိုးစားပါ</string>
+  <string name="morphe_music_apple_token_optional_hint">Apple Music token သည် စိတ်ကြိုက်ထည့်သွင်းနိုင်ပါသည်။ ၎င်းမရှိပါက Lyrically ကို အစားထိုးအသုံးပြုမည်ဖြစ်သည်</string>
+  <string name="morphe_music_deezer_arl_title">Deezer ARL</string>
+  <string name="morphe_music_deezer_arl_dialog_instruction">"Deezer မှ arl cookie ကို ဤနေရာတွင် ပူးကူးထည့်ပါ။
+
+အဆင့်များ-
+၁။ deezer.com တွင် အကောင့်ဝင်ပါ
+၂။ DevTools → Application → Cookies → deezer.com ကို ဖွင့်ပါ
+၃။ \"arl\" ၏ တန်ဖိုးကို ကူးယူပါ"</string>
+  <string name="morphe_music_deezer_arl_toast_saved">Deezer: arl ကို သိမ်းဆည်းပြီးပါပြီ</string>
+  <string name="morphe_music_deezer_arl_toast_cleared">Deezer: arl ကို ရှင်းလင်းပြီးပါပြီ</string>
+  <string name="morphe_music_deezer_arl_toast_invalid">Deezer: arl မမှန်ကန်ပါ - ကျေးဇူးပြု၍ စစ်ဆေးပြီး ထပ်မံကြိုးစားပါ</string>
+  <string name="morphe_music_musixmatch_token_title">Musixmatch တိုကင်</string>
+  <string name="morphe_music_musixmatch_token_dialog_instruction">သင်၏ကိုယ်ပိုင်အကောင့်ကို အသုံးပြုရန်အတွက်သာ token တစ်ခုကို ထည့်သွင်းပါ။ ၎င်းသည် Musixmatch Android app မှ လာရပါမည်။ musixmatch.com မှ ကူးယူထားသော token များသည် အသုံးမပြုတော့သော desktop client ၏ token များဖြစ်ပြီး API မှ ၎င်းတို့ကို လက်မခံပါ</string>
+  <string name="morphe_music_musixmatch_token_optional_hint">Musixmatch သည် token မပါဘဲ အလုပ်လုပ်သောကြောင့် ဤနေရာကို အလွတ်ထားနိုင်သည်</string>
+  <string name="morphe_music_musixmatch_token_dialog_hint">အသုံးပြုသူ တိုကင်</string>
+  <string name="morphe_music_musixmatch_token_toast_saved">Musixmatch: အသုံးပြုသူ တိုကင်ကို သိမ်းဆည်းပြီးပါပြီ</string>
+  <string name="morphe_music_musixmatch_token_toast_cleared">Musixmatch: အသုံးပြုသူ တိုကင်ကို ရှင်းလင်းပြီးပါပြီ</string>
+  <string name="morphe_music_musixmatch_token_toast_invalid">Musixmatch: user token မမှန်ကန်ပါ - ကျေးဇူးပြု၍ စစ်ဆေးပြီး ထပ်မံကြိုးစားပါ</string>
+  <string name="morphe_music_youtube_cookies_title">YouTube ကွကီးများ</string>
+  <string name="morphe_music_youtube_cookies_dialog_instruction">"YouTube မှ စာတန်းထိုးများနှင့် အချိန်စာသားများကို ရှာဖွေရန် သင်၏ YouTube cookies များကို ဤနေရာတွင် ပေးပို့ပါ။
+
+အဆင့်များ-
+၁။ ဘရောက်ဇာတွင် youtube.com ကို ဖွင့်ပြီး အကောင့်ဝင်ပါ
+၂။ DevTools (F12) → Application → Cookies → youtube.com ကို ဖွင့်ပါ
+၃။ cookie string တစ်ခုလုံးကို ကူးယူပါ (semicolons များဖြင့် ပိုင်းခြားထားသော key=value တွဲများ)
+
+လိုအပ်သော cookies များ- SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure-1PAPISID, LOGIN_INFO"</string>
+  <string name="morphe_music_youtube_cookies_toast_saved">YouTube: cookies များကို သိမ်းဆည်းပြီးပါပြီ</string>
+  <string name="morphe_music_youtube_cookies_toast_cleared">YouTube: cookies များကို ဖျက်လိုက်ပါပြီ</string>
+  <string name="morphe_music_youtube_cookies_toast_invalid">YouTube: ကုကီများ မမှန်ကန်ပါ - ကျေးဇူးပြု၍ စစ်ဆေးပြီး ထပ်မံကြိုးစားပါ</string>
+  <string name="morphe_music_lyrics_tap_to_seek_title">စာကြောင်းတစ်ကြောင်းကို ဖိထားပါ</string>
+  <string name="morphe_music_lyrics_tap_to_seek_summary">သီချင်း၏ ထိုအချိန်သို့ တိုက်ရိုက်ရောက်ရှိရန် စာကြောင်းတစ်ခုကို နှိပ်ပါ၊ စကားလုံးတစ်ခုကို ဖိနှိပ်ပြီး ကော်ပီကူးပါ သို့မဟုတ် စကားလုံးမဟုတ်သောနေရာကို ဖိနှိပ်ပါက စာကြောင်းတစ်ခုလုံးကို ကော်ပီကူးပါ၊ ပိတ်ထားပါက ဤလုပ်ဆောင်ချက် နှစ်ခုလုံးကို အသုံးပြု၍မရပါ</string>
+  <string name="morphe_music_lyrics_show_section_title">အပိုင်းတက်ဂ်များကို ပြရန်</string>
+  <string name="morphe_music_lyrics_show_section_summary">သီချင်းစာသားများ၏ အပိုင်းအသစ်တစ်ခုချင်းစီကို Verse သို့မဟုတ် Chorus ကဲ့သို့သော တက်ဂ်အသေးလေးများဖြင့် အမှတ်အသားပြုပါ</string>
+  <string name="morphe_music_lyrics_show_copy_button_title">ကူးယူရန်ခလုတ်ကို ပြပါ</string>
+  <string name="morphe_music_lyrics_show_copy_button_summary">မူရင်းသီချင်းစာသားများကို plain text အဖြစ် ကော်ပီကူးရန် နှိပ်ပါ၊ မူရင်းစာသားဖိုင်ကို Downloads folder ထဲသို့ သိမ်းဆည်းရန် ဖိနှိပ်ပါ</string>
+  <string name="morphe_music_lyrics_show_translate_button_title">ဘာသာပြန်ရန်ခလုတ်ကို ပြပါ</string>
+  <string name="morphe_music_lyrics_show_translate_button_summary">ဘာသာပြန်ချက်ကို ပြောင်းလဲရန် နှိပ်ပါ၊ ဘာသာပြန်ချက်တစ်ခုတည်းကိုသာ ကြည့်ရန် ဖိနှိပ်ပါ။ Provider ဘာသာပြန်ချက်များ၊ Google Translate သို့မဟုတ် OpenAI-compatible API ကို အသုံးပြုပါ</string>
+  <string name="morphe_music_lyrics_show_romanize_button_title">Romanize ခလုတ်ကို ပြရန်</string>
+  <string name="morphe_music_lyrics_show_romanize_button_summary">Romanization ကို ပြောင်းလဲရန် နှိပ်ပါ၊ Romanization တစ်ခုတည်းကိုသာ ကြည့်ရန် ဖိနှိပ်ပါ။ Provider Romanization၊ Google Translate သို့မဟုတ် OpenAI-compatible API ကို အသုံးပြုပါ</string>
+  <string name="morphe_music_lyrics_local_romanization_title">ဒေသတွင်း ရောမအက္ခရာပြောင်းလဲခြင်းနှင့် ချိန်ညှိခြင်း</string>
+  <string name="morphe_music_lyrics_local_romanization_summary">ပံ့ပိုးပေးသူ၊ သင်၏မော်ဒယ်နှင့် Google Translate တို့ အဆင်မပြေသောအခါ စက်ပေါ်တွင် Romanize ပြုလုပ်ပါ။ ဖတ်ရှုမှုသည် အချိန်သတ်မှတ်ထားသော သီချင်းစာသား၏ စကားလုံးတိုင်းနောက်တွင် လိုက်ပါမည်။ word sync ကို ဖွင့်ထားရပါမည်။ တရုတ်၊ ကန်တုံ၊ ဂျပန်၊ ကိုရီးယား၊ ဂရိ၊ ရုရှား၊ ဂျော်ဂျီယာ၊ အာမေးနီးယား၊ ပမာဏ ၁၂၀ MB ခန့်</string>
+  <string name="morphe_music_lyrics_local_romanization_dict_building">ဖတ်နေသည် %1$s: %2$d%%</string>
+  <string name="morphe_music_lyrics_local_romanization_dict_ready">ဖတ်ရှုမှုများ အဆင်သင့်ဖြစ်ပြီ (%1$d ခု)</string>
+  <string name="morphe_music_lyrics_local_romanization_dict_failed">ဒေါင်းလုဒ်လုပ်ခြင်း မအောင်မြင်ပါ - ပြန်လည်ကြိုးစားရန် ၎င်းကို ပိတ်ပြီး ပြန်ဖွင့်ပါ</string>
+  <string name="morphe_music_lyrics_show_refresh_button_title">Refresh ခလုတ်ကို ပြရန်</string>
+  <string name="morphe_music_lyrics_show_refresh_button_summary">နောက်ထပ်သီချင်းစာသား လျာထားချက်သို့ ပြောင်းရန် နှိပ်ပါ၊ သီချင်းခေါင်းစဉ်နှင့် အနုပညာရှင်အမည်ဖြင့် သီချင်းစာသားများကို ရှာဖွေရန် ဖိထားပါ</string>
+  <string name="morphe_music_lyrics_search_dialog_title">သီချင်းစာသားများကို ရှာဖွေပါ</string>
+  <string name="morphe_music_lyrics_search_title_hint">သီချင်းခေါင်းစဉ်</string>
+  <string name="morphe_music_lyrics_search_artist_hint">အနုပညာရှင်</string>
+  <string name="morphe_music_lyrics_search_empty">သီချင်းခေါင်းစဉ်နှင့် အနုပညာရှင်ကို ရိုက်ထည့်ပါ</string>
+  <string name="morphe_music_lyrics_search_no_providers">ဖွင့်ထားသော မည်သည့်ဝန်ဆောင်မှုပေးသူမှ အခြားသီချင်းများကို ရှာဖွေ၍မရပါ</string>
+  <string name="morphe_music_lyrics_saved">သိမ်းဆည်းပြီး</string>
+  <string name="morphe_music_lyrics_word_sync_title">စတိုက်ကျနေသော စကားလုံးများ သို့မဟုတ် အသံထွက်များကို မှတ်သားရန်</string>
+  <string name="morphe_music_lyrics_word_sync_summary">စကားလုံးတစ်လုံးချင်းစီ အလိုက် သီချင်းစာသားများ ရရှိနိုင်ပါက ဦးစားပေးပါ။ သီချင်းစာသားများတွင် အချိန်မှတ်သားချက်များ ပါရှိပါက သီချင်းနှင့်အတူ စကားလုံး သို့မဟုတ် အသံထွက်တစ်ခုချင်းစီကို အချိန်နှင့်အမျှ မှတ်သားပေးမည်ဖြစ်သည်</string>
+  <string name="morphe_music_lyrics_split_background_title">နောက်ခံအဆိုများကို သီးခြားပြသပါ</string>
+  <string name="morphe_music_lyrics_split_background_summary">\"(Oh) I want you\" ကဲ့သို့ လက်သည်းကွင်းအတွင်း ရေးထားသော နောက်ခံအသံများကို သီချင်းစာသားကြောင်းမှ ဖယ်ထုတ်ပြီး သီးခြားမှိန်သောစာကြောင်းသို့ ရွှေ့ပေးသည်</string>
+  <string name="morphe_music_lyrics_hide_played_title">ဖွင့်ပြီးသော သီချင်းစာသားများကို ဖျောက်ရန်</string>
+  <string name="morphe_music_lyrics_hide_played_summary">လက်ရှိဖွင့်နေသောစာသားကြောင်း၏ အထက်ရှိ စာသားများကို ဖျောက်ထားမည်</string>
+  <string name="morphe_music_lyrics_hide_unplayed_title">မဖွင့်ရသေးသော စာသားများကို ဖျောက်ထားမည်</string>
+  <string name="morphe_music_lyrics_hide_unplayed_summary">လက်ရှိဖွင့်နေသောစာသားကြောင်း၏ အောက်ရှိ စာသားများကို ဖျောက်ထားမည်</string>
+  <string name="morphe_music_lyrics_mediasession_title">Lock screen တွင် MediaSession စာသားများကို ပြသမည်</string>
+  <string name="morphe_music_lyrics_mediasession_summary">လော့ခ်စကရင်၊ Android Auto နှင့် Bluetooth တို့တွင် လက်ရှိစာကြောင်းကို ပြသပေးသည်။ Android 11 သို့မဟုတ် ပိုမိုသစ်သော ဗားရှင်း လိုအပ်ပါသည်</string>
+  <string name="morphe_music_lyrics_miniplayer_title">Miniplayer တွင် သီချင်းစာသားများ ပြသရန်</string>
+  <string name="morphe_music_lyrics_miniplayer_summary">သီချင်းစာသားကို subtitle နေရာသို့ ရွှေ့ပြီး miniplayer တွင် လက်ရှိစာကြောင်းကို ပြသသည်</string>
+  <string name="morphe_music_lyrics_mini_track_format_title">သီချင်းခေါင်းစဉ်/အဆိုတော် ပုံစံ</string>
+  <string name="morphe_music_lyrics_mini_track_format_summary">Miniplayer နှင့် MediaSession တို့တွင် သီချင်းစာသားနှင့်အတူ ပြသပေးမည့် သီချင်းပုံစံဖြစ်သည်။ {t} သည် ခေါင်းစဉ်၊ {a} သည် အဆိုတော်နှင့် {v} သည် သီချင်းစာသားရင်းမြစ်မှ ပံ့ပိုးပေးထားပါက Acoustic ကဲ့သို့သော ဗားရှင်းဖြစ်သည်။ ကိုလွန် နှစ်ခုကြားရှိ စာသားကို ၎င်းအတွင်းရှိ variable အားလုံးတွင် တန်ဖိုးရှိမှသာ ပြသမည်ဖြစ်သည်၊ ရိုးရိုးကိုလွန်အတွက် \\: ကို ရေးပါ။ သီချင်းစာသား ပြောင်းလဲတိုင်း တစ်ကြောင်းချင်းစီကို အလှည့်ကျ ပြသပေးမည်ဖြစ်သည်</string>
+  <string name="morphe_music_lyrics_mini_encapsulation_title">သီချင်းစာသားကြောင်း ပုံစံ</string>
+  <string name="morphe_music_lyrics_mini_encapsulation_summary">Miniplayer နှင့် MediaSession ရှိ သီချင်းစာသားလိုင်း၏ ပုံစံ။ {lrc} သည် စာသားလိုင်းဖြစ်ပြီး {n} သည် ၎င်းကို ဆက်တိုက်မည်မျှဆိုသည်ကို ဖော်ပြသည်။ ကိုလွန်များကြားရှိ စာသားများကို စာသားလိုင်း ထပ်ခါတလဲလဲဖြစ်မှသာ ပြသမည်။ ကိုလွန်အတွက် \\: ကို အသုံးပြုပါ</string>
+  <string name="morphe_music_lyrics_mini_encapsulation_invalid">ပုံစံတွင် {lrc} ပါဝင်ရမည်</string>
+  <string name="morphe_music_lyrics_mini_track_format_menu_summary">အနုပညာရှင်-စာသားပုံစံနှင့် အန်နီမေးရှင်း အချိန်သတ်မှတ်ချက်</string>
+  <string name="morphe_music_lyrics_mini_artist_min_label">အနည်းဆုံး စခရင်ပြသချိန် (ms)</string>
+  <string name="morphe_music_lyrics_mini_artist_max_label">အများဆုံး မျက်နှာပြင်ပြသချိန် (ms)</string>
+  <string name="morphe_music_lyrics_mini_artist_timing_explanation">မျဉ်းကြောင်းအများအပြားပါသော အန်နီမေးရှင်းများအတွက်သာ။ ဖရိမ်တစ်ခုစီကို အနည်းဆုံး သတ်မှတ်ချိန်အထိ ထားရှိပါ။ အများဆုံး သတ်မှတ်ချိန်တွင် စာသားများ တူညီနေသော်လည်း အနုပညာရှင်အမည် မျဉ်းကြောင်းကို ရှေ့ဆက်တိုးပေးပါ။</string>
+  <string name="morphe_music_lyrics_mini_artist_timing_invalid">အနည်းဆုံးတန်ဖိုးသည် 0 သို့မဟုတ် ထိုထက်ပိုရပါမည်။ အများဆုံးတန်ဖိုးသည် 0 ထက် ပိုရမည်ဖြစ်ပြီး အနည်းဆုံးတန်ဖိုးထက် မနည်းရပါ။</string>
+  <string name="morphe_music_lyrics_mini_line_limits_title">စာကြောင်းအရှည် ကန့်သတ်ချက်များ</string>
+  <string name="morphe_music_lyrics_mini_line_limits_summary">သီချင်းစာသားနှင့် အဆိုတော်စာကြောင်း ကန့်သတ်ချက်များ နှင့် full-width character အလေးချိန်</string>
+  <string name="morphe_music_lyrics_mini_line_limits_lyrics">"သီချင်းစာသားစာကြောင်း ကန့်သတ်ချက်
+ရှည်လျားသော သီချင်းစာသားများကို မျှတသော တစ်ဝက်စီသို့ ခွဲခြားပါ။ 0 သည် ခွဲခြားခြင်းကို ပိတ်ထားပါသည်။"</string>
+  <string name="morphe_music_lyrics_mini_line_limits_artist">"အဆိုတော်စာကြောင်း ကန့်သတ်ချက်
+ဖြည့်စွက်ထားသော track format ကို cycling frames များအဖြစ် ခွဲခြားပါ။ 0 သည် ခွဲခြားခြင်းကို ပိတ်ထားပါသည်။"</string>
+  <string name="morphe_music_lyrics_mini_line_limits_weight">"Full-width character အလေးချိန်
+ကန့်သတ်ချက် နှစ်ခုလုံးအတွက် အကျုံးဝင်ပါသည်။ 1.75 တွင် full-width character လေးလုံးကို 7 အဖြစ် သတ်မှတ်ပါသည်။"</string>
+  <string name="morphe_music_lyrics_mini_line_limits_invalid">0 မှ 10000 အထိ ကိန်းပြည့်ကန့်သတ်ချက်များနှင့် 0 ထက်ကြီးသော character အလေးချိန်ကို ထည့်သွင်းပါ</string>
+  <string name="morphe_music_lyrics_mini_instrumental_title">တူရိယာတီးခတ်မှု အပိုင်း</string>
+  <string name="morphe_music_lyrics_mini_instrumental_summary">တူရိယာတီးခတ်မှု အနားယူချိန်အတွင်း Miniplayer နှင့် MediaSession တို့တွင် ပြသပေးပါသည်။ မျဉ်းတစ်ကြောင်းသည် အန်နီမေးရှင်းဖရိမ်တစ်ခု ဖြစ်ပါသည်။ {t} သည် ခေါင်းစဉ်၊ {a} သည် အနုပညာရှင် နှင့် {lrc} သည် နောက်ဆုံးစာသားမျဉ်း ဖြစ်ပါသည်</string>
+  <string name="morphe_music_lyrics_mini_next_offset_ms_title">Miniplayer နှင့် MediaSession အချိန်ကွာခြားမှု</string>
+  <string name="morphe_music_lyrics_mini_next_offset_ms_summary">Miniplayer နှင့် MediaSession တို့တွင် နောက်စာကြောင်းကို ပြသမည့်အချိန်ကို ညှိပေးပါသည်။ အကယ်၍ စာကြောင်းများ နောက်ကျမှ ပေါ်လာပါက ဥပမာ lock screen တွင် အနှုတ်တန်ဖိုးကို အသုံးပြုပါ</string>
+  <string name="morphe_settings_music_lyrics_metadata_title">စစ်ထုတ်မှုများ</string>
+  <string name="morphe_music_lyrics_custom_regex_title">Metadata regex</string>
+  <string name="morphe_music_lyrics_custom_regex_summary">သီချင်းစာသားများကို ရှာဖွေခြင်းနှင့် ခေါင်းစဉ်နှစ်ခု ကိုက်ညီမှုရှိမရှိ တွက်ချက်ခြင်းတို့မပြုလုပ်မီ ခေါင်းစဉ်များ၊ အနုပညာရှင်များနှင့် အယ်လ်ဘမ်များတွင် အသုံးပြုမည့် Regular expression ဖြစ်သည်။ နှစ်ခုလုံးကို ပိတ်လိုပါက အလွတ်ထားပါ။ ပုံသေသတ်မှတ်ချက်သည် \"Official Video\", \"Remaster\", \"【插曲】\", နှင့် \"- Topic\" ကဲ့သို့သော အသုံးမဝင်သည့် စာသားများကို ဖယ်ရှားပေးပါလိမ့်မည်</string>
+  <string name="morphe_music_lyrics_text_filter_title">သီချင်းစာသား စစ်ထုတ်မှု regex</string>
+  <string name="morphe_music_lyrics_text_filter_summary">မူရင်းသီချင်းစာသားတွင်သာ အသုံးပြုမည့် Regular expression ဖြစ်သည် (ဘာသာပြန်များ သို့မဟုတ် romanization များတွင် အသုံးမပြုပါ။) ပိတ်ထားလိုပါက အလွတ်ထားခဲ့ပါ</string>
+  <string name="morphe_music_lyrics_credit_line_regex_title">အချက်အလက်ကြောင်း အမှတ်အသားများ</string>
+  <string name="morphe_music_lyrics_credit_line_regex_summary">သီချင်းစာသားများကို အောက်ခြေသို့ မှားယွင်းစွာ စစ်ထုတ်လိုက်ပါက ၎င်းကို ညှိပါ သို့မဟုတ် ရှင်းလင်းပါ။ ကော်မာဖြင့် ပிரிထားသော အမှတ်အသားများ- အမှတ်အသားတစ်ခုနှင့် colon (:) ပါဝင်သော စာကြောင်းများကို အောက်ခြေတွင် credit အချက်အလက်များအဖြစ် ပြသမည်ဖြစ်သည်။ ပိတ်ထားလိုပါက အလွတ်ထားခဲ့ပါ</string>
+  <string name="morphe_music_lyrics_force_capitalize_title">ပထမဆုံးအက္ခရာကို စာလုံးကြီးဖြင့်ရေးပါ</string>
+  <string name="morphe_music_lyrics_force_capitalize_summary">သီချင်းစာသားစာကြောင်းတစ်ခုစီ၏ ပထမဆုံးအက္ခရာကို စာလုံးကြီးဖြင့် ပြောင်းလဲပေးသည်</string>
+  <string name="morphe_music_lyrics_strip_trailing_punctuation_title">အဆုံးသတ်ပုဒ်ဖြတ်ပုဒ်ရပ်များကို ဖယ်ရှားပါ</string>
+  <string name="morphe_music_lyrics_strip_trailing_punctuation_summary">သီချင်းစာသားစာကြောင်းများ၏အဆုံးရှိ အစက်များ၊ ကော်မာများ၊ ကိုလွန်များနှင့် ဆီမီကိုလွန်များကို ဖယ်ရှားပေးပါသည်။ မေးခွန်းသင်္ကေတများ၊ အာမေဋ္ဌာသင်္ကေတများ၊ အစက်သုံးစက်များ၊ ကိုးကားချက်များနှင့် ကွင်းစကွင်းပိတ်များကိုမူ ထိန်းသိမ်းထားမည်ဖြစ်သည်</string>
+  <string name="morphe_music_lyrics_text_size_title">စာသားအရွယ်အစား</string>
+  <string name="morphe_music_lyrics_text_size_summary">သီချင်းစာသား၏ အရွယ်အစား</string>
+  <string name="morphe_music_lyrics_offset_ms_title">ယေဘုယျ အချိန်ကွာခြားမှု</string>
+  <string name="morphe_music_lyrics_offset_ms_summary">စိန့်ခ်လုပ်ထားသော စာသားများသည် ပြန်ဖွင့်မှုနောက်သို့ လိုက်ပါမည်။ အကယ်၍ ၎င်းတို့ လွဲချော်နေပါက timing offset ကို ညှိပါ။ စိန့်ခ်လုပ်ထားသော စာသားများကို ရှေ့သို့ သို့မဟုတ် နောက်သို့ ရွှေ့ပါ။ စာသားများသည် သီချင်းထက် စောနေပါက အပေါင်းကိန်းတန်ဖိုးကို အသုံးပြုပါ</string>
+  <string name="morphe_music_lyrics_sb_matching_title">Lyrics offset အတွက် SponsorBlock segments များကို အသုံးပြုပါ</string>
+  <string name="morphe_music_lyrics_sb_matching_summary">SponsorBlock ကျော်သွားသော segments များမပါဘဲ တိုက်ဆိုင်စစ်ဆေးပြီး lyrics များကို ထုတ်ဝေထားသော audio ပေါ်သို့ ရွှေ့ပါ။ ပိတ်ထားပါက SponsorBlock ကို လုံးဝဥပေက္ခာပြုမည် ဖြစ်သည်</string>
+  <string name="morphe_music_lyrics_sb_no_video">ဤ track တွင် ပေးပို့ရန် video id မရှိပါ</string>
   <!-- Shown under the lyrics. The placeholder is a service name such as LRCLIB. -->
+  <string name="morphe_music_lyrics_source_label">အရင်းအမြစ်: %s</string>
+  <string name="morphe_music_lyrics_contribute_credit">ဤ LRC ကို သိမ်းဆည်းရန် ကူးယူရေးခလုတ်ကို ဖိထားပါ။ အကယ်၍ သင်သည် အချိန်အမှတ်အသားများကို အသေးစိတ်ညှိနှိုင်းပြီး အသိုက်အဝန်းပံ့ပိုးသူများထံ မျှဝေပေးနိုင်ပါက ကျွန်ုပ်တို့ ကျေးဇူးတင်ရှိပါမည်</string>
+  <string name="morphe_music_lyrics_translated_by_google">Google မှ ဘာသာပြန်ဆိုသည်</string>
+  <string name="morphe_music_lyrics_romanized_by_google">Google မှ ရိုမန်အက္ခရာဖြင့် ပြောင်းလဲသည်</string>
+  <string name="morphe_music_lyrics_translated_by_ai">%s မှ ဘာသာပြန်ဆိုသည်</string>
+  <string name="morphe_music_lyrics_romanized_by_ai">%s မှ ရိုမန်အက္ခရာဖြင့် ပြောင်းလဲသည်</string>
+  <string name="morphe_music_lyrics_romanized_by_local">%s မှ ရောမန်အက္ခရာ ပြောင်းလဲထားသည်</string>
   <!-- Tappable label under the lyrics that turns the translation on. -->
+  <string name="morphe_music_lyrics_translate_hide">ဘာသာပြန်ဆိုပြီး</string>
+  <string name="morphe_music_lyrics_translation_language_title">ဘာသာပြန်ဆိုမည့် ဘာသာစကား</string>
+  <string name="morphe_music_lyrics_romanize_language_title">Romanization ဘာသာစကား</string>
+  <string name="morphe_music_lyrics_translating">ဘာသာပြန်နေသည်...</string>
+  <string name="morphe_music_lyrics_translate_failed">သီချင်းစာသားများကို ဘာသာမပြန်နိုင်ခဲ့ပါ</string>
+  <string name="morphe_music_lyrics_romanize_hide">ရိုမန်အက္ခရာပြောင်းပြီး</string>
+  <string name="morphe_romanize_language_DEFAULT">အလိုအလျောက်</string>
+  <string name="morphe_music_lyrics_romanizing">ရိုမန်အက္ခရာ ပြောင်းလဲနေသည်…</string>
+  <string name="morphe_music_lyrics_romanize_failed">သီချင်းစာသားများကို ရိုမန်အက္ခရာဖြင့် ပြောင်းလဲ၍မရပါ</string>
+  <string name="morphe_music_lyrics_translate_only">ဘာသာပြန်ဆိုချက် သီးသန့်</string>
+  <string name="morphe_music_lyrics_romanize_only">Romanized သီးသန့်</string>
+  <string name="morphe_music_lyrics_dual_only">Dual မုဒ်</string>
+  <string name="morphe_music_lyrics_copied">ကလစ်ဘုတ်သို့ ကူးယူပြီးပါပြီ</string>
+  <string name="morphe_music_lyrics_refreshing">ပြန်လည်မွမ်းမံနေသည်</string>
+  <string name="morphe_music_lyrics_refreshed">ပြန်လည်မွမ်းမံပြီးပြီ</string>
+  <string name="morphe_music_lyrics_transcribe_key_title">QuickLRC API သော့</string>
+  <string name="morphe_music_lyrics_transcribe_key_summary">QuickLRC သည် လက်ရှိသီချင်းအတွက် သီချင်းစာသားများကို ကူးယူရေးသားပေးခြင်း သို့မဟုတ် အချိန်ညှိပေးခြင်းများ ပြုလုပ်ပေးပါသည်။ ၎င်းသည် အထက်ပါ OpenAI-compatible endpoint နှင့် မသက်ဆိုင်သော သီးခြားဝန်ဆောင်မှုတစ်ခု ဖြစ်ပါသည်</string>
+  <string name="morphe_music_lyrics_transcribe_key_set_summary">QuickLRC key ကို သိမ်းဆည်းပြီးပါပြီ။ သီချင်းစာသား ရှာဖွေရေး dialogue ရှိ align ခလုတ်ကို အသုံးပြုပါ၊ သို့မဟုတ် သီချင်းတွင် စာသားမရှိပါက panel prompt ကို အသုံးပြုပါ</string>
+  <string name="morphe_music_lyrics_transcribe_key_saved">QuickLRC API key ကို သိမ်းဆည်းပြီးပါပြီ</string>
+  <string name="morphe_music_lyrics_transcribe_key_rejected">QuickLRC မှ ထို key ကို လက်မခံပါ</string>
+  <string name="morphe_music_lyrics_transcribe_key_cleared">QuickLRC API key ကို ဖျက်ပြီးပါပြီ</string>
+  <string name="morphe_music_lyrics_transcribe_key_dialog_instruction">QuickLRC သည် စာသားမရှိသော သီချင်းများအတွက် credits အသုံးပြု၍ အချိန်ညှိပေးခြင်း သို့မဟုတ် သီချင်းမှ ကူးယူရေးသားပေးခြင်းများကို ပြုလုပ်ပေးပါသည်။ key သတ်မှတ်ထားပါက စာသားမရှိသော သီချင်းများတွင် transcription ပြုလုပ်နိုင်ပြီး ရှာဖွေရေး dialogue တွင် alignment ခလုတ် ပေါ်လာမည်ဖြစ်သည်</string>
+  <string name="morphe_music_lyrics_transcribe_align">QuickLRC alignment ကို တောင်းဆိုရန်</string>
+  <string name="morphe_music_lyrics_transcribe_aligning">ချိန်ညှိနေသည်</string>
+  <string name="morphe_music_lyrics_transcribe_apply_align">ချိန်ညှိမှုကို အသုံးပြုရန်</string>
+  <string name="morphe_music_lyrics_transcribe_prompt">QuickLRC transcription ကို တောင်းဆိုရန်</string>
+  <string name="morphe_music_lyrics_transcribe_working">စာသားပြောင်းလဲနေသည်</string>
+  <string name="morphe_music_lyrics_transcribe_cancelled">စာသားပြောင်းလဲခြင်းကို ပယ်ဖျက်လိုက်သည်</string>
+  <string name="morphe_music_lyrics_transcribe_local_unsupported">YouTube မှ ဖွင့်သော သီချင်းများကိုသာ စာသားပြောင်းလဲနိုင်သည်</string>
+  <string name="morphe_music_lyrics_transcribe_no_text">ညှိရန် သီချင်းစာသားမရှိပါ - အစားထိုး၍ ကူးယူရေးသားနေပါသည်</string>
+  <string name="morphe_music_lyrics_transcribe_failed">QuickLRC သည် ဤသီချင်းကို လုပ်ဆောင်၍မရပါ</string>
+  <string name="morphe_music_lyrics_transcribe_out_of_credits">ဤသီချင်းအတွက် QuickLRC ခရက်ဒစ်များ ကုန်ဆုံးသွားပါပြီ</string>
+  <string name="morphe_music_lyrics_about_summary">"သီချင်းစာသားများကို သီချင်းခေါင်းစဉ်နှင့် အဆိုတော်အမည်ဖြင့် တိုက်ဆိုင်စစ်ဆေးပါသည်။ ပုံမှန်မဟုတ်သော metadata များရှိပါက မည်သည်ကိုမျှ ရှာမတွေ့နိုင်ခြင်း သို့မဟုတ် မှားယွင်းသော version ကို တွေ့ရှိနိုင်ပါသည်။ version များ ပြောင်းလဲရန် refresh ကို အသုံးပြုပါ။ * အမှတ်အသားပြုထားသော ပံ့ပိုးပေးသူများသည် token လိုအပ်ပါသည်။ ဖွင့်ထားသော ပံ့ပိုးပေးသူအားလုံးကို သင်သတ်မှတ်ထားသော အစီအစဉ်အတိုင်း အမြဲတမ်း တောင်းဆိုခြင်းမဟုတ်ဘဲ ၎င်းတို့၏ တုံ့ပြန်မှုအရှိန်အဟုန်ပေါ် မူတည်၍ တုံ့ပြန်ပါသည်။\n\nသီချင်းစာသားများသည် Morphe နှင့် ပတ်သက်မှုမရှိသော၊ ပံ့ပိုးမှုမပေးသော သို့မဟုတ် ထောက်ခံထားခြင်းမရှိသော ပြင်ပဝန်ဆောင်မှုများမှ လာခြင်းဖြစ်သည်။ တစ်ခုချင်းစီကို ၎င်းတို့ရှိနေသည့်အတိုင်း အသုံးပြုပါသည်။ သီချင်းစာသားများ၊ ၎င်းတို့၏ ရရှိနိုင်မှုနှင့် လိုင်စင်များသည် အဆိုပါ ဝန်ဆောင်မှုများနှင့် ၎င်းတို့၏ လိုင်စင်ပိုင်ရှင်များထံတွင်သာ ရှိပြီး ၎င်းတို့ကို အသုံးပြုခြင်းသည် ၎င်းတို့၏ ဝန်ဆောင်မှုစည်းကမ်းချက်များအောက်တွင် ရှိနိုင်ပါသည်။ ဖွင့်ထားသော ဝန်ဆောင်မှုထံသို့ ရောက်ရှိသွားသည်မှာ သင်တောင်းဆိုသော ရှာဖွေမှုဖြစ်သည့် သီချင်းခေါင်းစဉ်၊ အဆိုတော်နှင့် အဆိုပါ ဝန်ဆောင်မှုမှ လိုအပ်ပါက ဗီဒီယို ID သာ ဖြစ်ပါသည်။ စိတ်ကြိုက်ရွေးချယ်နိုင်သော AI endpoint နှင့် QuickLRC စာသားပြောင်းလဲမှုများသည် သင်ကွန်ဖီဂူရေးရှင်းပြုလုပ်ပြီးနောက်တွင်သာ အလုပ်လုပ်ပြီး သီချင်းစာသား သို့မဟုတ် သီချင်း၏ ဗီဒီယို URL ကို လက်ခံရယူပါသည်။"</string>
+  <string name="morphe_music_lyrics_source_advice_summary">သင်အသုံးပြုသည့် ပံ့ပိုးပေးသူများကိုသာ ဖွင့်ပါ သို့မဟုတ် ပုံသေအတိုင်းထားပါ - အဆက်မပြတ်တောင်းဆိုမှုများသည် သေးငယ်သော အသိုက်အဝန်း သီချင်းစာသားဝဘ်ဆိုဒ်များကို ဝန်ပိစေနိုင်သည်</string>
+  <string name="morphe_music_lyrics_hide_info_title">ဂုဏ်ပြုမှတ်တမ်းစာကြောင်းကို ဖျောက်ထားပါ</string>
+  <string name="morphe_music_lyrics_hide_info_summary">သီချင်းစာသားများအောက်တွင် ပြသထားသော ဂုဏ်ပြုမှတ်တမ်းစာကြောင်းကို ဖျောက်ထားပါ</string>
+  <string name="morphe_music_lyrics_swap_trans_roma_title">ဘာသာပြန်နှင့် ရိုမန်အက္ခရာပြောင်းလဲမှုကို အပြန်အလှန်လဲလှယ်ပါ</string>
+  <string name="morphe_music_lyrics_swap_trans_roma_summary">ဖွင့်ထားပါက ရိုမန်အက္ခရာပြောင်းလဲမှုကို သီချင်းစာသားများအောက်တွင်လည်းကောင်း၊ ဘာသာပြန်ကို အထက်တွင်လည်းကောင်း ထားရှိမည်ဖြစ်ပြီး၊ ပိတ်ထားပါက ရိုမန်အက္ခရာပြောင်းလဲမှုကို အထက်တွင်လည်းကောင်း၊ ဘာသာပြန်ကို အောက်တွင်လည်းကောင်း ထားရှိမည်ဖြစ်သည်</string>
+  <string name="morphe_music_lyrics_section_translation_title">ဘာသာပြန်ဆိုချက်</string>
+  <string name="morphe_music_lyrics_section_romanization_title">ရိုမန်ဘာသာပြန်ဆိုချက်</string>
+  <string name="morphe_music_lyrics_translation_provider_title">ဘာသာပြန်ဆိုမှု ပံ့ပိုးပေးသူ</string>
+  <string name="morphe_music_lyrics_translation_provider_google">Google (ပုံသေ၊ အခမဲ့)</string>
+  <string name="morphe_music_lyrics_translation_provider_openai_compatible">OpenAI နှင့် ကိုက်ညီသော (စိတ်ကြိုက်)</string>
+  <string name="morphe_music_lyrics_romanization_provider_title">ရောမအက္ခရာပြောင်းလဲမှု ပံ့ပိုးပေးသူ</string>
+  <string name="morphe_music_lyrics_romanization_provider_google">Google (ပုံသေ)</string>
+  <string name="morphe_music_lyrics_romanization_provider_local">ဒေသတွင်း / အော့ဖ်လိုင်း အဘိဓာန်</string>
+  <string name="morphe_music_lyrics_romanization_provider_openai_compatible">OpenAI နှင့် ကိုက်ညီသော (စိတ်ကြိုက်)</string>
+  <string name="morphe_music_lyrics_use_ai_section_title">AI အပိုင်း</string>
+  <string name="morphe_music_lyrics_use_ai_section_summary">Provider မှ Chorus သို့မဟုတ် Verse ကဲ့သို့သော အပိုင်းအမှတ်အသားများ ပေးမလာသောအခါတွင်သာ အသုံးပြုပြီး၊ ၎င်းတို့ကို သင်၏ OpenAI-နှင့် ကိုက်ညီသော မော်ဒယ်က ရှာဖွေဖော်ထုတ်ပေးမည်ဖြစ်သည်</string>
+  <string name="morphe_music_lyrics_ai_config_dialog_title">AI &amp; Cloud Endpoints</string>
+  <string name="morphe_music_lyrics_ai_config_dialog_instruction">AI ပံ့ပိုးပေးသူများအတွက် API key များ၊ မော်ဒယ်များ၊ endpoint များနှင့် prompt template များကို သတ်မှတ်ပါ။</string>
+  <string name="morphe_music_lyrics_ai_config_base_url_hint">API endpoint URL (ဥပမာ https://api.openai.com/v1/chat/completions)</string>
+  <string name="morphe_music_lyrics_ai_prompt_dialog_title">Prompt ပုံစံငယ်</string>
+  <string name="morphe_music_lyrics_ai_prompt_dialog_hint">နေရာလွတ်များ- {language}, {task}, {title}, {artist}, {count}, {lines}</string>
+  <string name="morphe_music_lyrics_ai_prompt_toast_saved">Prompt ကို သိမ်းဆည်းပြီးပါပြီ</string>
+  <string name="morphe_music_lyrics_ai_prompt_toast_endpoint_invalid">Prompt ကို သိမ်းဆည်းပြီးပါပြီ၊ သို့သော် AI endpoint ကို အသုံးမပြုနိုင်သေးပါ။ ပထမဦးစွာ AI Settings တွင် ၎င်းကို ပြင်ဆင်သတ်မှတ်ပါ</string>
+  <string name="morphe_music_lyrics_ai_prompt_toast_reset">Prompt ကို ပြန်လည်သတ်မှတ်ပြီးပါပြီ</string>
+  <string name="morphe_music_lyrics_ai_extra_body_invalid">JSON မှန်ကန်မှုမရှိပါ။ သိမ်းဆည်းခြင်းမပြုမီ ပြင်ဆင်ပါ သို့မဟုတ် နေရာလွတ်ကို ရှင်းလင်းပါ</string>
+  <string name="morphe_music_lyrics_ai_config_toast_saved">ဘာသာပြန်ဆိုခြင်း နှင့် ရိုမန်နိုက်ဇေးရှင်း ဆက်တင်များကို သိမ်းဆည်းပြီးပါပြီ</string>
+  <string name="morphe_music_lyrics_ai_config_toast_reset">ဆက်တင်များကို မူလအတိုင်း ပြန်လည်သတ်မှတ်ပြီးပါပြီ</string>
+  <string name="morphe_music_lyrics_ai_config_status_invalid_url">Base URL သည် http:// သို့မဟုတ် https:// နှင့် စတင်ရမည်</string>
+  <string name="morphe_music_lyrics_ai_config_test_connection">ချိတ်ဆက်မှုကို စမ်းသပ်မည်</string>
+  <string name="morphe_music_lyrics_ai_config_endpoint_label">Endpoints များကို သတ်မှတ်မည်</string>
+  <string name="morphe_music_lyrics_ai_config_show_all">Endpoints အားလုံးကို ပြပါ</string>
+  <string name="morphe_music_lyrics_ai_config_status_validating">ချိတ်ဆက်မှုကို စစ်ဆေးနေသည်…</string>
+  <string name="morphe_music_lyrics_ai_config_translation_provider_label">ဘာသာပြန်ပေးသူ</string>
+  <string name="morphe_music_lyrics_ai_config_romanization_provider_label">Romanization ပြုလုပ်ပေးသူ</string>
+  <string name="morphe_music_lyrics_ai_config_fetch_models">Models များကို ရယူမည်</string>
+  <string name="morphe_music_lyrics_ai_config_fetching_models">Models များကို ရယူနေသည်…</string>
+  <string name="morphe_music_lyrics_ai_config_fetch_models_success">Model တစ်ခုကို ရွေးချယ်ပါ</string>
+  <string name="morphe_music_lyrics_ai_config_fetch_models_failed">Models များကို ရယူ၍မရပါ။ API key သို့မဟုတ် ချိတ်ဆက်မှုကို စစ်ဆေးပါ။</string>
+  <string name="morphe_music_lyrics_ai_config_gemini_section">Gemini API ဆက်တင်များ</string>
+  <string name="morphe_music_lyrics_ai_config_openai_compat_section">OpenAI နှင့် ကိုက်ညီသော (Custom Endpoint)</string>
+  <string name="morphe_music_lyrics_ai_config_deepl_section">DeepL API ဆက်တင်များ</string>
+  <string name="morphe_music_lyrics_ai_config_api_key_label">API သော့</string>
+  <string name="morphe_music_lyrics_ai_config_model_label">မော်ဒယ်</string>
+  <string name="morphe_music_lyrics_ai_config_base_url_label">Base URL</string>
+  <string name="morphe_music_lyrics_ai_config_api_token_label">API key (ရွေးချယ်ရန်)</string>
+  <string name="morphe_music_lyrics_ai_config_prompt_label">ဘာသာပြန်ဆိုမှု prompt</string>
+  <string name="morphe_music_lyrics_ai_config_extra_body_label">အပို request body (ရွေးချယ်ရန် JSON)</string>
+  <string name="morphe_music_lyrics_ai_config_deepl_key_label">အသိအမှတ်ပြုကီး (အခမဲ့ သို့မဟုတ် Pro)</string>
+  <string name="morphe_music_lyrics_ai_config_summary">API ကီးများ၊ မော်ဒယ်များ၊ အဆုံးသတ်မှတ်များနှင့် ပရွမ်းများကို သတ်မှတ်ပါ</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
+  <string name="morphe_music_spoof_app_version_target_entry_8_23_51">8.23.51 - အထူစာလုံး အိုင်ကွန်များကို ပိတ်ပါ</string>
+  <string name="morphe_music_spoof_app_version_target_entry_9_13_51">9.13.51 - နောက်ထပ်လာမည့်အရာများ၊ စာသားများနှင့် ဆက်စပ်သော tab များကို ပြန်လည်ဖော်ပြသည်</string>
 </resources>

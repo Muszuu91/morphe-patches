@@ -17,62 +17,677 @@ Second \"item\" text"</string>
 -->
 <resources>
   <!-- misc.androidauto.androidAutoPatch -->
+  <string name="morphe_music_android_auto_last_played">છેલ્લે વગાડવામાં આવ્યું</string>
+  <string name="morphe_music_android_auto_subscriptions">સબસ્ક્રિપ્શન્સ</string>
+  <string name="morphe_music_android_auto_videos">વિડિયો</string>
+  <string name="morphe_music_android_auto_other_results">અન્ય પરિણામો</string>
+  <string name="morphe_music_android_auto_uploaded_songs">અપલોડ કરેલા ગીતો</string>
+  <string name="morphe_music_android_auto_uploaded_albums">અપલોડ કરેલા આલ્બમ્સ</string>
+  <string name="morphe_music_android_auto_uploaded_artists">અપલોડ કરેલા કલાકારો</string>
   <!-- app.morphe.patches.music.interaction.jam -->
+  <string name="morphe_music_jam_update_host_controls">પોઝ અને રિઝ્યુમનો ઉપયોગ કરવા માટે હોસ્ટના Jam પેચને અપડેટ કરો</string>
+  <string name="morphe_music_jam_probe_title">જેમ કતાર શેરિંગ</string>
+  <string name="morphe_music_jam_probe_summary">નજીકના Jam ને હોસ્ટ કરો અથવા તેમાં જોડાઓ અને Jam લેયર દ્વારા તેની કતારને એડિટ કરો</string>
+  <string name="morphe_music_jam_enabled_title">જેમ કતાર શેરિંગ સક્ષમ કરો</string>
+  <string name="morphe_music_jam_enabled_summary">YouTube Music ફરીથી શરૂ થયા પછી Jam ઇન્ટિગ્રેશનને સક્ષમ કરે છે</string>
+  <string name="morphe_music_jam_download_title">કાર્યરત કરવા માટે જેમ લેયર ડાઉનલોડ કરો</string>
+  <string name="morphe_music_jam_download_summary">તમારા બ્રાઉઝરમાં નવીનતમ Jam Layer રિલીઝ ખોલો</string>
+  <string name="morphe_music_jam_controls_title">જેમ કંટ્રોલ્સ</string>
+  <string name="morphe_music_jam_controls_summary">નજીકના Jam ને હોસ્ટ કરો અથવા તેમાં જોડાવો અને સેશનનું સંચાલન કરો</string>
+  <string name="morphe_music_jam_companion_package_title">જેમ લેયર પેકેજ</string>
+  <string name="morphe_music_jam_companion_package_summary">નજીકની કતાર શેરિંગ માટે વપરાતી ઇન્સ્ટોલ કરેલી સહાયક એપ પસંદ કરો</string>
+  <string name="morphe_music_jam_package_message">ઇન્સ્ટોલ કરેલ સહાયક પેકેજનો ઉપયોગ કરો. પેરિંગ માટે તમારી મંજૂરી અને લોકલ કેપેબિલિટી ટોકનની જરૂર છે</string>
+  <string name="morphe_music_jam_wifi_title">Wi-Fi ચાલુ કરવું છે?</string>
+  <string name="morphe_music_jam_wifi_message">Wi-Fi ચાલુ કરો, પછી ફરીથી Jam શરૂ કરવાનો અથવા તેમાં જોડાવાનો પ્રયાસ કરો</string>
+  <string name="morphe_music_jam_wifi_settings">Wi-Fi સેટિંગ્સ ખોલો</string>
+  <string name="morphe_music_jam_cancel">રદ કરો</string>
+  <string name="morphe_music_jam_use_package">પેકેજનો ઉપયોગ કરો</string>
+  <string name="morphe_music_jam_invalid_package">માન્ય Android પેકેજ નામ દાખલ કરો</string>
+  <string name="morphe_music_jam_package_saved">પેકેજ સેવ કરવામાં આવ્યું. કનેક્ટ કરવા માટે Jam Layer સેટ કરો</string>
+  <string name="morphe_music_jam_disconnected">Jam ડિસ્કનેક્ટ થયું</string>
+  <string name="morphe_music_jam_enable_layer_first">પહેલા Jam Layer સક્ષમ કરો</string>
+  <string name="morphe_music_jam_enable_patch_first">સેટિંગ્સમાં Jam કતાર શેરિંગ સક્ષમ કરો, પછી YouTube Music ફરીથી શરૂ કરો</string>
+  <string name="morphe_music_jam_install_layer_first">પહેલા પસંદ કરેલ Jam Layer પેકેજ ઇન્સ્ટોલ કરો</string>
+  <string name="morphe_music_jam_join_hint">હોસ્ટ પર દેખાતો કોડ દાખલ કરો. Wi-Fi Aware નજીકના ઉપકરણોને કનેક્ટ કરી શકે છે ભલે તેમના LAN અલગ હોય</string>
+  <string name="morphe_music_jam_join_with_code">કોડ વડે જોડાઓ</string>
+  <string name="morphe_music_jam_join">જોડાઓ</string>
+  <string name="morphe_music_jam_scan_qr">QR સ્કેન કરો</string>
+  <string name="morphe_music_jam_invalid_invite">આઠ-અક્ષરનો કોડ દાખલ કરો અથવા આમંત્રણ પેસ્ટ કરો</string>
+  <string name="morphe_music_jam_join_your_jam">તમારા Jam માં જોડાઓ</string>
+  <string name="morphe_music_jam_copy_code">કોડ કોપી કરો</string>
+  <string name="morphe_music_jam_code_clip">Jam કોડ</string>
+  <string name="morphe_music_jam_show_qr">QR બતાવો</string>
+  <string name="morphe_music_jam_done">થઈ ગયું</string>
+  <string name="morphe_music_jam_invite_title">તમારા Jam માં આમંત્રણ આપો</string>
+  <string name="morphe_music_jam_invite_message">આ કતારમાં જોડાવા અને તેને એડિટ કરવા માટે સ્કેન કરો. Jam સમાપ્ત કરવાથી આમંત્રણ રદ થશે</string>
+  <string name="morphe_music_jam_copy_link">લિંક કોપી કરો</string>
+  <string name="morphe_music_jam_invitation_clip">Jam આમંત્રણ</string>
+  <string name="morphe_music_jam_reconnecting_toast">Jam ફરીથી જોડાઈ રહ્યું છે; થોડીવાર પછી પ્રયાસ કરો</string>
+  <string name="morphe_music_jam_added_to_jam">Jam માં ઉમેરવામાં આવ્યું</string>
+  <string name="morphe_music_jam_unavailable_toast">Jam ઉપલબ્ધ નથી; ટ્રેક ઉમેરવામાં આવ્યો નથી</string>
+  <string name="morphe_music_jam_your_jam">તમારો Jam</string>
+  <string name="morphe_music_jam_listening_together">સાથે સાંભળી રહ્યા છો</string>
+  <string name="morphe_music_jam_joining_jam">Jam માં જોડાઈ રહ્યા છો</string>
+  <string name="morphe_music_jam_listen_together">સાથે સાંભળો</string>
+  <string name="morphe_music_jam_updating">Jam અપડેટ કરી રહ્યાં છીએ…</string>
+  <string name="morphe_music_jam_finding_host">Wi-Fi પર તમારા હોસ્ટને શોધી રહ્યા છીએ…</string>
+  <string name="morphe_music_jam_waiting_people">લોકોની રાહ જોઈ રહ્યા છીએ</string>
+  <string name="morphe_music_jam_one_connected">%s વ્યક્તિ કનેક્ટ થયેલ છે</string>
+  <string name="morphe_music_jam_many_connected">%s લોકો કનેક્ટ થયેલ છે</string>
+  <string name="morphe_music_jam_code_expires">નજીકના ઉપકરણ પર આ કોડ દાખલ કરો. Wi-Fi Aware સમર્થન હોય ત્યારે અલગ-અલગ LAN પર કામ કરે છે. %s મિનિટમાં સમાપ્ત થશે</string>
+  <string name="morphe_music_jam_seek_to">%s પર જાઓ?</string>
+  <string name="morphe_music_jam_edits_open">એડિટ્સ ખુલ્લા છે</string>
+  <string name="morphe_music_jam_edits_locked">એડિટ્સ લોક છે</string>
+  <string name="morphe_music_jam_connected_aware">Wi-Fi Aware દ્વારા જોડાયેલ છે</string>
+  <string name="morphe_music_jam_connected_wifi">Wi-Fi દ્વારા જોડાયેલ છે</string>
+  <string name="morphe_music_jam_connected_bluetooth">Bluetooth દ્વારા જોડાયેલ છે</string>
+  <string name="morphe_music_jam_unsupported">Jam દરમિયાન અસમર્થિત</string>
+  <string name="morphe_music_jam_cancelled">જોડાણ રદ કરવામાં આવ્યું</string>
+  <string name="morphe_music_jam_reconnecting_host">તમારા હોસ્ટ સાથે ફરીથી જોડાઈ રહ્યું છે…</string>
+  <string name="morphe_music_jam_share_prompt">કતાર શેર કરો. દરેકને ગીતો ઉમેરવા દો</string>
+  <string name="morphe_music_jam_invite_people">લોકોને આમંત્રિત કરો</string>
+  <string name="morphe_music_jam_guest_edits">મહેમાનો કતારમાં ફેરફાર કરી શકે છે</string>
+  <string name="morphe_music_jam_end_jam">જેમ સમાપ્ત કરો</string>
+  <string name="morphe_music_jam_participant_help">હોસ્ટ સંગીત વગાડે છે. YouTube Music ક્યુમાં સીધા ગીતો ઉમેરો, ખસેડો અથવા દૂર કરો</string>
+  <string name="morphe_music_jam_joining_help">બંને ઉપકરણો નજીક રાખો. જ્યાં સુધી અમે હોસ્ટને શોધીએ ત્યાં સુધી તમે રદ કરી શકો છો</string>
+  <string name="morphe_music_jam_cancel_joining">જોડાવાનું રદ કરો</string>
+  <string name="morphe_music_jam_leave_jam">જેમ છોડો</string>
+  <string name="morphe_music_jam_start_jam">જેમ શરૂ કરો</string>
+  <string name="morphe_music_jam_setup_layer">જેમ લેયર સેટ અપ કરો</string>
+  <string name="morphe_music_jam_manage">મેનેજ કરો</string>
+  <string name="morphe_music_jam_details">વિગતો</string>
+  <string name="morphe_music_jam_open">ખોલો</string>
+  <string name="morphe_music_jam_loading_song_options">ગીત વિકલ્પો લોડ કરી રહ્યું છે…</string>
+  <string name="morphe_music_jam_song_options_unavailable">ગીત વિકલ્પો ઉપલબ્ધ નથી; ફરી પ્રયાસ કરો</string>
+  <string name="morphe_music_jam_song_options_failed">ગીત વિકલ્પો ખોલી શકાયા નથી</string>
+  <string name="morphe_music_jam_no_browser">Jam Layer ડાઉનલોડ કરવા માટે કોઈ બ્રાઉઝર ઉપલબ્ધ નથી</string>
+  <string name="morphe_music_jam_waiting_host_queue">હોસ્ટ કતારની રાહ જુઓ</string>
+  <string name="morphe_music_jam_open_song_first">પહેલા YouTube Music માં ગીત ખોલો</string>
+  <string name="morphe_music_jam_play_on_host">હોસ્ટ પર પ્લે કરો</string>
+  <string name="morphe_music_jam_quit_and_play">Jam છોડો અને સ્થાનિક રીતે પ્લે કરો</string>
+  <string name="morphe_music_jam_play_next">Jam માં આગળ પ્લે કરો</string>
+  <string name="morphe_music_jam_add_to_queue">Jam કતારમાં ઉમેરો</string>
+  <string name="morphe_music_jam_play_track">આ Jam ટ્રેક પ્લે કરો</string>
+  <string name="morphe_music_jam_choose_playback">ક્યાં પ્લે કરવું તે પસંદ કરો</string>
+  <string name="morphe_music_jam_move_host_here">હોસ્ટને અહીં ખસેડો</string>
+  <string name="morphe_music_jam_seek_not_ready">સીક કરવા માટે ગીત તૈયાર થયું નથી</string>
+  <string name="morphe_music_jam_queue_changed_gesture">કતાર બદલાઈ ગઈ છે; જેસ્ચર ફરી પ્રયાસ કરો</string>
   <!-- layout.branding.customBrandingPatch -->
   <!-- layout.branding.header.changeHeaderPatch -->
+  <string name="morphe_header_logo_title">હેડર લોગો</string>
   <string name="morphe_header_logo_entry_1">ડિફૉલ્ટ</string>
+  <string name="morphe_header_logo_entry_3">કસ્ટમ</string>
   <!-- misc.album.albumMusicVideoPatch -->
+  <string name="morphe_music_play_album_songs_title">આલ્બમના ઓડિયો ટ્રેક્સ પ્લે કરો</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title' -->
+  <string name="morphe_music_play_album_songs_summary">મ્યુઝિક વિડિયોને બદલે ગીતોનું অ্যালবাম ઓડિયો-ઓનલી વર્ઝન પ્લે કરો. આ માટે \'Spoof video streams\' ની જરૂર છે</string>
   <!-- misc.audiovideoswitch.enableAudioVideoSwitchPatch -->
+  <string name="morphe_music_enable_audio_video_switch_title">ઓડિયો/વીડિયો સ્વિચ સક્ષમ કરો</string>
+  <string name="morphe_music_enable_audio_video_switch_summary">ઓડિયો ટ્રેક વર્ઝન અને ઓફિશિયલ મ્યુઝિક વીડિયો વચ્ચે સ્વિચ કરવાનો પ્રયાસ કરો</string>
   <!-- interaction.downloads.downloadsPatch -->
+  <string name="morphe_external_downloader_screen_summary">થર્ડ-પાર્ટી ડાઉનલોડિંગ એપ્સ દ્વારા મ્યુઝિક વિડિયો, પોડકાસ્ટ અથવા ગીતો ડાઉનલોડ કરો</string>
   <!-- 'Download' should be translated using the same localized wording YouTube displays for the menu. -->
+  <string name="morphe_external_downloader_menu_title">ડાઉનલોડ મેનૂ માટે બાહ્ય ડાઉનલોડરનો ઉપયોગ કરો</string>
+  <string name="morphe_external_downloader_menu_summary">મેનૂનો ડાઉનલોડ વિકલ્પ તેના બદલે તમારું બાહ્ય ડાઉનલોડર ખોલશે</string>
+  <string name="morphe_music_downloads_screen_title">ડાઉનલોડ્સ</string>
+  <string name="morphe_music_downloads_empty">"કોઈ ડાઉનલોડ્સ નથી
+ડાઉનલોડ કરેલા ટ્રેક્સ અહીં દેખાશે"</string>
+  <string name="morphe_music_downloads_track_subtitle">%1$s • %2$s • %3$s MB</string>
+  <string name="morphe_music_downloads_summary">%1$s ટ્રેક્સ • %2$s MB</string>
+  <string name="morphe_music_downloads_search_hint">ડાઉનલોડ્સ શોધો</string>
+  <string name="morphe_music_downloads_sort">ક્રમબદ્ધ કરો</string>
+  <string name="morphe_music_downloads_sort_artist">કલાકાર દ્વારા ક્રમબદ્ધ કરો</string>
+  <string name="morphe_music_downloads_sort_title">શીર્ષક દ્વારા ક્રમબદ્ધ કરો</string>
+  <string name="morphe_music_downloads_sort_size">કદ દ્વારા ક્રમબદ્ધ કરો</string>
+  <string name="morphe_music_downloads_delete_all">તમામ ડાઉનલોડ્સ કાઢી નાખો</string>
+  <string name="morphe_music_downloads_delete_all_title">તમામ ડાઉનલોડ્સ કાઢી નાખવા છે?</string>
+  <string name="morphe_music_downloads_delete_all_message">આ ઉપકરણમાંથી તમામ ડાઉનલોડ કરેલા ટ્રેક્સ કાઢી નાખવામાં આવશે</string>
+  <string name="morphe_music_downloads_all_deleted">ડાઉનલોડ્સ કાઢી નાખવામાં આવ્યા</string>
+  <string name="morphe_music_downloads_nothing_found">કંઈ મળ્યું નથી</string>
+  <string name="morphe_music_downloads_actions_for">%s માટેની ક્રિયાઓ</string>
+  <string name="morphe_music_downloads_play">ચલાવો</string>
+  <string name="morphe_music_downloads_play_pause">ચલાવો અથવા થોભાવો</string>
+  <string name="morphe_music_downloads_previous">અગાઉનું</string>
+  <string name="morphe_music_downloads_next">આગળનું</string>
+  <string name="morphe_music_downloads_pause">વિરામ</string>
+  <string name="morphe_music_downloads_close">બંધ કરો</string>
+  <string name="morphe_music_downloads_delete">કાઢી નાખો</string>
+  <string name="morphe_music_downloads_delete_track">ડાઉનલોડ કાઢી નાખો</string>
+  <string name="morphe_music_downloads_delete_track_title">ડાઉનલોડ કાઢી નાખવું છે?</string>
+  <string name="morphe_music_downloads_delete_track_message">%s આ ઉપકરણમાંથી કાઢી નાખવામાં આવશે</string>
+  <string name="morphe_music_downloads_track_deleted">ડાઉનલોડ કાઢી નાખવામાં આવ્યું</string>
+  <string name="morphe_music_downloads_track_delete_failed">ડાઉનલોડ કાઢી નાખવામાં આવ્યું નથી</string>
+  <string name="morphe_music_downloads_play_failed">ડાઉનલોડ પ્લે કરી શકાયું નથી</string>
+  <string name="morphe_music_downloads_notification_channel">ઓડિયો ડાઉનલોડ્સ</string>
+  <string name="morphe_music_downloads_playback_channel">ઓફલાઇન પ્લેબેક</string>
+  <string name="morphe_music_downloads_unknown_track">ડાઉનલોડ કરવા માટેના ટ્રેકને ઓળખી શકાયો નથી</string>
+  <string name="morphe_music_downloads_already_running">ડાઉનલોડ પહેલેથી જ ચાલુ છે</string>
+  <string name="morphe_music_downloads_already_saved">પહેલેથી જ ડાઉનલોડ કરેલ છે</string>
+  <string name="morphe_music_downloads_started">ડાઉનલોડ શરૂ થયું</string>
+  <string name="morphe_music_downloads_starting">ડાઉનલોડ શરૂ થઈ રહ્યું છે…</string>
+  <string name="morphe_music_downloads_progress">ડાઉનલોડ થઈ રહ્યું છે %s%%</string>
+  <string name="morphe_music_downloads_complete">ડાઉનલોડ પૂર્ણ થયું</string>
+  <string name="morphe_music_downloads_failed">ડાઉનલોડ નિષ્ફળ ગયું</string>
   <!-- misc.settings.settingsPatch -->
   <!-- In languages where "About" is ambiguous, translate this as "About Morphe" (i.e., About this app). -->
+  <string name="morphe_settings_music_screen_0_about_title">Morphe વિશે</string>
+  <string name="morphe_settings_music_screen_1_ads_title">જાહેરાતો</string>
+  <string name="morphe_settings_music_screen_2_feed_title">ફીડ</string>
+  <string name="morphe_settings_music_screen_3_general_title">સામાન્ય</string>
+  <string name="morphe_settings_music_screen_4_player_title">પ્લેયર</string>
+  <string name="morphe_settings_music_screen_5_lyrics_title">ગીતના શબ્દો</string>
+  <string name="morphe_settings_music_screen_9_misc_title">વિવિધ</string>
+  <string name="morphe_music_app_language_title">YouTube Music ભાષા</string>
+  <string name="morphe_music_app_language_summary_default">સિસ્ટમ ભાષા</string>
+  <string name="morphe_music_app_language_summary_unsupported">Android 13 અથવા તેનાથી પછીના વર્ઝનની જરૂર છે</string>
   <!-- ad.hideAdsPatch -->
+  <string name="morphe_music_hide_get_premium_label_title">\'Get Music Premium\' લેબલ છુપાવો</string>
+  <string name="morphe_music_hide_music_premium_promotions_title">Music Premium પ્રમોશન છુપાવો</string>
+  <string name="morphe_music_hide_video_ads_title">વીડિયો જાહેરાતો છુપાવો</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
+  <string name="morphe_music_hide_audio_video_toggle_title">ઓડિયો / વિડિયો ટોગલ છુપાવો</string>
+  <string name="morphe_music_hide_podcast_episode_download_button_title">ડાઉનલોડ બટન છુપાવો</string>
+  <string name="morphe_music_hide_podcast_episode_download_button_summary">પોડકાસ્ટ શોમાં ડાઉનલોડ બટન છુપાવે છે</string>
+  <string name="morphe_music_hide_explore_shelf_title">Explore શેલ્ફ છુપાવો</string>
+  <string name="morphe_music_hide_filter_bar_title">ફિલ્ટર બાર છુપાવો</string>
+  <string name="morphe_music_hide_grid_shelves_title">ગ્રીડ શેલ્ફ છુપાવો</string>
+  <string name="morphe_music_hide_horizontal_shelves_title">હોરિઝોન્ટલ શેલ્ફ છુપાવો</string>
+  <string name="morphe_music_hide_list_shelves_title">લિસ્ટ શેલ્ફ છુપાવો</string>
+  <string name="morphe_music_hide_lyrics_panel_category_title">લિરિક્સ પેનલ</string>
+  <string name="morphe_music_hide_lyrics_share_button_title">શેર બટન છુપાવો</string>
+  <string name="morphe_music_hide_lyrics_translate_button_title">ટ્રાન્સલેટ બટન છુપાવો</string>
+  <string name="morphe_music_hide_new_from_shelf_title">\'New from\' શેલ્ફ છુપાવો</string>
+  <string name="morphe_music_hide_playlist_shelves_title">પ્લેલિસ્ટ શેલ્ફ છુપાવો</string>
+  <string name="morphe_music_hide_repeat_button_title">Repeat બટન છુપાવો</string>
+  <string name="morphe_music_hide_shuffle_button_title">Shuffle બટન છુપાવો</string>
+  <string name="morphe_music_hide_speed_dial_shelf_title">\'Speed dial\' શેલ્ફ છુપાવો</string>
+  <string name="morphe_music_comments_screen_title">ટિપ્પણીઓ</string>
+  <string name="morphe_music_comments_screen_summary">કોમેન્ટ્સ વિભાગમાં કયા ઘટકો દેખાય તે પસંદ કરો</string>
+  <string name="morphe_music_hide_comments_community_guidelines_title">કમ્યુનિટી ગાઈડલાઈન્સ છુપાવો</string>
+  <string name="morphe_music_hide_comments_context_title">સંદર્ભ સંદેશ છુપાવો</string>
+  <string name="morphe_music_hide_comments_emoji_button_title">ઇમોજી બટન છુપાવો</string>
+  <string name="morphe_music_hide_comments_info_button_title">માહિતી બટન છુપાવો</string>
+  <string name="morphe_music_hide_comments_timestamp_button_title">ટાઇમસ્ટેમ્પ બટન છુપાવો</string>
   <!-- interaction.crossfade.crossfadePatch -->
+  <string name="morphe_music_crossfade_screen_title">ક્રોસફેડ</string>
+  <string name="morphe_music_crossfade_screen_summary">ટ્રેક્સને એકબીજામાં સરળતાથી મિશ્ર કરો</string>
+  <string name="morphe_music_crossfade_enabled_title">ક્રોસફેડ સક્ષમ કરો</string>
+  <string name="morphe_music_crossfade_curve_title">ફેડ કર્વ</string>
+  <string name="morphe_music_crossfade_curve_entry_equal_power">ઇકવલ પાવર</string>
+  <string name="morphe_music_crossfade_curve_entry_ease_out_cubic">સૂક્ષ્મ પકડ</string>
+  <string name="morphe_music_crossfade_curve_entry_ease_out_quad">નમ્ર ઇઝ</string>
+  <string name="morphe_music_crossfade_curve_entry_smoothstep">સ્મૂધ S-કર્વ</string>
   <!-- Empty string because custom preference handles the title itself -->
+  <string name="morphe_music_crossfade_curve_preview_outgoing">આઉટગોઇંગ</string>
+  <string name="morphe_music_crossfade_curve_preview_incoming">ઇનકમિંગ</string>
+  <string name="morphe_music_crossfade_duration_title">ક્રોસફેડ સમયગાળો</string>
+  <string name="morphe_crossfade_duration_250ms">250 મિલીસેકન્ડ</string>
+  <string name="morphe_crossfade_duration_500ms">500 મિલીસેકન્ડ</string>
+  <string name="morphe_crossfade_duration_750ms">750 મિલીસેકન્ડ</string>
+  <string name="morphe_crossfade_duration_1000ms">1 સેકન્ડ</string>
+  <string name="morphe_crossfade_duration_2000ms">2 સેકન્ડ</string>
+  <string name="morphe_crossfade_duration_3000ms">3 સેકન્ડ</string>
+  <string name="morphe_crossfade_duration_4000ms">4 સેકન્ડ</string>
+  <string name="morphe_crossfade_duration_5000ms">5 સેકન્ડ</string>
+  <string name="morphe_crossfade_duration_6000ms">6 સેકન્ડ</string>
+  <string name="morphe_crossfade_duration_7000ms">7 સેકન્ડ</string>
+  <string name="morphe_crossfade_duration_8000ms">8 સેકન્ડ</string>
+  <string name="morphe_crossfade_duration_9000ms">9 સેકન્ડ</string>
+  <string name="morphe_crossfade_duration_10000ms">10 સેકન્ડ</string>
+  <string name="morphe_crossfade_duration_11000ms">11 સેકન્ડ</string>
+  <string name="morphe_crossfade_duration_12000ms">12 સેકન્ડ</string>
+  <string name="morphe_music_crossfade_on_skip_title">મેન્યુઅલ સ્કીપ પર ક્રોસફેડ કરો</string>
+  <string name="morphe_music_crossfade_on_skip_summary">જ્યારે તમે મેન્યુઅલી આગલા ટ્રેક પર જાઓ છો ત્યારે ક્રોસફેડ ઇફેક્ટ લાગુ કરે છે</string>
+  <string name="morphe_music_crossfade_on_auto_advance_title">ઓટો-એડવાન્સ પર ક્રોસફેડ કરો</string>
+  <string name="morphe_music_crossfade_on_auto_advance_summary">જ્યારે ટ્રેક કુદરતી રીતે સમાપ્ત થાય છે ત્યારે ક્રોસફેડ ઇફેક્ટ લાગુ કરે છે</string>
+  <string name="morphe_music_crossfade_session_control_title">સેશન કંટ્રોલ</string>
+  <string name="morphe_music_crossfade_session_control_summary">ક્રોસફેડને થોભાવવા અથવા ફરી શરૂ કરવા માટે શફલ બટન પર લાંબો સમય દબાવો</string>
+  <string name="morphe_music_crossfade_paused_toast">આ સેશન માટે ક્રોસફેડ વિરામ રાખ્યું છે</string>
+  <string name="morphe_music_crossfade_resumed_toast">ક્રોસફેડ ફરી શરૂ થયું</string>
+  <string name="morphe_music_crossfade_video_mode_disabled_toast">ક્રોસફેડ સક્ષમ હોય ત્યારે વિડિયો મોડ ઉપલબ્ધ નથી</string>
+  <string name="morphe_music_crossfade_sabr_toast">SABR પ્લેબેક સાથે ક્રોસફેડ બંધ છે</string>
+  <string name="morphe_music_crossfade_cast_unstable_toast">કાસ્ટિંગ દરમિયાન ક્રોસફેડ બંધ છે</string>
+  <string name="morphe_music_crossfade_about_how_title">તે કેવી રીતે કામ કરે છે</string>
+  <string name="morphe_music_crossfade_about_how_summary">"ક્રોસફેડ તમારી અવધિ અને કર્વનો ઉપયોગ કરીને એક ગીતના અંતને બીજા ગીતની શરૂઆત સાથે ઓવરલેપ કરે છે
+
+તે ઓટો-એડવાન્સ અને મેન્યુઅલ સ્કીપ પર ચાલે છે, જેમાં દરેક માટે અલગ ટોગલ છે. ઓટો-એડવાન્સ પર, ગીત સમાપ્ત થાય તે થોડી સેકન્ડો પહેલા મિશ્રણ શરૂ થાય છે"</string>
+  <string name="morphe_music_crossfade_about_quirks_title">મર્યાદાઓ</string>
+  <string name="morphe_music_crossfade_about_quirks_summary">"ક્રોસફેડ ચાલુ હોય ત્યારે મ્યુઝિક વીડિયો ફક્ત ઓડિયો તરીકે પ્લે થાય છે. ક્રોસફેડને પોઝ કરવા અને વીડિયો જોવા માટે શફલને લોંગ-પ્રેસ કરો
+
+પ્લેબેક શરૂ કરતો મ્યુઝિક વીડિયો આગલા ગીત સુધી વીડિયો મોડમાં રહે છે
+
+ફેડ સમયગાળા કરતા ટૂંકા ગીતોમાં ક્રોસફેડ થતું નથી
+
+લોક સ્ક્રીન અથવા નોટિફિકેશન ટ્રાન્ઝિશન દરમિયાન ટૂંક સમય માટે જૂની સ્થિતિ બતાવી શકે છે
+
+મ્યુઝિક વીડિયો જોવા માટે ક્રોસફેડને પોઝ કરવાથી કેટલાક વીડિયો બ્લેક રહી શકે છે. ગીત પસંદ કરતા પહેલા ક્રોસફેડને પોઝ કરવાથી આ સમસ્યા ટાળી શકાય છે"</string>
+  <string name="morphe_music_crossfade_about_unsupported_title">સપોર્ટેડ નથી</string>
+  <string name="morphe_music_crossfade_about_unsupported_summary">"ઓડિયો કાસ્ટિંગ અથવા મિરરિંગ (Chromecast, સ્ક્રીન અથવા ઓડિયો મિરરિંગ)
+
+SABR પ્લેબેક (Spoof વિડિયો સ્ટ્રીમ્સ બંધ કરેલ છે)"</string>
+  <string name="morphe_music_crossfade_about_credit_title">ક્રેડિટ</string>
+  <string name="morphe_music_crossfade_about_credit_summary">VazerOG દ્વારા ક્રોસફેડ ફીચર</string>
   <!-- interaction.remember.repeatstate.rememberRepeatStatePatch-->
+  <string name="morphe_music_remember_repeat_state_title">રિપીટ સ્ટેટ યાદ રાખો</string>
   <!-- interaction.remember.shufflestate.rememberShuffleStatePatch -->
+  <string name="morphe_music_remember_shuffle_state_title">શફલ સ્ટેટ યાદ રાખો</string>
   <!-- video.speed.playbackSpeedPatch -->
+  <string name="morphe_music_playback_speed_title">પ્લેબેક ઝડપ</string>
+  <string name="morphe_music_playback_speed_summary">તમામ ટ્રેક માટે વપરાતી ઝડપ. 100% પર એપની ઝડપનો ઉપયોગ થાય છે, જેમ કે પોડકાસ્ટ પ્લેબેક ઝડપ</string>
+  <string name="morphe_music_playback_speed_change_pitch_title">ઝડપ સાથે પિચ બદલો</string>
   <!-- interaction.dislikeredirection.disableDislikeRedirectionPatch -->
+  <string name="morphe_music_disable_dislike_redirection_title">ડિસલાઈક રીડાયરેક્શન વિકલ્પો બંધ કરો</string>
+  <string name="morphe_music_disable_dislike_redirection_summary">જ્યારે ડિસલાઈક બટન દબાવવામાં આવે ત્યારે આગળના ટ્રેક પર જવાનું અટકાવે છે</string>
   <!-- interaction.playlisttracktap.playlistTrackTapPatch -->
+  <string name="morphe_music_playlist_track_tap_action_title">પ્લેલિસ્ટ ટ્રેક ટેપ એક્શન</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_default">પ્લેલિસ્ટ પ્લે કરો</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_play_single_track">માત્ર પસંદ કરેલ ટ્રેક પ્લે કરો</string>
+  <string name="morphe_music_playlist_track_tap_action_entry_add_to_queue">પસંદ કરેલ ટ્રેકને કતારમાં ઉમેરો</string>
   <!-- 'Added to queue' should be translated using the same localized wording YouTube Music displays for the toast. -->
+  <string name="morphe_music_playlist_track_tap_added_to_queue">ક્યુમાં ઉમેરવામાં આવ્યું</string>
   <!-- layout.buttons.hideButtonsPatch -->
+  <string name="morphe_music_hide_cast_button_title">કાસ્ટ બટન છુપાવો</string>
+  <string name="morphe_music_hide_history_button_title">હિસ્ટ્રી બટન છુપાવો</string>
+  <string name="morphe_music_hide_notification_button_title">નોટિફિકેશન બટન છુપાવો</string>
+  <string name="morphe_music_hide_search_button_title">સર્ચ બટન છુપાવો</string>
+  <string name="morphe_music_hide_voice_search_button_title">વોઇસ સર્ચ બટન છુપાવો</string>
+  <string name="morphe_music_hide_sound_search_button_title">સાઉન્ડ સર્ચ બટન છુપાવો</string>
+  <string name="morphe_music_hide_library_new_button_title">New બટન છુપાવો</string>
+  <string name="morphe_music_hide_library_new_button_summary">લાઇબ્રેરી ટેબમાં New બટન છુપાવે છે</string>
   <!-- layout.hide.actionbuttons.hideActionButtonsPatch -->
+  <string name="morphe_music_action_buttons_screen_title">એક્શન બટનો</string>
+  <string name="morphe_music_action_buttons_screen_summary">પ્લેયરની નીચે કયા એક્શન બટનો દેખાય તે પસંદ કરો</string>
+  <string name="morphe_music_hide_action_bar_title">એક્શન બાર છુપાવો</string>
+  <string name="morphe_music_hide_like_dislike_button_title">લાઈક અને ડિસલાઈક બટન છુપાવો</string>
+  <string name="morphe_music_hide_comments_button_title">કોમેન્ટ્સ બટન છુપાવો</string>
   <!-- 'Live chat replay' should be translated using the same localized wording YouTube Music displays for the button. -->
+  <string name="morphe_music_hide_live_chat_replay_button_title">\'Live chat replay\' બટન છુપાવો</string>
   <!-- 'Lyrics' should be translated using the same localized wording YouTube Music displays for the button. -->
+  <string name="morphe_music_hide_lyrics_button_title">ગીતના શબ્દો બટન છુપાવો</string>
   <!-- 'Share' should be translated using the same localized wording YouTube Music displays for the button. -->
+  <string name="morphe_music_hide_share_button_title">શેર બટન છુપાવો</string>
   <!-- 'Save' should be translated using the same localized wording YouTube Music displays for the button. -->
+  <string name="morphe_music_hide_save_button_title">સેવ બટન છુપાવો</string>
   <!-- 'Download' should be translated using the same localized wording YouTube Music displays for the button. -->
+  <string name="morphe_music_hide_download_button_title">ડાઉનલોડ બટન છુપાવો</string>
   <!-- 'Start radio' should be translated using the same localized wording YouTube Music displays for the button. -->
+  <string name="morphe_music_hide_radio_button_title">\'રેડિયો શરૂ કરો\' બટન છુપાવો</string>
   <!-- flyoutmenu.components.hideFlyoutMenuComponentsPatch -->
+  <string name="morphe_music_hide_flyout_menu_components_screen_title">ફ્લાયઆઉટ મેનુ</string>
+  <string name="morphe_music_hide_flyout_menu_components_screen_summary">પ્લેયર અને ક્યુ ફ્લાયઆઉટ મેનુમાં કયા ઘટકો દેખાય તે પસંદ કરો</string>
+  <string name="morphe_music_hide_flyout_menu_3_column_component_title">3-કૉલમ ઘટક છુપાવો</string>
+  <string name="morphe_music_hide_flyout_menu_like_dislike_title">લાઈક અને ડિસલાઈક બટનો છુપાવો</string>
+  <string name="morphe_music_hide_flyout_menu_taste_match_title">\'ટેસ્ટ મેચ\' મેનુ છુપાવો</string>
+  <string name="morphe_music_hide_flyout_menu_add_to_listen_later_title">\'Listen later\' પ્લેલિસ્ટમાં ઉમેરો\' મેનુ છુપાવો</string>
+  <string name="morphe_music_hide_flyout_menu_add_to_queue_title">\'ક્યુમાં ઉમેરો\' મેનુ છુપાવો</string>
+  <string name="morphe_music_hide_flyout_menu_captions_title">કેપ્શન્સ મેનૂ છુપાવો</string>
+  <string name="morphe_music_hide_flyout_menu_delete_playlist_title">\'પ્લેલિસ્ટ ડિલીટ કરો\' મેનુ છુપાવો</string>
+  <string name="morphe_music_hide_flyout_menu_dismiss_queue_title">\'ક્યુ ડિસમિસ કરો\' મેનુ છુપાવો</string>
+  <string name="morphe_music_hide_flyout_menu_dont_recommend_artist_title">\'આ કલાકારની ભલામણ ન કરો\' મેનુ છુપાવો</string>
+  <string name="morphe_music_hide_flyout_menu_download_title">ડાઉનલોડ મેનૂ છુપાવો</string>
+  <string name="morphe_music_hide_flyout_menu_edit_playlist_title">\'પ્લેલિસ્ટ સંપાદિત કરો\' મેનુ છુપાવો</string>
+  <string name="morphe_music_hide_flyout_menu_go_to_album_title">\'એલબમ પર જાઓ\' મેનુ છુપાવો</string>
+  <string name="morphe_music_hide_flyout_menu_go_to_artist_title">\'કલાકાર પર જાઓ\' મેનુ છુપાવો</string>
+  <string name="morphe_music_hide_flyout_menu_go_to_episode_title">\'એપિસોડ પર જાઓ\' મેનુ છુપાવો</string>
+  <string name="morphe_music_hide_flyout_menu_go_to_podcast_title">\'પોડકાસ્ટ પર જાઓ\' મેનુ છુપાવો</string>
+  <string name="morphe_music_hide_flyout_menu_help_title">મદદ મેનુ છુપાવો</string>
+  <string name="morphe_music_hide_flyout_menu_mark_episode_as_played_title">\'એપિસોડને પ્લે કરેલ તરીકે ચિહ્નિત કરો\' મેનુ છુપાવો</string>
+  <string name="morphe_music_hide_flyout_menu_not_interested_title">\'રસપ્રદ નથી\' મેનુ છુપાવો</string>
+  <string name="morphe_music_hide_flyout_menu_pin_to_speed_dial_title">\'સ્પીડ ડાયલ પર પિન કરો\' મેનુ છુપાવો</string>
+  <string name="morphe_music_hide_flyout_menu_play_next_title">\'આગળ પ્લે કરો\' મેનુ છુપાવો</string>
+  <string name="morphe_music_hide_flyout_menu_quality_title">ગુણવત્તા મેનુ છુપાવો</string>
+  <string name="morphe_music_hide_flyout_menu_remove_from_library_title">\'લાઇબ્રેરીમાંથી દૂર કરો\' મેનુ છુપાવો</string>
+  <string name="morphe_music_hide_flyout_menu_remove_from_playlist_title">\'પ્લેલિસ્ટમાંથી દૂર કરો\' મેનુ છુપાવો</string>
+  <string name="morphe_music_hide_flyout_menu_report_title">રિપોર્ટ મેનુ છુપાવો</string>
+  <string name="morphe_music_hide_flyout_menu_save_episode_for_later_save_to_library_title">\'એપિસોડ પછી માટે સાચવો\' / \'લાઇબ્રેરીમાં સાચવો\' મેનુ છુપાવો</string>
+  <string name="morphe_music_hide_flyout_menu_save_to_playlist_title">\'પ્લેલિસ્ટમાં સાચવો\' મેનુ છુપાવો</string>
+  <string name="morphe_music_hide_flyout_menu_share_title">શેર મેનુ છુપાવો</string>
+  <string name="morphe_music_hide_flyout_menu_shuffle_play_title">\'શફલ પ્લે\' મેનુ છુપાવો</string>
+  <string name="morphe_music_hide_flyout_menu_sleep_timer_title">\'સ્લીપ ટાઇમર\' મેનુ છુપાવો</string>
+  <string name="morphe_music_hide_flyout_menu_start_radio_title">\'રેડિયો શરૂ કરો\' મેનુ છુપાવો</string>
+  <string name="morphe_music_hide_flyout_menu_stats_for_nerds_title">\'સ્ટેટ્સ ફોર નર્ડ્સ\' મેનુ છુપાવો</string>
+  <string name="morphe_music_hide_flyout_menu_subscribe_title">સબ્સ્ક્રાઇબ મેનુ છુપાવો</string>
+  <string name="morphe_music_hide_flyout_menu_unpin_from_speed_dial_title">\'સ્પીડ ડાયલ પરથી અનપિન કરો\' મેનુ છુપાવો</string>
+  <string name="morphe_music_hide_flyout_menu_view_song_credit_title">\'ગીત ક્રેડિટ્સ જુઓ\' મેનુ છુપાવો</string>
   <!-- layout.startpage.changeStartPagePatch -->
+  <string name="morphe_change_start_page_title">શરૂઆતનું પેજ</string>
   <string name="morphe_change_start_page_entry_default">ડિફૉલ્ટ</string>
+  <string name="morphe_change_start_page_entry_charts">ચાર્ટ્સ</string>
+  <string name="morphe_change_start_page_entry_episodes_for_later">પછી માટે એપિસોડ્સ</string>
+  <string name="morphe_change_start_page_entry_explore">એક્સપ્લોર</string>
+  <string name="morphe_change_start_page_entry_history">ઇતિહાસ</string>
+  <string name="morphe_change_start_page_entry_library">લાઇબ્રેરી</string>
+  <string name="morphe_change_start_page_entry_liked_music">પસંદ કરેલું સંગીત</string>
+  <string name="morphe_change_start_page_entry_playlists">પ્લેલિસ્ટ્સ</string>
   <string name="morphe_change_start_page_entry_search">શોધો</string>
+  <string name="morphe_change_start_page_entry_subscriptions">સબ્સ્ક્રિપ્શન્સ</string>
   <!-- layout.orientation.forcePortraitOrientationPatch -->
+  <string name="morphe_music_force_portrait_orientation_title">ફોર્સ પોર્ટ્રેટ ઓરિએન્ટેશન</string>
+  <string name="morphe_music_force_portrait_orientation_summary">જ્યારે ઉપકરણને ફેરવવામાં આવે ત્યારે એપને પોર્ટ્રેટ ઓરિએન્ટેશનમાં રાખે છે</string>
   <!-- layout.miniplayer.changeMiniplayerColorPatch -->
+  <string name="morphe_music_change_miniplayer_color_title">Miniplayer નો રંગ બદલો</string>
+  <string name="morphe_music_change_miniplayer_color_summary">મિનીપ્લેયરના રંગને ફુલસ્ક્રીન પ્લેયર સાથે મેચ કરે છે</string>
+  <string name="morphe_music_change_navigation_bar_color_title">નેવિગેશન બારનો રંગ બદલો</string>
+  <string name="morphe_music_change_navigation_bar_color_summary">નેવિગેશન બારના રંગને ફુલસ્ક્રીન પ્લેયર સાથે મેળવશે</string>
   <!-- layout.miniplayer.miniplayerNextPreviousButtonsPatch -->
+  <string name="morphe_music_miniplayer_next_button_title">મિનીપ્લેયરમાં નેક્સ્ટ બટન બતાવો</string>
+  <string name="morphe_music_miniplayer_previous_button_title">મિનીપ્લેયરમાં પ્રીવિયસ બટન બતાવો</string>
   <!-- layout.miniplayer.enableForcedMiniplayerPatch -->
+  <string name="morphe_music_enable_forced_miniplayer_title">ફોર્સ્ડ મિનીપ્લેયર સક્ષમ કરો</string>
+  <string name="morphe_music_enable_forced_miniplayer_summary">જ્યારે નવું ટ્રેક શરૂ થાય ત્યારે પ્લેયરને આપમેળે ફૂલસ્ક્રીનમાં વિસ્તરતા અટકાવે છે</string>
   <!-- layout.miniplayer.enableSwipeToDismissMiniplayerPatch -->
+  <string name="morphe_music_enable_swipe_to_dismiss_miniplayer_title">મિનીપ્લેયરને ડિસમિસ કરવા માટે સ્વાઇપ કરો તેને સક્ષમ કરો</string>
+  <string name="morphe_music_enable_swipe_to_dismiss_miniplayer_summary">તેના પર નીચે સ્વાઇપ કરીને મિનીપ્લેયરને ડિસમિસ કરવાની મંજૂરી આપે છે</string>
   <!-- layout.navigationbar.navigationBarPatch -->
+  <string name="morphe_music_navigation_bar_screen_title">નેવિગેશન બાર</string>
+  <string name="morphe_music_navigation_bar_screen_summary">નીચેના નેવિગેશન બારમાં કયા બટનો દેખાય તે પસંદ કરો</string>
   <!-- 'Home' should be translated using the same localized wording YouTube Music displays for the tab. -->
+  <string name="morphe_music_hide_navigation_bar_home_button_title">હોમ બટન છુપાવો</string>
   <!-- 'Samples' should be translated using the same localized wording YouTube Music displays for the tab. -->
+  <string name="morphe_music_hide_navigation_bar_samples_button_title">સેમ્પલ્સ બટન છુપાવો</string>
   <!-- 'Explore' should be translated using the same localized wording YouTube Music displays for the tab. -->
+  <string name="morphe_music_hide_navigation_bar_explore_button_title">એક્સપ્લોર બટન છુપાવો</string>
   <!-- 'Library' should be translated using the same localized wording YouTube Music displays for the tab. -->
+  <string name="morphe_music_hide_navigation_bar_library_button_title">લાઇબ્રેરી બટન છુપાવો</string>
   <!-- 'Upgrade' should be translated using the same localized wording YouTube Music displays for the tab. -->
+  <string name="morphe_music_hide_navigation_bar_upgrade_button_title">અપગ્રેડ બટન છુપાવો</string>
+  <string name="morphe_music_hide_navigation_bar_title">નેવિગેશન બાર છુપાવો</string>
+  <string name="morphe_music_hide_navigation_bar_labels_title">નેવિગેશન બટન લેબલ્સ છુપાવો</string>
   <!-- interaction.scrobbling.scrobblingPatch -->
+  <string name="morphe_music_scrobbling_summary_logged_out">લોગ ઇન નથી. કોન્ફિગર કરવા માટે ટેપ કરો</string>
+  <string name="morphe_music_scrobbling_log_out">લોગ આઉટ</string>
+  <string name="morphe_music_scrobbling_logged_out_toast">લોગ આઉટ થઈ ગયું</string>
   <!-- 'scrobbling' must be kept untranslated -->
+  <string name="morphe_music_scrobbling_enabled_title">Scrobbling સક્ષમ કરો</string>
+  <string name="morphe_music_scrobbling_now_playing_title">\'હમણાં વગાડી રહ્યા છો\' સ્ટેટસ સબમિટ કરો</string>
+  <string name="morphe_music_scrobbling_min_song_duration_title">ગીતની ન્યૂનતમ અવધિ</string>
   <!-- 'scrobbled' must be kept untranslated -->
+  <string name="morphe_music_scrobbling_min_song_duration_summary">આનાથી ટૂંકા ગીતો scrobbled કરવામાં આવશે નહીં</string>
   <!-- 'scrobble' must be kept untranslated -->
+  <string name="morphe_music_scrobbling_delay_percent_title">Scrobble વિલંબ ટકાવારી</string>
   <!-- 'scrobble' must be kept untranslated -->
+  <string name="morphe_music_scrobbling_delay_percent_summary">ગીતના આ ટકાવારી સાંભળ્યા પછી scrobble ટ્રિગર કરો</string>
   <!-- 'scrobble' must be kept untranslated -->
+  <string name="morphe_music_scrobbling_delay_seconds_title">Scrobble વિલંબ સેકન્ડ</string>
   <!-- 'scrobble' must be kept untranslated -->
+  <string name="morphe_music_scrobbling_delay_seconds_summary">આટલી સેકન્ડ સાંભળ્યા પછી scrobble ટ્રિગર કરો</string>
+  <string name="morphe_music_listenbrainz_token_title">ListenBrainz એકાઉન્ટ</string>
+  <string name="morphe_music_listenbrainz_token_summary_logged_in">લોગ ઇન છે. એકાઉન્ટ મેનેજ કરવા માટે ટેપ કરો</string>
   <!-- 'scrobbling' must be kept untranslated -->
+  <string name="morphe_music_listenbrainz_token_dialog_instruction">scrobbling સક્ષમ કરવા માટે તમારું ListenBrainz યુઝર ટોકન દાખલ કરો</string>
+  <string name="morphe_music_listenbrainz_token_dialog_hint">ટોકન</string>
+  <string name="morphe_music_listenbrainz_token_dialog_verify">ચકાસો</string>
+  <string name="morphe_music_listenbrainz_token_status_empty">કૃપા કરીને ટોકન દાખલ કરો</string>
+  <string name="morphe_music_listenbrainz_token_status_validating">ચકાસણી થઈ રહી છે…</string>
+  <string name="morphe_music_listenbrainz_token_status_valid">માન્ય ટોકન! વપરાશકર્તા: %s</string>
+  <string name="morphe_music_listenbrainz_token_status_invalid">અમાન્ય ટોકન: %s</string>
   <string name="morphe_music_listenbrainz_token_status_invalid_unknown">અજ્ઞાત</string>
+  <string name="morphe_music_listenbrainz_token_status_failed">ચકાસણી નિષ્ફળ ગઈ: %s</string>
+  <string name="morphe_music_listenbrainz_token_toast_cleared">ટોકન દૂર કરવામાં આવ્યું</string>
+  <string name="morphe_music_listenbrainz_token_toast_saved">ટોકન સાચવવામાં આવ્યું</string>
+  <string name="morphe_music_listenbrainz_token_toast_invalid_warning">ચેતવણી: સાચવેલ ટોકન અમાન્ય છે!</string>
+  <string name="morphe_music_lastfm_love_on_like_title">પસંદ કરેલા ટ્રેક્સને લવ કરો</string>
+  <string name="morphe_music_lastfm_love_on_like_summary">જ્યારે તમે YouTube Music પર ગીતોને પસંદ કરો છો ત્યારે Last.fm પર આપોઆપ લવ ટ્રેક્સ ઉમેરો (અને અનલાઇક અથવા ડિસલાઇક કરવા પર લવ દૂર કરો)</string>
+  <string name="morphe_music_lastfm_token_title">Last.fm એકાઉન્ટ</string>
+  <string name="morphe_music_lastfm_token_summary_logged_in">%s તરીકે લોગ ઇન કરેલ છે. એકાઉન્ટ મેનેજ કરવા માટે ટેપ કરો</string>
+  <string name="morphe_music_lastfm_token_dialog_instruction">લોગ ઇન કરવા માટે તમારી Last.fm વિગતો દાખલ કરો</string>
+  <string name="morphe_music_lastfm_token_dialog_username_hint">વપરાશકર્તા નામ</string>
+  <string name="morphe_music_lastfm_token_dialog_password_hint">પાસવર્ડ</string>
+  <string name="morphe_music_lastfm_token_dialog_login">લોગ ઇન કરો</string>
+  <string name="morphe_music_lastfm_token_status_empty">કૃપા કરીને વપરાશકર્તા નામ અને પાસવર્ડ દાખલ કરો</string>
+  <string name="morphe_music_lastfm_token_status_logging_in">લોગ-ઇન થઈ રહ્યું છે…</string>
+  <string name="morphe_music_lastfm_token_status_success">સફળતાપૂર્વક લોગ ઇન થયું!</string>
+  <string name="morphe_music_lastfm_token_status_no_session">Last.fm પરથી સેશન મેળવવામાં નિષ્ફળતા</string>
+  <string name="morphe_music_lastfm_token_status_failed">લોગિન નિષ્ફળ રહ્યું: %s</string>
+  <string name="morphe_music_lastfm_token_toast_saved">Last.fm ઓળખપત્રો સાચવવામાં આવ્યા!</string>
+  <string name="morphe_settings_music_scrobbling_metadata_title">મેટાડેટા ક્લીનઅપ</string>
+  <string name="morphe_music_scrobbling_metadata_cleanup_title">મેટાડેટા ક્લીનઅપ કરો</string>
+  <string name="morphe_music_scrobbling_metadata_cleanup_summary">scrobbling કરતા પહેલા શીર્ષકો, કલાકારો અને આલ્બમ્સમાંથી સામાન્ય કચરો (જેમ કે \"Official Video\", \"Remaster\", \"Live\") આપમેળે સાફ કરો</string>
+  <string name="morphe_music_scrobbling_custom_regex_title">કસ્ટમ regex ક્લીનઅપ</string>
+  <string name="morphe_music_scrobbling_custom_regex_summary">ગીતનાં શીર્ષકો, કલાકારો અથવા આલ્બમ્સમાંથી વધારાનું લખાણ દૂર કરવા માટે કસ્ટમ નિયમિત અભિવ્યક્તિ દાખલ કરો. ઉદાહરણ: (?i)\\s*\\((clean|explicit)\\)</string>
+  <string name="morphe_music_scrobbling_parse_title_title">શીર્ષકમાંથી કલાકાર અને ટ્રેક પાર્સ કરો</string>
+  <string name="morphe_music_scrobbling_parse_title_summary">\" - \" સેપરેટરનો ઉપયોગ કરીને વિડિયો શીર્ષકમાંથી કલાકાર અને ટ્રેકનું નામ કાઢો. રી-અપલોડ કરેલી સામગ્રી માટે ઉપયોગી છે જ્યાં ચેનલના નામનો ઉપયોગ કલાકાર તરીકે થઈ શકે છે</string>
+  <string name="morphe_music_scrobbling_guess_album_title">ખૂટતી આલ્બમની વિગતો ભરો</string>
+  <string name="morphe_music_scrobbling_guess_album_summary">જ્યારે સંગીતમાં આલ્બમ શામેલ ન હોય, ત્યારે Last.fm પર શોધો જેથી તમારું scrobble પૂર્ણ થાય</string>
   <!-- 'scrobbling' must be kept untranslated -->
+  <string name="morphe_music_scrobbling_about_summary">"Scrobbling તમારા YouTube Music વપરાશને તમારા Last.fm અથવા ListenBrainz પ્રોફાઇલ સાથે આપમેળે સિંક કરે છે
+
+બેકગ્રાઉન્ડ પ્લેબેક દરમિયાન scrobbling સિંક થાય છે તેની ખાતરી કરવા માટે, ખાતરી કરો કે YouTube Music એપનો બેટરી વપરાશ \"Unrestricted\" પર સેટ કરેલ છે"</string>
   <!-- layout.lyrics.lyricsPatch -->
+  <string name="morphe_music_lyrics_enabled_title">થર્ડ-પાર્ટી ગીતના શબ્દોનો ઉપયોગ કરો</string>
+  <string name="morphe_music_lyrics_enabled_summary">થર્ડ-પાર્ટી સર્વિસમાંથી લિરિક્સ દર્શાવે છે, જ્યારે કોઈ ન મળે ત્યારે બિલ્ટ-ઇન લિરિક્સનો ઉપયોગ કરે છે</string>
+  <string name="morphe_music_lyrics_keep_screen_on_title">ગીતના શબ્દો જોતી વખતે સ્ક્રીન ચાલુ રાખો</string>
+  <string name="morphe_music_lyrics_keep_screen_on_summary">જ્યારે લિરિક્સ પેનલ ખુલ્લી હોય ત્યારે ડિસ્પ્લે બંધ થતો અટકાવે છે</string>
+  <string name="morphe_music_lyrics_section_service_title">લિરિક્સ સર્વિસ</string>
+  <string name="morphe_music_lyrics_section_display_title">પ્રદર્શન</string>
+  <string name="morphe_music_lyrics_section_sync_title">સિંક્રોનાઇઝેશન</string>
+  <string name="morphe_music_lyrics_section_panel_title">પેનલ</string>
+  <string name="morphe_music_lyrics_section_ai_endpoint_title">AI એન્ડપોઇન્ટ</string>
+  <string name="morphe_music_lyrics_source_all_disabled">તમામ પ્રોવાઇડર્સ અક્ષમ છે - બિલ્ટ-ઇન લિરિક્સ અને એમ્બેડેડ લિરિક્સ</string>
+  <string name="morphe_music_lyrics_source_reset_title">પ્રોવાઇડર ક્રમ રિસેટ કરવો?</string>
+  <string name="morphe_music_lyrics_source_reset_message">પ્રોવાઇડર્સને ડિફોલ્ટ પ્રાથમિકતા ક્રમ પર પુનઃસ્થાપિત કરો</string>
+  <string name="morphe_music_lyrics_clear_cache_title">સંગ્રહિત ગીતစာખડી સાફ કરો</string>
+  <string name="morphe_music_lyrics_clear_cache_summary">આ ઉપકરણ પર રાખેલી ગીતစာખડી ડિલીટ કરો</string>
+  <string name="morphe_music_lyrics_clear_cache_done">%1$s MB સાફ કરવામાં આવ્યું</string>
+  <string name="morphe_music_token_dialog_get_token">ટોકન મેળવો</string>
+  <string name="morphe_music_apple_music_token_title">Apple Music મીડિયા-યુઝર-ટોકન</string>
+  <string name="morphe_music_apple_music_token_dialog_instruction">"music.apple.com પરથી media-user-token કૂકી પેસ્ટ કરો
+
+પગલાં:
+1. સભ્ય વપરાશકર્તા તરીકે music.apple.com પર સાઇન ઇન કરો
+2. DevTools → Application → Cookies → music.apple.com ખોલો
+3. \"media-user-token\" ની કિંમત કોપી કરો"</string>
+  <string name="morphe_music_apple_music_token_toast_saved">Apple Music: media-user-token સાચવવામાં આવ્યું</string>
+  <string name="morphe_music_apple_music_token_toast_cleared">Apple Music: media-user-token દૂર કરવામાં આવ્યું</string>
+  <string name="morphe_music_apple_music_token_toast_invalid">Apple Music: અમાન્ય media-user-token - કૃપા કરીને તપાસો અને ફરી પ્રયાસ કરો</string>
+  <string name="morphe_music_spotify_token_title">Spotify SpDc</string>
+  <string name="morphe_music_spotify_token_dialog_instruction">"Spotify પરથી sp_dc કૂકી પેસ્ટ કરો.
+
+પગલાં:
+1. open.spotify.com પર સાઇન ઇન કરો
+2. DevTools → Application → Cookies → open.spotify.com ખોલો
+3. \"sp_dc\" ની કિંમત કોપી કરો"</string>
+  <string name="morphe_music_spotify_token_toast_saved">Spotify: sp_dc સાચવવામાં આવ્યું</string>
+  <string name="morphe_music_spotify_token_toast_cleared">Spotify: sp_dc દૂર કરવામાં આવ્યું</string>
+  <string name="morphe_music_spotify_token_toast_invalid">Spotify: અમાન્ય sp_dc - કૃપા કરીને તપાસો અને ફરી પ્રયાસ કરો</string>
+  <string name="morphe_music_apple_token_optional_hint">Apple Music ટોકન વૈકલ્પિક છે. તેના વગર, Lyrically નો ઉપયોગ ફોલબેક તરીકે કરવામાં આવશે</string>
+  <string name="morphe_music_deezer_arl_title">Deezer ARL</string>
+  <string name="morphe_music_deezer_arl_dialog_instruction">"Deezer માંથી arl કૂકી પેસ્ટ કરો.
+
+સ્ટેપ્સ:
+1. deezer.com પર સાઇન ઇન કરો
+2. DevTools → Application → Cookies → deezer.com ખોલો
+3. \"arl\" ની વેલ્યુ કોપી કરો"</string>
+  <string name="morphe_music_deezer_arl_toast_saved">Deezer: arl સેવ થયું</string>
+  <string name="morphe_music_deezer_arl_toast_cleared">Deezer: arl ક્લિયર થયું</string>
+  <string name="morphe_music_deezer_arl_toast_invalid">Deezer: અમાન્ય arl - કૃપા કરીને તપાસો અને ફરી પ્રયાસ કરો</string>
+  <string name="morphe_music_musixmatch_token_title">Musixmatch ટોકન</string>
+  <string name="morphe_music_musixmatch_token_dialog_instruction">તમારા પોતાના એકાઉન્ટનો ઉપયોગ કરવા માટે જ ટોકન ઉમેરો. તે Musixmatch Android એપમાંથી આવવું જોઈએ: musixmatch.com પરથી કોપી કરેલા ટોકન નિવૃત્ત ડેસ્કટોપ ક્લાયન્ટના છે અને API તેમને નકારે છે</string>
+  <string name="morphe_music_musixmatch_token_optional_hint">Musixmatch ટોકન વગર કામ કરે છે, તેથી આ ફિલ્ડ ખાલી રહી શકે છે</string>
+  <string name="morphe_music_musixmatch_token_dialog_hint">યુઝર ટોકન</string>
+  <string name="morphe_music_musixmatch_token_toast_saved">Musixmatch: યુઝર ટોકન સેવ કરવામાં આવ્યું</string>
+  <string name="morphe_music_musixmatch_token_toast_cleared">Musixmatch: યુઝર ટોકન ક્લિયર કરવામાં આવ્યું</string>
+  <string name="morphe_music_musixmatch_token_toast_invalid">Musixmatch: અમાન્ય યુઝર ટોકન - કૃપા કરીને તપાસો અને ફરી પ્રયાસ કરો</string>
+  <string name="morphe_music_youtube_cookies_title">YouTube કુકીઝ</string>
+  <string name="morphe_music_youtube_cookies_dialog_instruction">"YouTube પરથી કેપ્શન્સ અને ટાઇમટેક્સ્ટ મેળવવા માટે તમારા YouTube કૂકીઝ પેસ્ટ કરો.
+
+પગલાં:
+1. બ્રાઉઝરમાં youtube.com ખોલો અને સાઇન ઇન કરો
+2. DevTools (F12) → Application → Cookies → youtube.com ખોલો
+3. સંપૂર્ણ કૂકી સ્ટ્રિંગ (સેમીકોલન દ્વારા અલગ કરેલી key=value જોડીઓ) કોપી કરો
+
+જરૂરી કૂકીઝ: SID, HSID, SSID, SAPISID, __Secure-3PAPISID, __Secure-1PAPISID, LOGIN_INFO"</string>
+  <string name="morphe_music_youtube_cookies_toast_saved">YouTube: કૂકીઝ સાચવવામાં આવી</string>
+  <string name="morphe_music_youtube_cookies_toast_cleared">YouTube: કૂકીઝ દૂર કરવામાં આવી</string>
+  <string name="morphe_music_youtube_cookies_toast_invalid">YouTube: અમાન્ય કૂકીઝ - કૃપા કરીને તપાસો અને ફરી પ્રયાસ કરો</string>
+  <string name="morphe_music_lyrics_tap_to_seek_title">એક લાઇન પર ટેપ કરીને પકડી રાખો</string>
+  <string name="morphe_music_lyrics_tap_to_seek_summary">ગીતના તે ક્ષણ પર જવા માટે લાઇન પર ટેપ કરો, તમારી આંગળી નીચેના શબ્દને કોપી કરવા માટે તેને લોંગ-પ્રેસ કરો, અથવા જ્યારે પ્રેસ શબ્દ પર ન હોય ત્યારે આખી લાઇન કોપી કરો. \'ઓફ\' કરવાથી બંને જેસ્ચર દૂર થઈ જશે</string>
+  <string name="morphe_music_lyrics_show_section_title">સેક્શન ટેગ્સ બતાવો</string>
+  <string name="morphe_music_lyrics_show_section_summary">ગીતની દરેક નવી કલમને એક નાના ટેગ સાથે લેબલ કરો, જેમ કે Verse અથવા Chorus</string>
+  <string name="morphe_music_lyrics_show_copy_button_title">Copy બટન દર્શાવો</string>
+  <string name="morphe_music_lyrics_show_copy_button_summary">મૂળ ગીતစာખડીને પ્લેન ટેક્સ્ટ તરીકે કોપી કરવા માટે ટેપ કરો; ડાઉનલોડ્સમાં રો ગીતစာખડી સોર્સ ફાઇલ સાચવવા માટે લોંગ-પ્રેસ કરો</string>
+  <string name="morphe_music_lyrics_show_translate_button_title">Translate બટન બતાવો</string>
+  <string name="morphe_music_lyrics_show_translate_button_summary">ટ્રાન્સલેશન ટોગલ કરવા માટે ટેપ કરો; ફક્ત ટ્રાન્સલેશન માટે લોંગ-પ્રેસ કરો. પ્રોવાઇડર ટ્રાન્સલેશન, Google Translate અથવા OpenAI-સુસંગત API નો ઉપયોગ કરે છે</string>
+  <string name="morphe_music_lyrics_show_romanize_button_title">Romanize બટન બતાવો</string>
+  <string name="morphe_music_lyrics_show_romanize_button_summary">રોમનઇઝેશન ટોગલ કરવા માટે ટેપ કરો; ફક્ત રોમનઇઝેશન માટે લોંગ-પ્રેસ કરો. પ્રોવાઇડર રોમનઇઝેશન, Google Translate અથવા OpenAI-સુસંગત API નો ઉપયોગ કરે છે</string>
+  <string name="morphe_music_lyrics_local_romanization_title">સ્થાનિક રોમનઇઝેશન અને એલાઇનમેન્ટ</string>
+  <string name="morphe_music_lyrics_local_romanization_summary">જ્યારે પ્રોવાઇડર, તમારું મોડેલ અને Google Translate નિષ્ફળ જાય ત્યારે ઉપકરણ પર રોમનઇઝ કરો. વાંચન સમયબદ્ધ ગીતના દરેક શબ્દ પછી આવે છે; વર્ડ સિંક ચાલુ હોવું જોઈએ. ચાઇનીઝ, કેન્ટોનીઝ, જાપાનીઝ, કોરિયન, ગ્રીક, રશિયન, જ્યોર્જિયન, આર્મેનિયન; લગભગ 120 MB</string>
+  <string name="morphe_music_lyrics_local_romanization_dict_building">વાંચી રહ્યું છે %1$s: %2$d%%</string>
+  <string name="morphe_music_lyrics_local_romanization_dict_ready">વાંચન તૈયાર છે (%1$d એન્ટ્રીઝ)</string>
+  <string name="morphe_music_lyrics_local_romanization_dict_failed">ડાઉનલોડ નિષ્ફળ રહ્યું - ફરી પ્રયાસ કરવા માટે આને બંધ કરીને ફરીથી ચાલુ કરો</string>
+  <string name="morphe_music_lyrics_show_refresh_button_title">Refresh બટન બતાવો</string>
+  <string name="morphe_music_lyrics_show_refresh_button_summary">આગલા ગીતના ઉમેદવાર પર જવા માટે ટેપ કરો; ગીતના શીર્ષક અને કલાકાર દ્વારા ગીતો શોધવા માટે લાંબો સમય દબાવો</string>
+  <string name="morphe_music_lyrics_search_dialog_title">ગીતના શબ્દો શોધો</string>
+  <string name="morphe_music_lyrics_search_title_hint">ગીતનું શીર્ષક</string>
+  <string name="morphe_music_lyrics_search_artist_hint">કલાકાર</string>
+  <string name="morphe_music_lyrics_search_empty">ગીતનું શીર્ષક અને કલાકાર દાખલ કરો</string>
+  <string name="morphe_music_lyrics_search_no_providers">સક્ષમ કરેલા પ્રોવાઇડર્સમાંથી કોઈ પણ અન્ય ગીતો શોધી શકતું નથી</string>
+  <string name="morphe_music_lyrics_saved">સાચવવામાં આવ્યું</string>
+  <string name="morphe_music_lyrics_word_sync_title">સિંક થયેલા શબ્દો અથવા સિલેબલ્સને હાઇલાઇટ કરો</string>
+  <string name="morphe_music_lyrics_word_sync_summary">જ્યારે ઉપલબ્ધ હોય ત્યારે શબ્દ-દર-શબ્દ ગીતોને પ્રાધાન્ય આપો. જ્યારે ગીતોમાં શબ્દોના સમયની વિગત હોય, ત્યારે સંગીત સાથેના સમય અનુસાર દરેક શબ્દ અથવા અક્ષરને હાઇલાઇટ કરે છે</string>
+  <string name="morphe_music_lyrics_split_background_title">બેકગ્રાઉન્ડ વોકલ્સ અલગથી બતાવો</string>
+  <string name="morphe_music_lyrics_split_background_summary">કૌંસમાં લખાયેલા બેકગ્રાઉન્ડ વોકલ, જેમ કે \"(Oh) I want you\", તેને ગાયેલી લાઇનમાંથી અલગ કરી તેની પોતાની ઝાંખી લાઇન પર લઈ જાય છે</string>
+  <string name="morphe_music_lyrics_hide_played_title">વગાડેલા ગીત છુપાવો</string>
+  <string name="morphe_music_lyrics_hide_played_summary">હાલમાં વગાડવામાં આવી રહેલી લાઇનથી ઉપરની ગીતની લાઇનો છુપાવો</string>
+  <string name="morphe_music_lyrics_hide_unplayed_title">ન વગાડેલા ગીત છુપાવો</string>
+  <string name="morphe_music_lyrics_hide_unplayed_summary">હાલમાં વગાડવામાં આવી રહેલી લાઇનથી નીચેની ગીતની લાઇનો છુપાવો</string>
+  <string name="morphe_music_lyrics_mediasession_title">લોક સ્ક્રીન પર MediaSession ગીતો બતાવો</string>
+  <string name="morphe_music_lyrics_mediasession_summary">લોક સ્ક્રીન, Android Auto અને Bluetooth પર વર્તમાન લાઇન દર્શાવે છે. Android 11 અથવા તેનાથી નવું સંસ્કરણ જરૂરી છે</string>
+  <string name="morphe_music_lyrics_miniplayer_title">Miniplayer ગીતો બતાવો</string>
+  <string name="morphe_music_lyrics_miniplayer_summary">મિનીપ્લેયરમાં વર્તમાન લાઇન દર્શાવે છે, જેમાં ટ્રેક સબટાઈટલમાં ખસેડવામાં આવે છે</string>
+  <string name="morphe_music_lyrics_mini_track_format_title">ગીતનું શીર્ષક/કલાકાર ફોર્મેટ</string>
+  <string name="morphe_music_lyrics_mini_track_format_summary">Miniplayer અને MediaSession માં ગીતના શબ્દો સાથે દર્શાવવામાં આવતા ટ્રેકનું ફોર્મેટ. {t} શીર્ષક છે, {a} કલાકાર છે અને {v} વર્ઝન છે, જેમ કે Acoustic, જ્યારે ગીતના શબ્દોનો સ્ત્રોત તે પ્રદાન કરે છે. બે કોલન વચ્ચેનું લખાણ ત્યારે જ દર્શાવવામાં આવે છે જ્યારે તેની અંદરના દરેક વેરિએબલની કિંમત હોય; સાદા કોલન માટે \\: લખો. દરેક લાઇન વારાફરતી દર્શાવવામાં આવે છે, જ્યારે પણ ગીતના શબ્દો બદલાય છે ત્યારે તે આગળ વધે છે</string>
+  <string name="morphe_music_lyrics_mini_encapsulation_title">ગીતના શબ્દોની લાઇન ફોર્મેટ</string>
+  <string name="morphe_music_lyrics_mini_encapsulation_summary">Miniplayer અને MediaSession માં ગીતના શબ્દોની લાઇનની ફોર્મેટ. {lrc} લાઇન છે અને {n} તે કેટલી વાર સતત ગાવામાં આવી છે તે છે. કોલન વચ્ચેનું લખાણ ત્યારે જ દર્શાવવામાં આવે છે જ્યારે લાઇન પુનરાવર્તિત થાય છે. કોલન માટે \\: નો ઉપયોગ કરો</string>
+  <string name="morphe_music_lyrics_mini_encapsulation_invalid">ફોર્મેટમાં {lrc} હોવું જોઈએ</string>
+  <string name="morphe_music_lyrics_mini_track_format_menu_summary">કલાકાર-લાઇન ટેમ્પલેટ અને એનિમેશન સમય</string>
+  <string name="morphe_music_lyrics_mini_artist_min_label">ન્યૂનતમ સ્ક્રીન સમય (ms)</string>
+  <string name="morphe_music_lyrics_mini_artist_max_label">મહત્તમ સ્ક્રીન સમય (ms)</string>
+  <string name="morphe_music_lyrics_mini_artist_timing_explanation">માત્ર મલ્ટિલાઇન એનિમેશન માટે. દરેક ફ્રેમને ઓછામાં ઓછા ન્યૂનતમ સમય માટે રાખો. મહત્તમ સમયે, ગીતના શબ્દો સમાન રહેવા છતાં કલાકારની લાઇન આગળ વધારો.</string>
+  <string name="morphe_music_lyrics_mini_artist_timing_invalid">ન્યૂનતમ 0 અથવા તેનાથી વધુ હોવું જોઈએ. મહત્તમ 0 થી વધુ અને ઓછામાં ઓછું ન્યૂનતમ હોવું જોઈએ.</string>
+  <string name="morphe_music_lyrics_mini_line_limits_title">લાઇન લંબાઈની મર્યાદાઓ</string>
+  <string name="morphe_music_lyrics_mini_line_limits_summary">ગીતના શબ્દો અને કલાકારની લાઇન મર્યાદાઓ, અને ફૂલ-વિડ્થ કેરેક્ટર વેઇટ</string>
+  <string name="morphe_music_lyrics_mini_line_limits_lyrics">"ગીતના શબ્દોની લાઇન મર્યાદા
+લાંબા ગીતના શબ્દોને સંતુલિત અડધા ભાગમાં વિભાજિત કરો. 0 વિભાજનને અક્ષમ કરે છે."</string>
+  <string name="morphe_music_lyrics_mini_line_limits_artist">"કલાકારની લાઇન મર્યાદા
+ભરેલા ટ્રેક ફોર્મેટને સાયકલિંગ ફ્રેમ્સમાં વિભાજિત કરો. 0 વિભાજનને અક્ષમ કરે છે."</string>
+  <string name="morphe_music_lyrics_mini_line_limits_weight">"ફુલ-વિડ્થ કેરેક્ટર વેઇટ
+બંને મર્યાદાઓ પર લાગુ થાય છે. 1.75 પર, ચાર ફુલ-વિડ્થ કેરેક્ટર્સ 7 ગણાય છે."</string>
+  <string name="morphe_music_lyrics_mini_line_limits_invalid">0 થી 10000 સુધીની પૂર્ણાંક સંખ્યા મર્યાદાઓ અને 0 કરતા વધુ કેરેક્ટર વેઇટ દાખલ કરો</string>
+  <string name="morphe_music_lyrics_mini_instrumental_title">ઇન્સ્ટ્રુમેન્ટલ બ્રેક</string>
+  <string name="morphe_music_lyrics_mini_instrumental_summary">ઇન્સ્ટ્રુમેન્ટલ બ્રેક દરમિયાન Miniplayer અને MediaSession માં બતાવવામાં આવે છે. દરેક લાઇન એક એનિમેશન ફ્રેમ છે. {t} શીર્ષક છે, {a} કલાકાર છે અને {lrc} છેલ્લી લિરિક્સ લાઇન છે</string>
+  <string name="morphe_music_lyrics_mini_next_offset_ms_title">મિનીપ્લેયર અને MediaSession ટાઇમિંગ ઓફસેટ</string>
+  <string name="morphe_music_lyrics_mini_next_offset_ms_summary">મિનીપ્લેયર અને MediaSession માં આગલી લાઇન ક્યારે બતાવવી તેનું સમયગાળું બદલે છે. જો લાઇનો મોડી દેખાય, ઉદાહરણ તરીકે લોક સ્ક્રીન પર, તો નકારાત્મક મૂલ્યનો ઉપયોગ કરો</string>
+  <string name="morphe_settings_music_lyrics_metadata_title">ફિલ્ટર્સ</string>
+  <string name="morphe_music_lyrics_custom_regex_title">મેટાડેટા regex</string>
+  <string name="morphe_music_lyrics_custom_regex_summary">ગીતના શબ્દો શોધતા પહેલા અને બે શીર્ષકો મેચ થાય છે કે નહીં તે સ્કોર કરતી વખતે શીર્ષકો, કલાકારો અને આલ્બમ્સ પર લાગુ કરવામાં આવેલ Regular expression. બંનેને નિષ્ક્રિય કરવા માટે ખાલી છોડો. ડિફોલ્ટ \"Official Video\", \"Remaster\", \"【插曲】\", અને \"- Topic\" જેવી સામાન્ય બિનજરૂરી બાબતોને દૂર કરે છે</string>
+  <string name="morphe_music_lyrics_text_filter_title">ગીતના શબ્દો ફિલ્ટર regex</string>
+  <string name="morphe_music_lyrics_text_filter_summary">માત્ર મૂળ ગીતના શબ્દોના ટેક્સ્ટ પર લાગુ કરવામાં આવેલ નિયમિત અભિવ્યક્તિ (અનુવાદ અથવા રોમનહાઇઝેશન નહીં). નિષ્ક્રિય કરવા માટે ખાલી રાખો</string>
+  <string name="morphe_music_lyrics_credit_line_regex_title">માહિતી લાઇન માર્કર્સ</string>
+  <string name="morphe_music_lyrics_credit_line_regex_summary">જો ગીતના શબ્દો ખોટી રીતે નીચે ફિલ્ટર થયા હોય, તો તેને समायोजित કરો અથવા સાફ કરો. અલ્પવિરામથી અલગ કરેલા માર્કર્સ: માર્કર પછી કોલન ધરાવતી લાઇનો નીચે ક્રેડિટ માહિતી તરીકે બતાવવામાં આવે છે. નિષ્ક્રિય કરવા માટે ખાલી રાખો</string>
+  <string name="morphe_music_lyrics_force_capitalize_title">પ્રથમ અક્ષર કેપિટલ કરો</string>
+  <string name="morphe_music_lyrics_force_capitalize_summary">ગીતના શબ્દોની દરેક લાઇનાના પ્રથમ અક્ષરને કેપિટલ કરે છે</string>
+  <string name="morphe_music_lyrics_strip_trailing_punctuation_title">છેવાりの વિરામચિહ્નો દૂર કરો</string>
+  <string name="morphe_music_lyrics_strip_trailing_punctuation_summary">ગીતના શબ્દોની લાઇનોના અંતે પૂર્ણવિરામ, અલ્પવિરામ, કોલન અને સેમી-કોલન દૂર કરે છે. પ્રશ્નાર્થ ચિહ્નો, ઉદગાર ચિહ્નો, લિપિસ, અવતરણ ચિહ્નો અને કૌંસ રાખવામાં આવે છે</string>
+  <string name="morphe_music_lyrics_text_size_title">લખાણનું કદ</string>
+  <string name="morphe_music_lyrics_text_size_summary">લિરિક્સ લખાણનું કદ</string>
+  <string name="morphe_music_lyrics_offset_ms_title">ગ્લોબલ ટાઈમિંગ ઓફસેટ</string>
+  <string name="morphe_music_lyrics_offset_ms_summary">સિંક કરેલા ગીતના શબ્દો પ્લેબેકને અનુસરે છે. જો તે વિચલિત થાય, તો સમયના ઓફસેટને समायोजित કરો. સિંક કરેલા ગીતના શબ્દોને આગળ અથવા પાછળ ખસેડો. જો ગીતના શબ્દો ગીત કરતાં આગળ ચાલતા હોય તો હકારાત્મક મૂલ્યનો ઉપયોગ કરો</string>
+  <string name="morphe_music_lyrics_sb_matching_title">લિરિક્સ ઓફસેટ માટે SponsorBlock સેગમેન્ટ્સનો ઉપયોગ કરો</string>
+  <string name="morphe_music_lyrics_sb_matching_summary">SponsorBlock જે સેગમેન્ટ્સ સ્કીપ કરે છે તેના વગર મેચ કરો અને લિરિક્સને રિલીઝ થયેલ ઓડિયો પર શિફ્ટ કરો. \'ઓફ\' SponsorBlock ને સંપૂર્ણપણે અવગણે છે</string>
+  <string name="morphe_music_lyrics_sb_no_video">આ ટ્રેકમાં સબમિટ કરવા માટે કોઈ વીડિયો આઈડી નથી</string>
   <!-- Shown under the lyrics. The placeholder is a service name such as LRCLIB. -->
+  <string name="morphe_music_lyrics_source_label">સ્રોત: %s</string>
+  <string name="morphe_music_lyrics_contribute_credit">આ LRC સાચવવા માટે કોપી બટનને દબાવી રાખો; જો તમે સમયને વધુ સચોટ બનાવી શકો અને તેને સમુદાય પ્રોવાઇડર્સ સાથે શેર કરી શકો, તો અમે તમારા આભારી રહીશું</string>
+  <string name="morphe_music_lyrics_translated_by_google">Google દ્વારા અનુવાદિત</string>
+  <string name="morphe_music_lyrics_romanized_by_google">Google દ્વારા રોમન લિપિમાં રૂપાંતરિત</string>
+  <string name="morphe_music_lyrics_translated_by_ai">%s દ્વારા અનુવાદિત</string>
+  <string name="morphe_music_lyrics_romanized_by_ai">%s દ્વારા રોમન લિપિમાં રૂપાંતરિત</string>
+  <string name="morphe_music_lyrics_romanized_by_local">%s દ્વારા રોમનઇઝ કરેલ</string>
   <!-- Tappable label under the lyrics that turns the translation on. -->
+  <string name="morphe_music_lyrics_translate_hide">અનુવાદિત</string>
+  <string name="morphe_music_lyrics_translation_language_title">અનુવાદની ભાષા</string>
+  <string name="morphe_music_lyrics_romanize_language_title">રોમનાઇઝેશન ભાષા</string>
+  <string name="morphe_music_lyrics_translating">ભાષાંતર થઈ રહ્યું છે…</string>
+  <string name="morphe_music_lyrics_translate_failed">લિરિક્સનું ભાષાંતર કરી શકાયું નથી</string>
+  <string name="morphe_music_lyrics_romanize_hide">રોમન લિપિમાં રૂપાંતરિત</string>
+  <string name="morphe_romanize_language_DEFAULT">સ્વચાલિત</string>
+  <string name="morphe_music_lyrics_romanizing">રોમન લિપિમાં રૂપાંતરિત થઈ રહ્યું છે…</string>
+  <string name="morphe_music_lyrics_romanize_failed">ગીતોને રોમન લિપિમાં રૂપાંતરિત કરી શકાયા નથી</string>
+  <string name="morphe_music_lyrics_translate_only">ફક્ત અનુવાદિત</string>
+  <string name="morphe_music_lyrics_romanize_only">ફક્ત રોમનઇઝ્ડ</string>
+  <string name="morphe_music_lyrics_dual_only">ડ્યુઅલ મોડ</string>
+  <string name="morphe_music_lyrics_copied">ક્લિપબોર્ડ પર નકલ કરવામાં આવી</string>
+  <string name="morphe_music_lyrics_refreshing">રિફ્રેશ થઈ રહ્યું છે</string>
+  <string name="morphe_music_lyrics_refreshed">રિફ્રેશ કરવામાં આવ્યું</string>
+  <string name="morphe_music_lyrics_transcribe_key_title">QuickLRC API કી</string>
+  <string name="morphe_music_lyrics_transcribe_key_summary">QuickLRC વર્તમાન ટ્રેક માટે ગીતોનું ટ્રાન્સક્રિપ્શન કરે છે અથવા સમય-ગોઠવણ કરે છે. આ એક અલગ સેવા છે, જે ઉપરના OpenAI-સુસંગત એન્ડપોઇન્ટ સાથે સંબંધિત નથી</string>
+  <string name="morphe_music_lyrics_transcribe_key_set_summary">QuickLRC કી સેવ કરવામાં આવી છે. ગીતો શોધવાના ડાયલોગમાં એલાઈન બટનનો ઉપયોગ કરો, અથવા જ્યારે ટ્રેકમાં ગીતો ન હોય ત્યારે પેનલ પ્રોમ્પ્ટનો ઉપયોગ કરો</string>
+  <string name="morphe_music_lyrics_transcribe_key_saved">QuickLRC API કી સાચવવામાં આવી</string>
+  <string name="morphe_music_lyrics_transcribe_key_rejected">QuickLRC એ તે કી સ્વીકારી નથી</string>
+  <string name="morphe_music_lyrics_transcribe_key_cleared">QuickLRC API કી દૂર કરવામાં આવી</string>
+  <string name="morphe_music_lyrics_transcribe_key_dialog_instruction">QuickLRC એવા ગીતોનો સમય નક્કી કરે છે જેમાં સમય નથી, અથવા ક્રેડિટ્સના ખર્ચે ટ્રેકમાંથી તેનું ટ્રાન્સક્રિપ્શન કરે છે. કી સેટ હોવા પર, ગીતો વગરના ટ્રેક્સ ટ્રાન્સક્રિપ્શનની સુવિધા આપે છે અને સર્ચ ડાયલોગમાં એલાઈનમેન્ટ બટન દેખાય છે</string>
+  <string name="morphe_music_lyrics_transcribe_align">QuickLRC એલાઇનમેન્ટ માટે વિનંતી કરો</string>
+  <string name="morphe_music_lyrics_transcribe_aligning">એલાઇન કરી રહ્યું છે</string>
+  <string name="morphe_music_lyrics_transcribe_apply_align">એલાઈનમેન્ટ લાગુ કરો</string>
+  <string name="morphe_music_lyrics_transcribe_prompt">QuickLRC ટ્રાન્સક્રિપ્શન માટે વિનંતી કરો</string>
+  <string name="morphe_music_lyrics_transcribe_working">ટ્રાન્સક્રાઇબ થઈ રહ્યું છે</string>
+  <string name="morphe_music_lyrics_transcribe_cancelled">ટ્રાન્સક્રિપ્શન રદ કરવામાં આવ્યું</string>
+  <string name="morphe_music_lyrics_transcribe_local_unsupported">માત્ર YouTube પરથી વગાડવામાં આવેલા ટ્રેક્સનું ટ્રાન્સક્રિપ્શન કરી શકાય છે</string>
+  <string name="morphe_music_lyrics_transcribe_no_text">ગોઠવવા માટે કોઈ ગીતો નથી - તેના બદલે ટ્રાન્સક્રિપ્શન કરવામાં આવી રહ્યું છે</string>
+  <string name="morphe_music_lyrics_transcribe_failed">QuickLRC આ ટ્રેક પ્રોસેસ કરી શક્યું નથી</string>
+  <string name="morphe_music_lyrics_transcribe_out_of_credits">આ ટ્રેક માટે QuickLRC ક્રેડિટ્સ સમાપ્ત થઈ ગઈ છે</string>
+  <string name="morphe_music_lyrics_about_summary">"લિરિક્સ ટાઈટલ અને આર્ટિસ્ટ દ્વારા મેચ કરવામાં આવે છે, અસામાન્ય મેટાડેટાના કારણે કદાચ કંઈ જ ન મળે અથવા ખોટું સંસ્કરણ મળી શકે છે. સંસ્કરણ બદલવા માટે રિફ્રેશનો ઉપયોગ કરો. * દ્વારા ચિહ્નિત પ્રોવાઈડર્સ માટે ટોકન જરૂરી છે. બધા સક્ષમ પ્રોવાઈડર્સ હંમેશા તમારા ક્રમ મુજબ વિનંતી કરવામાં આવતા નથી, પરંતુ તેમની ઝડપના આધારે પ્રતિસાદ આપે છે.\n\nલિરિક્સ તૃતીય-પક્ષ સેવાઓમાંથી આવે છે જે Morphe સાથે સંલગ્ન, પ્રાયોજિત અથવા સમર્થિત નથી. દરેકનો ઉપયોગ તે જેવું છે તે રીતે કરવામાં આવે છે: લિરિક્સ, તેમની ઉપલબ્ધતા અને તેમના લાયસન્સ તે સેવાઓ અને તેમના લાયસન્સર્સ પાસે રહે છે, અને તેમનો ઉપયોગ તેમની સેવાઓની શરતોને આધીન હોઈ શકે છે. સક્ષમ સેવા સુધી જે પહોંચે છે તે ફક્ત તમે માંગેલ લુકઅપ છે - ટાઈટલ, આર્ટિસ્ટ, અને જ્યાં તે સેવાને જરૂર હોય ત્યાં, વિડિયો ID. વૈકલ્પિક AI એન્ડપોઈન્ટ અને QuickLRC ટ્રાન્સક્રિપ્શન ફક્ત તમે તેને કોન્ફિગર કર્યા પછી જ ચાલે છે, અને લિરિક્સ ટેક્સ્ટ અથવા ટ્રેકનો વિડિયો URL પ્રાપ્ત કરે છે."</string>
+  <string name="morphe_music_lyrics_source_advice_summary">ફક્ત તમે ઉપયોગ કરો છો તેવા પ્રોવાઇડર્સને સક્ષમ કરો, અથવા ડિફોલ્ટ રાખો - સતત વિનંતીઓ નાની કોમ્યુનિટી લિરિક્સ સાઇટ્સ પર ભાર વધારી શકે છે</string>
+  <string name="morphe_music_lyrics_hide_info_title">ક્રેડિટ લાઇન છુપાવો</string>
+  <string name="morphe_music_lyrics_hide_info_summary">ગીતોની નીચે દર્શાવેલ ક્રેડિટ લાઇન છુપાવો</string>
+  <string name="morphe_music_lyrics_swap_trans_roma_title">અનુવાદ અને રોમનઇઝેશન બદલો</string>
+  <string name="morphe_music_lyrics_swap_trans_roma_summary">ON કરવાથી રોમનઇઝેશન ગીતોની નીચે અને અનુવાદ ઉપર આવશે; OFF કરવાથી રોમનઇઝેશન ઉપર અને અનુવાદ નીચે રહેશે</string>
+  <string name="morphe_music_lyrics_section_translation_title">અનુવાદ</string>
+  <string name="morphe_music_lyrics_section_romanization_title">રોમનઇઝેશન</string>
+  <string name="morphe_music_lyrics_translation_provider_title">અનુવાદ પ્રદાતા</string>
+  <string name="morphe_music_lyrics_translation_provider_google">Google (ડિફોલ્ટ, મફત)</string>
+  <string name="morphe_music_lyrics_translation_provider_openai_compatible">OpenAI સુસંગત (કસ્ટમ)</string>
+  <string name="morphe_music_lyrics_romanization_provider_title">રોમનઇઝેશન પ્રદાતા</string>
+  <string name="morphe_music_lyrics_romanization_provider_google">Google (ડિફોલ્ટ)</string>
+  <string name="morphe_music_lyrics_romanization_provider_local">સ્થાનિક / ઓફલાઇન શબ્દકોશ</string>
+  <string name="morphe_music_lyrics_romanization_provider_openai_compatible">OpenAI સુસંગત (કસ્ટમ)</string>
+  <string name="morphe_music_lyrics_use_ai_section_title">AI વિભાગ</string>
+  <string name="morphe_music_lyrics_use_ai_section_summary">માત્ર ત્યારે જ વપરાય છે જ્યારે પ્રોવાઇડર Chorus અથવા Verse જેવા કોઈ વિભાગ લેબલ મોકલતા નથી, જેને તમારું OpenAI-સુસંગત મોડેલ પછી શોધી કાઢે છે</string>
+  <string name="morphe_music_lyrics_ai_config_dialog_title">AI &amp; Cloud Endpoints</string>
+  <string name="morphe_music_lyrics_ai_config_dialog_instruction">AI પ્રદાતાઓ માટે API કી, મોડેલ્સ, એન્ડપોઇન્ટ્સ અને પ્રોમ્પ્ટ ટેમ્પ્લેટ્સ કન્ફિગર કરો.</string>
+  <string name="morphe_music_lyrics_ai_config_base_url_hint">API એન્ડપોઇન્ટ URL (દા.ત. https://api.openai.com/v1/chat/completions)</string>
+  <string name="morphe_music_lyrics_ai_prompt_dialog_title">પ્રોમ્પ્ટ ટેમ્પલેટ</string>
+  <string name="morphe_music_lyrics_ai_prompt_dialog_hint">પ્લેસહોલ્ડર્સ: {language}, {task}, {title}, {artist}, {count}, {lines}</string>
+  <string name="morphe_music_lyrics_ai_prompt_toast_saved">પ્રોમ્પ્ટ સેવ કરવામાં આવ્યો</string>
+  <string name="morphe_music_lyrics_ai_prompt_toast_endpoint_invalid">પ્રોમ્પ્ટ સેવ કરવામાં આવ્યો છે, પરંતુ AI એન્ડપોઇન્ટ હજી સુધી ઉપયોગી નથી. પહેલા તેને AI Settings હેઠળ કન્ફિગર કરો</string>
+  <string name="morphe_music_lyrics_ai_prompt_toast_reset">પ્રોમ્પ્ટ રીસેટ કરવામાં આવ્યો</string>
+  <string name="morphe_music_lyrics_ai_extra_body_invalid">માન્ય JSON નથી. સેવ કરતા પહેલા તેને સુધારો અથવા ફિલ્ડ સાફ કરો</string>
+  <string name="morphe_music_lyrics_ai_config_toast_saved">Translation &amp; Romanization settings saved</string>
+  <string name="morphe_music_lyrics_ai_config_toast_reset">સેટિંગ્સ ડિફોલ્ટ પર રીસેટ કરવામાં આવ્યા</string>
+  <string name="morphe_music_lyrics_ai_config_status_invalid_url">બેઝ URL http:// અથવા https:// થી શરૂ થવી જોઈએ</string>
+  <string name="morphe_music_lyrics_ai_config_test_connection">કનેક્શન ટેસ્ટ કરો</string>
+  <string name="morphe_music_lyrics_ai_config_endpoint_label">એન્ડપોઇન્ટ્સ કન્ફિગર કરો</string>
+  <string name="morphe_music_lyrics_ai_config_show_all">તમામ એન્ડપોઇન્ટ્સ બતાવો</string>
+  <string name="morphe_music_lyrics_ai_config_status_validating">કનેક્શન ચકાસી રહ્યું છે…</string>
+  <string name="morphe_music_lyrics_ai_config_translation_provider_label">ટ્રાન્સલેશન પ્રોવાઇડર</string>
+  <string name="morphe_music_lyrics_ai_config_romanization_provider_label">રોમનાઇઝેશન પ્રોવાઇડર</string>
+  <string name="morphe_music_lyrics_ai_config_fetch_models">મોડેલ્સ મેળવો</string>
+  <string name="morphe_music_lyrics_ai_config_fetching_models">મોડેલ્સ મેળવી રહ્યા છીએ…</string>
+  <string name="morphe_music_lyrics_ai_config_fetch_models_success">મોડેલ પસંદ કરો</string>
+  <string name="morphe_music_lyrics_ai_config_fetch_models_failed">મોડેલ્સ મેળવવામાં નિષ્ફળતા. API કી અથવા કનેક્શન તપાસો.</string>
+  <string name="morphe_music_lyrics_ai_config_gemini_section">Gemini API સેટિંગ્સ</string>
+  <string name="morphe_music_lyrics_ai_config_openai_compat_section">OpenAI સુસંગત (કસ્ટમ એન્ડપોઇન્ટ)</string>
+  <string name="morphe_music_lyrics_ai_config_deepl_section">DeepL API સેટિંગ્સ</string>
+  <string name="morphe_music_lyrics_ai_config_api_key_label">API કી</string>
+  <string name="morphe_music_lyrics_ai_config_model_label">મોડેલ</string>
+  <string name="morphe_music_lyrics_ai_config_base_url_label">બેઝ URL</string>
+  <string name="morphe_music_lyrics_ai_config_api_token_label">API કી (વૈકલ્પિક)</string>
+  <string name="morphe_music_lyrics_ai_config_prompt_label">ટ્રાન્સલેશન પ્રોમ્પ્ટ</string>
+  <string name="morphe_music_lyrics_ai_config_extra_body_label">વધારાનું રિક્વેસ્ટ બોડી (વૈકલ્પિક JSON)</string>
+  <string name="morphe_music_lyrics_ai_config_deepl_key_label">ઓથેન્ટિકેશન કી (Free અથવા Pro)</string>
+  <string name="morphe_music_lyrics_ai_config_summary">API કીઝ, મોડલ્સ, એન્ડપોઈન્ટ્સ અને પ્રોમ્પ્ટ્સ કન્ફિગર કરો</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
+  <string name="morphe_music_spoof_app_version_target_entry_8_23_51">8.23.51 - બોલ્ડ આઇકોન્સ અક્ષમ કરો</string>
+  <string name="morphe_music_spoof_app_version_target_entry_9_13_51">9.13.51 - પ્લેયર Up next, Lyrics, અને Related ટેબ્સ પુનઃસ્થાપિત કરો</string>
 </resources>

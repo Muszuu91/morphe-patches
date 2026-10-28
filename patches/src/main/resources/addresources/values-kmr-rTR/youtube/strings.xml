@@ -90,6 +90,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_surveys_title">Erdekan veşêrin</string>
   <string name="morphe_hide_surveys_summary">Hide surveys and nudges about feed recommendation accuracy</string>
   <string name="morphe_hide_ticket_shelf_title">Sernaketa biletê veşêrin</string>
+  <!-- 'Unavailable videos are hidden' should be translated using the same localized wording YouTube displays for the banner in playlists. -->
   <string name="morphe_hide_upload_time_title">Demîlê barkêşîyê veşêre</string>
   <!-- Translations should match the language used in 'morphe_hide_view_count_summary'. -->
   <string name="morphe_hide_upload_time_summary">"Senetkirîn:

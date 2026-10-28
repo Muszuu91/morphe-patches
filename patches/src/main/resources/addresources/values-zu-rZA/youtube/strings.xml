@@ -113,6 +113,7 @@ Izinguquko zihlanganisa:
   <string name="morphe_hide_surveys_title">Fihla imibuzo</string>
   <string name="morphe_hide_surveys_summary">Fihla imibuzo nokukhuthaza mayelana nokunemba kokunikezelwa kwe-feed</string>
   <string name="morphe_hide_ticket_shelf_title">Fihla ishelufu yamathikithi</string>
+  <!-- 'Unavailable videos are hidden' should be translated using the same localized wording YouTube displays for the banner in playlists. -->
   <string name="morphe_hide_upload_time_title">Fihla isikhathi sokukhuphula</string>
   <!-- Translations should match the language used in 'morphe_hide_view_count_summary'. -->
   <string name="morphe_hide_upload_time_summary">"Imikhawulo:

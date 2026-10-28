@@ -18,213 +18,1637 @@ Second \"item\" text"</string>
 <resources>
   <!-- misc.settings.settingsPatch -->
   <!-- In languages where "About" is ambiguous, translate this as "About Morphe" (i.e., About this app). -->
+  <string name="morphe_settings_screen_00_about_title">Morphe အကြောင်း</string>
+  <string name="morphe_settings_screen_01_ads_title">ကြော်ငြာများ</string>
+  <string name="morphe_settings_screen_03_feed_title">ဖိဒ်</string>
+  <string name="morphe_settings_screen_04_general_title">အထွေထွေ</string>
+  <string name="morphe_settings_screen_05_player_title">ပလေယာ</string>
+  <string name="morphe_settings_screen_06_shorts_title">Shorts</string>
+  <string name="morphe_settings_screen_07_seekbar_title">ရှာဖွေဘား</string>
+  <string name="morphe_settings_screen_08_swipe_controls_title">ဆွဲပြီးထိန်းချုပ်မှုများ</string>
+  <string name="morphe_settings_screen_11_misc_title">အထွေထွေအမျိုးမျိုး</string>
+  <string name="morphe_settings_screen_12_video_title">ဗီဒီယို</string>
+  <string name="morphe_restore_old_settings_menus_title">YouTube ၏ ယခင် ဆက်တင်မျက်နှာပြင်ကို ပြန်လည်ရယူရန်</string>
   <!-- misc.backgroundplayback.backgroundPlaybackPatch -->
+  <string name="morphe_remove_background_playback_restrictions_title">နောက်ခံဖွင့်ပြသမှု ကန့်သတ်ချက်များကို ဖယ်ရှားပါ</string>
+  <string name="morphe_shorts_disable_background_playback_title">နောက်ခံတွင် ဖွင့်ခြင်းကို ပိတ်ပါ</string>
+  <string name="morphe_auto_pause_on_screen_lock_title">စခရင်လော့ခ်ချချိန်တွင် အလိုအလျောက် ရပ်တန့်ရန်</string>
+  <string name="morphe_auto_pause_on_screen_lock_off">ပိတ်သည်</string>
+  <string name="morphe_auto_pause_on_screen_lock_always">Lock ပျက်သွားတိုင်း အမြဲတမ်း ခေတ္တရပ်နားမည်</string>
+  <string name="morphe_auto_pause_on_screen_lock_except_wireless">Wireless အသံချိတ်ဆက်ထားခြင်း မရှိပါက ခေတ္တရပ်နားမည်</string>
   <!-- layout.disableScrollSpeedLimitPatch -->
+  <string name="morphe_disable_scrolling_speed_limit_title">လိပ်စာချောခြင်း အရှိန်ကန့်သတ်ချက်ကို ပိတ်ပါ</string>
   <!-- layout.disableLayoutUpdatesPatch -->
+  <string name="morphe_disable_layout_updates_title">လေအောက် အပ်ဒိတ်များကို ပိတ်ပါ</string>
+  <string name="morphe_disable_layout_updates_summary">ဆာဗာမှ အက်ပ်၏ အပြင်အဆင်ကို အပ်ဒိတ်လုပ်ခြင်းမှ တားဆီးသည်</string>
+  <string name="morphe_disable_layout_updates_user_dialog_message">"အက်ပ်၏ ပုံစံ (layout) သည် ပထမဆုံး အင်စတောလုပ်စဉ်က အသုံးပြုခဲ့သော ပုံစံသို့ ပြန်သွားပါမည်။
+
+အချို့သော ဆာဗာဘက်မှ ပုံစံများသည် ပြန်မသွားနိုင်ပါ။
+
+ပြောင်းလဲမှုများတွင် အောက်ပါတို့ ပါဝင်သည်- 
+• ပလေယာ၏ flyout menu (သို့မဟုတ် ဆက်စပ်သော ဆက်တင်များ) ရှိ အစိတ်အပိုင်းများ အလုပ်မလုပ်နိုင်ပါ
+• Rolling numbers များသည် အန်နီမေးရှင်း (animated) ဖြစ်မည်မဟုတ်ပါ
+• စာကြည့်တိုက် (Library) တက်ဘ်ကို ပြသပါမည်
+• ဗီဒီယိုဖော်ပြချက်ရှိ တေးဂီတအပိုင်း အလုပ်မလုပ်နိုင်ပါ
+• ပလေယာ၏ flyout menu ရှိ အရာများကို ဖျောက်ထား၍မရပါ
+• စာကြည့်တိုက် (Library) တက်ဘ်တွင် အကောင့်ပြောင်းလဲသည့် ခလုတ် ပေါ်မည်မဟုတ်ပါ"</string>
   <!-- layout.hide.general.hideLayoutComponentsPatch -->
+  <string name="morphe_hide_feed_flyout_menu_title">Feed flyout menu filter ကို အသုံးပြုရန်</string>
+  <string name="morphe_hide_feed_flyout_menu_filter_strings_title">ဖိဒ် flyout မီနူး ဖစ်လ်တာ</string>
+  <string name="morphe_hide_feed_flyout_menu_filter_strings_summary">စစ်ထုတ်လိုသော flyout မီနူးအမည်များကို စာကြောင်းအသစ်များဖြင့် ခြား၍ ရိုက်ထည့်ပါ</string>
+  <string name="morphe_hide_account_menu_title">Library / You အောက်ခြေမီနူး စစ်ထုတ်မှုကို အသက်သွင်းပါ</string>
+  <string name="morphe_hide_account_menu_filter_strings_title">Library / You အောက်ခြေမီနူး စစ်ထုတ်မှု</string>
+  <string name="morphe_hide_account_menu_filter_strings_summary">စစ်ထုတ်လိုသော Library / You အောက်ခြေမီနူးအမည်များကို စာကြောင်းအသစ်များဖြင့် ခြားပြီး ရိုက်ထည့်ပါ</string>
+  <string name="morphe_hide_album_cards_title">အယ်လ်ဘမ်ကတ်များကို ဖျောက်ရန်</string>
+  <string name="morphe_hide_album_cards_summary">အနုပညာရှင် ဖော်ပြချက်အောက်ရှိ အယ်လ်ဘမ်ကတ်များကို ဖျောက်ထားသည်</string>
+  <string name="morphe_hide_artist_cards_title">အနုပညာရှင်ကတ်များကို ဖျောက်ထားပါ</string>
+  <string name="morphe_hide_artist_cards_summary">ရှာဖွေမှုရလဒ်များ၏ အပေါ်ဆုံးရှိ အနုပညာရှင်ကတ်ကို ဖျောက်ထားသည်</string>
+  <string name="morphe_hide_channel_buttons_title">ချန်နယ်ခလုတ်များကို ဖျောက်ရန်</string>
+  <string name="morphe_hide_channel_buttons_summary">ရှာဖွေမှုရလဒ်များရှိ ချန်နယ်ပရိုဖိုင်များမှ Subscribe၊ View Channel၊ Community နှင့် YouTube Music ကဲ့သို့သော ခလုတ်များကို ဖျောက်ပေးသည်</string>
+  <string name="morphe_hide_community_posts_title">ကွန်မြူနတီပို့စ်များကို ဖျောက်ထားပါ</string>
+  <string name="morphe_hide_compact_banner_title">ကျစ်လျစ်သော ဘန်နာများကို ဖျောက်ပါ</string>
+  <string name="morphe_hide_compact_banner_summary">ကျစ်လျစ်သောဘန်နာများနှင့် အချို့သော အစိတ်အပိုင်းများကြားရှိ ခြားနားချက်များကို ဖျောက်ထားသည်</string>
+  <string name="morphe_hide_expandable_card_title">ဗီဒီယိုများအောက်ရှိ ချဲ့၍ကြည့်နိုင်သော ကတ်များ</string>
+  <string name="morphe_hide_expandable_card_entry_1">အားလုံးပြရန်</string>
+  <string name="morphe_hide_expandable_card_entry_2">အနှစ်ချုပ်ကတ်ကိုသာ ဖျောက်ထားပါ</string>
+  <string name="morphe_hide_expandable_card_entry_3">အားလုံးကို ဖျောက်ထားပါ</string>
+  <string name="morphe_hide_floating_microphone_button_title">မျောနေသော မိုက်ခရိုဖုန်းခလုတ်ကို ဖျောက်ပါ</string>
+  <string name="morphe_hide_floating_microphone_button_summary">ရှာဖွေမှုအကြံပြုချက်များမျက်နှာပြင်၏ အောက်ဘက်ညာဘက်ထောင့်ရှိ လွင့်မျောနေသော မိုက်ခရိုဖုန်းခလုတ်ကို ဖျောက်ထားပါမည်</string>
+  <string name="morphe_hide_get_premium_button_title">\"Get Premium\" ခလုတ်ကို ဖျောက်ထားပါ</string>
+  <string name="morphe_hide_history_shelf_title">မှတ်တမ်းစင်ကို ဖျောက်ပါ</string>
+  <string name="morphe_hide_horizontal_shelves_title">အလျားလိုက်စင်များကို ဖျောက်ပါ</string>
+  <string name="morphe_hide_horizontal_shelves_summary">Breaking news၊ သင်နှစ်သက်နိုင်သော Community ပို့စ်များ၊ ဆက်လက်ကြည့်ရှုရန်၊ ချန်နယ်များ ပိုမိုရှာဖွေရန်၊ အကြောင်းအရာများ ပိုမိုရှာဖွေရန်၊ သင့်အတွက်၊ နောက်ဆုံးဗီဒီယိုများ၊ အကိုက်ညီဆုံး၊ ဖန်တီးသူ၏ Community မှ ပို့စ်များ၊ Shopping နှင့် ပြန်လည်ကြည့်ရှုရန် စသည့် အလျားလိုက် အတန်းများကို ဖျောက်ထားမည်</string>
+  <string name="morphe_hide_image_shelf_title">ပုံရိပ်စင်ကို ဖျောက်ပါ</string>
+  <string name="morphe_hide_image_shelf_summary">ရှာဖွေမှုရလဒ်များရှိ ပုံစင်များကို ဖျောက်ထားပါမည်</string>
   <!-- 'Invite others to message' should be translated using the same localized wording YouTube displays
           for the card in the Messages section at the top of the Notifications tab. -->
+  <string name="morphe_hide_invite_to_message_card_title">\'အခြားသူများကို မက်ဆေ့ဂျ်ပို့ရန် ဖိတ်ခေါ်ပါ\' ကတ်ကို ဖျောက်ထားပါ</string>
+  <string name="morphe_hide_invite_to_message_card_summary">အကြောင်းကြားချက်များ တက်ဘ်ရှိ မက်ဆေ့ဂျ်များ ကဏ္ဍတွင် ပြသသော ဖိတ်ခေါ်မှုကတ်ကို ဖျောက်ထားပေးသည်</string>
   <!-- 'Latest videos' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears in the Home feed for refreshing the feed. -->
+  <string name="morphe_hide_latest_videos_button_title">\'နောက်ဆုံးဗီဒီယိုများ\' ခလုတ်ကို ဖျောက်ပါ</string>
+  <string name="morphe_hide_latest_videos_button_summary">Home feed ၏ အပေါ်ဆုံးတွင် ပေါ်လာသော အပြာရောင် \'နောက်ဆုံးဗီဒီယိုများ\' ဘန်နာကို ဖျောက်ထားပါမည်</string>
+  <string name="morphe_hide_live_streams_title">တိုက်ရိုက်ထုတ်လွှင့်မှုများကို ဖျောက်ထားပါ</string>
+  <string name="morphe_hide_live_streams_summary">ပင်မဖိဒ်နှင့် ရှာဖွေမှုရလဒ်များတွင် ယခုတိုက်ရိုက်ထုတ်လွှင့်နေသော ဗီဒီယိုများကို ဖျောက်ထားပေးသည်</string>
+  <string name="morphe_hide_mix_playlists_title">Mix ပလေးလစ်များကို ဖျောက်ပါ</string>
+  <string name="morphe_hide_movies_section_title">ရုပ်ရှင်ကဏ္ဍကို ဖျောက်ပါ</string>
   <!-- 'Notifications' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_notifications_menu_header_title">အသိပေးချက်များ မီနူးခေါင်းစဉ်ကို ဖျောက်ပါ</string>
+  <string name="morphe_hide_notifications_menu_header_summary">ခေါင်းလောင်းပုံခလုတ်ကို နှိပ်သည့်အခါ အသိပေးချက်များ မီနူးခေါင်းစဉ်ကို ဖျောက်ထားသည်</string>
   <!-- 'Notify me' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears in the Subscriptions feed for future live streams or unreleased videos. -->
+  <string name="morphe_hide_notify_me_button_title">\'ကျွန်ုပ်ကို အကြောင်းကြားပါ\' ခလုတ်ကို ဖျောက်ထားပါ</string>
+  <string name="morphe_hide_notify_me_button_summary">အချိန်သတ်မှတ်ထားသော တိုက်ရိုက်ထုတ်လွှင့်မှုများနှင့် ပွဲဦးထွက်များအတွက် သတိပေးခလုတ်ကို ဖျောက်ထားပါသည်</string>
+  <string name="morphe_hide_playables_title">Playables ကို ဖျောက်ထားပါ</string>
+  <string name="morphe_hide_playables_summary">ဂိမ်းများကစားနိုင်သည့် လုပ်ဆောင်ချက်ကို ဖျောက်ထားပါမည်</string>
+  <string name="morphe_hide_search_term_thumbnails_title">ရှာဖွေမှုဝေါဟာရ ပုံရိပ်များကို ဖျောက်ထားပါ</string>
+  <string name="morphe_hide_search_term_thumbnails_summary">ရှာဖွေမှု အလိုအလျောက်ဖြည့်စွက်ချက်စာရင်းရှိ thumbnail ပုံစံငယ်များကို ဖျောက်ထားပါမည်</string>
   <!-- 'Show more' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears when searching for a YouTube creator. -->
+  <string name="morphe_hide_show_more_button_title">\'ပို၍ပြပါ\' ခလုတ်ကို ဖျောက်ထားပါ</string>
+  <string name="morphe_hide_show_more_button_summary">ရှာဖွေမှုရလဒ်များရှိ ဗီဒီယိုများအောက်ရှိ ပို၍ပြရန်ခလုတ်ကို ဖျောက်ထားပါမည်</string>
+  <string name="morphe_hide_subscribed_channels_bar_title">စာရင်းသွင်းထားသော ချန်နယ်များဘားကို ဖျောက်ပါ</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_title">စာရင်းသွင်းထားသော ချန်နယ်အမည်များကို ဖျောက်ရန်</string>
+  <string name="morphe_hide_subscribed_channels_bar_names_summary">စာရင်းသွင်းထားသော ချန်နယ်ဘားရှိ ချန်နယ်အမည်များကို ဖျောက်ပေးသည်</string>
+  <string name="morphe_hide_surveys_title">စစ်တမ်းများကို ဖျောက်ထားပါ</string>
+  <string name="morphe_hide_surveys_summary">Feed အကြံပြုချက် တိကျမှုနှင့် ပတ်သက်သော စစ်တမ်းများနှင့် တိုက်တွန်းချက်များကို ဖျောက်ထားပါ</string>
+  <string name="morphe_hide_ticket_shelf_title">လက်မှတ်စင်ကို ဖျောက်ထားပါ</string>
+  <!-- 'Unavailable videos are hidden' should be translated using the same localized wording YouTube displays for the banner in playlists. -->
+  <string name="morphe_hide_upload_time_title">တင်ထားသည့်အချိန်ကို ဖုံးကွယ်ပါ</string>
   <!-- Translations should match the language used in 'morphe_hide_view_count_summary'. -->
+  <string name="morphe_hide_upload_time_summary">"ကန့်သတ်ချက်များ- 
+• Shorts shelves များ၊ ချန်နယ်စာမျက်နှာများနှင့် ရှာဖွေမှုရလဒ်များတွင် တင်ထားသည့်အချိန်များကို ဆက်လက်ဖော်ပြနိုင်သည်
+• automotive layout နှင့် အလုပ်မလုပ်ပါ"</string>
+  <string name="morphe_hide_video_thumbnail_title">ဗီဒီယို thumbnail ကို ဖျောက်ရန်</string>
   <!-- 'Auto-dubbed', 'Earns commission', 'Hyped', 'People also watched' and 'You might also like' should be translated using the same localized wording YouTube displays for the label. -->
+  <string name="morphe_hide_video_labels_title">ဗီဒီယို လေဘယ်များကို ဖျောက်ထားပါ</string>
+  <string name="morphe_hide_video_labels_summary">\'အလိုအလျောက် ဘာသာပြန်ထားသည်\' / \'ဘာသာပြန်ထားသည်\'၊ \'ကော်မရှင် ရရှိသည်\'၊ \'လူကြိုက်များနေသည်\'၊ \'လူများ ကြည့်ရှုခဲ့သည်\'၊ \'ထုတ်ကုန်(များ)\' နှင့် \'သင် နှစ်သက်နိုင်သည်\' စသည့် လေဘယ်များကို ဖျောက်ထားပါသည်</string>
+  <string name="morphe_hide_view_count_title">ကြည့်ရှုမှုအရေအတွက်ကို ဖုံးကွယ်ပါ</string>
   <!-- Translations should match the language used in 'morphe_hide_upload_time_summary'. -->
+  <string name="morphe_hide_view_count_summary">"ကန့်သတ်ချက်များ- 
+• Shorts shelves များ၊ ချန်နယ်စာမျက်နှာများနှင့် ရှာဖွေမှုရလဒ်များတွင် ကြည့်ရှုမှုအရေအတွက်များကို ဆက်လက်ဖော်ပြနိုင်သည်
+• automotive layout နှင့် အလုပ်မလုပ်ပါ"</string>
+  <string name="morphe_hide_web_search_results_title">ဝဘ်ရှာဖွေမှုရလဒ်များကို ဖျောက်ထားပါ</string>
+  <string name="morphe_hide_web_search_results_summary">ရှာဖွေမှုရလဒ်များမှ \'ဝက်ဘ်မှရလဒ်\' ကဏ္ဍကို ဖျောက်ထားသည်</string>
+  <string name="morphe_hide_you_may_like_section_title">\'သင်ကြိုက်နှစ်သက်နိုင်သည်\' အပိုင်းကို ဖျောက်ပါ</string>
   <!-- https://logos.fandom.com/wiki/YouTube/Yoodles -->
+  <string name="morphe_hide_youtube_doodles_title">YouTube Doodles များကို ဖျောက်ထားပါ</string>
+  <string name="morphe_hide_youtube_doodles_summary">YouTube လိုဂိုပေါ်ရှိ ရာသီအလိုက်နှင့် ပွဲလမ်းသဘင်အခြေခံ အန်နီမေးရှင်းများကို ဖျောက်ထားပါမည်</string>
+  <string name="morphe_hide_youtube_doodles_user_dialog_message">YouTube Doodles များကို ပြသခြင်းသည် စိတ်ကြိုက် header များကို ပြသခြင်းမှ တားဆီးနိုင်သည်</string>
+  <string name="morphe_hide_channel_bar_title">ချန်နယ်ဘားကို ဖျောက်ထားပါ</string>
+  <string name="morphe_hide_channel_watermark_title">ချန်နယ်ဝါတားမတ်ခ်ကို ဖျောက်ထားပါ</string>
+  <string name="morphe_hide_chapters_timeline_button_title">Chapters နှင့် \'In this video\' ခလုတ်ကို ဖျောက်ထားပါ</string>
+  <string name="morphe_hide_crowdfunding_box_title">လူထုရန်ပုံငွေဘောက်စ်ကို ဖျောက်ပါ</string>
+  <string name="morphe_hide_emergency_box_title">အရေးပေါ်သတိပေးချက်ဘောက်စ်များကို ဖျောက်ထားပါ</string>
+  <string name="morphe_hide_info_panels_title">အချက်အလက်ပန်နယ်များကို ဖျောက်ထားပါ</string>
+  <string name="morphe_hide_info_panels_summary">ဆေးဘက်ဆိုင်ရာ အချက်အလက်များကဲ့သို့သော သတင်းအချက်အလက် အကြောင်းအရာ ပန်နယ်များကို ဖျောက်ထားပါသည်</string>
   <!-- 'Join' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears in the video player for certain videos. -->
+  <string name="morphe_hide_join_membership_button_title">\"ပူးပေါင်းပါ\" ခလုတ်ကို ဖျောက်ထားပါ</string>
   <!-- 'Live chat replay' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears when in fullscreen for live-streamed videos after opening live chat. -->
+  <string name="morphe_hide_live_chat_replay_button_title">\'တိုက်ရိုက်ချက်တင် ပြန်ဖွင့်ခြင်း\' ခလုတ်ကို ဖျောက်ပါ</string>
+  <string name="morphe_hide_live_chat_replay_button_summary">ဖန်သားပြင်အပြည့် မုဒ်တွင် chat replay ခလုတ်ကို ဖျောက်ထားပါသည်</string>
+  <string name="morphe_hide_medical_panels_title">ဆေးဘက်ဆိုင်ရာပန်နယ်များကို ဖျောက်ထားပါ</string>
+  <string name="morphe_hide_player_gesture_hints_title">ပလေယာ၏ အမူအရာလမ်းညွှန်များကို ဖျောက်ထားပါ</string>
   <!-- 'Pull up for precise seeking', 'Release to cancel' and '2x' should be translated using the same localized wording YouTube displays for the hints.
           These hints appear in the video player while dragging the seekbar or holding to speed up playback. -->
+  <string name="morphe_hide_player_gesture_hints_summary">\'တိကျသော ရှာဖွေမှုအတွက် အပေါ်သို့ဆွဲတင်ပါ\'၊ \'ပယ်ဖျက်ရန် လွှတ်ပါ\' နှင့် \'2x\' ကဲ့သို့သော ပလေယာ အမူအရာများအတွင်း ပြသသော လမ်းညွှန်များကို ဖျောက်ထားပေးသည်</string>
+  <string name="morphe_hide_snackbar_title">Snackbar ကို ဖျောက်ပါ</string>
+  <string name="morphe_hide_subscribers_community_guidelines_title">စာရင်းသွင်းသူများအတွက် လမ်းညွှန်ချက်များကို ဖျောက်ထားပါ</string>
+  <string name="morphe_hide_sync_button_title">\'ဗီဒီယိုနှင့် ညှိပါ\' ခလုတ်ကို ဖျောက်ပါ</string>
+  <string name="morphe_hide_tap_and_hold_gradient_title">ထိပြီးဖိထားသည့် gradient ကို ဖျောက်ပါ</string>
+  <string name="morphe_hide_tap_and_hold_gradient_summary">အရှိန်မြှင့်ရန် ဖိပြီး လက်ချောင်းကို ရွှေ့သည့်အခါ ပလေယာထိန်းချုပ်မှု gradient ကို ဖျောက်ထားပေးသည်</string>
+  <string name="morphe_hide_timed_reactions_title">အချိန်အကန့်အသတ်ရှိသော တုံ့ပြန်မှုများကို ဖျောက်ထားပါ</string>
+  <string name="morphe_hide_timed_reactions_summary">မှတ်ချက်ကဏ္ဍနှင့် live chat တွင် အီမိုဂျီများဖြင့် တုံ့ပြန်နိုင်သည့် လုပ်ဆောင်ချက်ကို ဖျောက်ထားပါသည်</string>
   <!-- 'Help & feedback' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_help_feedback_menu_title">\'အကူအညီနှင့် အကြံပြုချက်\' မီနူးကို ဖျောက်ပါ</string>
+  <string name="morphe_hide_help_feedback_menu_summary">ရှာဖွေမှုရလဒ်များတွင် အစက်သုံးစက်ခလုတ်ကို အသုံးပြုသည့်အခါ \'အကူအညီနှင့် အကြံပြုချက်\' မီနူးကို ဖျောက်ထားပေးသည်</string>
+  <string name="morphe_hide_handle_title">Handle ကို ဖျောက်ရန်</string>
+  <string name="morphe_hide_handle_summary">\'You\' တက်ဘ်တွင် သင်၏ချန်နယ် handle ကို ဖျောက်ပေးသည်</string>
+  <string name="morphe_hide_video_title_title">ဗီဒီယိုခေါင်းစဉ်ကို ဖျောက်ပါ</string>
+  <string name="morphe_hide_video_title_summary">ဖန်သားပြင်အပြည့် မုဒ်တွင် ဗီဒီယိုခေါင်းစဉ်ကို ဖျောက်ထားပါသည်</string>
+  <string name="morphe_sanitize_video_subtitle_title">ဗီဒီယိုစာတန်းထိုးကို သန့်စင်ပါ</string>
+  <string name="morphe_sanitize_video_subtitle_summary">ဗီဒီယိုစာတန်းများမှ \'#\', \'Fundraiser\', \'product(s)\', နှင့် \'Shop\' ကဲ့သို့သော စကားစုများကို ဖယ်ရှားပေးသည်</string>
+  <string name="morphe_hide_ask_gemini_button_title">\'Ask Gemini\' ခလုတ်ကို ဖျောက်ရန်</string>
+  <string name="morphe_hide_ask_gemini_button_summary">\'Ask about this video\' ပန်နယ်၏ အောက်ခြေရှိ \'Ask Gemini\' ခလုတ်ကို ဖျောက်ပေးသည်</string>
+  <string name="morphe_hide_description_components_screen_title">ဗီဒီယိုဖော်ပြချက်</string>
+  <string name="morphe_hide_description_components_screen_summary">ဗီဒီယိုဖော်ပြချက်တွင် မည်သည့်အစိတ်အပိုင်းများ ပေါ်လာမည်ကို ရွေးချယ်ပါ</string>
+  <string name="morphe_hide_ai_generated_video_summary_section_title">\'AI-generated video summary\' ကဏ္ဍကို ဖျောက်ပါ</string>
+  <string name="morphe_hide_ask_section_title">Ask ကဏ္ဍကို ဖျောက်ပါ</string>
+  <string name="morphe_hide_attributes_section_title">Attributes ကဏ္ဍကို ဖျောက်ပါ</string>
+  <string name="morphe_hide_attributes_section_summary">ဖော်ပြထားသော ထူးခြားသည့်နေရာများ၊ ဂိမ်းများ၊ တေးဂီတနှင့် လူပုဂ္ဂိုလ်များ ကဏ္ဍများကို ဖျောက်ထားပါသည်</string>
+  <string name="morphe_hide_channel_links_section_title">Channel လင့်ခ်များ ကဏ္ဍကို ဖျောက်ပါ</string>
+  <string name="morphe_hide_chapters_section_title">Chapters ကဏ္ဍကို ဖျောက်ပါ</string>
+  <string name="morphe_hide_corrections_section_title">ပြင်ဆင်ချက်များ ကဏ္ဍကို ဖျောက်ပါ</string>
+  <string name="morphe_hide_course_progress_section_title">\'သင်ခန်းစာ တိုးတက်မှု\' ကဏ္ဍကို ဖျောက်ပါ</string>
+  <string name="morphe_hide_explore_section_title">ရှာဖွေလေ့လာရေး ကဏ္ဍကို ဖျောက်ပါ</string>
+  <string name="morphe_hide_explore_section_summary">ဤသင်ခန်းစာကို ရှာဖွေလေ့လာပါ နှင့် ပေါ့ဒ်ကတ်စ်ကို ရှာဖွေလေ့လာပါ ကဏ္ဍများကို ဖျောက်ပေးသည်</string>
+  <string name="morphe_hide_explore_course_section_title">\'ဤသင်ခန်းစာကို ရှာဖွေလေ့လာပါ\' ကဏ္ဍကို ဖျောက်ပါ</string>
+  <string name="morphe_hide_explore_podcast_section_title">\'ပေါ့ဒ်ကတ်စ်ကို ရှာဖွေလေ့လာပါ\' ကဏ္ဍကို ဖျောက်ပါ</string>
+  <string name="morphe_hide_featured_channels_section_title">ထင်ရှားသော ချန်နယ်များ ကဏ္ဍကို ဖျောက်ထားပါ</string>
+  <string name="morphe_hide_featured_links_section_title">အသားပေးလင့်ခ်များ ကဏ္ဍကို ဖျောက်ပါ</string>
+  <string name="morphe_hide_featured_playlists_section_title">ထူးခြားသော ပလေလစ်များ ကဏ္ဍကို ဖျောက်ထားပါ</string>
+  <string name="morphe_hide_featured_videos_section_title">အသားပေးဗီဒီယိုများ ကဏ္ဍကို ဖျောက်ပါ</string>
+  <string name="morphe_hide_hashtag_section_title">Hashtag ကဏ္ဍကို ဖျောက်ထားပါ</string>
+  <string name="morphe_hide_how_this_was_made_section_title">\'ဤအရာကို မည်သို့ပြုလုပ်ခဲ့သည်\' အပိုင်းကို ဖျောက်ပါ</string>
+  <string name="morphe_hide_hype_points_title">Hype ပွိုင့်များကို ဖျောက်ထားပါ</string>
+  <string name="morphe_hide_info_cards_section_title">အချက်အလက်ကတ်များ ကဏ္ဍကို ဖျောက်ပါ</string>
+  <string name="morphe_hide_key_concepts_section_title">\'အဓိက အယူအဆများ\' ကဏ္ဍကို ဖျောက်ထားပါ</string>
+  <string name="morphe_hide_quizzes_section_title">ဉာဏ်စမ်းပဟေဠိများ ကဏ္ဍကို ဖျောက်ပါ</string>
+  <string name="morphe_hide_search_inside_this_video_section_title">\'ဤဗီဒီယိုအတွင်း ရှာဖွေပါ\' ကဏ္ဍကို ဖျောက်ထားပါ</string>
+  <string name="morphe_hide_subscribe_button_title">Subscribe ခလုတ်ကို ဖျောက်ထားပါ</string>
+  <string name="morphe_hide_transcript_section_title">စာသားမှတ်တမ်း အပိုင်းကို ဖျောက်ထားပါ</string>
+  <string name="morphe_hide_video_details_section_title">\'ဗီဒီယို အသေးစိတ်\' အပိုင်းကို ဖျောက်ထားပါ</string>
+  <string name="morphe_hide_filter_bar_screen_title">စစ်ထုတ်မှု ဘား</string>
+  <string name="morphe_hide_filter_bar_screen_summary">Scrolling filter bar ကို မည်သည့်နေရာတွင် ဖျောက်မည်ကို ရွေးချယ်ပါ</string>
+  <string name="morphe_hide_filter_bar_in_channel_page_title">ချန်နယ်စာမျက်နှာတွင် ဖျောက်ထားရန်</string>
+  <string name="morphe_hide_filter_bar_in_comments_title">မှတ်ချက်များတွင် ဖျောက်ရန်</string>
+  <string name="morphe_hide_filter_bar_in_feed_title">Feed များတွင် ဖျောက်ရန်</string>
+  <string name="morphe_hide_filter_bar_in_related_videos_title">ဆက်စပ်ဗီဒီယိုများတွင် ဖျောက်ရန်</string>
+  <string name="morphe_hide_filter_bar_in_search_title">ရှာဖွေမှုရလဒ်များတွင် ဖျောက်ထားပါ</string>
+  <string name="morphe_hide_filter_bar_in_history_title">ကြည့်ရှုမှုမှတ်တမ်းတွင် ဖျောက်ထားပါ</string>
+  <string name="morphe_channel_screen_title">ချန်နယ်စာမျက်နှာ</string>
+  <string name="morphe_channel_screen_summary">ချန်နယ်စာမျက်နှာတွင် မည်သည့်အစိတ်အပိုင်းများ ပေါ်မည်ကို ရွေးချယ်ပါ</string>
+  <string name="morphe_hide_channel_tab_title">ချန်နယ်တက်ဘ် ဖစ်လ်တာကို အသုံးပြုပါ</string>
+  <string name="morphe_hide_channel_tab_filter_strings_title">ချန်နယ်တက်ဘ် ဖစ်လ်တာ</string>
+  <string name="morphe_hide_channel_tab_filter_strings_summary">စစ်ထုတ်လိုသော ချန်နယ်တက်ဘ် အမည်များကို စာကြောင်းအသစ်များဖြင့် ခြား၍ ရိုက်ထည့်ပါ</string>
   <!-- 'Community' should be translated using the same localized wording YouTube displays for the button. -->
+  <string name="morphe_hide_community_button_title">Community ခလုတ်ကို ဖျောက်ထားပါ</string>
   <!-- 'Join' should be translated using the same localized wording YouTube displays for the button. -->
+  <string name="morphe_hide_join_button_title">Join ခလုတ်ကို ဖျောက်ထားပါ</string>
+  <string name="morphe_hide_links_preview_title">လင့်ခ်များကို ကြိုတင်ကြည့်ရှုမှုကို ဖျောက်ထားပါ</string>
+  <string name="morphe_hide_links_preview_summary">ချန်နယ်၏ ထိပ်ပိုင်းတွင်ရှိသော နှိပ်၍ရသည့် ဝဘ်လင့်ခ်များကို ဖျောက်ထားပါသည်</string>
+  <string name="morphe_hide_members_only_chip_title">\'အဖွဲ့ဝင်များသာ\' ချစ်ပ်ကို ဖျောက်ရန်</string>
+  <string name="morphe_hide_members_only_chip_summary">ချန်နယ် filter ဘားရှိ \'အဖွဲ့ဝင်များသာ\' chip ကို ဖုံးကွယ်ထားမည်</string>
+  <string name="morphe_hide_members_shelf_title">အဖွဲ့ဝင်များ စင်ကို ဖျောက်ထားပါ</string>
+  <string name="morphe_hide_members_shelf_summary">ချန်နယ်အဖွဲ့ဝင်များ စာရင်းကို ဖျောက်ထားပါသည်</string>
+  <string name="morphe_hide_posts_shelf_title">ပို့စ်များစင်ကို ဖျောက်ထားပါ</string>
   <!-- 'Store' should be translated using the same localized wording YouTube displays for the button. -->
+  <string name="morphe_hide_store_button_title">Store ခလုတ်ကို ဖျောက်ရန်</string>
   <!-- 'Subscribe' should be translated using the same localized wording YouTube displays for the button. -->
+  <string name="morphe_hide_subscribe_button_in_channel_page_title">Subscribe ခလုတ်ကို ဖျောက်ရန်</string>
+  <string name="morphe_explore_menu_screen_title">လေ့လာစရာ မီနူး</string>
+  <string name="morphe_explore_menu_screen_summary">Explore မီနူးတွင် မည်သည့် အစိတ်အပိုင်းများ ပေါ်မည်ကို ရွေးချယ်ပါ</string>
+  <string name="morphe_hide_courses_menu_title">Courses မီနူးကို ဖျောက်ပါ</string>
+  <string name="morphe_hide_explore_button_title">Explore ခလုတ်ကို ဖျောက်ပါ</string>
+  <string name="morphe_hide_fashion_menu_title">\'Fashion &amp; Beauty\' မီနူးကို ဖျောက်ပါ</string>
+  <string name="morphe_hide_gaming_menu_title">Gaming မီနူးကို ဖျောက်ပါ</string>
+  <string name="morphe_hide_hype_menu_title">Hype မီနူးကို ဖျောက်ပါ</string>
+  <string name="morphe_hide_learning_menu_title">လေ့လာသင်ယူမှုမီနူးကို ဖျောက်ထားမည်</string>
+  <string name="morphe_hide_live_menu_title">Live မီနူးကို ဖျောက်ပါ</string>
+  <string name="morphe_hide_memberships_menu_title">Memberships မီနူးကို ဖျောက်ပါ</string>
+  <string name="morphe_hide_movies_menu_title">\'Movies &amp; TV\' မီနူးကို ဖျောက်ရန်</string>
+  <string name="morphe_hide_music_menu_title">ဂီတ မီနူးကို ဖျောက်ရန်</string>
+  <string name="morphe_hide_news_menu_title">News မီနူးကို ဖျောက်ပါ</string>
+  <string name="morphe_hide_playables_menu_title">Playables မီနူးကို ဖျောက်ရန်</string>
+  <string name="morphe_hide_podcasts_menu_title">Podcasts မီနူးကို ဖျောက်ရန်</string>
+  <string name="morphe_hide_shopping_menu_title">Shopping မီနူးကို ဖျောက်ရန်</string>
+  <string name="morphe_hide_sports_menu_title">အားကစား မီနူးကို ဖျောက်ရန်</string>
+  <string name="morphe_hide_youtube_premium_menu_title">YouTube Premium မီနူးကို ဖျောက်ရန်</string>
+  <string name="morphe_hide_youtube_studio_menu_title">YouTube Studio မီနူးကို ဖျောက်ရန်</string>
+  <string name="morphe_hide_youtube_music_menu_title">YouTube Music မီနူးကို ဖျောက်ထားပါ</string>
+  <string name="morphe_hide_youtube_kids_menu_title">YouTube Kids မီနူးကို ဖျောက်ထားပါ</string>
+  <string name="morphe_hide_youtube_create_menu_title">YouTube Create မီနူးကို ဖျောက်ထားပါ</string>
+  <string name="morphe_hide_youtube_works_menu_title">\'YouTube မည်သို့အလုပ်လုပ်သည်\' မီနူးကို ဖျောက်ထားမည်</string>
+  <string name="morphe_hide_privacy_tos_footer_title">ဥပဒေဆိုင်ရာနှင့် ကိုယ်ရေးကိုယ်တာဆိုင်ရာ အောက်ခြေစာသားများကို ဖျောက်ထားမည်</string>
+  <string name="morphe_comments_screen_title">မှတ်ချက်များ</string>
+  <string name="morphe_comments_screen_summary">မှတ်ချက်များ အပိုင်းတွင် မည်သည့်အစိတ်အပိုင်းများ ပေါ်မည်ကို ရွေးချယ်ပါ</string>
+  <string name="morphe_hide_comments_carousel_title">မှတ်ချက်များ Carousel စစ်ထုတ်မှုကို အသုံးပြုပါ</string>
+  <string name="morphe_hide_comments_carousel_summary">"• carousel item ၏ အမည်အတိအကျကို ထည့်သွင်းရန် သေချာပါစေ (ဥပမာ- Ask, Hype this video, Listen on YouTube Music)
+• carousel item များကို ဖျောက်ထားခြင်းသည် မရည်ရွယ်ထားသော ဘေးထွက်ဆိုးကျိုးများ ရှိနိုင်သည်
+• carousel item အားလုံးကို ဖျောက်ထားပါက comment ပိုင်းတစ်ခုလုံးကိုလည်း ဖျောက်ထားမည်ဖြစ်သည်"</string>
+  <string name="morphe_hide_comments_carousel_filter_strings_title">မှတ်ချက်များ Carousel စစ်ထုတ်မှု</string>
+  <string name="morphe_hide_comments_carousel_filter_strings_summary">စစ်ထုတ်လိုသော မှတ်ချက်များ carousel အမည်များကို စာကြောင်းအသစ်များဖြင့် ခြား၍ ရိုက်ထည့်ပါ</string>
+  <string name="morphe_hide_comments_ai_chat_summary_title">AI ချတ် အကျဉ်းချုပ်ကို ဖျောက်ထားပါ</string>
+  <string name="morphe_hide_comments_channel_guidelines_title">ချန်နယ် လမ်းညွှန်ချက်များကို ဖျောက်ထားပါ</string>
+  <string name="morphe_hide_comments_contexts_title">အကြောင်းအရာဆိုင်ရာ မက်ဆေ့ဂျ်များကို ဖျောက်ထားပါ</string>
+  <string name="morphe_hide_comments_by_members_header_title">\'အဖွဲ့ဝင်များ၏ မှတ်ချက်များ\' ခေါင်းစဉ်ကို ဖျောက်ထားပါ</string>
+  <string name="morphe_hide_comments_section_title">မှတ်ချက်များအပိုင်းကို ဖုံးကွယ်ပါ</string>
+  <string name="morphe_hide_comments_section_in_home_feed_title">Home feed ရှိ မှတ်ချက်ပေးသည့်ကဏ္ဍကို ဖျောက်ထားပါ</string>
+  <string name="morphe_hide_comments_community_guidelines_title">Community Guidelines များကို ဖျောက်ထားပါ</string>
+  <string name="morphe_hide_comments_create_a_short_button_title">\'Short ဗီဒီယိုဖန်တီးပါ\' ခလုတ်ကို ဖုံးကွယ်ပါ</string>
+  <string name="morphe_hide_comments_dislike_button_title">မကြိုက်ဘူး ခလုတ်ကို ဖျောက်ထားရန်</string>
+  <string name="morphe_hide_comments_emoji_button_title">Emoji ခလုတ်ကို ဖျောက်ထားပါ</string>
+  <string name="morphe_hide_comments_filter_bar_options_title">Filter bar ရွေးချယ်မှုများကို ဖျောက်ထားပါ</string>
+  <string name="morphe_hide_comments_filter_bar_options_summary">\'ထိပ်တန်း\' နှင့် \'အသစ်ဆုံး\' မှအပ အခြား filter bar ရွေးချယ်မှုအားလုံးကို ဖျောက်ထားပါသည်</string>
+  <string name="morphe_hide_comments_gift_animation_and_cards_title">လက်ဆောင်အန်နီမေးရှင်းနှင့် ကတ်များကို ဖျောက်ထားပါ</string>
+  <string name="morphe_hide_comments_gift_button_title">လက်ဆောင်ခလုတ်ကို ဖျောက်ထားပါ</string>
+  <string name="morphe_hide_comments_info_button_title">အချက်အလက်ခလုတ်ကို ဖျောက်ပါ</string>
+  <string name="morphe_hide_comments_live_chat_donators_bar_title">Live chat အလှူရှင်များဘားကို ဖျောက်ပါ</string>
+  <string name="morphe_hide_comments_live_chat_scroll_to_bottom_button_title">တိုက်ရိုက်ချက်တင် အောက်ခြေသို့ဆင်းရန် ခလုတ်ကို ဖျောက်ထားပါ</string>
+  <string name="morphe_hide_comments_live_chat_tooltips_title">Live chat အကြံပြုချက်များကို ဖျောက်ရန်</string>
+  <string name="morphe_hide_comments_live_chat_tooltips_summary">စာကြောသွင်းဘားအနီးတွင် ပြသသော subscriber-only chat အသိပေးချက်ကဲ့သို့သော tooltip popup များကို ဖျောက်ထားသည်</string>
+  <string name="morphe_hide_comments_menu_button_title">မီနူးခလုတ်ကို ဖျောက်ပါ</string>
+  <string name="morphe_hide_comments_menu_button_summary">မှတ်ချက်တစ်ခုချင်းစီ၏ အစက် ၃ စက်ပါသော မီနူးခလုတ်ကို ဖျောက်ပေးသည်</string>
+  <string name="morphe_hide_comments_preview_comment_title">မှတ်ချက်အကြိုကြည့်ရှုမှုကို ဖုံးကွယ်ပါ</string>
+  <string name="morphe_hide_comments_preview_comment_summary">မှတ်ချက်များ အပိုင်းတစ်ခုလုံးကို မဖွင့်မီ ဗီဒီယိုအောက်ရှိ မှတ်ချက်အကျဉ်းကို ဖျောက်ထားပါသည်</string>
+  <string name="morphe_hide_comments_preview_comment_hidden">Morphe မှ မှတ်ချက်ကို ဖျောက်ထားသည်…</string>
+  <string name="morphe_minimal_comments_button_title">Minimal ဖြစ်သော မှတ်ချက်များခလုတ်ကို အသုံးပြုမည်</string>
+  <string name="morphe_minimal_comments_button_summary">မှတ်ချက်ပေးခလုတ်ပေါ်တွင် ပြသသည့် ဆွဲယူနိုင်သော ကတ်များနှင့် ၎င်း၏ စာမျက်နှာ ရွေးချယ်မှုများကို ဖျောက်ထားပါသည်</string>
+  <string name="morphe_hide_comments_thanks_button_title">ကျေးဇူးတင်ကြောင်းခလုတ်ကို ဖုံးကွယ်ပါ</string>
+  <string name="morphe_hide_comments_timestamp_button_title">အချိန်မှတ်သားချက်ခလုတ်ကို ဖျောက်ထားပါ</string>
+  <string name="morphe_hide_comments_top_fans_button_title">\'ထိပ်တန်းပရိသတ်များ\' ခလုတ်ကို ဖျောက်ပါ</string>
+  <string name="morphe_hide_comments_translate_button_title">ဘာသာပြန်ခလုတ်ကို ဖျောက်ပါ</string>
+  <string name="morphe_hide_comments_zero_state_title">\'မှတ်ချက်မရှိသေးပါ\' ဆိုသည့် မက်ဆေ့ချ်ကို ဖျောက်ရန်</string>
+  <string name="morphe_sanitize_comments_highlighted_search_links_title">Highlight ပြထားသော ရှာဖွေမှုလင့်ခ်များကို သန့်စင်ပါ</string>
+  <string name="morphe_sanitize_comments_highlighted_search_links_summary">Highlight ပြထားသော ရှာဖွေမှုလင့်ခ်များကို သန့်စင်ပြီး မူလစာသားသက်သက်ကိုသာ ချန်ထားပါသည်</string>
+  <string name="morphe_hide_keyword_content_screen_title">သော့ချက်စကားလုံး စစ်ထုတ်မှု</string>
+  <string name="morphe_hide_keyword_content_screen_summary">ဖိဒ်နှင့် ရှာဖွေမှုများတွင် ဗီဒီယိုများကို ဖျောက်ရန် သတ်မှတ်ထားသော စကားလုံးများ သို့မဟုတ် စာသားများကို ရွေးချယ်ပါ</string>
+  <string name="morphe_hide_keyword_content_comments_title">Keyword များဖြင့် မှတ်ချက်များကို ဖျောက်ပါ</string>
+  <string name="morphe_hide_keyword_content_home_title">Keywords များဖြင့် Home ဗီဒီယိုများကို ဖုံးကွယ်ပါ</string>
+  <string name="morphe_hide_keyword_content_search_title">Keywords များဖြင့် ရှာဖွေမှုရလဒ်များကို ဖုံးကွယ်ပါ</string>
+  <string name="morphe_hide_keyword_content_subscriptions_title">Keywords များဖြင့် Subscriptions ဗီဒီယိုများကို ဖုံးကွယ်ပါ</string>
+  <string name="morphe_hide_keyword_content_phrases_title">ဖုံးကွယ်မည့် Keywords များ</string>
   <!-- For localization, it is preferred, but not required, if 'LeBlanc' is replaced with a localized name or a familiar word that has upper case letters in the middle of the word.
          This is because keywords can be in any language, and showing an example in the localized script helps convey this. -->
+  <string name="morphe_hide_keyword_content_phrases_summary">"ဖျောက်ထားလိုသော keyword များနှင့် စကားစုများကို စာကြောင်းအသစ်များဖြင့် ပိုင်းခြား၍ ထည့်သွင်းပါ
+
+Keyword များသည် ဗီဒီယိုခေါင်းစဉ်များ သို့မဟုတ် ချန်နယ်အမည်များတွင် ပြသထားသော မည်သည့်စာသားမဆို ဖြစ်နိုင်သည်
+
+စာလုံးအလယ်တွင် အင်္ဂလိပ်စာလုံးအကြီးပါသော စကားလုံးများသည် အတိအကျတူညီရမည် (ဥပမာ - iPhone, TikTok, LeBlanc)"</string>
+  <string name="morphe_hide_keyword_content_about_summary">"Home / Subscriptions / Search / Comments များတွင် keyword စကားစုများနှင့် ကိုက်ညီသော အကြောင်းအရာများကို ဖျောက်ရန် filter ပြုလုပ်ထားသည်
+
+ကန့်သတ်ချက်များ- 
+• Shorts များကို channel အမည်ဖြင့် ဖျောက်၍မရပါ
+• အချို့သော UI အစိတ်အပိုင်းများကို ဖျောက်၍မရနိုင်ပါ
+• keyword တစ်ခုကို ရှာဖွေပါက ရလဒ်မရှိကြောင်း ပြသနိုင်သည်"</string>
+  <string name="morphe_hide_keyword_content_about_whole_words_title">စကားလုံးအပြည့်အစုံကို တိုက်ဆိုင်စစ်ဆေးပါ</string>
   <!-- Translations must use a localized example. For languages that do not use spaces between words (Chinese, Japanese, etc.) the English AI example should be used since no localized examples exist. Or if using machine translations, or if nobody wants to think of a localized example, then the English 'ai' example should be left as-is. -->
+  <string name="morphe_hide_keyword_content_about_whole_words_summary">သော့ချက်စကားလုံး/စကားစုကို မျက်တောင်အဖွင့်အပိတ်သင်္ကေတများဖြင့် ပတ်ထားပါက ဗီဒီယိုခေါင်းစဉ်များနှင့် ချန်နယ်အမည်များ၏ တစ်စိတ်တစ်ပိုင်းတိုက်ဆိုင်မှုများကို တားဆီးပေးမည်ဖြစ်သည်&lt;br&gt;&lt;br&gt;ဥပမာအားဖြင့်၊&lt;br&gt;&lt;b&gt;\"ai\"&lt;/b&gt; သည် &lt;b&gt;How does AI work?&lt;/b&gt; ဗီဒီယိုကို ဖျောက်ပေးမည်ဖြစ်ပြီး&lt;br&gt; &lt;b&gt;What does fair use mean?&lt;/b&gt; ကိုမူ ဖျောက်ပေးမည်မဟုတ်ပါ</string>
   <!-- Translations of this should not be longer than the original English text, otherwise the text can be clipped and not entirely shown. -->
+  <string name="morphe_hide_keyword_toast_invalid_common">သော့ချက်စကားလုံး %s ကို အသုံးမပြုနိုင်ပါ</string>
+  <string name="morphe_hide_keyword_toast_invalid_common_whole_word_required">သော့ချက်စကားလုံး %s ကို အသုံးပြုရန် မျက်တောင်အဖွင့်အပိတ်များ ထည့်ပါ</string>
+  <string name="morphe_hide_keyword_toast_invalid_conflicting">သော့ချက်စကားလုံးတွင် ပဋိပက္ခဖြစ်နေသော ကြေညာချက်များရှိသည်- %s</string>
+  <string name="morphe_hide_keyword_toast_invalid_length">သော့ချက်စကားလုံးသည် တိုလွန်းပြီး မျက်တောင်အဖွင့်အပိတ်များ လိုအပ်သည်- %s</string>
+  <string name="morphe_hide_keyword_toast_invalid_broad">Keyword သည် ဗီဒီယိုအားလုံးကို ဖျောက်ပါမည်- %s</string>
+  <string name="morphe_hide_keyword_content_stats_hidden_breakdown">"• ပင်မစာမျက်နှာ: %s
+• စာရင်းသွင်းမှုများ: %s
+• ရှာဖွေမှု: %s
+• မှတ်ချက်များ: %s
+• စုစုပေါင်း: %s"</string>
+  <string name="morphe_hide_stats_category_title">စာရင်းအချက်အလက်များ</string>
+  <string name="morphe_hide_stats_hidden_24h_title">လွန်ခဲ့သော ၂၄ နာရီအတွင်း ဖျောက်ထားသော ဗီဒီယိုများ</string>
+  <string name="morphe_hide_stats_hidden_all_title">အချိန်အားလုံးအတွက် ဖျောက်ထားသော ဗီဒီယိုများ</string>
+  <string name="morphe_hide_stats_hidden_24h_reset_title">ပြီးခဲ့သော ၂၄ နာရီရေတွက်မှုကို ပြန်လည်သတ်မှတ်မလား?</string>
+  <string name="morphe_hide_stats_hidden_all_reset_title">အချိန်အားလုံး ရေတွက်မှုကို ပြန်လည်သတ်မှတ်မလား?</string>
+  <string name="morphe_hide_aislist_screen_title">AI ချန်နယ် စစ်ထုတ်မှု</string>
+  <string name="morphe_hide_aislist_screen_summary">AiSList အသိုင်းအဝိုင်းစာရင်းမှ AI-ဖန်တီးထားသော အကြောင်းအရာအဖြစ် မှတ်သားထားသည့် ချန်နယ်များမှ ဗီဒီယိုများကို ဖျောက်ထားပါ</string>
+  <string name="morphe_hide_aislist_blocklist_category_title">ပိတ်ပင်ထားသောစာရင်း: ယုံကြည်မှု မြင့်မားသည်</string>
+  <string name="morphe_hide_aislist_warnlist_category_title">သတိပေးစာရင်း: ယုံကြည်မှု အသင့်အတင့်ရှိသည်</string>
+  <string name="morphe_hide_aislist_hide_home_title">ပင်မစာမျက်နှာတွင် ဗီဒီယိုများကို ဖျောက်ထားပါ</string>
+  <string name="morphe_hide_aislist_hide_search_title">ရှာဖွေမှုတွင် ဗီဒီယိုများကို ဖျောက်ထားပါ</string>
+  <string name="morphe_hide_aislist_stats_hidden_breakdown">"• ပင်မစာမျက်နှာ: %s
+• ရှာဖွေမှု: %s
+• စုစုပေါင်း: %s"</string>
+  <string name="morphe_hide_aislist_stats_blocklist_channels_title">Blocklist ချန်နယ်များ</string>
+  <string name="morphe_hide_aislist_stats_warnlist_channels_title">Warnlist ချန်နယ်များ</string>
+  <string name="morphe_hide_aislist_stats_channels_disabled_summary">ချန်နယ်များကို load လုပ်ရန် filter တစ်ခုကို ဖွင့်ပါ</string>
+  <string name="morphe_hide_aislist_stats_channels_loading_summary">ချန်နယ်များကို load လုပ်နေသည်…</string>
+  <string name="morphe_hide_aislist_about_summary">"AiSList မှ အမှတ်အသားပြုထားသော ချန်နယ်များမှ ဗီဒီယိုများကို ဖျောက်ထားရန် ပင်မစာမျက်နှာနှင့် ရှာဖွေမှုရလဒ်များကို စစ်ထုတ်ထားသည်
+
+ကန့်သတ်ချက်များ:
+• စစ်ထုတ်ထားသော AI Shorts များသည် အလွတ်နေရာအဖြစ် ပေါ်လာနိုင်သည်
+• အချို့သော AI ဗီဒီယိုများသည် ဆက်လက်ပေါ်နေနိုင်သည်"</string>
+  <string name="morphe_hide_aislist_attribution_summary">"AiSList ဆိုသည်မှာ စေတနာ့ဝန်ထမ်းများမှ ထိန်းသိမ်းထားသော AI ဖြင့် ဖန်တီးထားသော အကြောင်းအရာများကို တင်ဆက်သည့် YouTube ချန်နယ်များ၏ open source စာရင်းတစ်ခု ဖြစ်ပါသည်။ ချန်နယ်များကို အသုံးပြုသူများမှ တိုင်ကြားပြီး စိစစ်ပြီးမှသာ ထည့်သွင်းခြင်း ဖြစ်သည်
+
+ဤစာရင်းကို GitHub မှ ဒေါင်းလုဒ်ပြုလုပ်ပြီး ဗီဒီယိုများကို သင့်စက်ပစ္စည်းပေါ်တွင် စစ်ထုတ်ပေးပါသည်။"</string>
+  <string name="morphe_aislist_submit_category_title">AI ချန်နယ်များကို တိုင်ကြားရန်</string>
+  <string name="morphe_aislist_submit_flyout_menu_title">ဗီဒီယိုမီနူးတွင် တိုင်ကြားချက် ထည့်သွင်းရန်</string>
+  <string name="morphe_aislist_submit_flyout_menu_summary">ဗီဒီယိုတစ်ခု၏ ချန်နယ်ကို AiSList သို့ တိုင်ကြားနိုင်မည့် အချက်အလက်တစ်ခုကို ဗီဒီယိုမီနူးတွင် ထည့်သွင်းရန်</string>
+  <string name="morphe_aislist_submit_username_title">တိုင်ကြားသူ အမည်</string>
+  <string name="morphe_aislist_submit_username_summary">အများပြည်သူကြည့်ရှုနိုင်သော AiSList အဆင့်သတ်မှတ်ချက်ဘုတ်တွင် သင်၏တိုင်ကြားချက်များဘေး၌ ပြသမည့်အမည်ဖြစ်သည်။ ဤနေရာတွင် အမည်မရှိပါက တိုင်ကြား၍မရပါ</string>
+  <string name="morphe_aislist_submit_title">AI ချန်နယ်ကို တိုင်ကြားရန်</string>
+  <string name="morphe_aislist_submit_dialog_message">"ဤဗီဒီယိုကို သက်သေအဖြစ်အသုံးပြု၍ %s ကို AiSList သို့ ပေးပို့မည်လား?
+
+အောက်ပါအချက်များနှင့် ကိုက်ညီသော ချန်နယ်များကိုသာ တိုင်ကြားပါ- 
+• AI အသံများ၊ ရုပ်ပုံများ၊ ဇာတ်ညွှန်းများ သို့မဟုတ် တေးဂီတများကို အဓိကအကြောင်းအရာအဖြစ် အသုံးပြုခြင်း
+• လူသားတို့၏ လုပ်ဆောင်မှု အနည်းငယ်သာပါဝင်ပြီး AI ကိရိယာများဖြင့် အကြောင်းအရာများကို အမြောက်အမြား ထုတ်လုပ်ခြင်း
+
+AI အကြောင်း ဆွေးနွေးရုံသာဖြစ်သော သို့မဟုတ် ဗီဒီယို၏ အစိတ်အပိုင်းအချို့တွင် AI ကို အသုံးပြုထားသော ချန်နယ်များကို မတိုင်ကြားပါနှင့်။
+
+တိုင်ကြားချက်များသည် လူသိရှင်ကြားဖြစ်ပြီး ချန်နယ်တစ်ခုကို စာရင်းထဲသို့ မထည့်မီ ပြန်လည်သုံးသပ်မည်ဖြစ်သည်။ ပယ်ဖျက်လိုပါက GitHub တွင် တောင်းဆိုချက်တင်၍သာ လုပ်ဆောင်နိုင်သည်"</string>
+  <string name="morphe_aislist_submit_already_blocklisted">ဤချန်နယ်သည် AiSList ပိတ်ဆို့မှုစာရင်းတွင် ရှိနှင့်ပြီးဖြစ်သည်</string>
+  <string name="morphe_aislist_submit_already_warnlisted">ဤချန်နယ်သည် AiSList သတိပေးစာရင်းတွင် ရှိနှင့်ပြီးဖြစ်သည်</string>
+  <string name="morphe_aislist_submit_dialog_confirm">တိုင်ကြားရန်</string>
+  <string name="morphe_aislist_submit_no_username">ချန်နယ်များကို တိုင်ကြားရန်အတွက် AI ချန်နယ်စစ်ထုတ်မှု ဆက်တင်များတွင် ပေးပို့သူအမည် သတ်မှတ်ပါ</string>
+  <string name="morphe_aislist_submit_resolving">ချန်နယ်ကို ရှာဖွေနေသည်…</string>
+  <string name="morphe_aislist_submit_failed_channel">ဤဗီဒီယို၏ ချန်နယ်ကို ရှာမတွေ့ပါ</string>
+  <string name="morphe_aislist_submit_success">ချန်နယ်ကို သတင်းပို့ပြီးပြီဖြစ်ပြီး ပြန်လည်သုံးသပ်ရန် စောင့်ဆိုင်းနေသည်</string>
+  <string name="morphe_aislist_submit_failed_conflict">AiSList သည် သတင်းပို့ချက်ကို မသိမ်းဆည်းနိုင်ပါ၊ နောက်မှ ထပ်မံကြိုးစားပါ</string>
+  <string name="morphe_aislist_submit_failed_rate_limit">သတင်းပို့ချက်များ များလွန်းနေပါသည်၊ နောက်မှ ထပ်မံကြိုးစားပါ</string>
+  <string name="morphe_aislist_submit_failed_rejected">AiSList မှ သတင်းပို့ချက်ကို ပယ်ချခဲ့သည်</string>
+  <string name="morphe_aislist_submit_failed">အစီရင်ခံခြင်း မအောင်မြင်ပါ၊ သင်၏ အင်တာနက်ချိတ်ဆက်မှုကို စစ်ဆေးပါ</string>
   <!-- ad.hideAdsPatch -->
+  <string name="morphe_ads_channel_whitelist_title">ချန်နယ် ကြော်ငြာ အဖြူရောင်စာရင်း</string>
+  <string name="morphe_ads_channel_whitelist_summary">ခွင့်ပြုထားသော channel များမှ ဗီဒီယိုများကို ကြော်ငြာများနှင့်အတူ ဖွင့်ပြမည်ဖြစ်သောကြောင့် ဖန်တီးသူများ ငွေကြေးရရှိမည်ဖြစ်သည်။ အခြား channel အားလုံးတွင် ကြော်ငြာများကို ပိတ်ထားမည်ဖြစ်သည်</string>
+  <string name="morphe_ads_channel_whitelist_flyout_add">Channel ကို ကြော်ငြာခွင့်ပြုစာရင်းသို့ ထည့်ပါ</string>
+  <string name="morphe_ads_channel_whitelist_flyout_remove">Channel ကို ကြော်ငြာခွင့်ပြုစာရင်းမှ ဖယ်ရှားပါ</string>
+  <string name="morphe_hide_creator_store_shelf_title">ဖန်တီးသူ၏ store shelf ကို ဖျောက်ထားပါ</string>
+  <string name="morphe_hide_end_screen_store_banner_title">အဆုံးသတ်မျက်နှာပြင်ရှိ store banner ကို ဖျောက်ထားပါ</string>
+  <string name="morphe_hide_general_ads_title">အထွေထွေကြော်ငြာများကို ဖျောက်ထားပါ</string>
+  <string name="morphe_hide_merchandise_banners_title">ကုန်ပစ္စည်းဘန်နာများကို ဖျောက်ထားပါ</string>
+  <string name="morphe_hide_paid_promotion_labels_title">အခပေးပရိုမိုးရှင်း အညွှန်းများကို ဖျောက်ထားပါ</string>
+  <string name="morphe_hide_player_popup_ads_title">ပလေယာ ပေါ့ပ်အပ် ကြော်ငြာများကို ဖျောက်ပါ</string>
+  <string name="morphe_hide_self_sponsor_ads_title">ကိုယ်ပိုင်စပွန်ဆာကတ်များကို ဖျောက်ထားပါ</string>
+  <string name="morphe_hide_shopping_links_title">ဈေးဝယ်ယူမှုလင့်ခ်များကို ဖျောက်ထားပါ</string>
+  <string name="morphe_hide_video_ads_title">ဗီဒီယိုကြော်ငြာများကို ဖျောက်ထားပါ</string>
+  <string name="morphe_hide_youtube_premium_promotions_title">YouTube Premium ပရိုမိုးရှင်းများကို ဖျောက်ထားပါ</string>
   <!-- layout.flyout.flyoutPatch -->
   <!-- Shown instead of the text of a flyout menu item while the data it needs is loading. -->
+  <string name="morphe_flyout_button_loading">တင်ဆက်နေသည်…</string>
   <!-- Channel whitelist dialog, shared by ad.hideAdsPatch and layout.sponsorblock.sponsorBlockPatch -->
+  <string name="morphe_channel_whitelist_current_channel">လက်ရှိချန်နယ်-</string>
+  <string name="morphe_channel_whitelist_add">ခွင့်ပြုစာရင်းသို့ ထည့်ပါ</string>
+  <string name="morphe_channel_whitelist_remove">ဖယ်ရှားပါ</string>
+  <string name="morphe_channel_whitelist_channels_header">ခွင့်ပြုထားသော channel များ</string>
+  <string name="morphe_channel_whitelist_empty">ခွင့်ပြုထားသော channel မရှိပါ</string>
+  <string name="morphe_channel_whitelist_channel_added">Channel ကို ခွင့်ပြုစာရင်းသို့ ထည့်ပြီးပါပြီ</string>
+  <string name="morphe_channel_whitelist_channel_removed">Channel ကို ခွင့်ပြုစာရင်းမှ ဖယ်ရှားပြီးပါပြီ</string>
   <!-- interaction.doubletap.doubleTapLengthPatch -->
   <!-- interaction.channelsearch.channelSearchPatch -->
+  <string name="morphe_channel_search_title">ချန်နယ်အတွင်း ရှာဖွေရန်</string>
+  <string name="morphe_channel_search_summary">ချန်နယ်စာမျက်နှာများတွင် အဆိုပါချန်နယ်အတွင်း၌သာ ရှာဖွေရန် ဒုတိယရှာဖွေရေးခလုတ်တစ်ခုကို ထည့်ပေးသည်</string>
+  <string name="morphe_channel_search_hint">ချန်နယ်ကို ရှာဖွေပါ</string>
+  <string name="morphe_channel_search_results">ချန်နယ် ရှာဖွေမှုရလဒ်များ</string>
+  <string name="morphe_channel_search_no_results">ဤချန်နယ်တွင် ဘာမျှမတွေ့ရှိပါ</string>
+  <string name="morphe_channel_search_failed">ဤချန်နယ်ကို ရှာဖွေ၍မရပါ</string>
+  <string name="morphe_channel_search_videos">ဗီဒီယိုများ</string>
+  <string name="morphe_channel_search_posts">ပို့စ်များ</string>
+  <string name="morphe_channel_search_no_posts">ဤချန်နယ်တွင် ကိုက်ညီသော ပို့စ်များမရှိပါ</string>
+  <string name="morphe_channel_search_sort_relevance">သက်ဆိုင်မှု</string>
+  <string name="morphe_channel_search_sort_most_viewed">ကြည့်ရှုမှုအများဆုံး</string>
+  <string name="morphe_channel_search_sort_least_viewed">ကြည့်ရှုမှုအနည်းဆုံး</string>
+  <string name="morphe_channel_search_sort_newest">အသစ်ဆုံး</string>
+  <string name="morphe_channel_search_sort_oldest">အဟောင်းဆုံး</string>
+  <string name="morphe_channel_search_sort_shortest">အတိုဆုံး</string>
+  <string name="morphe_channel_search_sort_longest">အရှည်ဆုံး</string>
   <!-- interaction.copyvideolink.copyVideoLinkButtonPatch -->
+  <string name="morphe_share_copy_link_button_success">လင့်ခ်ကို ကလစ်ဘုတ်သို့ ကူးယူပြီးပါပြီ</string>
+  <string name="morphe_share_copy_link_with_timestamp_button_success">အချိန်မှတ်တမ်းပါသော လင့်ခ်ကို ကလစ်ဘုတ်သို့ ကူးယူပြီးပါပြီ</string>
+  <string name="morphe_copy_video_link_button_title">ဗီဒီယိုလင့်ခ်ကူးယူရန် ခလုတ်ကို ပြပါ</string>
+  <string name="morphe_copy_video_link_button_summary">ဗီဒီယိုလင့်ခ်ကို ကူးယူရန် တစ်ချက်နှိပ်ပါ၊ အချိန်မှတ်တမ်းနှင့်တကွ ကူးယူရန် နှိပ်ပြီး ဖိထားပါ</string>
+  <string name="morphe_copy_video_link_with_timestamp_button_title">ပုံသေအားဖြင့် အချိန်မှတ်သားချက်ကို ကူးယူမည်</string>
+  <string name="morphe_copy_video_link_with_timestamp_button_summary">\'ဗီဒီယိုလင့်ခ်ကူးယူရန်\' ခလုတ်၏ တစ်ချက်နှိပ်ခြင်းနှင့် နှိပ်ပြီးဖိထားခြင်း လုပ်ဆောင်ချက်များကို ပြောင်းပြန်ပြုလုပ်ပါ</string>
   <!-- interaction.copytext.copyTextPatch -->
+  <string name="morphe_copy_video_title_title">ဗီဒီယိုခေါင်းစဉ်ကို ကူးယူပါ</string>
+  <string name="morphe_copy_video_title_summary">ဗီဒီယိုခေါင်းစဉ်ကို ကူးယူရန် ခေါင်းစဉ်ကို ဖိထားပါ</string>
+  <string name="morphe_copy_video_title_success">ဗီဒီယိုခေါင်းစဉ်ကို ကလစ်ဘုတ်သို့ ကူးယူပြီးပါပြီ</string>
+  <string name="morphe_copy_comments_title">မှတ်ချက်များကို ကူးယူပါ</string>
+  <string name="morphe_copy_comments_summary">မှတ်ချက်တစ်ခုကို ကူးယူရန် ၎င်းကို ဖိထားပါ</string>
+  <string name="morphe_copy_comments_success">မှတ်ချက်ကို ကလစ်ဘုတ်သို့ ကူးယူပြီးပါပြီ</string>
   <!-- interaction.feedactions.feedVideoActionsPatch -->
+  <string name="morphe_feed_long_press_menu_title">ဗီဒီယိုမီနူးကို ဖွင့်ရန် နှိပ်ပြီး ဖိထားပါ</string>
+  <string name="morphe_feed_long_press_menu_summary">Feed ဗီဒီယိုတစ်ခု၏ မည်သည့်နေရာတွင်မဆို နှိပ်ပြီး ဖိထားခြင်းဖြင့် ၎င်း၏မီနူးကို ဖွင့်နိုင်သည်</string>
+  <string name="morphe_feed_watch_later_button_title">Thumbnail များပေါ်တွင် \"နောက်မှကြည့်မည်\" ခလုတ်ကို ပြရန်</string>
+  <string name="morphe_feed_watch_later_button_summary">feed ဗီဒီယိုများ၏ thumbnail များပေါ်တွင် \"နောက်မှကြည့်မည်\" ခလုတ်ကို ပြသပေးပါသည်။ ၎င်းကို နှိပ်ပြီး ဖိထားပါက \"စာရင်းထဲသို့ သိမ်းဆည်းရန်\" ကို ဖွင့်ပေးမည်ဖြစ်သည်</string>
   <!-- interaction.postimages.postImageDownloadPatch -->
+  <string name="morphe_post_image_download_title">ပို့စ်ပုံများကို ဒေါင်းလုဒ်လုပ်ပါ</string>
+  <string name="morphe_post_image_download_summary">ပုံများ သို့မဟုတ် GIF များပါရှိသော ပို့စ်များ၏ Share ခလုတ်ဘေးတွင် ဒေါင်းလုဒ်ခလုတ်တစ်ခုကို ပြသပေးပြီး ၎င်းတို့၏ မီနူးတွင် ဒေါင်းလုဒ်အိုက်တမ်တစ်ခုကို ထည့်သွင်းပေးထားသည်</string>
+  <string name="morphe_post_image_download_flyout">ပုံများကို ဒေါင်းလုဒ်လုပ်ပါ</string>
+  <string name="morphe_post_image_download_flyout_single">ပုံကို ဒေါင်းလုဒ်လုပ်ပါ</string>
+  <string name="morphe_post_image_download_started">ပုံ %s ကို ဒေါင်းလုဒ်လုပ်နေသည်…</string>
+  <string name="morphe_post_image_download_started_single">ပုံကို ဒေါင်းလုဒ်လုပ်နေသည်…</string>
+  <string name="morphe_post_image_download_saved">ပုံ %1$s ကို %2$s တွင် သိမ်းဆည်းပြီးပါပြီ</string>
+  <string name="morphe_post_image_download_saved_single">ပုံကို %s တွင် သိမ်းဆည်းပြီးပါပြီ</string>
+  <string name="morphe_post_image_download_failed">ပုံကို ဒေါင်းလုဒ်မပြုလုပ်နိုင်ပါ</string>
+  <string name="morphe_post_image_download_not_found">ဤပို့စ်တွင် ပုံမရှိပါ</string>
   <!-- interaction.ask.askFlyoutMenuPatch -->
+  <string name="morphe_ask_summarize_flyout_menu_title">Flyout မီနူးတွင် Ask အိုင်တမ်ကို ထည့်ရန်</string>
+  <string name="morphe_ask_summarize_flyout_menu_summary">Feed flyout မီနူးတွင် ဗီဒီယိုအနှစ်ချုပ် အိုင်တမ်တစ်ခုကို ထည့်ပေးသည်</string>
   <!-- 'Ask' should be translated using the same localized wording YouTube displays for the Ask button under a video. -->
+  <string name="morphe_ask_summarize_flyout_menu_user_dialog_message">"Ask ကို အသုံးပြုရန်အတွက် Ask ရရှိနိုင်သော နိုင်ငံရှိ အကောင့်တစ်ခုဖြင့် အရင်ဦးဆုံး အကောင့်ဝင်ထားရန် လိုအပ်ပါသည်။
+
+Ask ခလုတ်ပါရှိသော ဗီဒီယိုတစ်ခုကို တစ်ကြိမ်ဖွင့်ပြီးနောက်တွင် လက်ရှိနိုင်ငံတွင် Ask အင်္ဂါရပ် မရရှိနိုင်စေကာမူ ဤအင်္ဂါရပ်သည် ဗီဒီယိုအားလုံးတွင် အလုပ်လုပ်မည် ဖြစ်ပါသည်။"</string>
   <!-- 'Summarize the video' should be translated using the same localized wording YouTube displays for the suggestion of the Ask panel. -->
+  <string name="morphe_ask_summarize_title">ဗီဒီယိုကို အနှစ်ချုပ်ပါ</string>
   <!-- 'Ask' should be translated using the same localized wording YouTube displays for the Ask button under a video. -->
+  <string name="morphe_ask_summarize_failed">ဤဗီဒီယိုအတွက် Ask ကို မဖွင့်နိုင်ပါ</string>
   <!-- 'Ask' should be translated using the same localized wording YouTube displays for the Ask button under a video. -->
+  <string name="morphe_ask_summarize_unavailable">သင်၏အကောင့် သို့မဟုတ် လက်ရှိနိုင်ငံအတွက် Ask ကို အသုံးပြု၍မရနိုင်ပါ</string>
   <!-- layout.feedviews.feedViewCountPatch -->
+  <string name="morphe_feed_view_count_title">Thumbnail များပေါ်တွင် ကြည့်ရှုမှုအရေအတွက်ကို ပြသပါ</string>
+  <string name="morphe_feed_view_count_summary">Feed ဗီဒီယိုများ၏ ကြည့်ရှုမှုအရေအတွက်ကို ခေါင်းစဉ်အောက်တွင် ပြသမည့်အစား ၎င်းတို့၏ thumbnail များ၏ ဘယ်ဘက်အောက်ခြေတွင် ပြသပေးပါသည်။ Shelf များတွင်ရှိသော အချို့ဗီဒီယိုများသည် ကြည့်ရှုမှုအရေအတွက်ကို ပြသမည်မဟုတ်ပါ</string>
   <!-- layout.returnyoutubedislike.returnYouTubeDislikePatch -->
+  <string name="morphe_ryd_feed_like_count_title">Feed thumbnail တွင် like အရေအတွက်ကို ပြသရန်</string>
+  <string name="morphe_ryd_feed_like_ratio_title">Feed thumbnail တွင် like ရာခိုင်နှုန်းကို ပြသရန်</string>
   <!-- interaction.searchcomments.searchCommentsPatch -->
+  <string name="morphe_search_comments_title">မှတ်ချက်များကို ရှာဖွေပါ</string>
+  <string name="morphe_search_comments_summary">ရှာဖွေထားသော စကားလုံးများအားလုံးပါဝင်သည့် ပုံစံတင်ပြီးသား မှတ်ချက်များကိုသာ ပြသရန် မှတ်ချက်များရှိ ရှာဖွေရေးခလုတ်ကို နှိပ်ပါ။ စကားစုတစ်ခုကို ရှာဖွေရန် စကားလုံးများကို မျက်တောင်ဖွင့်ပိတ်အတွင်း ထည့်ပါ</string>
+  <string name="morphe_search_comments_dialog_title">မှတ်ချက်များကို ရှာဖွေရန်</string>
+  <string name="morphe_search_comments_hint">ရှာဖွေလိုသော စကားလုံးများ</string>
+  <string name="morphe_search_comments_search">ရှာဖွေရန်</string>
+  <string name="morphe_search_comments_clear">ဖျက်ရန်</string>
+  <string name="morphe_search_comments_applied">စီစဉ်မှုပုံစံကို ပြောင်းလဲပါ သို့မဟုတ် မှတ်ချက်များကို ရှာဖွေရန်အတွက် ၎င်းတို့ကို ပြန်ဖွင့်ပါ</string>
+  <string name="morphe_search_comments_cleared">ရှာဖွေမှုအား ဖျက်ပြီးပါပြီ။ မှတ်ချက်အားလုံးကို ပြသရန် စီစဉ်မှုပုံစံကို ပြောင်းလဲပါ သို့မဟုတ် မှတ်ချက်များကို ပြန်ဖွင့်ပါ</string>
   <!-- layout.hide.signintotv.disableSignInToTVPopupPatch -->
+  <string name="morphe_disable_sign_in_to_tv_popup_title">\'Sign in to TV\' ပေါ့ပ်အပ်ကို ပိတ်ရန်</string>
+  <string name="morphe_disable_connect_your_devices_popup_title">\'သင့်စက်ပစ္စည်းများကို ချိတ်ဆက်ပါ\' ပေါ့ပ်အပ်ကို ပိတ်ပါ</string>
   <!-- interaction.doubletap.disableDoubleTapActionsPatch -->
+  <string name="morphe_disable_chapter_skip_double_tap_title">အခန်းကျော်ရန် နှစ်ချက်နှိပ်ခြင်းကို ပိတ်ပါ</string>
+  <string name="morphe_disable_chapter_skip_double_tap_summary">လက်ချောင်းတစ်ချောင်းတည်းဖြင့် မှားယွင်းစွာ နှိပ်မိနိုင်သော အခန်းများကို ကျော်ရန် လက်ချောင်းနှစ်ချောင်းဖြင့် နှစ်ချက်နှိပ်သည့် အမူအရာကို ပိတ်ထားသည်</string>
   <!-- interaction.downloads.downloadsPatch -->
+  <string name="morphe_external_downloader_screen_summary">ပြင်ပဒေါင်းလုဒ်လုပ်သည့်အက်ပ်များဖြင့် ဗီဒီယိုများ၊ ပေါ့တ်ကတ်စ်များ သို့မဟုတ် သီချင်းများကို ဒေါင်းလုဒ်လုပ်ပါ</string>
+  <string name="morphe_external_downloader_overlay_button_title">Player overlay ဒေါင်းလုဒ်ခလုတ်ကို ပြသပါ</string>
+  <string name="morphe_external_downloader_overlay_button_summary">ဗီဒီယို player တွင် သင်၏ ပြင်ပဒေါင်းလုဒ်ဆော့ဖ်ဝဲကို ဖွင့်ပေးမည့် ခလုတ်တစ်ခုကို ပြသပေးသည်</string>
+  <string name="morphe_external_downloader_quick_menu_title">နှိပ်လိုက်သည်နှင့် အမြန်ဒေါင်းလုဒ်လုပ်မည်</string>
+  <string name="morphe_external_downloader_quick_menu_summary">နောက်ခံတွင် ဒေါင်းလုဒ်လုပ်ရန် အကြောင်းကြားချက် ပေးပါမည်။ ဒေါင်းလုဒ်လုပ်သည့်အက်ပ်ကို ဖွင့်ရန် နှိပ်ပြီး ဖိထားပါ။ YTDLnis နှင့် YTindir တို့နှင့် အလုပ်လုပ်သည်</string>
+  <string name="morphe_external_downloader_mark_watched_title">ဒေါင်းလုဒ်လုပ်ပြီးသည်များကို ကြည့်ပြီးသည်ဟု မှတ်သားရန်</string>
+  <string name="morphe_external_downloader_mark_watched_summary">ပြင်ပဒေါင်းလုဒ်လုပ်သည့်အက်ပ်ဖြင့် ဒေါင်းလုဒ်လုပ်ထားသော ဗီဒီယိုများကို သင်၏ YouTube ကြည့်ရှုမှုမှတ်တမ်းတွင် ထည့်သွင်းမည်</string>
+  <string name="morphe_external_downloader_quick_video_quality">Full HD (1080p)</string>
+  <string name="morphe_external_downloader_quick_audio_quality">အလတ်စား (192 kbps)</string>
+  <string name="morphe_external_downloader_quick_menu_header">အမြန်ဒေါင်းလုဒ်</string>
+  <string name="morphe_external_downloader_quick_video">ဗီဒီယို</string>
+  <string name="morphe_external_downloader_quick_audio">အသံ</string>
+  <string name="morphe_external_downloader_quick_options">ရွေးချယ်စရာအားလုံး</string>
+  <string name="morphe_shorts_download_flyout_button_title">Shorts မီနူးတွင် ဒေါင်းလုဒ်ပြသရန်</string>
+  <string name="morphe_shorts_download_flyout_button_summary">Shorts ပလေယာတွင် ပြင်ပဒေါင်းလုဒ်လုပ်ဆောင်ချက် မီနူးတစ်ခုကို ထည့်သွင်းပေးသည်</string>
+  <string name="morphe_shorts_download_flyout_title">ဒေါင်းလုဒ်</string>
   <!-- video.voiceovertranslation.voiceOverTranslationPatch -->
+  <string name="morphe_vot_screen_title">အသံဖြင့် ဘာသာပြန်ဆိုခြင်း</string>
+  <string name="morphe_vot_screen_summary">ဗီဒီယိုစာတမ်းများကို စက်အတွင်းရှိ စာသားမှအသံပြောင်းစနစ်ကို အသုံးပြု၍ ဗီဒီယိုဖွင့်ခြင်းနှင့် တစ်ပြိုင်နက် အသံထွက်ဖတ်ပေးမည် ဖြစ်သည်</string>
+  <string name="morphe_vot_enabled_summary">ဗီဒီယိုဖွင့်စက်တွင် overlay ခလုတ်တစ်ခုကို ပြသပေးပါသည်။ ဘာသာပြန်ဆိုမှုကို အဖွင့်/အပိတ်ပြုလုပ်ရန် နှိပ်ပါ၊ အမြန်ဆက်တင်များအတွက် ဖိ၍နှိပ်ထားပါ</string>
+  <string name="morphe_vot_caption_language_title">ဘာသာစကား</string>
+  <string name="morphe_vot_translation_service_title">ဘာသာပြန် ဝန်ဆောင်မှုပေးသူ</string>
+  <string name="morphe_vot_original_audio_volume_title">မူရင်း အသံပမာဏ</string>
+  <string name="morphe_vot_original_audio_volume_summary">ဘာသာပြန် အသံထွက်နေစဉ်အတွင်း မူရင်း YouTube အသံ၏ ပမာဏ</string>
+  <string name="morphe_vot_translation_volume_title">ဘာသာပြန်အသံပမာဏ</string>
+  <string name="morphe_vot_translation_volume_summary">အသံသွင်းဘာသာပြန်အသံ၏ ပမာဏ</string>
+  <string name="morphe_vot_max_speech_rate_title">အမြင့်ဆုံး စကားပြောနှုန်း</string>
+  <string name="morphe_vot_max_speech_rate_summary">စာတန်းထိုးနေရာတွင် စကားပြောသံကို အံဝင်ခွင်ကျဖြစ်စေရန် အသုံးပြုသည့် အမြင့်ဆုံး အရှိန်မြှင့်တင်မှု</string>
+  <string name="morphe_vot_mymemory_info_summary">"အခမဲ့ ဘာသာပြန် API ဖြစ်ပြီး API key မလိုအပ်ပါ။ အခမဲ့အဆင့်တွင် တစ်နေ့လျှင် စာလုံးရေ ၅,၀၀၀ အထိ သို့မဟုတ် အီးမေးလ်လိပ်စာဖြင့် တစ်နေ့လျှင် စာလုံးရေ ၅၀,၀၀၀ အထိ အသုံးပြုနိုင်ပါသည်။
+
+MyMemory.translated.net ကို ဖွင့်ရန် ဤနေရာကို နှိပ်ပါ"</string>
+  <string name="morphe_vot_mymemory_email_title">MyMemory အီးမေးလ်</string>
+  <string name="morphe_vot_mymemory_email_summary">ရွေးချယ်နိုင်ပါသည်။ နေ့စဉ်ကန့်သတ်ချက်ကို စာလုံးရေ ၅,၀၀၀ မှ ၅၀,၀၀၀ အထိ တိုးမြှင့်ရန် သင်၏ MyMemory အီးမေးလ်လိပ်စာကို ထည့်ပါ။ အမည်မသိကန့်သတ်ချက်ကို အသုံးပြုလိုပါက အလွတ်ထားခဲ့ပါ</string>
+  <string name="morphe_vot_openrouter_info_summary">"OpenRouter မှတစ်ဆင့် အခပေး AI ဘာသာပြန်စနစ်။ တစ်ကြိမ်ဖြည့်သွင်းပြီး ဗီဒီယိုထောင်ပေါင်းများစွာကို ဘာသာပြန်ပါ။ Mistral Nemo သည် အသက်သာဆုံးရွေးချယ်မှုဖြစ်ပြီး Gemma 4 သည် အကောင်းဆုံးအရည်အသွေးကို ပေးစွမ်းပါသည်။
+
+OpenRouter.ai ကို ဖွင့်ရန် ဤနေရာကို နှိပ်ပါ"</string>
+  <string name="morphe_vot_openrouter_api_key_title">OpenRouter API ကီး</string>
+  <string name="morphe_vot_openrouter_api_key_summary">သင်၏ OpenRouter API ကီး ဖြစ်သည်။ OpenRouter.ai &gt; Workspace &gt; API Keys တွင် ကီးတစ်ခု ဖန်တီးပါ</string>
+  <string name="morphe_vot_openrouter_model_title">OpenRouter မော်ဒယ်</string>
+  <string name="morphe_vot_openrouter_model_custom">စိတ်ကြိုက်</string>
+  <string name="morphe_vot_openrouter_not_configured_title">OpenRouter ကို configure မလုပ်ရသေးပါ</string>
+  <string name="morphe_vot_openrouter_not_configured_message">ဤ provider ကို မရွေးချယ်မီ settings တွင် သင်၏ OpenRouter API key ကို ထည့်သွင်းပါ</string>
+  <string name="morphe_vot_cost_free">အခမဲ့</string>
   <!-- %s is dollar cost, e.g., $0.10 per 100 hours -->
+  <string name="morphe_vot_cost_per_hour">ဗီဒီယို နာရီ ၁၀၀ လျှင် %s</string>
+  <string name="morphe_vot_tts_voice_type">အသံ</string>
+  <string name="morphe_vot_tts_system">စနစ်</string>
+  <string name="morphe_vot_voice_gender_male_multilingual">ဘာသာစကားမျိုးစုံ ပြောနိုင်သော အမျိုးသား</string>
+  <string name="morphe_vot_voice_gender_female_multilingual">ဘာသာစကားမျိုးစုံ ပြောနိုင်သော အမျိုးသမီး</string>
+  <string name="morphe_vot_voice_gender_male">အမျိုးသား</string>
+  <string name="morphe_vot_voice_gender_female">အမျိုးသမီး</string>
+  <string name="morphe_vot_tts_sample">Morphing လုပ်မယ့်အချိန်ရောက်ပြီ!</string>
+  <string name="morphe_vot_http_error_title">ဘာသာပြန်ခြင်း မရနိုင်ပါ</string>
+  <string name="morphe_vot_http_error_message">"ဘာသာပြန်ဝန်ဆောင်မှုမှ HTTP error %s ကို ပြန်ပေးခဲ့ပါသည်။ သင်၏ IP လိပ်စာသည် ၂၄ နာရီအထိ ကန့်သတ်ခံထားရခြင်း ဖြစ်နိုင်ပါသည်။
+
+ဘာသာပြန်ခြင်းကို ဆက်လက်အသုံးပြုရန် settings တွင် အခြားဘာသာပြန်ဝန်ဆောင်မှုတစ်ခုသို့ ပြောင်းလဲပါ သို့မဟုတ် VPN ကို အသုံးပြုပါ"</string>
+  <string name="morphe_vot_do_not_show_again">ထပ်မပြပါနှင့်</string>
+  <string name="morphe_vot_export_api_key_warning">"သင်၏ ဆက်တင်များတွင် OpenRouter API key ပါဝင်နေပါသည်။
+
+သင်၏ API key ကို မည်သူနှင့်မျှ မမျှဝေပါနှင့်။ ၎င်းကို ရရှိထားသူ မည်သူမဆို သင်၏ OpenRouter ခရက်ဒစ်များကို အသုံးပြုနိုင်သည်"</string>
+  <string name="morphe_vot_openrouter_credits_title">OpenRouter ခရက်ဒစ် ကန့်သတ်ချက် ပြည့်သွားပါပြီ</string>
+  <string name="morphe_vot_openrouter_credits_message">သင်၏ OpenRouter ခရက်ဒစ် ကန့်သတ်ချက် ပြည့်သွားပါပြီ။ OpenRouter.ai တွင် သင်၏ လက်ကျန်ငွေကို ဖြည့်သွင်းပါ သို့မဟုတ် သင်၏ key သုံးစွဲမှု ကန့်သတ်ချက်ကို တိုးမြှင့်ပါ</string>
+  <string name="morphe_vot_openrouter_open_website">OpenRouter.ai ကို ဖွင့်ပါ</string>
+  <string name="morphe_vot_openrouter_error">OpenRouter ဘာသာပြန်ဆိုမှု မအောင်မြင်ပါ (HTTP %s)</string>
+  <string name="morphe_vot_mymemory_quota_title">MyMemory နေ့စဉ်ကန့်သတ်ချက် ပြည့်သွားပါပြီ</string>
+  <string name="morphe_vot_mymemory_quota_next_available">နောက်တစ်ကြိမ် %s တွင် အသုံးပြုနိုင်မည်</string>
+  <string name="morphe_vot_mymemory_quota_message_no_email">သင်သည် ယနေ့အတွက် MyMemory အခမဲ့ ဘာသာပြန်ဆိုမှု ပမာဏ (စာလုံးရေ ၅,၀၀၀) ကို အသုံးပြုပြီးပါပြီ။ နေ့စဉ်ကန့်သတ်ချက်ကို စာလုံးရေ ၅၀,၀၀၀ အထိ တိုးမြှင့်ရန် ဆက်တင်များတွင် MyMemory အီးမေးလ်တစ်ခု ထည့်သွင်းပါ၊ သို့မဟုတ် အခြားဘာသာပြန်ဝန်ဆောင်မှုတစ်ခုသို့ ပြောင်းလဲပါ</string>
+  <string name="morphe_vot_mymemory_quota_message_with_email">သင်သည် ယနေ့အတွက် MyMemory ဘာသာပြန်ဆိုမှု ပမာဏ (စာလုံးရေ ၅၀,၀၀၀) ကို အသုံးပြုပြီးပါပြီ။ အခြားဘာသာပြန်ဝန်ဆောင်မှုတစ်ခုသို့ ပြောင်းလဲပါ သို့မဟုတ် မနက်ဖြန်တွင် ထပ်မံကြိုးစားပါ</string>
+  <string name="morphe_vot_mymemory_error">MyMemory ဘာသာပြန်ဆိုမှု မအောင်မြင်ပါ (အခြေအနေ %s)</string>
   <!-- interaction.loop.loopVideoPatch -->
+  <string name="morphe_loop_video_title">ဗီဒီယိုပတ်၍ပြသခြင်းကို ဖွင့်ပါ</string>
+  <string name="morphe_do_not_remember_loop_video_title">ဗီဒီယိုအကြိမ်ကြိမ်ပြသမှုကို မှတ်မထားပါနှင့်</string>
+  <string name="morphe_do_not_remember_loop_video_summary">နောက်ဆက်တွဲဗီဒီယိုများအတွက် လက်ရှိဗီဒီယိုအကြိမ်ကြိမ်ပြသမှုအခြေအနေကို သိမ်းဆည်းခြင်းမှ တားဆီးပါ</string>
   <!-- interaction.loop.loopVideoButtonPatch -->
+  <string name="morphe_loop_video_button_title">ဗီဒီယိုပတ်ပတ်လည် ဖွင့်ရန် ခလုတ်ကို ပြပါ</string>
+  <string name="morphe_loop_video_button_toast_on">ဗီဒီယိုပတ်၍ပြသခြင်း ဖွင့်ထားသည်</string>
+  <string name="morphe_loop_video_button_toast_off">ဗီဒီယိုပတ်လမ်းပိတ်ထားသည်</string>
+  <string name="morphe_loop_video_range_dialog_title">ပတ်လမ်း အတိုင်းအတာ</string>
+  <string name="morphe_loop_video_range_label_start">စတင်ရန်</string>
+  <string name="morphe_loop_video_range_label_end">ပြီးဆုံးရန်</string>
+  <string name="morphe_loop_video_range_hint_start">[hh:]mm:ss</string>
+  <string name="morphe_loop_video_range_hint_end">[hh:]mm:ss (အလွတ်ထားပါက = ဗီဒီယိုအဆုံးသတ်)</string>
+  <string name="morphe_loop_video_range_set">သတ်မှတ်မည်</string>
+  <string name="morphe_loop_video_range_clear">ဖျက်မည်</string>
+  <string name="morphe_loop_video_range_toast_on">%1$s - %2$s ကို အကြိမ်ကြိမ်ပြသနေသည်</string>
+  <string name="morphe_loop_video_range_invalid_time">အချိန်အပိုင်းအခြား မမှန်ကန်ပါ</string>
   <!-- interaction.pictureinpicture.pictureinPictureButtonPatch -->
+  <string name="morphe_pip_button_overlay_title">Picture-in-Picture ခလုတ်ကို ပြပါ</string>
+  <string name="morphe_pip_button_flyout_title">Picture-in-Picture မီနူးကို ပြပါ</string>
+  <string name="morphe_pip_button_flyout_name">Picture-in-Picture သို့ ပြောင်းပါ</string>
   <!-- interaction.playall.playAllButtonPatch -->
+  <string name="morphe_play_all_button_title">အားလုံးဖွင့်ရန် ခလုတ်ကို ပြပါ</string>
+  <string name="morphe_play_all_button_summary">"ချန်နယ်မှ ဗီဒီယိုအားလုံးပါဝင်သော ပလေးလစ်တစ်ခု ဖန်တီးရန် နှိပ်ပါ၊ ပယ်ဖျက်ရန် နှိပ်ထားပါ
+
+အချက်အလက်- တိုက်ရိုက်ထုတ်လွှင့်မှုများတွင် အလုပ်မလုပ်နိုင်ပါ"</string>
+  <string name="morphe_play_all_button_type_title">Playlist ထုတ်လုပ်မှု ပုံစံ</string>
+  <string name="morphe_play_all_button_type_entry_0">အကြောင်းအရာအားလုံး (အချိန်အလိုက် စီပါ၊ အနည်းမှ အများ)</string>
+  <string name="morphe_play_all_button_type_entry_1">အကြောင်းအရာအားလုံး (အချိန်အလိုက် စီပါ)</string>
+  <string name="morphe_play_all_button_type_entry_2">အကြောင်းအရာအားလုံး (လူကြိုက်အများဆုံးအလိုက် စီပါ)</string>
+  <string name="morphe_play_all_button_type_entry_3">ဗီဒီယိုများသာ (အချိန်အလိုက်စီရန်)</string>
+  <string name="morphe_play_all_button_type_entry_4">ဗီဒီယိုများသာ (လူကြိုက်အများဆုံးအလိုက်စီရန်)</string>
+  <string name="morphe_play_all_button_type_entry_5">Shorts များသာ (အချိန်အလိုက်စီရန်)</string>
+  <string name="morphe_play_all_button_type_entry_6">Shorts များသာ (လူကြိုက်အများဆုံးအလိုက်စီရန်)</string>
+  <string name="morphe_play_all_button_type_entry_7">တိုက်ရိုက်ထုတ်လွှင့်မှုဗီဒီယိုများသာ (အချိန်အလိုက်စီရန်)</string>
+  <string name="morphe_play_all_button_type_entry_8">တိုက်ရိုက်ထုတ်လွှင့်မှုဗီဒီယိုများသာ (လူကြိုက်အများဆုံးအလိုက်စီရန်)</string>
+  <string name="morphe_play_all_button_type_entry_9">အဖွဲ့ဝင်များသာ ကြည့်ရှုနိုင်သော အကြောင်းအရာအားလုံး</string>
+  <string name="morphe_play_all_button_type_entry_10">အဖွဲ့ဝင်များသာ ကြည့်ရှုနိုင်သော ဗီဒီယိုများ</string>
+  <string name="morphe_play_all_button_type_entry_11">အဖွဲ့ဝင်များအတွက်သာ Shorts များ</string>
+  <string name="morphe_play_all_button_type_entry_12">အဖွဲ့ဝင်များအတွက်သာ တိုက်ရိုက်ထုတ်လွှင့်မှုများ</string>
+  <string name="morphe_play_all_button_not_available_toast">ချန်နယ် ID မကိုက်ညီမှုကြောင့် ပလေလစ်ကို ဖန်တီး၍မရပါ</string>
   <!-- interaction.reload.reloadVideoPatch -->
+  <string name="morphe_reload_video_button_title">ဗီဒီယိုပြန်ဖွင့်ရန် ခလုတ်ကို ပြပါ</string>
+  <string name="morphe_dismiss_player_not_available_toast">ဗီဒီယို ID ကို မရရှိနိုင်ပါ။ ဗီဒီယိုကို ကျေးဇူးပြု၍ ကိုယ်တိုင်ပြန်ဖွင့်ပါ</string>
   <!-- interaction.savetowatchlater.saveToWatchLaterPatch -->
+  <string name="morphe_save_to_watch_later_button_title">\'နောက်မှကြည့်မည်\' သို့ သိမ်းဆည်းရန် ခလုတ်ကို ပြသပါ</string>
+  <string name="morphe_save_to_watch_later_button_summary">\'နောက်မှကြည့်မည်\' သို့ သိမ်းဆည်းရန် နှိပ်ပါ၊ တန်းစီစောင့်ဆိုင်းမှု ရွေးချယ်ခွင့်များအတွက် ဖိထားပါ</string>
+  <string name="morphe_save_to_watch_later_success_toast">ဗီဒီယိုကို \"နောက်မှကြည့်မည်\" ပလေးလစ်တွင် အောင်မြင်စွာ သိမ်းဆည်းပြီးပါပြီ</string>
+  <string name="morphe_save_to_watch_later_already_exists_toast">ဤဗီဒီယိုကို နောက်မှကြည့်ရန်စာရင်းတွင် သိမ်းဆည်းထားပြီးဖြစ်သည်</string>
+  <string name="morphe_save_to_watch_later_error_toast">ဤဗီဒီယိုကို နောက်မှကြည့်ရန်စာရင်းတွင် မသိမ်းဆည်းနိုင်ပါ</string>
+  <string name="morphe_save_to_watch_later_flyout_title">\'နောက်မှကြည့်မည်\' သို့ သိမ်းဆည်းပါ</string>
+  <string name="morphe_save_to_watch_later_flyout_button_title">ဗီဒီယိုဖွင့်စက်၏ ဆက်တင်များ flyout တွင် \'နောက်မှကြည့်မည်\' သို့ သိမ်းဆည်းရန် ခလုတ်ကို ပြသပါ</string>
+  <string name="morphe_save_to_watch_later_flyout_button_summary">ဗီဒီယိုဆက်တင်များ flyout မှတစ်ဆင့် လက်ရှိကြည့်ရှုနေသော ဗီဒီယိုကို \'နောက်မှကြည့်မည်\' တွင် သိမ်းဆည်းနိုင်စေသည်</string>
+  <string name="morphe_save_to_watch_later_kids_flyout_button_title">ကလေးဗီဒီယိုများတွင် \'နောက်မှကြည့်မည်\' သို့ သိမ်းဆည်းရန် ခလုတ်ကို ပြသပါ</string>
+  <string name="morphe_save_to_watch_later_kids_flyout_button_summary">flyout မီနူးမှတစ်ဆင့် ကလေးများနှင့် သက်ဆိုင်သော ဗီဒီယိုများကို \'နောက်မှကြည့်မည်\' တွင် သိမ်းဆည်းနိုင်စေသည်</string>
+  <string name="morphe_save_to_watch_later_shorts_flyout_button_title">Shorts flyout တွင် \'နောက်မှကြည့်မည်\' သို့ သိမ်းဆည်းရန် ခလုတ်ကို ပြသပါ</string>
+  <string name="morphe_save_to_watch_later_shorts_flyout_button_summary">Flyout မီနူးမှတစ်ဆင့် shorts များကို \'နောက်မှကြည့်မည်\' တွင် သိမ်းဆည်းနိုင်စေသည်</string>
+  <string name="morphe_save_to_watch_later_redirect_playlist_id_title">နောက်မှကြည့်မည်ကို ပလေးလစ်သို့ လမ်းကြောင်းပြောင်းရန်</string>
+  <string name="morphe_save_to_watch_later_redirect_playlist_id_summary">နောက်မှကြည့်မည်</string>
+  <string name="morphe_queue_flyout_title">Morphe တန်းစီဇယားသို့ ထည့်ပါ</string>
+  <string name="morphe_queue_restore_title">Session များအကြား တန်းစီမှုကို ထိန်းသိမ်းထားပါ</string>
+  <string name="morphe_queue_restore_summary">အက်ပ်ကို ပြန်ဖွင့်ပြီးနောက်တွင်လည်း တန်းစီမှုကို ထိန်းသိမ်းထားမည်ဖြစ်သည်</string>
+  <string name="morphe_swap_save_and_queue_actions_title">သိမ်းဆည်းခြင်းနှင့် စီစဉ်ခြင်း လုပ်ဆောင်ချက်များကို အပြန်အလှန်လဲမည်</string>
+  <string name="morphe_swap_save_and_queue_actions_summary">တန်းစီစောင့်ဆိုင်းမှု ရွေးချယ်ခွင့်များအတွက် နှိပ်ပါ၊ \'နောက်မှကြည့်မည်\' သို့ သိမ်းဆည်းရန် ဖိထားပါ</string>
   <!-- 'Play next in queue' should be translated using the same localized wording YouTube displays the feed flyout item. -->
+  <string name="morphe_queue_type_title">ဆင့်တက်ကစားမည့် အစီအစဉ်အမျိုးအစား</string>
+  <string name="morphe_queue_type_entry_1">မူလ</string>
+  <string name="morphe_queue_type_entry_2">Native အစီအစဉ်</string>
+  <string name="morphe_queue_type_entry_3">Morphe အစီအစဉ်</string>
+  <string name="morphe_queue_type_entry_4">Morphe queue client side</string>
+  <string name="morphe_queue_add_flyout_menu_title">Feed flyout queue menu item ကို ထည့်သွင်းပါ</string>
+  <string name="morphe_queue_add_flyout_menu_summary">အပို flyout item တစ်ခုကို ထည့်သွင်းပေးပါသည်။ \"Add to queue\" ကို မတွေ့ရပါက ဤအချက်ကို အသုံးပြုပါ</string>
+  <string name="morphe_local_queue_sheet_title">စီတန်းခြင်း</string>
+  <string name="morphe_local_queue_open">တန်းစီစောင့်ဆိုင်းမှု (%s)</string>
+  <string name="morphe_local_queue_clear">အားလုံးကို ရှင်းလင်းပါ</string>
+  <string name="morphe_local_queue_empty">စီတန်းထားသည်များ မရှိပါ</string>
+  <string name="morphe_local_queue_empty_hint">မည်သည့်ဗီဒီယိုတွင်မဆို စီတန်းခြင်းတွင် နောက်တစ်ခုအဖြစ် ဖွင့်ရန် အသုံးပြုပါ</string>
+  <string name="morphe_local_queue_now_playing">ယခုဖွင့်နေသည်</string>
+  <string name="morphe_local_queue_play_next">စီတန်းခြင်းတွင် နောက်တစ်ခုအဖြစ် ဖွင့်ရန်</string>
+  <string name="morphe_local_queue_play_last">တန်းစီထားသည်များ၏ နောက်ဆုံးတွင် ဖွင့်ရန်</string>
+  <string name="morphe_local_queue_reorder">အစီအစဉ်ပြန်ပြောင်းရန်</string>
+  <string name="morphe_local_queue_remove">ဖယ်ရှားရန်</string>
+  <string name="morphe_local_queue_added">စီတန်းခြင်းသို့ ထည့်ပြီးပါပြီ</string>
+  <string name="morphe_local_queue_unavailable">ဤဗီဒီယိုကို တန်းစီထားသည်များထဲသို့ ထည့်၍မရပါ</string>
+  <string name="morphe_local_queue_playlist_unsupported">ပလေးလစ်များကို တန်းစီထားသည်များထဲသို့ ထည့်၍မရပါ</string>
+  <string name="morphe_local_queue_full">တန်းစီမှု ပြည့်နေသည်</string>
+  <string name="morphe_local_queue_play_failed">ဗီဒီယိုကို စတင်၍မရနိုင်ပါ</string>
+  <string name="morphe_ads_channel_whitelist_flyout_menu_title">Flyout မီနူးရှိ ကြော်ငြာ အဖြူရောင်စာရင်း</string>
+  <string name="morphe_ads_channel_whitelist_flyout_menu_summary">ထိုဗီဒီယို၏ ချန်နယ်တွင် ကြော်ငြာများကို ဖွင့်ပြခွင့်ပြုမည့် flyout အိုက်တမ်တစ်ခုကို ထည့်သွင်းသည်</string>
   <!-- "Spoof video streams" must use the same translation as morphe_spoof_video_streams_screen_title -->
+  <string name="morphe_ads_channel_whitelist_flyout_user_dialog_message">ဤအင်္ဂါရပ်သည် PotHelper ကို အသုံးပြုရန် သို့မဟုတ် \"Spoof video streams\" ကို TV သို့မဟုတ် Android VR sign-in သို့ ပြောင်းလဲရန် လိုအပ်နိုင်သည်</string>
+  <string name="morphe_playback_speed_channel_whitelist_flyout_menu_title">Flyout မီနူးရှိ အမြန်နှုန်း အဖြူရောင်စာရင်း</string>
+  <string name="morphe_playback_speed_channel_whitelist_flyout_menu_summary">ထိုဗီဒီယို၏ ချန်နယ်ကို အမြဲတမ်း 1.0x အမြန်နှုန်းဖြင့် ဖွင့်ပြမည့် flyout အိုက်တမ်တစ်ခုကို ထည့်သွင်းသည်</string>
+  <string name="morphe_queue_manager_check_failed_auth">လော့ဂ်အင် မဝင်ထားပါ</string>
+  <string name="morphe_queue_manager_check_failed_playlist_id">ပလေလစ် ID မရှိပါ</string>
+  <string name="morphe_queue_manager_check_failed_queue">တန်းစီဇယားသည် အလွတ်ဖြစ်နေသည်</string>
+  <string name="morphe_queue_manager_check_failed_video_id">ဗီဒီယို ID မရှိပါ</string>
+  <string name="morphe_queue_manager_check_failed_generic">မအောင်မြင်ပါ- %s</string>
+  <string name="morphe_queue_manager_fetch_failed_add">တန်းစီဇယားထဲသို့ ထည့်ရန် မအောင်မြင်ပါ</string>
+  <string name="morphe_queue_manager_fetch_failed_create">တန်းစီဇယား ဖန်တီးရန် မအောင်မြင်ပါ</string>
+  <string name="morphe_queue_manager_fetch_failed_remove">စီတန်းခြင်းမှ ဖယ်ရှား၍မရပါ</string>
+  <string name="morphe_queue_manager_fetch_failed_save">စီတန်းခြင်းကို သိမ်းဆည်း၍မရပါ</string>
+  <string name="morphe_queue_manager_fetch_succeeded_add">စီတန်းခြင်းသို့ ထည့်ပြီးပါပြီ</string>
+  <string name="morphe_queue_manager_fetch_succeeded_create">စီတန်းခြင်းကို ဖန်တီးပြီးပါပြီ</string>
+  <string name="morphe_queue_manager_fetch_succeeded_remove">တန်းစီဇယားမှ ဖယ်ရှားပြီးပါပြီ</string>
+  <string name="morphe_queue_manager_fetch_succeeded_save">တန်းစီဇယားကို %s တွင် သိမ်းဆည်းပြီးပါပြီ</string>
+  <string name="morphe_queue_manager_playlist_title">Morphe တန်းစီဇယား</string>
+  <string name="morphe_queue_manager_add_to_queue">တန်းစီဇယားထဲသို့ ပေါင်းထည့်ပါ</string>
+  <string name="morphe_queue_manager_add_to_queue_and_open_queue">တန်းစီဇယားထဲသို့ ပေါင်းထည့်ပြီး ဖွင့်ပါ</string>
+  <string name="morphe_queue_manager_add_to_queue_and_play_video">တန်းစီဇယားထဲသို့ ပေါင်းထည့်ပြီး ဖွင့်ပါ</string>
+  <string name="morphe_queue_manager_add_to_queue_and_reload_video">ပေါင်းထည့်ပြီး ဗီဒီယိုကို ပြန်ဖွင့်ပါ</string>
+  <string name="morphe_queue_manager_remove_from_queue">တန်းစီဇယားမှ ဖယ်ရှားပါ</string>
+  <string name="morphe_queue_manager_remove_from_queue_and_open_queue">ဖယ်ရှားပြီး တန်းစီဇယားကို ဖွင့်ပါ</string>
+  <string name="morphe_queue_manager_remove_from_queue_and_reload_video">ဖယ်ရှားပြီး ဗီဒီယိုကို ပြန်ဖွင့်ပါ</string>
+  <string name="morphe_queue_manager_open_queue">တန်းစီဇယားကို ဖွင့်ပါ</string>
+  <string name="morphe_queue_manager_save_queue">စီစဉ်ထားမှုများကို playlist သို့ သိမ်းဆည်းမည်</string>
   <!-- interaction.nativeplaylistqueue.nativePlaylistQueuePatch -->
+  <string name="morphe_native_playlist_queue_saved">စာရင်းကို သိမ်းဆည်းပြီးပါပြီ</string>
+  <string name="morphe_native_playlist_queue_saved_to">%s တွင် သိမ်းဆည်းပြီးပါသည်</string>
+  <string name="morphe_native_playlist_queue_clear">တန်းစီမှုကို ရှင်းလင်းပါ</string>
+  <string name="morphe_native_playlist_queue_cleared">တန်းစီမှုကို ရှင်းလင်းပြီးပါသည်</string>
+  <string name="morphe_native_playlist_queue_title">တန်းစီမှု</string>
+  <string name="morphe_native_playlist_queue_last">တန်းစီမှု၏ နောက်ဆုံးတွင် ဖွင့်ပါ</string>
+  <string name="morphe_native_playlist_queue_next">တန်းစီမှု၏ နောက်တွင် ဖွင့်ပါ</string>
+  <string name="morphe_native_playlist_queue_unavailable">YouTube သည် တန်းစီမှုကို မပြသနိုင်ပါ။</string>
+  <string name="morphe_native_playlist_queue_not_ready">ဤဗီဒီယိုအတွက် တန်းစီမှု အဆင်သင့်မဖြစ်သေးပါ။ ဗီဒီယိုပလေယာကို ဖွင့်ပြီး ထပ်မံကြိုးစားပါ။</string>
+  <string name="morphe_native_playlist_queue_mix_choice">Mix ကို တန်းစီမှုတွင် ထည့်မည်လား သို့မဟုတ် Mix ကို ကြည့်မည်လား?</string>
+  <string name="morphe_native_playlist_queue_watch_mix">ကြည့်ရှုမည်</string>
+  <string name="morphe_native_playlist_queue_add_mix">တန်းစီမှုသို့ ပေါင်းထည့်ပါ</string>
+  <string name="morphe_native_playlist_queue_loading_mix">Mix ကို တင်နေသည်…</string>
   <!-- interaction.livering.openChannelOfLiveAvatarPatch -->
+  <string name="morphe_open_channel_of_live_avatar_title">တိုက်ရိုက်ထုတ်လွှင့်မှု ပုံရိပ်မှ ချန်နယ်ကို ဖွင့်ပါ</string>
+  <string name="morphe_open_channel_of_live_avatar_summary">ချန်နယ်၏ ပုံရိပ်ကို နှိပ်သောအခါ တိုက်ရိုက်ထုတ်လွှင့်မှု ပွင့်လာခြင်းကို တားဆီးသည်</string>
   <!-- interaction.seekbar.disablePreciseSeekingGesturePatch -->
+  <string name="morphe_disable_precise_seeking_gesture_title">တိကျသောရှာဖွေမှုလက်ဟန်ကို ပိတ်ပါ</string>
+  <string name="morphe_disable_precise_seeking_gesture_summary">ရှာဖွေဘားကို အပေါ်သို့ဆွဲတင်သောအခါ အသက်ဝင်လာသော တိကျသော ရှာဖွေမှုမုဒ်ကို ပိတ်ထားသည်</string>
   <!-- interaction.seekbar.liveStreamDVRPatch -->
+  <string name="morphe_live_stream_dvr_title">Live stream DVR ကို အသုံးပြုပါ</string>
+  <string name="morphe_live_stream_dvr_summary">ပုံမှန်အားဖြင့် ကန့်သတ်ထားသော တိုက်ရိုက်ထုတ်လွှင့်မှုများ အပါအဝင် တိုက်ရိုက်ထုတ်လွှင့်မှုအားလုံးတွင် ရှာဖွေကြည့်ရှုမှုကို ခွင့်ပြုပါသည်</string>
   <!-- interaction.seekbar.seekbarThumbnailPreviewPatch -->
+  <string name="morphe_seekbar_thumbnail_preview_title">Seekbar thumbnail များကို အသုံးပြုပါ</string>
+  <string name="morphe_seekbar_thumbnail_preview_summary">Seekbar ကို ဆွဲရွှေ့နေစဉ် ဗီဒီယို thumbnail ကို ပြသပေးမည်</string>
+  <string name="morphe_seekbar_thumbnail_heatmap_peak_point">အများဆုံး ပြန်ဖွင့်ကြည့်ရှုမှု</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_live_stream_dvr_not_available">"'Live stream DVR ကို အသုံးပြုပါ' ကို အသုံးမပြုနိုင်ခြင်း ဖြစ်နိုင်သည်
+
+ယင်းကို ဖြေရှင်းရန် 'ဗီဒီယို စတြီမ်းများကို အယောင်ဆောင်ပါ' ကို ဖွင့်ပြီး 'Default client' ကို 'TV Simply' သို့မဟုတ် 'visionOS' သို့ ပြောင်းပါ"</string>
+  <string name="morphe_expand_live_stream_dvr_duration_title">တိုက်ရိုက်ထုတ်လွှင့်မှု DVR ကြာချိန်ကို တိုးချဲ့ပါ</string>
+  <string name="morphe_expand_live_stream_dvr_duration_summary">တိုက်ရိုက်ထုတ်လွှင့်မှုများကို လွန်ခဲ့သော ၇ ရက်အထိ နောက်ပြန်ဆုတ်ကြည့်ရှုနိုင်စေသည်</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_expand_live_stream_dvr_duration_not_available">"'တိုက်ရိုက်ထုတ်လွှင့်မှု DVR ကြာချိန်ကို တိုးချဲ့ပါ' ကို အသုံးပြုနိုင်မည်မဟုတ်ပါ
+
+ယင်းကို ဖြေရှင်းရန် 'ဗီဒီယိုထုတ်လွှင့်မှုများကို အတုပြုလုပ်ရန်' ကို ဖွင့်ပြီး 'Default client' ကို 'TV Simply' သို့မဟုတ် 'visionOS' သို့ ပြောင်းလဲပါ"</string>
   <!-- interaction.seekbar.enableSlideToSeekPatch -->
+  <string name="morphe_slide_to_seek_title">ရှာဖွေရန် ဆွဲရွှေ့ခြင်းကို ဖွင့်ပါ</string>
+  <string name="morphe_slide_to_seek_summary">ဗီဒီယိုပလေယာကို ဖိထားသောအခါ 2x အရှိန်ဖြင့် ဖွင့်မည့်အစား ရှာဖွေရန်အတွက် ဘေးသို့ဆွဲခြင်းကို အသုံးပြုမည်</string>
   <!-- interaction.seekbar.enableTapToSeekPatch -->
+  <string name="morphe_tap_to_seek_title">ထိပြီး ရှာဖွေခြင်းကို အသုံးပြုမည်</string>
+  <string name="morphe_tap_to_seek_summary">ဆွဲရွှေ့စရာမလိုဘဲ ၎င်းနေရာသို့ တိုက်ရိုက်ရောက်ရှိရန် seekbar ကို နှိပ်ရုံသာနှိပ်ပါ</string>
   <!-- interaction.swipecontrols.swipeControlsPatch -->
+  <string name="morphe_swipe_left_zone_title">ဘယ်ဘက်သို့ ပွတ်ဆွဲသည့် အမူအရာ</string>
+  <string name="morphe_swipe_right_zone_title">ညာဘက်သို့ ပွတ်ဆွဲသည့် အမူအရာ</string>
+  <string name="morphe_swipe_top_zone_title">အပေါ်ဘက်သို့ ပွတ်ဆွဲသည့် အမူအရာ</string>
+  <string name="morphe_swipe_zone_width_title">ဘယ်/ညာ ဇုန် အကျယ်</string>
+  <string name="morphe_swipe_zone_width_summary">ဘယ်ဘက်နှင့် ညာဘက် ပွတ်ဆွဲသည့် အမူအရာများအတွက် သီးသန့်သတ်မှတ်ထားသော မျက်နှာပြင်အစွန်းတစ်ခုချင်းစီ၏ ရာခိုင်နှုန်း (၅-၅၀)</string>
+  <string name="morphe_swipe_zone_label_brightness">လင်းလက်မှု</string>
+  <string name="morphe_swipe_zone_label_volume">အသံပမာဏ</string>
+  <string name="morphe_swipe_zone_label_native">Native</string>
+  <string name="morphe_swipe_zone_label_off">ပိတ်ထားသည်</string>
+  <string name="morphe_swipe_ignore_when_locked_title">လော့ခ်ချထားချိန်တွင် ပွတ်ဆွဲမှုများကို လျစ်လျူရှုရန်</string>
   <!-- 'Lock screen' should be translated using the same localized wording YouTube displays for the player menu item. -->
+  <string name="morphe_swipe_ignore_when_locked_summary">ပလေယာကို \'စခရင်လော့ခ်ချရန်\' ဖြင့် လော့ခ်ချထားစဉ် ပွတ်ဆွဲသည့် အမူအရာများကို လျစ်လျူရှုမည်ဖြစ်သည်</string>
+  <string name="morphe_swipe_press_to_engage_title">ဖိပြီး ပွတ်ဆွဲသည့် အမူအရာကို အသုံးပြုမည်</string>
+  <string name="morphe_swipe_press_to_engage_summary">Swipe gesture ကို အသိအမှတ်မပြုမီ ဖိထားရန် လိုအပ်သည်</string>
+  <string name="morphe_swipe_haptic_feedback_title">Haptic တုံ့ပြန်မှုကို အသုံးပြုမည်</string>
+  <string name="morphe_swipe_save_and_restore_brightness_title">အလင်းအမှောင်ကို သိမ်းဆည်းပြီး ပြန်တင်မည်</string>
+  <string name="morphe_swipe_save_and_restore_brightness_summary">Fullscreen မုဒ်သို့ ဝင်သည့်အခါ/ထွက်သည့်အခါ အလင်းအမှောင်အဆင့်ကို မှတ်သားထားပါသည်</string>
+  <string name="morphe_swipe_lowest_value_enable_auto_brightness_title">အလိုအလျောက် အလင်းအမှောင် အမူအရာကို အသုံးပြုမည်</string>
+  <string name="morphe_swipe_lowest_value_enable_auto_brightness_summary">အလင်းအမှောင်ကို အနိမ့်ဆုံးတန်ဖိုးသို့ ဆွဲချခြင်းဖြင့် စနစ်၏ အလိုအလျောက် အလင်းအမှောင်ကို အသက်သွင်းပါသည်</string>
+  <string name="morphe_swipe_lowest_value_enable_auto_brightness_overlay_text">အလိုအလျောက်</string>
+  <string name="morphe_swipe_overlay_timeout_title">ပွတ်ဆွဲမှု အပေါ်ယံလွှာ ပျောက်ကွယ်မည့် အချိန်</string>
+  <string name="morphe_swipe_overlay_timeout_summary">အပေါ်ယံလွှာ မြင်နိုင်သော မီလီစက္ကန့် ပမာဏ</string>
+  <string name="morphe_swipe_overlay_background_opacity_title">ပွတ်ဆွဲမှု အပေါ်ယံလွှာ နောက်ခံ ပွင့်လင်းမှု</string>
+  <string name="morphe_swipe_overlay_background_opacity_summary">ကြည်လင်မှုအဆင့်ကို ညှိပါ (၀ သည် ကြည်လင်ပြီး၊ ၁၀၀ သည် မကြည်လင်ပါ)</string>
+  <string name="morphe_swipe_overlay_progress_brightness_color_title">Swipe overlay အလင်းအမှောင်အရောင်</string>
+  <string name="morphe_swipe_overlay_progress_brightness_color_summary">အလင်းအမှောင်ထိန်းချုပ်မှု တိုးတက်မှုဘား၏ အရောင်ကို သတ်မှတ်ပါ</string>
+  <string name="morphe_swipe_overlay_progress_volume_color_title">Swipe overlay အသံပမာဏအရောင်</string>
+  <string name="morphe_swipe_overlay_progress_volume_color_summary">အသံထိန်းချုပ်မှု တိုးတက်မှုဘား၏ အရောင်ကို သတ်မှတ်ပါ</string>
+  <string name="morphe_swipe_overlay_progress_speed_color_title">Swipe overlay အမြန်နှုန်း အရောင်</string>
+  <string name="morphe_swipe_overlay_progress_speed_color_summary">Playback အမြန်နှုန်းထိန်းချုပ်မှု ပရိုဂရက်ဘား၏ အရောင်ကို သတ်မှတ်ပါ</string>
+  <string name="morphe_swipe_text_overlay_size_title">Swipe overlay စာသားအရွယ်အစား</string>
+  <string name="morphe_swipe_text_overlay_size_summary">မျက်နှာပြင်ပေါ်ရှိ စာသားအရွယ်အစားကို ညှိပါ (၁-၃၀)</string>
+  <string name="morphe_swipe_threshold_title">Swipe ပမာဏ အကန့်အသတ်</string>
+  <string name="morphe_swipe_threshold_summary">ညှိနှိုင်းမှုတစ်ခု မစတင်မီ လိုအပ်သော ပွတ်ဆွဲမှုအကွာအဝေးကို သတ်မှတ်ပါ</string>
+  <string name="morphe_swipe_volume_distance_title">အသံပမာဏ swipe အာရုံခံနိုင်စွမ်း</string>
+  <string name="morphe_swipe_volume_distance_summary">တန်ဖိုး ပိုမြင့်မားပါက အသံအဆင့်တစ်ခုအတွက် ပို၍ swipe လုပ်ရန် လိုအပ်ပါသည်</string>
+  <string name="morphe_swipe_volume_steps_title">အသံပမာဏ အဆင့်များ</string>
+  <string name="morphe_volume_boost_title">အသံပမာဏမြှင့်တင်ခြင်း</string>
+  <string name="morphe_volume_boost_summary">အမြင့်ဆုံးအသံပမာဏထက် ပို၍အပေါ်သို့ ပွတ်ဆွဲခြင်းက အသံကို ပိုမြှင့်တင်ပေးမည်ဖြစ်ပြီး ၎င်းသည် ကျယ်လောင်သောအသံများကို ပုံပျက်စေနိုင်သည်</string>
+  <string name="morphe_swipe_volume_steps_entry_default">စက်၏ မူလသတ်မှတ်ချက်</string>
+  <string name="morphe_swipe_brightness_sensitivity_title">Brightness swipe တုံ့ပြန်မှုနှုန်း</string>
+  <string name="morphe_swipe_brightness_sensitivity_summary">တန်ဖိုးများလေ အလင်းအမှောင် အဆင့်တစ်ခုအတွက် ပို၍ swipe လုပ်ရန် လိုအပ်လေဖြစ်သည်</string>
+  <string name="morphe_swipe_speed_sensitivity_title">Speed swipe တုံ့ပြန်မှုနှုန်း</string>
+  <string name="morphe_swipe_speed_sensitivity_summary">တန်ဖိုး ပိုမြင့်မားပါက အမြန်နှုန်းအဆင့်တစ်ခုအတွက် ပို၍ ပွတ်ဆွဲရန် လိုအပ်သည်</string>
+  <string name="morphe_swipe_speed_step_title">အရှိန်အဆင့်</string>
+  <string name="morphe_swipe_speed_zone_height_title">အမြန်နှုန်းဇုန် အမြင့်</string>
+  <string name="morphe_swipe_speed_zone_height_summary">ပလေယာအမြင့်၏ ရာခိုင်နှုန်းအဖြစ် အမြန်နှုန်း အမူအရာဇုန်၏ အမြင့် (၅-၇၅)</string>
+  <string name="morphe_swipe_zone_label_speed">အမြန်နှုန်း</string>
+  <string name="morphe_swipe_overlay_style_title">Swipe overlay ပုံစံ</string>
+  <string name="morphe_swipe_overlay_style_entry_1">အလျားလိုက် overlay</string>
+  <string name="morphe_swipe_overlay_style_entry_2">အလျားလိုက် overlay (minimal - အပေါ်)</string>
+  <string name="morphe_swipe_overlay_style_entry_3">အလျားလိုက် overlay (minimal - အလယ်)</string>
+  <string name="morphe_swipe_overlay_style_entry_4">စက်ဝိုင်းပုံ overlay</string>
+  <string name="morphe_swipe_overlay_style_entry_5">စက်ဝိုင်းပုံအပေါ်ယံလွှာ (အနည်းဆုံး)</string>
+  <string name="morphe_swipe_overlay_style_entry_6">ဒေါင်လိုက်အပေါ်ယံလွှာ</string>
+  <string name="morphe_swipe_overlay_style_entry_7">ဒေါင်လိုက်အပေါ်ယံလွှာ (အနည်းဆုံး)</string>
+  <string name="morphe_swipe_change_video_title">ဗီဒီယိုများပြောင်းရန် ပွတ်ဆွဲခြင်းကို အသုံးပြုပါ</string>
+  <string name="morphe_swipe_change_video_summary">နောက်ထပ် သို့မဟုတ် ယခင်ဗီဒီယိုသို့ ကျော်သွားရန် ဖန်သားပြင်အပြည့်မုဒ်တွင် ပွတ်ဆွဲပါ</string>
   <!-- layout.buttons.action.hideButtonsPatch -->
+  <string name="morphe_action_buttons_screen_title">လုပ်ဆောင်ချက် ခလုတ်များ</string>
+  <string name="morphe_action_buttons_screen_summary">Portrait နှင့် ဖန်သားပြင်အပြည့်မုဒ်များတွင် မည်သည့် လုပ်ဆောင်ချက်ခလုတ်များ ပေါ်လာမည်ကို ရွေးချယ်ပါ</string>
+  <string name="morphe_portrait_buttons">Portrait ပုံစံ ခလုတ်များ</string>
+  <string name="morphe_disable_like_subscribe_glow_title">Like နှင့် Subscribe တောက်ပမှုကို ပိတ်ပါ</string>
+  <string name="morphe_disable_like_subscribe_glow_summary">ဖန်တီးသူမှ ဖော်ပြသောအခါ Like နှင့် Subscribe ခလုတ်များကို တောက်ပခြင်းမှ ကာကွယ်ပါ</string>
+  <string name="morphe_hide_action_bar_title">အရေးယူဆောင်ရွက်မှုဘားကို ဖျောက်ပါ</string>
+  <string name="morphe_hide_like_dislike_button_title">Like နှင့် Dislike ခလုတ်ကို ဖျောက်ပါ</string>
   <!-- 'Share' should be translated using the same localized wording YouTube displays for the button. -->
+  <string name="morphe_hide_share_button_title">မျှဝေရန် ခလုတ်ကို ဖျောက်ပါ</string>
   <!-- 'Stop ads' should be translated using the same localized wording YouTube displays for the button. -->
+  <string name="morphe_hide_stop_ads_button_title">\'ကြော်ငြာများ ရပ်တန့်ပါ\' ခလုတ်ကို ဖျောက်ရန်</string>
   <!-- Button does not have any text and is only shown as an icon, and only when the video information area is collapsed to a compact state. -->
+  <string name="morphe_hide_comments_button_title">မှတ်ချက်များ ခလုတ်ကို ဖျောက်ရန်</string>
   <!-- 'Connect' should be translated using the same localized wording YouTube displays for the button. -->
+  <string name="morphe_hide_connect_button_title">ချိတ်ဆက်ရန် ခလုတ်ကို ဖျောက်ပါ</string>
   <!-- 'Report' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears on live stream videos. -->
+  <string name="morphe_hide_report_button_title">\'တိုင်ကြားရန်\' ခလုတ်ကို ဖျောက်ရန်</string>
   <!-- 'Remix' should be translated using the same localized wording YouTube displays for the button. -->
+  <string name="morphe_hide_remix_button_title">\'Remix\' ခလုတ်ကို ဖျောက်ရန်</string>
   <!-- 'Download' should be translated using the same localized wording YouTube displays for the button. -->
+  <string name="morphe_hide_download_button_title">\'ဒေါင်းလုဒ်\' ခလုတ်ကို ဖျောက်ရန်</string>
   <!-- 'Hype' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears on videos uploaded by the logged-in user. -->
+  <string name="morphe_hide_hype_button_title">\'Hype\' ခလုတ်ကို ဖျောက်ရန်</string>
   <!-- 'Promote' should be translated using the same localized wording YouTube displays for the button. -->
+  <string name="morphe_hide_promote_button_title">\'ပရိုမိုးရှင်းလုပ်ရန်\' ခလုတ်ကို ဖျောက်ရန်</string>
   <!-- 'Thanks' should be translated using the same localized wording YouTube displays for the button. -->
+  <string name="morphe_hide_thanks_button_title">ကျေးဇူးတင်ပါတယ် ခလုတ်ကို ဖျောက်ရန်</string>
   <!-- 'Ask' should be translated using the same localized wording YouTube displays for the button.
           This button usually appears if the user IP is from a specific region such as the USA or EU. -->
+  <string name="morphe_hide_ask_button_title">မေးမြန်းရန် ခလုတ်ကို ဖျောက်ရန်</string>
+  <string name="morphe_hide_channel_profile_button_title">ချန်နယ်နှင့် Subscribe ခလုတ်ကို ဖျောက်ထားပါ</string>
+  <string name="morphe_hide_channel_profile_button_summary">လုပ်ဆောင်ချက်ဘား၏ အစတွင်ရှိသော ချန်နယ် ပရိုဖိုင်ပုံနှင့် Subscribe ခလုတ်ကို ဖျောက်ထားပါသည်</string>
+  <string name="morphe_hide_channel_profile_subscribe_button_title">Subscribe ခလုတ်ကို ဖျောက်ပါ</string>
+  <string name="morphe_hide_channel_profile_subscribe_button_summary">အက်ရှင်ဘား၏ အစရှိသော ချန်နယ်ပုံရိပ်ဘေးရှိ Subscribe နှင့် Join ခလုတ်များကို ဖျောက်ပေးသည်</string>
   <!-- 'Clip' should be translated using the same localized wording YouTube displays for the button. -->
+  <string name="morphe_hide_clip_button_title">Clip ခလုတ်ကို ဖျောက်ရန်</string>
+  <string name="morphe_hide_clip_button_summary">ဤအချက်သည် အချို့သော အသုံးပြုသူအကောင့်များအတွက် အလုပ်မလုပ်နိုင်ပါ</string>
   <!-- 'Shop' should be translated using the same localized wording YouTube displays for the button. -->
+  <string name="morphe_hide_shop_button_title">ဈေးဝယ်ဆိုင် ခလုတ်ကို ဖျောက်ရန်</string>
   <!-- 'Save' should be translated using the same localized wording YouTube displays for the button. -->
+  <string name="morphe_hide_save_button_title">သိမ်းဆည်းရန် ခလုတ်ကို ဖျောက်ရန်</string>
+  <string name="morphe_hide_more_button_title">ပို၍ကြည့်ရန် ခလုတ်ကို ဖျောက်ပါ</string>
+  <string name="morphe_fullscreen_buttons">Full-screen ပုံစံ ခလုတ်များ</string>
+  <string name="morphe_hide_quick_actions_dislike_button_title">မကြိုက်ဘူး ခလုတ်ကို ဖျောက်ရန်</string>
+  <string name="morphe_hide_quick_actions_like_button_title">ကြိုက်တယ် ခလုတ်ကို ဖျောက်ရန်</string>
+  <string name="morphe_hide_quick_actions_live_chat_button_title">\'တိုက်ရိုက်ချက်တင်\' ခလုတ်ကို ဖျောက်ရန်</string>
+  <string name="morphe_hide_quick_actions_mix_button_title">Mix ခလုတ်ကို ဖျောက်ထားရန်</string>
+  <string name="morphe_hide_quick_actions_more_videos_button_title">\'ဗီဒီယိုများ ပိုကြည့်ရန်\' ခလုတ်ကို ဖျောက်ထားရန်</string>
+  <string name="morphe_hide_quick_actions_playlist_button_title">Playlist ခလုတ်ကို ဖျောက်ထားရန်</string>
+  <string name="morphe_quick_actions_top_margin_title">အမြန်လုပ်ဆောင်ချက်များ အပေါ်ဘက်ဘေးဘောင်</string>
+  <string name="morphe_quick_actions_top_margin_summary">အမြန်လုပ်ဆောင်ချက်ဘား၏ အပေါ်ဘက်ဘေးဘောင်ကို သတ်မှတ်ပါ (0-32 dp)</string>
   <!-- layout.captions.captionsPatch -->
+  <string name="morphe_captions_screen_title">စာတန်းများ</string>
+  <string name="morphe_captions_screen_summary">အလိုအလျောက်စာတမ်းထိုးချက်များနှင့် စာတမ်းထိုးကွတ်ကီးများကို စီမံခန့်ခွဲရန်</string>
   <!-- layout.captions.autoCaptionsPatch -->
+  <string name="morphe_auto_captions_style_title">အလိုအလျောက် စာတန်းထိုးများ မြင်နိုင်စွမ်း</string>
+  <string name="morphe_auto_captions_style_entry_1">အမြဲပြရန်</string>
+  <string name="morphe_auto_captions_style_entry_2">လုံးဝမပြရန်</string>
+  <string name="morphe_auto_captions_style_entry_3">အသံဖွင့်ထားချိန်တွင် ပြရန်</string>
+  <string name="morphe_auto_captions_style_entry_4">အသံပိတ်ထားချိန်တွင် ပြရန်</string>
   <!-- layout.captions.preferredCaptionLanguagePatch -->
+  <string name="morphe_preferred_caption_language_title">နှစ်သက်သော စာတန်းထိုးဘာသာစကား</string>
+  <string name="morphe_preferred_caption_language_summary">ပံ့ပိုးပေးထားသော စာတန်းထိုးများကို ဦးစွာရွေးချယ်ပြီးနောက် နှစ်သက်သောဘာသာစကားသို့ အလိုအလျောက် ဘာသာပြန်ပေးမည် ဖြစ်သည်</string>
+  <string name="morphe_preferred_caption_language_entry_off">ပိတ်ထားသည်</string>
   <!-- layout.captions.autoTranslateCaptionsPatch -->
+  <string name="morphe_auto_translate_additional_languages_title">အလိုအလျောက် ဘာသာပြန်ဆိုမည့် နောက်ထပ် ဘာသာစကားများကို ထည့်ရန်</string>
+  <string name="morphe_auto_translate_additional_languages_summary">အလိုအလျောက် ဘာသာပြန်ဆိုရေး မီနူးတွင် ဘာသာစကားများ ပိုမိုထည့်သွင်းပေးသည်</string>
   <!-- layout.captions.captionCookiesPatch -->
+  <string name="morphe_set_caption_cookies_title">စာတန်းထိုး cookies များ သတ်မှတ်ရန်</string>
+  <string name="morphe_set_caption_cookies_summary">"Cookie များ ပျောက်ဆုံးနေမှုကြောင့် auto-translate captions များ အသုံးပြု၍မရသော YouTube ၏ မူလ bug ကို ပြင်ဆင်ပေးသည်
+
+'Caption cookies' များကို ပံ့ပိုးပေးရမည်"</string>
+  <string name="morphe_caption_cookies_title">စာတန်း ကွတ်ကီးများ</string>
+  <string name="morphe_caption_cookies_summary">Timed Text API (Caption Data API) တောင်းဆိုမှုများတွင် သတ်မှတ်ရမည့် Cookies များ</string>
+  <string name="morphe_get_caption_cookies_title">စာတန်း ကွတ်ကီးများကို ရယူပါ</string>
+  <string name="morphe_get_caption_cookies_summary">Cookies များ ရယူရန် ဤနေရာကို နှိပ်ပါ</string>
+  <string name="morphe_get_caption_cookies_failed">ကွတ်ကီးများကို ရယူ၍မရပါ</string>
+  <string name="morphe_get_caption_cookies_duplicate">Cookies များ ရှိပြီးသားဖြစ်သည်</string>
+  <string name="morphe_get_caption_cookies_success">Cookies များကို အောင်မြင်စွာ အပ်ဒိတ်လုပ်ပြီးပါပြီ</string>
   <!-- layout.captions.transcriptPatch -->
+  <string name="morphe_fix_transcript_title">စာသားမှတ်တမ်းကို ပြင်ဆင်ပါ</string>
+  <string name="morphe_fix_transcript_summary">စာသားမှတ်တမ်းတင်မှု တင်နေခြင်းမှ တားဆီးနိုင်သည့် ကြိုတင်လိုအပ်ချက် စစ်ဆေးမှု ပျက်ကွက်မှုကို ဖြေရှင်းပေးသည်</string>
+  <string name="morphe_captions_in_pip_title">Picture-in-picture တွင် စာတန်းများကို ပြသရန်</string>
   <!-- layout.buttons.navigation.navigationButtonsPatch -->
+  <string name="morphe_navigation_buttons_screen_title">လမ်းညွှန်ခလုတ်များ</string>
+  <string name="morphe_navigation_buttons_screen_summary">အောက်ခြေ လမ်းညွှန်ဘားတွင် မည်သည့်ခလုတ်များကို ပြမည်ကို ရွေးချယ်ပါ</string>
   <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
+  <string name="morphe_hide_home_button_title">ပင်မစာမျက်နှာ ခလုတ်ကို ဖျောက်ထားရန်</string>
   <!-- 'Shorts' should be translated using the same localized wording YouTube displays for the tab. -->
+  <string name="morphe_hide_shorts_button_title">Shorts ခလုတ်ကို ဖျောက်ရန်</string>
   <!-- 'Create' has no display name. Translate normally. -->
+  <string name="morphe_hide_create_button_title">ဖန်တီးရန် ခလုတ်ကို ဖျောက်ရန်</string>
   <!-- 'Subscriptions' should be translated using the same localized wording YouTube displays for the tab. -->
+  <string name="morphe_hide_subscriptions_button_title">Subscriptions ခလုတ်ကို ဖျောက်ရန်</string>
   <!-- 'Notifications' should be translated using the same localized wording YouTube displays for the tab. -->
+  <string name="morphe_hide_notifications_button_title">အကြောင်းကြားချက်များ ခလုတ်ကို ဖျောက်ရန်</string>
+  <string name="morphe_show_search_button_title">ရှာဖွေရေးခလုတ်ကို ပြရန်</string>
+  <string name="morphe_show_search_button_index_title">ရှာဖွေရေးခလုတ် တည်နေရာ</string>
+  <string name="morphe_show_settings_button_title">ဆက်တင်များ ခလုတ်ကို ပြရန်</string>
+  <string name="morphe_show_settings_button_index_title">ဆက်တင်များ ခလုတ် တည်နေရာ</string>
+  <string name="morphe_show_settings_button_type_title">ဆက်တင်များခလုတ် လုပ်ဆောင်ချက်</string>
+  <string name="morphe_show_settings_button_type_summary">ဖွင့်ထားပါက Morphe ဆက်တင်များကို ဖွင့်ပေးပြီး၊ ပိတ်ထားပါက YouTube ဆက်တင်များကို ဖွင့်ပေးပါသည်</string>
+  <string name="morphe_swap_create_with_notifications_button_title">Create ခလုတ်ကို Notifications ခလုတ်နှင့် နေရာလဲလှယ်ရန်</string>
+  <string name="morphe_swap_create_with_notifications_button_summary">ဤဆက်တင်ကို ပြောင်းလဲခြင်းသည် အကျိုးသက်ရောက်မှုမရှိပါက Incognito mode သို့ ပြောင်းလဲကြည့်ပါ</string>
+  <string name="morphe_hide_navigation_button_labels_title">လမ်းညွှန်ခလုတ် အညွှန်းများကို ဖျောက်ပါ</string>
+  <string name="morphe_hide_navigation_new_content_dot_title">အကြောင်းအရာသစ် အစက်ကလေးကို ဖျောက်ထားပါ</string>
+  <string name="morphe_hide_navigation_bar_title">လမ်းညွှန်ဘားကို ဖျောက်ပါ</string>
+  <string name="morphe_hide_navigation_bar_user_dialog_message">"၎င်းသည် 'သင်' တက်ဘ် အပါအဝင် လမ်းညွှန်ဘားကို လုံးဝဖျောက်ထားပါမည်။
+
+ဆက်တင်များသို့ ဝင်ရောက်ရန် General → Toolbar → Show Settings မှတစ်ဆင့် ဆက်တင်ခလုတ်ကို အသက်သွင်းပါ"</string>
+  <string name="morphe_narrow_navigation_buttons_title">ကျဉ်းမြောင်းသော လမ်းညွှန်ခလုတ်များကို အသုံးပြုရန်</string>
+  <string name="morphe_narrow_navigation_buttons_summary">ခလုတ်များကြားရှိ အလျားလိုက် အကွာအဝေးကို လျှော့ချသည်</string>
+  <string name="morphe_disable_icon_only_navigation_buttons_title">စာတန်းမပါသော လမ်းညွှန်ခလုတ်များကို ပိတ်ထားပါ</string>
+  <string name="morphe_disable_icon_only_navigation_buttons_summary">YouTube မှ စာတန်းမပါဘဲ ပေးပို့လာသော လမ်းညွှန်ခလုတ်များကို စာတန်းနှင့်တကွ ပြသပေးသည်</string>
+  <string name="morphe_disable_toolbar_navigation_tabs_title">Toolbar ၏ လမ်းညွှန် Tab များကို ပိတ်ပါ</string>
+  <string name="morphe_disable_toolbar_navigation_tabs_summary">YouTube က Subscriptions ကို Home ၏ အပေါ်ဘက် tab တစ်ခုသို့ ပြောင်းရွှေ့လိုက်ပါက ၎င်းကို လမ်းညွှန်ဘားတွင် ပြသပေးမည်ဖြစ်သည်</string>
+  <string name="morphe_navigation_bar_animations_title">လမ်းညွှန်ဘား အန်နီမေးရှင်းများကို အသုံးပြုပါ</string>
+  <string name="morphe_navigation_bar_animations_summary">တက်ဘ်များအကြား ပြောင်းလဲရာတွင် အကူးအပြောင်းများကို အန်နီမေးရှင်းဖြင့် ပြသသည်</string>
+  <string name="morphe_disable_auto_hide_navigation_bar_title">Navigation bar ကို အလိုအလျောက် ဖျောက်ထားခြင်းကို ပိတ်ပါ</string>
+  <string name="morphe_disable_auto_hide_navigation_bar_summary">စခရင်ကို အပေါ်အောက်ရွေ့နေစဉ်အတွင်း လမ်းညွှန်ဘားကို မြင်သာအောင်ထားသည်</string>
+  <string name="morphe_navigation_bar_style_title">လမ်းညွှန်ဘား စတိုင်ль</string>
+  <string name="morphe_navigation_bar_style_entry_1">မူလအတိုင်း</string>
+  <string name="morphe_navigation_bar_style_entry_2">ကြည်လင်သော</string>
+  <string name="morphe_navigation_bar_style_entry_3">ကြည်လင်သော</string>
+  <string name="morphe_navigation_bar_style_entry_4">မပွင့်လင်းသော</string>
+  <string name="morphe_navigation_bar_style_user_dialog_message">ဤစတိုင်ကို သင်၏စက် သို့မဟုတ် YouTube ဗားရှင်းမှ အထောက်အပံ့မပေးနိုင်ခြင်းကြောင့် layout ပြဿနာများ သို့မဟုတ် crash ဖြစ်ခြင်းများ ဖြစ်ပေါ်နိုင်သည်</string>
+  <string name="morphe_toolbar_screen_title">တူးလ်ဘား</string>
+  <string name="morphe_toolbar_screen_summary">တူးလ်ဘားတွင် မည်သည့်အစိတ်အပိုင်းများ ပေါ်မည်ကို ရွေးချယ်ပါ</string>
+  <string name="morphe_hide_toolbar_cast_button_title">Cast ခလုတ်ကို ဖျောက်ပါ</string>
+  <string name="morphe_hide_toolbar_chat_button_title">Chat ခလုတ်ကို ဖျောက်ပါ</string>
+  <string name="morphe_hide_toolbar_microphone_button_title">မိုက်ခရိုဖုန်းခလုတ်ကို ဖျောက်ပါ</string>
+  <string name="morphe_hide_toolbar_search_button_title">ရှာဖွေရေးခလုတ်ကို ဖျောက်ပါ</string>
+  <string name="morphe_show_toolbar_settings_button_type_summary">ဖွင့်ထားပါက၊ တစ်ချက်နှိပ်လျှင် Morphe ဆက်တင်များကို ဖွင့်ပြီး၊ ဖိနှိပ်ထားလျှင် YouTube ဆက်တင်များကို ဖွင့်မည်ဖြစ်သည်၊ အပြန်အလှန်ပြောင်းလဲရန် ပိတ်ပါ</string>
   <!-- layout.hide.player.flyoutmenupanel.hidePlayerFlyoutMenuPatch -->
+  <string name="morphe_hide_player_flyout_title">ဘေးတိုက်မီနူး</string>
+  <string name="morphe_hide_player_flyout_summary">Flyout မီနူးတွင် မည်သည့်အစိတ်အပိုင်းများ ပေါ်လာမည်ကို ရွေးချယ်ပါ</string>
   <!-- 'Additional settings / More' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_additional_settings_title">\'အပိုဆောင်းဆက်တင်များ\' / ပို၍ မီနူးကို ဖျောက်ထားပါ</string>
   <!-- 'Ambient mode' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_ambient_mode_title">\'ပတ်ဝန်းကျင်မုဒ်\' မီနူးကို ဖျောက်ထားပါ</string>
   <!-- 'Spoof video streams' should match the language used in 'morphe_spoof_video_streams_screen_title'.
          'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
+  <string name="morphe_hide_player_flyout_audio_track_not_available">"'Audio Track' မီနူးကို ဖျောက်ထားသည်
+
+'Audio Track' မီနူးကို ပြသရန် 'Spoof video streams' ကို 'Android Studio' နှင့် 'Android VR Downgraded' မှလွဲ၍ အခြားမည်သည့် client သို့မဆို ပြောင်းလဲပါ"</string>
   <!-- 'Audio Track' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_audio_track_title">\'အသံလမ်းကြောင်း\' မီနူးကို ဖျောက်ပါ</string>
+  <string name="morphe_hide_player_flyout_audio_track_footer_title">\'အသံလမ်းကြောင်း\' မီနူး၏ အောက်ခြေပိုင်းကို ဖျောက်ပါ</string>
   <!-- 'Captions' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_captions_title">စာတန်းထိုး မီနူးကို ဖျောက်ပါ</string>
+  <string name="morphe_hide_player_flyout_captions_footer_title">စာတန်းထိုး မီနူး၏ အောက်ခြေပိုင်းကို ဖျောက်ပါ</string>
+  <string name="morphe_hide_player_flyout_captions_header_title">စာတန်းထိုး မီနူး၏ အပေါ်ပိုင်းကို ဖျောက်ပါ</string>
   <!-- 'Help & feedback' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_help_title">\'အကူအညီနှင့် အကြံပြုချက်\' မီနူးကို ဖျောက်ထားပါ</string>
   <!-- 'Listen with YouTube Music' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_listen_with_youtube_music_title">\'YouTube Music ဖြင့် နားထောင်ပါ\' မီနူးကို ဖျောက်ထားပါ</string>
   <!-- 'Lock screen' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_lock_screen_title">\'စခရင်လော့ခ်\' မီနူးကို ဖျောက်ထားပါ</string>
   <!-- 'Loop video' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_loop_video_title">\'ဗီဒီယိုကို အကြိမ်ကြိမ်ဖွင့်ရန်\' မီနူးကို ဖျောက်ထားပါ</string>
   <!-- 'On-the-go' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_on_the_go_title">\'လမ်းခရီးတွင်\' မီနူးကို ဖျောက်ပါ</string>
   <!-- 'Quality' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_quality_title">အရည်အသွေး မီနူးကို ဖျောက်ထားပါ</string>
+  <string name="morphe_hide_player_flyout_quality_footer_title">အရည်အသွေး မီနူး ခြေပန်းတိုင်ကို ဖျောက်ထားပါ</string>
+  <string name="morphe_hide_player_flyout_quality_header_title">အရည်အသွေး မီနူး ခေါင်းစဉ်ကို ဖျောက်ထားပါ</string>
   <!-- 'Sleep timer' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_sleep_timer_title">\'အိပ်စက်ချိန်သတ်မှတ်ချက်\' မီနူးကို ဖျောက်ထားပါ</string>
   <!-- 'Playback speed' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_speed_title">\'ဖွင့်နိုင်သည့် အရှိန်\' မီနူးကို ဖျောက်ထားပါ</string>
   <!-- 'Stable volume' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_stable_volume_title">\'တည်ငြိမ်သော အသံပမာဏ\' မီနူးကို ဖျောက်ထားပါ</string>
   <!-- 'Watch in VR' should be translated using the same localized wording YouTube displays for the menu item. -->
+  <string name="morphe_hide_player_flyout_watch_in_vr_title">\'VR ဖြင့် ကြည့်ရှုပါ\' မီနူးကို ဖျောက်ထားပါ</string>
   <!-- layout.hide.autoplaypreview.hideAutoplayPreviewPatch -->
+  <string name="morphe_hide_autoplay_preview_title">အလိုအလျောက် ဖွင့်ပြခြင်းကို ဖျောက်ရန်</string>
+  <string name="morphe_hide_autoplay_preview_summary">အလိုအလျောက် ဖွင့်မပြမီ ဖန်သားပြင်အပြည့်တွင် ပေါ်လာမည့် ဗီဒီယိုအကြိုကြည့်ရှုမှုကို ဖုံးကွယ်ထားပါသည်</string>
   <!-- layout.buttons.overlay.hidePlayerOverlayButtonsPatch -->
+  <string name="morphe_overlay_buttons_screen_title">အပေါ်ယံထပ်ထားသော ခလုတ်များ</string>
+  <string name="morphe_overlay_buttons_screen_summary">ဗီဒီယိုပလေယာပေါ်တွင် မည်သည့်ခလုတ်များ ပေါ်လာမည်ကို ရွေးချယ်ပါ</string>
+  <string name="morphe_hide_autoplay_button_title">အလိုအလျောက် ဖွင့်ခြင်း ခလုတ်ကို ဖုံးကွယ်ပါ</string>
   <!-- This button does not display any text, but 'Captions' should match the language used in 'morphe_hide_player_flyout_captions_title'. -->
+  <string name="morphe_hide_captions_button_title">စာတမ်းထိုး ခလုတ်ကို ဖုံးကွယ်ပါ</string>
+  <string name="morphe_hide_cast_button_title">Cast ခလုတ်ကို ဖုံးကွယ်ပါ</string>
+  <string name="morphe_hide_collapse_button_title">စုစည်းမှု ခလုတ်ကို ဖုံးကွယ်ပါ</string>
+  <string name="morphe_hide_fullscreen_button_title">ဖန်သားပြင်အပြည့် ခလုတ်ကို ဖုံးကွယ်ပါ</string>
+  <string name="morphe_hide_player_control_buttons_background_title">ပလေးယာထိန်းချုပ်မှု နောက်ခံကို ဖျောက်ပါ</string>
+  <string name="morphe_hide_player_control_buttons_background_summary">ဗီဒီယိုပလေယာ ထိန်းချုပ်မှုခလုတ်များ ပတ်ပတ်လည်ရှိ အမှောင်ရောင်ကို ဖုံးကွယ်ထားပါသည်</string>
+  <string name="morphe_player_control_buttons_background_opacity_title">ထိန်းချုပ်ခလုတ်များ နောက်ခံ ပွင့်လင်းမှု</string>
+  <string name="morphe_player_control_buttons_background_opacity_summary">ပလေယာထိန်းချုပ်ခလုတ်များနှင့် အချိန်ဘားနောက်ကွယ်ရှိ နောက်ခံ၏ ပွင့်လင်းမြင်သာမှုကို ချိန်ညှိပါ (0 သည် မမြင်ရ၊ 100 သည် အပိတ်)</string>
+  <string name="morphe_hide_player_previous_next_buttons_title">ယခင် နှင့် နောက်ခလုတ်များကို ဖုံးကွယ်ပါ</string>
+  <string name="morphe_hide_settings_button_title">ဆက်တင်များ ခလုတ်ကို ဖုံးကွယ်ပါ</string>
   <!-- layout.hide.endscreencards.hideEndScreenCardsPatch -->
+  <string name="morphe_hide_end_screen_cards_title">အဆုံးသတ်မျက်နှာပြင် ကတ်များကို ဖျောက်ပါ</string>
   <!-- layout.hide.ambientmode.ambientModePatch -->
+  <string name="morphe_ambient_mode_screen_title">ပတ်ဝန်းကျင်မုဒ်</string>
+  <string name="morphe_ambient_mode_screen_summary">Ambient mode ၏ မြင်နိုင်စွမ်းနှင့် ပါဝါကန့်သတ်ချက်များကို စီမံခန့်ခွဲပါ</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_title">Ambient mode ကန့်သတ်ချက်များကို ကျော်ဖြတ်ပါ</string>
+  <string name="morphe_bypass_ambient_mode_restrictions_summary">ဘက်ထရီချွေတာရေးမုဒ်တွင် Ambient mode ကို ဆက်လက်အသက်ဝင်စေရန် ခွင့်ပြုသည်</string>
+  <string name="morphe_disable_ambient_mode_title">Ambient mode ကို ပိတ်ပါ</string>
+  <string name="morphe_disable_fullscreen_ambient_mode_title">Fullscreen တွင် Ambient mode ကို ပိတ်ပါ</string>
   <!-- layout.hide.infocards.hideInfocardsPatch -->
+  <string name="morphe_hide_info_cards_title">အချက်အလက်ကတ်များကို ဖျောက်ပါ</string>
   <!-- layout.hide.rollingnumber.disableRollingNumberAnimationPatch -->
+  <string name="morphe_disable_rolling_number_animations_title">နံပါတ်များ လိမ့်သွားသော animation များကို ပိတ်ပါ</string>
+  <string name="morphe_disable_rolling_number_animations_summary">Like အရေအတွက်နှင့် ကြည့်ရှုမှုအရေအတွက်များရှိ ဂဏန်းပြောင်းလဲမှု အန်နီမေးရှင်းကို ရပ်တန့်သည်</string>
   <!-- layout.hide.seekbar.hideSeekbarPatch -->
+  <string name="morphe_hide_seekbar_title">ဗီဒီယိုပလေယာ၏ seekbar ကို ဖျောက်ပါ</string>
+  <string name="morphe_hide_seekbar_thumbnail_title">ဗီဒီယို thumbnail များပါသော seekbar ကို ဖျောက်ပါ</string>
+  <string name="morphe_hide_seekbar_thumbnail_summary">သင်ကြည့်ပြီးသား ဗီဒီယိုများ၏ thumbnail များတွင် ပြသထားသော ကြည့်ရှုမှုတိုးတက်မှုဘားကို ဖျောက်ရန်</string>
+  <string name="morphe_fullscreen_large_seekbar_title">Fullscreen large seekbar ကို အသုံးပြုပါ</string>
   <!-- layout.hide.shorts.hideShortsComponentsPatch -->
+  <string name="morphe_hide_shorts_category_title">Shorts များကို ဖျောက်ရန်</string>
+  <string name="morphe_hide_shorts_channel_title">ချန်နယ်စာမျက်နှာတွင် ဖျောက်ထားပါ</string>
   <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
+  <string name="morphe_hide_shorts_home_title">ပင်မစာမျက်နှာ feed နှင့် ဆက်စပ်ဗီဒီယိုများတွင် ဖျောက်ထားပါ</string>
+  <string name="morphe_hide_shorts_search_title">ရှာဖွေမှုရလဒ်များတွင် ဖျောက်ထားပါ</string>
   <!-- 'Subscriptions' should be translated using the same localized wording YouTube displays for the tab. -->
+  <string name="morphe_hide_shorts_subscriptions_title">Subscriptions ဖိဒ်တွင် ဖျောက်ထားပါ</string>
+  <string name="morphe_hide_shorts_video_description_title">ဗီဒီယိုဖော်ပြချက်တွင် ဖျောက်ထားပါ</string>
+  <string name="morphe_hide_shorts_history_title">ကြည့်ရှုမှုမှတ်တမ်းတွင် ဖျောက်ထားပါ</string>
+  <string name="morphe_shorts_player_screen_title">Shorts ပလေယာ</string>
+  <string name="morphe_shorts_player_screen_summary">Shorts player တွင် မည်သည့်အစိတ်အပိုင်းများ ပေါ်လာမည်ကို ရွေးချယ်ပါ</string>
+  <string name="morphe_disable_shorts_double_tap_to_like_title">နှစ်ကြိုက်ရန် နှစ်ချက်နှိပ်ခြင်းကို ပိတ်ပါ</string>
+  <string name="morphe_hide_shorts_ai_button_title">AI ခလုတ်ကို ဖျောက်ပါ</string>
+  <string name="morphe_hide_shorts_auto_dubbed_label_title">\'Auto-dubbed\' အညွှန်းကို ဖျောက်ရန်</string>
+  <string name="morphe_hide_shorts_channel_bar_title">ချန်နယ်ဘားကို ဖျောက်ပါ</string>
+  <string name="morphe_hide_shorts_comments_button_title">မှတ်ချက်များ ခလုတ်ကို ဖျောက်ထားပါ</string>
+  <string name="morphe_hide_shorts_effect_button_title">Effect ခလုတ်ကို ဖျောက်ပါ</string>
+  <string name="morphe_hide_shorts_full_video_link_label_title">ဗီဒီယိုလင့်ခ်တံဆိပ်ကို ဖျောက်ပါ</string>
+  <string name="morphe_hide_shorts_gesture_hints_title">Gesture ညွှန်ကြားချက်များကို ဖျောက်ထားပါ</string>
+  <string name="morphe_hide_shorts_green_screen_button_title">\'Green screen\' ခလုတ်ကို ဖျောက်ရန်</string>
+  <string name="morphe_hide_shorts_hashtag_button_title">Hashtag ခလုတ်ကို ဖျောက်ပါ</string>
+  <string name="morphe_hide_shorts_info_panel_title">အချက်အလက် panel ကို ဖျောက်ပါ</string>
   <!-- 'Join' should be translated using the same localized wording YouTube displays for the button. -->
+  <string name="morphe_hide_shorts_join_button_title">ဝင်ရောက်ရန် ခလုတ်ကို ဖျောက်ပါ</string>
+  <string name="morphe_hide_shorts_like_button_title">Like ခလုတ်ကို ဖျောက်ထားပါ</string>
   <!-- YouTube may no longer use this feature and this setting may be obsolete. -->
+  <string name="morphe_hide_shorts_like_fountain_title">Like ခလုတ်၏ fountain animation ကို ဖျောက်ထားပါ</string>
+  <string name="morphe_hide_shorts_live_preview_title">တိုက်ရိုက် ကြိုတင်ကြည့်ရှုမှုကို ဖျောက်ရန်</string>
+  <string name="morphe_hide_shorts_location_label_title">တည်နေရာ အညွှန်းကို ဖျောက်ပါ</string>
+  <string name="morphe_hide_shorts_navigation_bar_title">လမ်းညွှန်ဘားကို ဖျောက်ပါ</string>
+  <string name="morphe_hide_shorts_new_posts_button_title">\'ပို့စ်အသစ်များ\' ခလုတ်ကို ဖျောက်ရန်</string>
+  <string name="morphe_hide_shorts_paused_overlay_buttons_title">ရပ်တန့်ထားချိန်တွင် ပေါ်လာသော overlay ခလုတ်များကို ဖျောက်ပါ</string>
+  <string name="morphe_hide_shorts_preview_comment_title">မှတ်ချက် အကြိုကြည့်ရှုမှုကို ဖျောက်ပါ</string>
   <!-- 'Remix' should be translated using the same localized wording YouTube displays for the button. -->
+  <string name="morphe_hide_shorts_remix_button_title">Remix ခလုတ်ကို ဖျောက်ထားပါ</string>
   <!-- 'Save' should be translated using the same localized wording YouTube displays for the button. -->
+  <string name="morphe_hide_shorts_save_button_title">သိမ်းဆည်းရန် ခလုတ်ကို ဖျောက်ရန်</string>
+  <string name="morphe_hide_shorts_save_sound_button_title">\'တေးဂီတ သိမ်းဆည်းရန်\' ခလုတ်ကို ဖျောက်ရန်</string>
+  <string name="morphe_hide_shorts_search_suggestions_title">ရှာဖွေမှု အကြံပြုချက်များကို ဖျောက်ပါ</string>
   <!-- 'Share' should be translated using the same localized wording YouTube displays for the button. -->
+  <string name="morphe_hide_shorts_share_button_title">မျှဝေရန် ခလုတ်ကို ဖျောက်ထားပါ</string>
+  <string name="morphe_hide_shorts_shop_button_title">Shop ခလုတ်ကို ဖျောက်ပါ</string>
+  <string name="morphe_hide_shorts_sound_button_title">အသံ ခလုတ်ကို ဖျောက်ထားပါ</string>
+  <string name="morphe_hide_shorts_sound_metadata_label_title">အသံဆိုင်ရာ အချက်အလက်တံဆိပ်ကို ဖျောက်ပါ</string>
+  <string name="morphe_hide_shorts_subscribe_button_title">Subscribe ခလုတ်ကို ဖျောက်ထားပါ</string>
+  <string name="morphe_hide_shorts_super_thanks_button_title">\'Buy Super Thanks\' ခလုတ်ကို ဖျောက်ရန်</string>
+  <string name="morphe_hide_shorts_tagged_products_title">တဂ်တွဲထားသော ပစ္စည်းများကို ဖျောက်ထားပါ</string>
+  <string name="morphe_hide_shorts_upcoming_button_title">Upcoming ခလုတ်ကို ဖျောက်ထားပါ</string>
+  <string name="morphe_hide_shorts_use_sound_button_title">\'ဤအသံကို အသုံးပြုရန်\' ခလုတ်ကို ဖျောက်ရန်</string>
+  <string name="morphe_hide_shorts_use_template_button_title">\'ဤပုံစံကို အသုံးပြုရန်\' ခလုတ်ကို ဖျောက်ရန်</string>
+  <string name="morphe_hide_shorts_video_title_title">ဗီဒီယိုခေါင်းစဉ်ကို ဖျောက်ပါ</string>
   <!-- layout.hide.endscreensuggestedvideo.hideEndScreenSuggestedVideoPatch -->
+  <string name="morphe_hide_end_screen_suggested_video_title">အဆုံးသတ်မျက်နှာပြင်ရှိ အကြံပြုဗီဒီယိုကို ဖျောက်ပါ</string>
+  <string name="morphe_hide_end_screen_suggested_video_summary">"ဗီဒီယိုပြီးဆုံးပြီးနောက် ပေါ်လာသော အကြံပြုဗီဒီယို overlay ကို ဖျောက်ပေးသည်
+
+ဤဆက်တင်သည် autoplay ကို ပိတ်ထားမှသာ အလုပ်လုပ်မည်ဖြစ်သည်။ ၎င်းကို YouTube တွင် ပြောင်းလဲနိုင်သည်-
+Settings → Playback (သို့မဟုတ် Autoplay) → Autoplay next video"</string>
   <!-- layout.hide.relatedvideos.hideRelatedVideosPatch -->
+  <string name="morphe_hide_player_related_videos_title">ဆက်စပ်ဗီဒီယိုများကို ဖျောက်ပါ</string>
   <!-- layout.hide.relatedvideooverlay.hideRelatedVideoOverlayPatch -->
+  <string name="morphe_hide_player_related_videos_overlay_title">\'ဗီဒီယိုများ ပိုမိုကြည့်ရှုရန်\' overlay ကို ဖျောက်ရန်</string>
+  <string name="morphe_hide_player_related_videos_overlay_summary">Full-screen mode တွင် အပေါ်သို့ ပွတ်ဆွဲသောအခါ ပေါ်လာသော \'ဗီဒီယိုများ ပိုမိုကြည့်ရှုရန်\' overlay ကို ဖျောက်ထားပါသည်</string>
   <!-- layout.hide.time.hideTimestampPatch -->
+  <string name="morphe_hide_timestamp_title">ဗီဒီယိုအချိန်မှတ်တမ်းကို ဖျောက်ပါ</string>
   <!-- layout.panels.popup.disablePlayerPopupPanelsPatch -->
+  <string name="morphe_disable_player_popup_panels_title">ပလေယာ ပေါ့ပ်အပ် ပန်နယ်များကို ပိတ်ပါ</string>
+  <string name="morphe_disable_player_popup_panels_summary">ပလေလစ်နှင့် တိုက်ရိုက်ချက်တင်ချက် ပန်နယ်များကို အလိုအလျောက် ပွင့်လာခြင်းမှ ပိတ်ထားသည်</string>
   <!-- layout.playlistautoplay.disablePlaylistAutoplayPatch -->
+  <string name="morphe_disable_playlist_autoplay_title">Playlist အလိုအလျောက် ဖွင့်ခြင်းကို ပိတ်ပါ</string>
+  <string name="morphe_disable_playlist_autoplay_summary">Playlist များတွင် နောက်ဗီဒီယိုတစ်ခုသို့ အလိုအလျောက် ကူးပြောင်းခြင်းကို တားဆီးပါသည်</string>
   <!-- interaction.continuewatching.disableContinueWatchingPromptPatch -->
+  <string name="morphe_disable_continue_watching_prompt_title">\'ဆက်လက်ကြည့်ရှုမလား?\' ဟူသော အသိပေးချက်ကို ပိတ်ပါ</string>
   <!-- layout.player.fullscreen.exitFullscreenPatch -->
+  <string name="morphe_exit_fullscreen_title">ဗီဒီယိုပြီးဆုံးပါက ဖန်သားပြင်အပြည့်မုဒ်မှ ထွက်ပါ</string>
+  <string name="morphe_exit_fullscreen_entry_1">ပိတ်ထားသည်</string>
+  <string name="morphe_exit_fullscreen_entry_2">Portrait သာ</string>
+  <string name="morphe_exit_fullscreen_entry_3">Landscape သာ</string>
+  <string name="morphe_exit_fullscreen_entry_4">Portrait နှင့် landscape</string>
   <!-- layout.player.fullscreen.forceFullscreenLandscapePatch -->
+  <string name="morphe_force_fullscreen_landscape_title">Full screen တွင် အလျားလိုက်ပုံစံကို အတင်းအကျပ် သတ်မှတ်ပါ</string>
+  <string name="morphe_force_fullscreen_landscape_summary">Full screen သို့ ပြောင်းလဲချိန်တွင် ဗီဒီယိုဖွင့်စက်ကို အလျားလိုက်ပုံစံသို့ လှည့်ပါ။ အလျားလိုက်ပုံစံဖြင့် full screen ပွင့်ပြီးသားဖြစ်သော မျက်နှာပြင်ငယ်များတွင် အသုံးပြု၍မရပါ</string>
   <!-- layout.player.fullscreen.disableFullscreenGesturesPatch -->
+  <string name="morphe_disable_fullscreen_gestures_title">Full-screen လက်ဟန်ခြေဟန်များ</string>
+  <string name="morphe_disable_fullscreen_gestures_summary">Fullscreen မုဒ်ရှိ ပလေယာ လက်ဟန်ခြေဟန်များ</string>
+  <string name="morphe_disable_fullscreen_pulled_up_gesture_title">Portrait ပုံစံ အပေါ်သို့ ပွတ်ဆွဲသည့် လက်ဟန်ကို ပိတ်ပါ</string>
+  <string name="morphe_disable_fullscreen_sliding_down_gesture_title">Portrait ပုံစံ အောက်သို့ ပွတ်ဆွဲသည့် လက်ဟန်ကို ပိတ်ပါ</string>
+  <string name="morphe_disable_fullscreen_dragged_down_gesture_title">Landscape ပုံစံတွင် အောက်သို့ဆွဲချသည့် gesture ကို ပိတ်ပါ</string>
+  <string name="morphe_disable_fullscreen_zoom_gesture_title">Pinch-to-zoom လက်ဟန်ကို ပိတ်ပါ</string>
+  <string name="morphe_restore_pinch_to_zoom_title">Pinch to zoom ကို ပြန်လည်ဖော်ပြပါ</string>
   <!-- layout.player.fullscreen.openVideosFullscreenPatch -->
+  <string name="morphe_open_videos_fullscreen_title">ဗီဒီယိုများကို fullscreen ပုံစံဖြင့် ဖွင့်ပါ</string>
+  <string name="morphe_open_videos_fullscreen_entry_1">ပိတ်ထားသည်</string>
+  <string name="morphe_open_videos_fullscreen_entry_2">Portrait ပုံစံ</string>
+  <string name="morphe_open_videos_fullscreen_entry_3">Landscape ပုံစံ</string>
   <!-- layout.player.fullscreen.stretchVideoPatch -->
+  <string name="morphe_fullscreen_video_scale_title">Fullscreen ဗီဒီယို စကေး</string>
+  <string name="morphe_fullscreen_video_scale_entry_default">မူလအတိုင်း</string>
+  <string name="morphe_fullscreen_video_scale_entry_stretch">ဆွဲဆန့်ရန် (မျက်နှာပြင်အပြည့်)</string>
+  <string name="morphe_fullscreen_video_scale_entry_zoom">ဇူးမ်ဆွဲရန် (အပြည့်ဖြစ်အောင် ဖြတ်တောက်ရန်)</string>
+  <string name="morphe_fullscreen_video_scale_button_title">ဗီဒီယို စကေးခလုတ်ကို ပြရန်</string>
+  <string name="morphe_fullscreen_video_scale_button_summary">မူလအတိုင်း၊ ဆွဲဆန့်ရန် နှင့် ဇူးမ်ဆွဲရန် တို့ကို အလှည့်ကျပြောင်းရန် နှိပ်ပါ</string>
+  <string name="morphe_fullscreen_video_scale_button_fullscreen_only_title">Full screen တွင်သာ ပြပါ</string>
+  <string name="morphe_fullscreen_video_scale_button_fullscreen_only_summary">Portrait ပုံစံ ဗီဒီယိုဖွင့်စက်တွင် ဗီဒီယိုအရွယ်အစားညှိခလုတ်ကို ဖျောက်ထားပါ</string>
   <!-- layout.player.buttons.muteVideoButtonPatch -->
+  <string name="morphe_mute_video_button_title">အသံပိတ်ခလုတ်ကို ပြရန်</string>
   <!-- layout.player.overlay.customPlayerOverlayOpacityPatch -->
+  <string name="morphe_player_overlay_opacity_title">Player overlay ပွင့်လင်းမှု</string>
+  <string name="morphe_player_overlay_opacity_summary">ပွင့်လင်းမြင်သာမှုအဆင့်ကို ညှိပါ (၀ သည် ပွင့်လင်းမြင်သာပြီး၊ ၁၀၀ သည် အလင်းမပေါက်ပါ)</string>
   <!-- layout.searchbar.wideSearchbarPatch -->
+  <string name="morphe_searchbar_type_title">ရှာဖွေရေးဘား</string>
+  <string name="morphe_searchbar_type_entry_disabled">ပိတ်ထားသည်</string>
+  <string name="morphe_searchbar_type_entry_wide">ကျယ်ပြန့်သော</string>
+  <string name="morphe_searchbar_type_entry_extra_wide">အထူးကျယ်ပြန့်သော</string>
   <!-- layout.sponsorblock.sponsorBlockPatch -->
   <!-- layout.formfactor.changeFormFactorPatch -->
+  <string name="morphe_change_form_factor_title">စက်ပစ္စည်း၏ အပြင်အဆင်</string>
+  <string name="morphe_change_form_factor_entry_1">ပုံသေ</string>
+  <string name="morphe_change_form_factor_entry_2">ဖုန်း</string>
+  <string name="morphe_change_form_factor_entry_3">တက်ဘလက်</string>
+  <string name="morphe_change_form_factor_entry_4">မော်တော်ယာဉ်</string>
+  <string name="morphe_change_form_factor_user_dialog_message">"ပြောင်းလဲမှုများတွင် အောက်ပါတို့ ပါဝင်သည်- 
+
+Tablet ပုံစံ
+• Community ပို့စ်များကို ဖျောက်ထားသည်
+• feed များတွင် ဖွင့်ကြည့်ခြင်း ဆက်တင်ကို အသုံးမပြုနိုင်ပါ
+• Shorts တွင် Remix ခလုတ်နှင့် အသံခလုတ်များကို အသုံးမပြုနိုင်ပါ
+• 'ဗီဒီယိုများ ပိုကြည့်ရန်' အပေါ်ထပ်စာသား ပေါ်လာမည်မဟုတ်ပါ
+• အရင်ဗီဒီယို လုပ်ဆောင်ချက်ဘား (မချုံ့ထားသော) ကို ပြသသည်
+• Flyout မီနူးရှိ အကြောင်းအရာများ မှန်ကန်စွာ အလုပ်မလုပ်နိုင်ပါ
+
+Automotive ပုံစံ
+• feed ကို အကြောင်းအရာများနှင့် ချန်နယ်များအလိုက် စုစည်းထားသည်
+• feed များတွင် ဖွင့်ကြည့်ခြင်း ဆက်တင်ကို အသုံးမပြုနိုင်ပါ
+• Shorts တွင် Remix ခလုတ်နှင့် အသံခလုတ်များကို အသုံးမပြုနိုင်ပါ
+• 'ဗီဒီယိုများ ပိုကြည့်ရန်' အပေါ်ထပ်စာသား ပေါ်လာမည်မဟုတ်ပါ
+• Shorts များကို ပုံမှန်ဖွင့်ကြည့်ကိရိယာဖြင့် ဖွင့်မည်
+• အရင်ဗီဒီယို လုပ်ဆောင်ချက်ဘား (မချုံ့ထားသော) ကို ပြသသည်"</string>
+  <string name="morphe_tablet_layout_in_player_title">ပလေယာတွင် တက်ဘလက် လေအုတ္တုကို အသုံးပြုပါ</string>
   <!-- "Restore old video action bar" must be translated the same as morphe_restore_old_video_action_bar_title -->
+  <string name="morphe_tablet_layout_in_player_summary">"ယခင် player layout ကို ပြန်လည်ရယူပါ
+
+ကန့်သတ်ချက်- အကယ်၍ 'ယခင် ဗီဒီယို action bar ကို ပြန်လည်ရယူပါ' ကို ပိတ်ထားပါက 'ဗီဒီယိုများ ပိုမိုကြည့်ရှုရန်' overlay ကို အသုံးမပြုနိုင်ပါ"</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
+  <string name="morphe_spoof_app_version_target_entry_21_11">21.11.48 - စာတန်းထိုးဟန်ပုံစံဟောင်းကို ပြန်လည်ဖော်ပြပါ</string>
+  <string name="morphe_spoof_app_version_target_entry_20_39">20.39.41 - သိမ်းဆည်းထားမှုအဟောင်းကို playlist သို့ ပြန်သွင်းပါ</string>
+  <string name="morphe_spoof_app_version_target_entry_20_28">20.28.41 - အထူပုံစံအိုင်ကွန်များကို ပိတ်ပါ</string>
+  <string name="morphe_spoof_app_version_target_entry_20_13">20.13.41 - ဗီဒီယို player အောက်ရှိ channel အမည်ကို ပြန်လည်ဖော်ပြပါ</string>
   <!-- misc.sharesheet.openSystemShareSheetPatch -->
+  <string name="morphe_open_system_share_sheet_title">စနစ်၏ မျှဝေမှုစာမျက်နှာကို ဖွင့်ပါ</string>
+  <string name="morphe_open_system_share_sheet_summary">အကြောင်းအရာများကို မျှဝေသည့်အခါ အက်ပ်အတွင်းရှိ မျှဝေမှုအစား စနစ်၏ share sheet ကို ဖွင့်ပါ</string>
   <!-- layout.music.overrideYouTubeMusicButtonsPatch -->
+  <string name="morphe_override_youtube_music_buttons_title">YouTube Music ခလုတ်များကို အစားထိုးပါ</string>
+  <string name="morphe_override_youtube_music_buttons_summary">မူလ YouTube Music app အစား သင်နှစ်သက်သော တေးဂီတ app ကို ဖွင့်ပေးသည်</string>
+  <string name="morphe_custom_music_package_name_title">Music အက်ပ် ပက်ကေ့ဂျ်အမည်</string>
+  <string name="morphe_custom_music_package_name_summary">သင်ထည့်သွင်းထားသော တေးဂီတအက်ပ်၏ ပက်ကေ့ချ်အမည်</string>
   <!-- layout.startpage.changeStartPagePatch -->
+  <string name="morphe_change_start_page_title">စတင်စာမျက်နှာ</string>
+  <string name="morphe_change_start_page_entry_default">ပုံသေ</string>
+  <string name="morphe_change_start_page_entry_all_subscriptions">စာရင်းသွင်းမှုအားလုံး</string>
+  <string name="morphe_change_start_page_entry_browse">ချန်နယ်များကို ရှာဖွေပါ</string>
+  <string name="morphe_change_start_page_entry_courses">သင်တန်းများ / လေ့လာသင်ယူမှု</string>
+  <string name="morphe_change_start_page_entry_explore">လေ့လာစမ်းသပ်ပါ</string>
+  <string name="morphe_change_start_page_entry_fashion">ဖက်ရှင် &amp; အလှအပ</string>
+  <string name="morphe_change_start_page_entry_gaming">ဂိမ်းများ</string>
+  <string name="morphe_change_start_page_entry_history">မှတ်တမ်း</string>
+  <string name="morphe_change_start_page_entry_library">စာကြည့်တိုက်</string>
+  <string name="morphe_change_start_page_entry_liked_videos">ကြိုက်နှစ်သက်သော ဗီဒီယိုများ</string>
+  <string name="morphe_change_start_page_entry_live">တိုက်ရိုက်လွှင့်မှု</string>
+  <string name="morphe_change_start_page_entry_movies">ရုပ်ရှင်များ</string>
+  <string name="morphe_change_start_page_entry_music">ဂီတ</string>
+  <string name="morphe_change_start_page_entry_news">သတင်းများ</string>
+  <string name="morphe_change_start_page_entry_notifications">အကြောင်းကြားချက်များ</string>
+  <string name="morphe_change_start_page_entry_playlists">ပလေလစ်များ</string>
+  <string name="morphe_change_start_page_entry_search">ရှာဖွေရန်</string>
+  <string name="morphe_change_start_page_entry_shopping">ဈေးဝယ်ခြင်း</string>
+  <string name="morphe_change_start_page_entry_shorts">Shorts</string>
+  <string name="morphe_change_start_page_entry_sports">အားကစား</string>
+  <string name="morphe_change_start_page_entry_subscriptions">စာရင်းသွင်းမှုများ</string>
+  <string name="morphe_change_start_page_entry_trending">ရေပန်းစားနေသည်များ</string>
+  <string name="morphe_change_start_page_entry_virtual_reality">Virtual Reality</string>
+  <string name="morphe_change_start_page_entry_watch_later">နောက်မှကြည့်မည်</string>
+  <string name="morphe_change_start_page_entry_your_clips">သင်၏ ကလစ်များ</string>
   <!-- layout.shortsnoresume.disableShortsResumingOnStartupPatch -->
+  <string name="morphe_disable_shorts_resuming_on_startup_title">စတင်ချိန်တွင် ပြန်လည်စတင်ခြင်းကို ပိတ်ပါ</string>
   <!-- layout.shortsplayer.shortsPlayerTypePatch -->
+  <string name="morphe_shorts_player_type_title">Shorts ကို ၎င်းဖြင့် ဖွင့်ပါ</string>
+  <string name="morphe_shorts_player_type_shorts">Shorts ပလေယာ</string>
+  <string name="morphe_shorts_player_type_regular_player">ပုံမှန်ပလေယာ</string>
+  <string name="morphe_shorts_player_type_regular_player_fullscreen">ပုံမှန်ပလေယာ ဖန်သားပြင်အပြည့်</string>
   <!-- layout.shortsautoplay.shortsAutoplayPatch -->
+  <string name="morphe_shorts_autoplay_title">Shorts များကို အလိုအလျောက်ဖွင့်ပါ</string>
+  <string name="morphe_shorts_autoplay_summary">လက်ရှိ Short ကို ထပ်ခါတလဲလဲ ပြသမည့်အစား နောက်ထပ် Short တစ်ခုသို့ အလိုအလျောက် ကူးပြောင်းပါမည်</string>
+  <string name="morphe_shorts_autoplay_background_title">နောက်ခံတွင် အလိုအလျောက် ဖွင့်ခြင်း</string>
+  <string name="morphe_shorts_autoplay_background_summary">နောက်ခံတွင် ဖွင့်ထားစဉ် နောက်ထပ် Short တစ်ခုသို့ အလိုအလျောက် ကူးပြောင်းပါမည်</string>
+  <string name="morphe_skip_live_shorts_title">တိုက်ရိုက်လွှင့်နေသော Shorts များကို ကျော်ပါ</string>
+  <string name="morphe_skip_live_shorts_summary">Shorts feed တွင် ပေါ်လာသော တိုက်ရိုက်ထုတ်လွှင့်မှုများကို ကျော်သွားမည်</string>
   <!-- layout.playbackinfeeds.playbackInFeedsPatch -->
+  <string name="morphe_playback_in_feeds_title">ဖိဒ်များတွင် ပြန်ဖွင့်ခြင်း</string>
+  <string name="morphe_playback_in_feeds_entry_always_on">အမြဲတမ်းဖွင့်ထားမည်</string>
+  <string name="morphe_playback_in_feeds_entry_wifi_only">Wi-Fi သာ</string>
+  <string name="morphe_playback_in_feeds_entry_off">ပိတ်ထားသည်</string>
   <!-- layout.originaltitles.restoreOriginalTitlesPatch -->
+  <string name="morphe_restore_original_titles_title">မူလခေါင်းစဉ်များကို ပြန်လည်ရယူပါ</string>
+  <string name="morphe_restore_original_titles_summary">အလိုအလျောက် ဘာသာပြန်ထားသော ခေါင်းစဉ်များအစား မူရင်းဗီဒီယိုခေါင်းစဉ်များ၊ ဗီဒီယိုဖော်ပြချက်များနှင့် ချန်နယ်ဖော်ပြချက်များကို ပြသပေးသည်</string>
+  <string name="morphe_restore_original_titles_loading">ခေါင်းစဉ်ကို တက်နေသည်…</string>
   <!-- layout.feedrefresh.disableAutoFeedRefreshPatch -->
+  <string name="morphe_disable_auto_feed_refresh_title">အလိုအလျောက် feed refresh လုပ်ခြင်းကို ပိတ်ပါ</string>
+  <string name="morphe_disable_auto_feed_refresh_summary">feed များ သက်တမ်းကုန်သွားပြီးနောက် အလိုအလျောက် refresh ဖြစ်ခြင်းကို တားဆီးပေးသည်</string>
   <!-- layout.feedcards.feedCardLayoutPatch -->
+  <string name="morphe_feed_card_layout_title">Feed ကတ် ဒီဇိုင်း</string>
+  <string name="morphe_feed_card_layout_entry_1">ကလတ်စစ်</string>
+  <string name="morphe_feed_card_layout_entry_2">ကတ်များ</string>
+  <string name="morphe_feed_card_layout_entry_3">Like၊ Comment နှင့် သိမ်းဆည်းရန် ခလုတ်များပါသော ကတ်များ</string>
+  <string name="morphe_feed_card_layout_comments">မှတ်ချက်များ</string>
   <!-- layout.miniplayer.miniplayerPatch -->
+  <string name="morphe_miniplayer_disable_resuming_title">Miniplayer ကို ပြန်လည်စတင်ခြင်းကို ပိတ်ပါ</string>
+  <string name="morphe_miniplayer_disable_resuming_summary">အက်ပ်စတင်ချိန်တွင် ပေါ်လာသော YouTube Premium ၏ လုပ်ဆောင်ချက်တစ်ခုဖြစ်သည့် \'ဆက်လက်ကြည့်ရှုရန်\' miniplayer ကို ပိတ်ပါ</string>
+  <string name="morphe_miniplayer_screen_title">မီနီပလေယာ</string>
+  <string name="morphe_miniplayer_screen_summary">အသေးချုံ့ထားသော ဗီဒီယိုပလေယာ၏ ပုံပန်းသဏ္ဌာန်နှင့် လုပ်ဆောင်ချက်ကို စိတ်ကြိုက်ပြင်ဆင်ပါ</string>
+  <string name="morphe_miniplayer_type_title">မီနီပလေယာအမျိုးအစား</string>
+  <string name="morphe_miniplayer_hide_title_title">ခေါင်းစဉ်နှင့် ချန်နယ်ကို ဖျောက်ပါ</string>
+  <string name="morphe_miniplayer_type_entry_0">ပိတ်ထားသည်</string>
+  <string name="morphe_miniplayer_type_entry_1">မူလအတိုင်း</string>
+  <string name="morphe_miniplayer_type_entry_2">အနည်းဆုံး</string>
+  <string name="morphe_miniplayer_type_entry_3">အနည်းဆုံးပုံစံ ၂</string>
+  <string name="morphe_miniplayer_type_entry_4">တက်ဘလက်</string>
+  <string name="morphe_miniplayer_type_entry_5">ခေတ်မီပုံစံ ၁</string>
+  <string name="morphe_miniplayer_type_entry_6">ခေတ်မီပုံစံ ၂</string>
+  <string name="morphe_miniplayer_type_entry_7">ခေတ်မီပုံစံ ၃</string>
+  <string name="morphe_miniplayer_type_entry_8">ခေတ်မီပုံစံ ၄</string>
+  <string name="morphe_miniplayer_disable_rounded_corners_title">ထောင့်မှန်များကို ပိတ်ပါ</string>
+  <string name="morphe_miniplayer_disable_drag_and_drop_title">ဆွဲယူ၍ ချထားခြင်းကို ပိတ်ပါ</string>
+  <string name="morphe_miniplayer_disable_drag_and_drop_summary">အသေးချုံ့ထားသော ပလေယာကို မျက်နှာပြင်၏ အခြားထောင့်များသို့ ဆွဲရွှေ့ခြင်းကို တားဆီးပါသည်</string>
+  <string name="morphe_miniplayer_disable_horizontal_drag_title">အလျားလိုက် ဆွဲယူသည့် ပုံစံကို ပိတ်ပါ</string>
+  <string name="morphe_miniplayer_disable_horizontal_drag_summary">Miniplayer ကို မျက်နှာပြင်ပြင်ပသို့ အလျားလိုက်ဆွဲထုတ်၍ ပိတ်ခြင်းကို တားဆီးပါသည်</string>
+  <string name="morphe_miniplayer_disable_horizontal_drag_playback_title">ဘေးတိုက်ဆွဲယူခြင်းဖြင့် ဖွင့်ပြမှုကို ရပ်တန့်ပါ</string>
+  <string name="morphe_miniplayer_disable_horizontal_drag_playback_summary">Miniplayer ကို မျက်နှာပြင်ပြင်ပသို့ ဆွဲထုတ်လိုက်ပါက ဖွင့်ပြမှုကို ခေတ္တရပ်နားမည်ဖြစ်သည်</string>
+  <string name="morphe_miniplayer_disable_horizontal_reposition_title">ဆွဲယူထားသော အနေအထားကို မှတ်သားထားပါ</string>
+  <string name="morphe_miniplayer_disable_horizontal_reposition_summary">Miniplayer ကို မျက်နှာပြင်အပြင်ဘက်သို့ ဆွဲယူခြင်းဖြင့် ၎င်း၏ UI အခြေအနေကို ထိန်းသိမ်းထားမည်ဖြစ်သည်</string>
+  <string name="morphe_miniplayer_hide_overlay_buttons_title">အပေါ်ထပ် ခလုတ်များကို ဖျောက်ပါ</string>
+  <string name="morphe_miniplayer_width_dip_title">မူလအရွယ်အစား</string>
+  <string name="morphe_miniplayer_width_dip_summary">စတင်မည့် မျက်နှာပြင်အရွယ်အစားကို ပစ်ဇယ် pixels ဖြင့် သတ်မှတ်ပါ</string>
+  <string name="morphe_miniplayer_width_dip_invalid_toast">Pixel အရွယ်အစားသည် %1$s နှင့် %2$s ကြား ဖြစ်ရမည်</string>
+  <string name="morphe_miniplayer_opacity_title">အပေါ်ထပ် ပွင့်လင်းမှု</string>
+  <string name="morphe_miniplayer_opacity_summary">ပွင့်လင်းမြင်သာမှုအဆင့်ကို ညှိပါ (၀ သည် ပွင့်လင်းမြင်သာပြီး ၁၀၀ သည် အလင်းမပေါက်ပါ)</string>
   <!-- misc.fix.fixBackToExitGesturePatch -->
+  <string name="morphe_back_button_always_exits_feed_title">Back ခလုတ်သည် feed မှ ထွက်မည်</string>
+  <string name="morphe_back_button_always_exits_feed_summary">Back ကို နှိပ်ပါက feed ၏ အပေါ်ဆုံးသို့ ပွတ်တင်မည့်အစား အက်ပ်မှ အမြဲတမ်း ထွက်မည်ဖြစ်သည်</string>
   <!-- layout.animations.forceAnimationsPatch -->
+  <string name="morphe_force_animations_title">အန်နီမေးရှင်းများကို အတင်းအကြပ် သတ်မှတ်ရန်</string>
+  <string name="morphe_force_animations_entry_default">မူလအတိုင်း</string>
+  <string name="morphe_force_animations_entry_always_on">အမြဲတမ်းဖွင့်ထားမည်</string>
+  <string name="morphe_force_animations_entry_always_off">အမြဲတမ်းပိတ်ထားမည်</string>
   <!-- layout.statusbar.hideStatusBarPatch -->
+  <string name="morphe_hide_status_bar_title">အခြေအနေဘားကို ဖျောက်ပါ</string>
+  <string name="morphe_hide_status_bar_summary">စနစ်၏ အခြေအနေဘားကို ဖျောက်ပေးသည်။ ခေတ္တပြသရန် အပေါ်ဘက်အစွန်းမှ အောက်သို့ ဆွဲချပါ</string>
+  <string name="morphe_fix_status_bar_layout_title">အပေါ်ဘားများကို status bar က ဖုံးအုပ်နေခြင်းကို ပြင်ဆင်ရန်</string>
+  <string name="morphe_fix_status_bar_layout_summary">အပေါ်ဘားများကို ဖုံးကွယ်မသွားစေရန်နှင့် ပလေယာအပေါ်တွင် နေရာလွတ်များ မကျန်ရှိစေရန် status bar layout ကို တစ်သမတ်တည်းဖြစ်အောင် ထိန်းသိမ်းပေးပါသည်။ အကယ်၍ အက်ပ် crash ဖြစ်လျှင် သို့မဟုတ် အပေါ်ဘားများ ပုံစံလွဲနေလျှင် ၎င်းကို ပိတ်ထားပါ</string>
   <!-- layout.theme.themePatch -->
+  <string name="morphe_splash_screen_style_entry_6">တောက်ပခြင်း</string>
+  <string name="morphe_theme_color_light_title">Light theme နောက်ခံ</string>
+  <string name="morphe_theme_color_light_entry_2">အဖြူရောင်</string>
+  <string name="morphe_theme_color_light_entry_3">Material You (အဖြူရောင်)</string>
+  <string name="morphe_theme_color_light_entry_9">ပန်းရောင်ဖျော့</string>
+  <string name="morphe_theme_color_light_entry_10">အပြာနုရောင်</string>
+  <string name="morphe_theme_color_light_entry_11">အစိမ်းနုရောင်</string>
+  <string name="morphe_theme_color_light_entry_12">အဝါနုရောင်</string>
+  <string name="morphe_theme_color_light_entry_13">လိမ္မော်နုရောင်</string>
+  <string name="morphe_theme_color_light_entry_14">အနီနုရောင်</string>
+  <string name="morphe_theme_color_light_custom_title">စိတ်ကြိုက် နောက်ခံအလင်းရောင်</string>
+  <string name="morphe_theme_color_light_custom_summary">Light theme ၏ နောက်ခံအရောင်ကို သတ်မှတ်ပါ</string>
+  <string name="morphe_theme_color_change_foreground_title">ရှေ့မျက်နှာပြင်အရောင်ကို ပြောင်းလဲပါ</string>
+  <string name="morphe_theme_color_change_foreground_summary">စာသားများနှင့် အိုင်ကွန်များအတွက် theme အရောင်ကို အသုံးပြုပါ</string>
+  <string name="morphe_gradient_loading_screen_title">အရောင်ပြေး Loading screen ကို ဖွင့်ပါ</string>
+  <string name="morphe_gradient_loading_screen_summary">Loading screen တွင် အရောင်ရင့်တစ်မျိုးတည်းအစား gradient နောက်ခံကို ပြသပါသည်</string>
+  <string name="morphe_seekbar_custom_color_title">စိတ်ကြိုက် seekbar အရောင်ကို ဖွင့်ပါ</string>
+  <string name="morphe_seekbar_custom_color_primary_title">Seekbar အရောင်</string>
+  <string name="morphe_seekbar_custom_color_primary_summary">ဗီဒီယိုတိုးတက်မှုဘား၏ ပင်မအရောင်ကို သတ်မှတ်ပါ</string>
+  <string name="morphe_seekbar_custom_color_accent_title">Seekbar ၏ အသားပေးအရောင်</string>
+  <string name="morphe_seekbar_custom_color_accent_summary">ဗီဒီယိုတိုးတက်မှုဘား၏ ဒုတိယအရောင်ကို သတ်မှတ်ပါ</string>
+  <string name="morphe_seekbar_custom_color_invalid">မှားယွင်းသော seekbar အရောင်တန်ဖိုး ဖြစ်နေသည်</string>
   <!-- layout.branding.customBrandingPatch -->
+  <string name="morphe_custom_branding_icon_entry_8">မူရင်း အန်နာလော့</string>
+  <string name="morphe_custom_branding_icon_entry_9">မူရင်းကိတ်မုန့်</string>
+  <string name="morphe_custom_branding_icon_entry_10">မူရင်းသတ္တု</string>
   <!-- layout.branding.header.changeHeaderPatch -->
+  <string name="morphe_header_logo_title">Header လိုဂို</string>
+  <string name="morphe_header_logo_entry_1">ပုံသေ</string>
+  <string name="morphe_header_logo_entry_2">ပုံမှန်</string>
   <!-- Translations should match the language used in 'morphe_custom_branding_icon_entry_7'. -->
+  <string name="morphe_header_logo_entry_5">စိတ်ကြိုက်</string>
   <!-- layout.thumbnails.bypassImageRegionRestrictionsPatch -->
+  <string name="morphe_bypass_image_region_restrictions_title">ပုံရိပ်ဒေသဆိုင်ရာ ကန့်သတ်ချက်များကို ကျော်ဖြတ်ပါ</string>
+  <string name="morphe_bypass_image_region_restrictions_summary">ကန့်သတ်ထားသော နိုင်ငံများတွင် ပျောက်ဆုံးနေသော ပုံများကို ပြင်ဆင်ရန် thumbnail တောင်းဆိုမှုများကို အခြားဆာဗာတစ်ခုသို့ လွှဲပြောင်းပေးသည်</string>
   <!-- layout.dearrow.deArrowPatch -->
   <!-- "DeArrow" must be kept untranslated. -->
+  <string name="morphe_dearrow_titles_title">DeArrow ခေါင်းစဉ်များ</string>
   <!-- 'Home' should be translated using the same localized wording YouTube displays for the tab. -->
+  <string name="morphe_dearrow_titles_home_title">ပင်မစာမျက်နှာ တက်ဘ်</string>
   <!-- 'Subscriptions' should be translated using the same localized wording YouTube displays for the tab. -->
+  <string name="morphe_dearrow_titles_subscription_title">လိုက်ဘ်လုပ်ထားသည်များ တက်ဘ်</string>
   <!-- 'You' should be translated using the same localized wording YouTube displays for the tab. -->
+  <string name="morphe_dearrow_titles_library_title">သင် တက်ဘ်</string>
+  <string name="morphe_dearrow_titles_player_title">Player ပလေးလစ်များနှင့် အကြံပြုချက်များ</string>
+  <string name="morphe_dearrow_titles_search_title">ရှာဖွေမှုရလဒ်များ</string>
+  <string name="morphe_dearrow_titles_icon_title">DeArrow အိုင်ကွန်ကို ပြရန်</string>
+  <string name="morphe_dearrow_titles_icon_summary">Crowdsourced ဗီဒီယိုခေါင်းစဉ်များတွင် DeArrow အိုင်ကွန်ကို ပြသသည်</string>
+  <string name="morphe_dearrow_casual_mode_title">ပေါ့ပေါ့ပါးပါးမုဒ်</string>
+  <string name="morphe_dearrow_casual_mode_summary">DeArrow အသုံးပြုသူများက မူလခေါင်းစဉ်ကို ပိုကြိုက်သည်ဟု မဲပေးထားပါက DeArrow ခေါင်းစဉ်အစား မူလခေါင်းစဉ်ကို ပြသပေးသည်</string>
+  <string name="morphe_dearrow_casual_mode_min_votes_title">မူလခေါင်းစဉ်ကို ပြသရန် လိုအပ်သော အနည်းဆုံး casual မဲအရေအတွက်</string>
+  <string name="morphe_dearrow_casual_mode_min_votes_summary">မူလခေါင်းစဉ်ကို ပြသနိုင်ရန်အတွက် ဟာသ သို့မဟုတ် တီထွင်ဖန်တီးမှုရှိခြင်း ကဲ့သို့သော ကဏ္ဍတစ်ခုတည်းတွင် လိုအပ်သော casual မဲအရေအတွက်</string>
+  <string name="morphe_dearrow_thumbnails_title">DeArrow ပုံကြိုကြည့်များ</string>
+  <string name="morphe_dearrow_thumbnail_options_entry_1">မူရင်း thumbnails များ</string>
+  <string name="morphe_dearrow_thumbnail_options_entry_2">DeArrow &amp; မူရင်း thumbnails များ</string>
+  <string name="morphe_dearrow_thumbnail_options_entry_3">DeArrow &amp; Still captures များ</string>
+  <string name="morphe_dearrow_thumbnail_options_entry_4">ပုံသေဖမ်းယူချက်များ</string>
+  <string name="morphe_dearrow_about_summary">"DeArrow သည် လူအာရုံစိုက်စေရန် ဖန်တီးထားသော ခေါင်းစဉ်များနှင့် thumbnail များကို ပိုမိုတိကျပြီး အရှိန်အဟုန်လျှော့ထားသော လူထုအခြေပြုအကြောင်းအရာများဖြင့် အစားထိုးပေးပါသည်။ ခေါင်းစဉ်များကို အသိုင်းအဝိုင်းမှ ရေးသားပြီး မဲပေးရွေးချယ်ထားခြင်းဖြစ်ပြီး thumbnail များသည် ဗီဒီယိုထဲမှ ပုံရိပ်များ ဖြစ်သည်
+
+ဗီဒီယိုများကို hashed video ID ၏ အတိုကောက် prefix ဖြင့် တောင်းဆိုသောကြောင့် သင်မည်သည့်ဗီဒီယိုကို ကြည့်နေသည်ကို ဆာဗာမှ အတိအကျ မသိနိုင်ပါ။ အကယ်၍ ဗီဒီယိုတစ်ခုတွင် DeArrow thumbnail မရှိပါက မူရင်း သို့မဟုတ် ပုံသေဖမ်းယူထားသော ပုံကို ပြသမည်ဖြစ်သည်"</string>
+  <string name="morphe_dearrow_connection_toast_title">ချိတ်ဆက်မှု အမှားသတိပေးချက်များကို ပြသပါ</string>
+  <string name="morphe_dearrow_connection_toast_summary">DeArrow ဆာဗာကို အသုံးပြု၍မရသောအခါ အကြောင်းကြားချက်တစ်ခုကို ပြသမည်</string>
+  <string name="morphe_dearrow_api_url_title">API အဆုံးသတ်ပွိုင့်</string>
+  <string name="morphe_dearrow_api_url_summary">DeArrow thumbnail cache endpoint ၏ URL</string>
+  <string name="morphe_dearrow_thumbnail_stills_about_title">ဗီဒီယို ပုံသေဖမ်းယူချက်များ</string>
+  <string name="morphe_dearrow_thumbnail_stills_about_summary">ဗီဒီယိုတစ်ခုစီ၏ အစ / အလယ် / အဆုံးမှ ပုံသေဖမ်းယူမှုများကို ရယူထားခြင်း ဖြစ်သည်။ ဤပုံများကို YouTube တွင် ထည့်သွင်းထားပြီး ပြင်ပ API ကို အသုံးမပြုပါ</string>
+  <string name="morphe_dearrow_thumbnail_stills_time_title">ဗီဒီယိုဖရိမ်ကို ဤနေရာမှ ထုတ်ယူပါ</string>
+  <string name="morphe_dearrow_thumbnail_stills_time_entry_1">အစပိုင်း</string>
+  <string name="morphe_dearrow_thumbnail_stills_time_entry_2">အလယ်</string>
+  <string name="morphe_dearrow_thumbnail_stills_time_entry_3">အဆုံး</string>
   <!-- Translations of this should not be longer than the original English text, otherwise the text can be clipped and not entirely shown. -->
+  <string name="morphe_dearrow_error">DeArrow ကို ယာယီအသုံးပြု၍မရပါ (အခြေအနေကုဒ်: %s)</string>
+  <string name="morphe_dearrow_error_generic">DeArrow ကို ယာယီအသုံးပြု၍မရပါ</string>
   <!-- misc.announcements.announcementsPatch -->
   <!-- misc.playercontrols.playerControlsPatch -->
+  <string name="morphe_restore_old_player_buttons_title">Player ခလုတ် ပုံစံဟောင်းကို ပြန်သုံးပါ</string>
+  <string name="morphe_restore_old_player_buttons_summary">ထင်ရှားသော ဗီဒီယိုပလေယာ ထိန်းချုပ်မှုများကို ယခင်က ပိုမိုပါးလွှာသော ပုံစံသို့ ပြောင်းလဲပေးသည်</string>
   <!-- misc.dimensions.spoof.spoofDeviceDimensionsPatch -->
+  <string name="morphe_spoof_device_dimensions_title">စက်ပစ္စည်းအရွယ်အစားကို အတုအယောင်ပြုလုပ်ရန်</string>
+  <string name="morphe_spoof_device_dimensions_summary">ယင်းကို အသုံးပြုခြင်းဖြင့် ပိုမိုမြင့်မားသော ဗီဒီယိုအရည်အသွေးများကို ရရှိနိုင်မည်ဖြစ်သည်</string>
+  <string name="morphe_spoof_device_dimensions_user_dialog_message">၎င်းကို အသက်သွင်းခြင်းသည် ဗီဒီယိုဖွင့်ရာတွင် ထစ်ငေါ့ခြင်း၊ ဘက်ထရီသက်တမ်း ပိုမိုတိုတောင်းခြင်းနှင့် အခြားမသိရှိရသော ဘေးထွက်ဆိုးကျိုးများကို ဖြစ်စေနိုင်သည်</string>
   <!-- misc.hapticfeedback.disableHapticFeedbackPatch -->
+  <string name="morphe_disable_haptic_feedback_title">Haptic တုံ့ပြန်မှု</string>
+  <string name="morphe_disable_haptic_feedback_summary">မည်သည့် အပြန်အလှန်သက်ရောက်မှုများက စက်ပစ္စည်း တုန်ခါမှုကို ဖြစ်ပေါ်စေမည်ကို ရွေးချယ်ပါ</string>
+  <string name="morphe_disable_haptic_feedback_chapters_title">အခန်းများ၏ haptics ကို ပိတ်ပါ</string>
+  <string name="morphe_disable_haptic_feedback_precise_seeking_title">တိကျသော ရှာဖွေမှု haptics ကို ပိတ်ပါ</string>
+  <string name="morphe_disable_haptic_feedback_seek_undo_title">ရှာဖွေမှုပယ်ဖျက်ခြင်း haptics ကို ပိတ်ပါ</string>
+  <string name="morphe_disable_haptic_feedback_tap_and_hold_title">နှိပ်ပြီးဖိထားသည့် haptics များကို ပိတ်ရန်</string>
+  <string name="morphe_disable_haptic_feedback_zoom_title">Zoom haptics ကို ပိတ်ပါ</string>
   <!-- misc.gms.accountCredentialsInvalidTextPatch -->
+  <string name="microg_offline_account_login_error">သင်သည် အကောင့်ဝင်ရောက်မှု အချက်အလက်များကို မကြာသေးမီက ပြောင်းလဲခဲ့ပါက MicroG ကို ပယ်ဖျက်ပြီး ပြန်လည်ထည့်သွင်းပါ</string>
   <!-- misc.links.bypassLinkRedirectsPatch -->
+  <string name="morphe_bypass_link_redirects_title">လင့်ခ်လမ်းကြောင်း ပြန်လည်ညွှန်းဆိုမှုများကို ကျော်ဖြတ်ပါ</string>
+  <string name="morphe_bypass_link_redirects_summary">ခြေရာခံလင့်ခ် (youtube.com/redirect) ကို ကျော်ပြီး မူရင်းလင့်ခ်ကို တိုက်ရိုက်ဖွင့်ပါသည်</string>
   <!-- misc.links.openLinksExternallyPatch -->
+  <string name="morphe_external_browser_title">လင့်ခ်များကို ဘရောက်ဆာတွင် ဖွင့်ပါ</string>
+  <string name="morphe_external_browser_summary">လင့်ခ်များကို app အတွင်းရှိ browser အစား ပြင်ပ browser တွင် ဖွင့်ပါသည်</string>
   <!-- video.buffer.playbackBufferPatch -->
+  <string name="morphe_playback_buffer_size_title">ပြန်ဖွင့်မှု ဘတ်ဖာအရွယ်အစား</string>
+  <string name="morphe_playback_buffer_size_entry_default">ပုံမှန်</string>
+  <string name="morphe_playback_buffer_size_entry_low">နည်းသည်</string>
+  <string name="morphe_playback_buffer_size_entry_medium">အလတ်စား</string>
+  <string name="morphe_playback_buffer_size_entry_maximum">အများဆုံး</string>
   <!-- video.delay.videoDelayPatch -->
+  <string name="morphe_video_delay_title">ဗီဒီယို ကြန့်ကြာမှု</string>
+  <string name="morphe_video_delay_summary">Bluetooth နားကြပ်များကဲ့သို့ အသံနှေးကွေးမှုရှိသော အခြေအနေမျိုးတွင် ဗီဒီယိုကို အသံနှင့် ကိုက်ညီစေရန် ကြန့်ကြာအောင် ပြုလုပ်သည် (0-5000 ms)</string>
+  <string name="morphe_video_delay_bluetooth_only_title">Bluetooth အသံဖြင့်သာ ကြန့်ကြာစေရန်</string>
+  <string name="morphe_video_delay_bluetooth_only_summary">Bluetooth အသံ ချိတ်ဆက်ထားချိန်တွင်သာ ဗီဒီယိုကို ကြန့်ကြာစေမည်ဖြစ်သောကြောင့် ဖုန်းစပီကာသည် အသံနှင့် ကိုက်ညီနေမည်ဖြစ်သည်</string>
+  <string name="morphe_video_delay_button_overlay_title">ဗီဒီယိုနှေးကွေးမှုခလုတ်ကို ပြသရန်</string>
+  <string name="morphe_video_delay_button_overlay_summary">နှေးကွေးမှုကို 0 ms သို့ ပြန်သတ်မှတ်ရန် ဖိထားပါ</string>
+  <string name="morphe_video_delay_button_flyout_title">ဗီဒီယိုနှေးကွေးမှုမီနူးကို ပြသရန်</string>
+  <string name="morphe_video_delay_dialog_input_hint">မီလီစက္ကန့်ဖြင့် နှေးကွေးမှု ပမာဏ</string>
   <!-- video.quality.rememberVideoQualityPatch -->
   <!-- Translations should match the language used in 'morphe_custom_playback_speeds_auto'. -->
+  <string name="morphe_video_quality_default_entry_1">အလိုအလျောက်</string>
+  <string name="morphe_remember_video_quality_last_selected_title">ဗီဒီယိုအရည်အသွေးကို မှတ်သားထားရန်</string>
+  <string name="morphe_remember_video_quality_last_selected_summary">သင်ကိုယ်တိုင် ရွေးချယ်ထားသော အရည်အသွေးကို နောက်ပိုင်းတွင် ကြည့်ရှုမည့် ဗီဒီယိုအားလုံးအတွက် အသုံးပြုမည်</string>
+  <string name="morphe_remember_video_quality_last_selected_toast_title">အရည်အသွေး ပြောင်းလဲမှု အကြောင်းကြားချက်များ</string>
+  <string name="morphe_remember_video_quality_last_selected_toast_summary">မူလအရည်အသွေး အသစ်တစ်ခုကို သိမ်းဆည်းလိုက်သောအခါ အကြောင်းကြားချက်တစ်ခုကို ပြသပါသည်</string>
+  <string name="morphe_video_quality_default_wifi_title">Wi-Fi ကွန်ရက်ရှိ ပုံသေဗီဒီယိုအရည်အသွေး</string>
+  <string name="morphe_video_quality_default_mobile_title">မိုဘိုင်းကွန်ရက်ရှိ ပုံသေဗီဒီယိုအရည်အသွေး</string>
+  <string name="morphe_remember_shorts_quality_last_selected_title">Shorts အရည်အသွေးကို မှတ်သားထားရန်</string>
+  <string name="morphe_remember_shorts_quality_last_selected_summary">နောင်လာမည့် Shorts အားလုံးအတွက် သင်ကိုယ်တိုင်ရွေးချယ်ထားသော အရည်အသွေးကို အသုံးပြုပါမည်</string>
+  <string name="morphe_shorts_quality_default_wifi_title">Wi-Fi ကွန်ရက်ရှိ ပုံသေ Shorts အရည်အသွေး</string>
+  <string name="morphe_shorts_quality_default_mobile_title">မိုဘိုင်းလ်ကွန်ရက်တွင် ပုံသေ Shorts အရည်အသွေး</string>
+  <string name="morphe_remember_video_quality_toast_mobile">မိုဘိုင်းအတွက် ပုံသေအရည်အသွေးကို %s သို့ ပြောင်းလဲလိုက်ပါသည်</string>
+  <string name="morphe_remember_video_quality_toast_wifi">Wi-Fi အတွက် ပုံသေအရည်အသွေးကို %s သို့ ပြောင်းလဲလိုက်ပါသည်</string>
+  <string name="morphe_remember_video_quality_toast_shorts_mobile">Shorts မိုဘိုင်းအရည်အသွေးကို %s သို့ ပြောင်းလဲလိုက်ပါပြီ</string>
+  <string name="morphe_remember_video_quality_toast_shorts_wifi">Shorts Wi-Fi အရည်အသွေးကို %s သို့ ပြောင်းလဲလိုက်ပါပြီ</string>
   <!-- video.speed.button.playbackSpeedButtonPatch -->
+  <string name="morphe_playback_speed_dialog_button_title">ပြန်ဖွင့်အမြန်နှုန်း ခလုတ်ကို ပြသရန်</string>
+  <string name="morphe_playback_speed_dialog_button_summary">အမြန်နှုန်းကို မူလအတိုင်း ပြန်သတ်မှတ်ရန် ဖိထားပါ</string>
   <!-- video.quality.button.videoQualityDialogButtonPatch -->
+  <string name="morphe_video_quality_dialog_button_title">အရည်အသွေး ခလုတ်ကို ပြသရန်</string>
+  <string name="morphe_video_quality_dialog_button_summary">အရည်အသွေးကို မူလအတိုင်း ပြန်သတ်မှတ်ရန် ဖိထားပါ</string>
+  <string name="morphe_video_quality_dialog_button_resolution_title">Quality ခလုတ်တွင် resolution ကို ပြပါ</string>
+  <string name="morphe_video_quality_dialog_button_resolution_summary">FHD ကဲ့သို့သော အညွှန်းများအစား 1080 ကဲ့သို့သော resolution ကို ပြသပါ</string>
   <!-- video.speed.custom.customPlaybackSpeedPatch -->
+  <string name="morphe_custom_speed_menu_title">စိတ်ကြိုက် ဖွင့်ပြမှုအရှိန် မီနူး</string>
+  <string name="morphe_restore_old_speed_menu_title">ယခင် ဖွင့်ပြမှုအရှိန် မီနူးကို ပြန်တင်ပါ</string>
+  <string name="morphe_custom_playback_speeds_title">စိတ်ကြိုက် ဖွင့်ပြမှု အမြန်နှုန်းများ</string>
+  <string name="morphe_custom_playback_speeds_summary">သင်နှစ်သက်သော ပြန်ဖွင့်အမြန်နှုန်း ရွေးချယ်မှုကို ထည့်သွင်းပါ</string>
+  <string name="morphe_custom_playback_speeds_invalid">စိတ်ကြိုက်ဖွင့်ပြသမှု အရှိန်နှုန်းသည် %s ထက် နည်းရပါမည်</string>
+  <string name="morphe_custom_playback_speeds_parse_exception">စိတ်ကြိုက် ဖွင့်ပြမှု အမြန်နှုန်းများ မှားယွင်းနေသည်</string>
+  <string name="morphe_custom_playback_speeds_auto">အလိုအလျောက်</string>
+  <string name="morphe_speed_tap_and_hold_title">ပြန်ဖွင့်အမြန်နှုန်းကို ဖိထားပါ</string>
+  <string name="morphe_speed_tap_and_hold_summary">မျက်နှာပြင်ကို ဖိထားချိန်တွင် အသုံးပြုမည့် အမြန်နှုန်းမြှောက်ကိန်းကို သတ်မှတ်ပါ၊ ပိတ်ရန် ၀ ဟု သတ်မှတ်ပါ</string>
   <!-- video.speed.remember.rememberPlaybackSpeedPatch -->
+  <string name="morphe_remember_playback_speed_last_selected_title">ပြန်ဖွင့်မှုအရှိန်ကို မှတ်သားထားရန်</string>
+  <string name="morphe_remember_playback_speed_last_selected_summary">သင်ကိုယ်တိုင် ရွေးချယ်ထားသော အရှိန်ကို နောင်လာမည့် ဗီဒီယိုအားလုံးတွင် အသုံးပြုမည်</string>
+  <string name="morphe_remember_playback_speed_last_selected_toast_title">အရှိန်ပြောင်းလဲမှု အကြောင်းကြားချက်များ</string>
+  <string name="morphe_remember_playback_speed_last_selected_toast_summary">မူလဖွင့်ပြနှုန်း အသစ်တစ်ခုကို သိမ်းဆည်းလိုက်သောအခါ အကြောင်းကြားချက်တစ်ခုကို ပြသပါသည်</string>
+  <string name="morphe_playback_speed_default_title">ပုံသေ ဖွင့်ပြမှု အမြန်နှုန်း</string>
+  <string name="morphe_shorts_playback_speed_default_title">Shorts များအတွက် ပုံသေ ပြန်ဖွင့်မှုအရှိန်</string>
+  <string name="morphe_shorts_remember_playback_speed_title">Shorts များတွင် ပြန်ဖွင့်မှုအရှိန်ကို မှတ်ထားရန်</string>
+  <string name="morphe_shorts_remember_playback_speed_summary">သင်ကိုယ်တိုင် ရွေးချယ်ထားသော Shorts အရှိန်ကို နောင်လာမည့် Shorts အားလုံးအတွက် အသုံးပြုပါမည်။ ပိတ်ထားပါက Shorts ပလေယာကို ပိတ်ပြီးနောက် အရှိန်သည် မူလအတိုင်း ပြန်ဖြစ်သွားပါမည်</string>
+  <string name="morphe_shorts_playback_speed_flyout_button_title">Shorts မီနူးတွင် ပြန်ဖွင့်မှုအရှိန်ကို ပြသပါ</string>
+  <string name="morphe_shorts_playback_speed_flyout_button_summary">Shorts ပလေယာမီနူးတွင် ပြန်ဖွင့်မှုအရှိန် အကြောင်းအရာတစ်ခုကို ထည့်သွင်းသည်</string>
+  <string name="morphe_shorts_playback_speed_flyout_title">ပြန်ဖွင့်မှုအရှိန် · %s</string>
+  <string name="morphe_remember_playback_speed_toast">ပုံသေဖွင့်ပြသမှု အရှိန်နှုန်းကို %s သို့ ပြောင်းလဲလိုက်ပါသည်</string>
+  <string name="morphe_disable_playback_speed_music_title">ဂီတအတွက် ပုံမှန်အမြန်နှုန်းကို အသုံးပြုပါ</string>
+  <string name="morphe_disable_playback_speed_music_summary">ဂီတဗီဒီယိုများကို အမြဲတမ်း 1.0x အမြန်နှုန်းဖြင့် ဖွင့်ပါ</string>
+  <string name="morphe_playback_speed_channel_whitelist_title">ချန်နယ် အမြန်နှုန်း အဖြူရောင်စာရင်း</string>
+  <string name="morphe_playback_speed_channel_whitelist_summary">အဖြူရောင်စာရင်းဝင် ချန်နယ်များမှ ဗီဒီယိုများသည် အမြဲတမ်း 1.0x အမြန်နှုန်းဖြင့် ဖွင့်ပြမည်ဖြစ်သည်</string>
+  <string name="morphe_playback_speed_channel_whitelist_flyout_add">အရှိန်နှုန်း whitelist သို့ ချန်နယ်ကို ပေါင်းထည့်ပါ</string>
+  <string name="morphe_playback_speed_channel_whitelist_flyout_remove">အရှိန်နှုန်း whitelist မှ ချန်နယ်ကို ဖယ်ရှားပါ</string>
+  <string name="morphe_enable_playback_audio_pitch_controls_title">အသံအနိမ့်အမြင့် ထိန်းချုပ်မှုများကို ဖွင့်ရန်</string>
+  <string name="morphe_playback_audio_pitch_default_title">ပုံသေ ဖွင့်တုံ့ပြန်မှု အသံအနိမ့်အမြင့်</string>
+  <string name="morphe_remember_playback_audio_pitch_toast">ပုံသေ အသံအနိမ့်အမြင့်ကို %s သို့ ပြောင်းလဲလိုက်ပါသည်</string>
+  <string name="morphe_playback_audio_time_stretching_title">အသံကြာချိန် ဆွဲဆန့်ခြင်း</string>
+  <string name="morphe_playback_audio_time_stretching_summary">အရှိန်နှင့် အသံအနိမ့်အမြင့်ကို သီးခြားစီ သတ်မှတ်နိုင်သည်၊ အသံအရည်အသွေး ပျက်ယွင်းမှုများ ဖြစ်နိုင်သည်</string>
   <!-- video.livestream.rememberLiveStreamPositionPatch -->
+  <string name="morphe_remember_live_stream_position_title">တိုက်ရိုက်ထုတ်လွှင့်မှု ပြန်ဖွင့်သည့်နေရာကို မှတ်သားထားပါ</string>
+  <string name="morphe_remember_live_stream_position_summary">လက်ရှိထုတ်လွှင့်နေသော တိုက်ရိုက်ထုတ်လွှင့်မှုများအတွက်၊ လက်ရှိတိုက်ရိုက်နေရာသို့ အလိုအလျောက်မသွားဘဲ သင်ကြည့်ရှုခဲ့သောနေရာကို မှတ်သားထားပြီး ထိုနေရာမှ ပြန်လည်စတင်ပေးမည်ဖြစ်သည်</string>
+  <string name="morphe_remember_live_stream_position_user_dialog_message">ဤလုပ်ဆောင်ချက်သည် ၂၄/၇ တိုက်ရိုက်ထုတ်လွှင့်မှုများနှင့် အမြဲတမ်း \'ဖွင့်ထားသော\' အခြားထုတ်လွှင့်မှုများတွင် အလုပ်မလုပ်ပါ</string>
   <!-- video.codecs.disableVideoCodecsPatch -->
+  <string name="morphe_disable_hdr_video_title">HDR ဗီဒီယိုကို ပိတ်ပါ</string>
+  <string name="morphe_force_hdr_video_title">HDR ဗီဒီယိုကို အတင်းအကျပ်အသုံးပြုရန်</string>
+  <string name="morphe_force_hdr_video_summary">ဤစက်ပစ္စည်းအား HDR အသုံးပြုနိုင်သည်ဟု အက်ပ်မှ အသိအမှတ်ပြုရန် အတင်းအကျပ်လုပ်ဆောင်ပေးသည်</string>
+  <string name="morphe_force_hdr_video_user_dialog_message">"HDR decoding အလုပ်လုပ်သော်လည်း HLG ကို ဖုံးကွယ်ထားသည့် အချို့သော HyperOS စက်ပစ္စည်းများကဲ့သို့ YouTube မှ HDR ကို ပေးမလာသည့်အခါ ဤအချက်ကို အသုံးပြုပါ။
+
+ကန့်သတ်ချက်များ- 
+• မျက်နှာပြင်မှ HDR ကို အမှန်တကယ် မပြသနိုင်ပါက အရောင်များ မှားယွင်းနေနိုင်သည်
+• Decoder မှ HDR ကို မကိုင်တွယ်နိုင်ပါက playback ပျက်ကွက်နိုင်သည်
+• HDR သည် spoof ပြုလုပ်ထားသော ဗီဒီယို stream client ပေါ်တွင် မူတည်နေဆဲဖြစ်သည်"</string>
+  <string name="morphe_video_codec_title">ဗီဒီယို ကိုဒက်</string>
+  <string name="morphe_video_codec_entry_default">ပုံသေ</string>
   <!-- 'Spoof video streams' should be the same translation used for 'morphe_spoof_video_streams_screen_title'. -->
+  <string name="morphe_video_codec_avc_not_available">AVC ကို အတင်းအကျပ်အသုံးပြုရန် \'ဗီဒီယို စတြင်းများကို အတုပြုလုပ်ပါ\' ကို \'Android Studio\', \'Android VR\' သို့မဟုတ် \'visionOS\' သို့ ပြောင်းလဲပါ</string>
+  <string name="morphe_video_codec_user_dialog_message">"VP9
+• ဘက်ထရီသက်တမ်းကို ပိုကောင်းစေပြီး ပြန်ဖွင့်ရာတွင် ထစ်ငေါ့မှုများကို ဖြေရှင်းပေးနိုင်သည်
+• AV1 ထက် အင်တာနက်ဒေတာ ပိုမိုအသုံးပြုသည်
+
+AVC (H.264)
+• 'Android Studio', 'Android VR' သို့မဟုတ် 'visionOS' ဗီဒီယို စတြင်း အတုပြုလုပ်သည့် client လိုအပ်သည်
+• ဘက်ထရီသက်တမ်းကို ပိုမိုတိုးတက်စေနိုင်သည်
+• ပစ္စည်းဟောင်းများတွင် ပျောက်ဆုံးနေသော ဗီဒီယို resolution များကို ပြန်လည်ရရှိစေနိုင်သည်
+• အမြင့်ဆုံး resolution သည် 1080p ဖြစ်သည်
+• HDR ဗီဒီယိုများသည် AVC ကို အသုံးမပြုနိုင်ပါ
+• အချို့သော ပစ္စည်းများသည် AVC ကို အတင်းအကျပ်အသုံးပြု၍မရနိုင်ပါ"</string>
   <!-- video.quality.advancedVideoQualityMenuPatch -->
+  <string name="morphe_advanced_video_quality_menu_title">အဆင့်မြင့် အရည်အသွေးမီ မီနူးကို ဖွင့်ပါ</string>
+  <string name="morphe_advanced_video_quality_menu_summary">အရည်အသွေးရွေးချယ်မှုမီနူးကို ကျော်ပြီး အဆင့်မြင့်အရည်အသွေးမီနူးကို တိုက်ရိုက်ဖွင့်ပေးသည်</string>
   <!-- video.quality.hidePremiumVideoQualityPatch -->
+  <string name="morphe_hide_premium_video_quality_title">Premium အရည်အသွေး ရွေးချယ်မှုများကို ဖျောက်ပါ</string>
   <!-- video.quality.prioritizeVideoQualityPatch -->
+  <string name="morphe_video_quality_prioritize_title">ဗီဒီယိုအရည်အသွေးကို ဦးစားပေးပါ</string>
+  <string name="morphe_video_quality_prioritize_summary">Codec ထိရောက်မှုထက် ရရှိနိုင်သော အမြင့်ဆုံး ဗီဒီယိုအရည်အသွေးကို ဦးစားပေးမည်</string>
+  <string name="morphe_video_quality_prioritize_dialog">ဤဆက်တင်ကို ပိတ်ထားပါက ဗီဒီယိုအဟောင်းများတွင် ဗီဒီယိုအရည်အသွေး ရွေးချယ်စရာများ ပေါ်လာမည်မဟုတ်ပါ</string>
   <!-- misc.spoof.spoofVideoStreamsPatch -->
+  <string name="morphe_spoof_video_streams_av1_title">\'Android VR\' / visionOS AV1 ကို ခွင့်ပြုရန်</string>
+  <string name="morphe_spoof_video_streams_av1_summary">\'Android VR\' / visionOS client ကို အသုံးပြုသည့်အခါ software AV1 decoding ကို ခွင့်ပြုသည်</string>
+  <string name="morphe_spoof_video_streams_av1_user_dialog_message">"ဤဆက်တင်ကို အသက်သွင်းခြင်းသည် software AV1 decoding ကို အသုံးပြုနိုင်ပါသည်။
+
+AV1 ဖြင့် ဗီဒီယိုဖွင့်ရာတွင် ထစ်ငေါ့ခြင်း သို့မဟုတ် frame များ ကျန်ရစ်ခြင်းများ ဖြစ်နိုင်သည်"</string>
+  <string name="morphe_spoof_video_streams_about_title">Spoofing ၏ ဘေးထွက်ဆိုးကျိုးများ</string>
+  <string name="morphe_spoof_video_streams_about_failure">• ၁ မိနစ်တွင် ပြန်ဖွင့်ခြင်း ပျက်ကွက်နိုင်သည်</string>
+  <string name="morphe_spoof_video_streams_about_no_audio_tracks">• \'Audio Track\' မီနူး ပျောက်ဆုံးနေသည်</string>
+  <string name="morphe_spoof_video_streams_about_no_av1">• AV1 ဗီဒီယို codec မရှိပါ</string>
+  <string name="morphe_spoof_video_streams_about_no_immersive_mode">• 360° VR immersive mode ကို အသုံးမပြုနိုင်ပါ</string>
+  <string name="morphe_spoof_video_streams_about_no_stable_volume">• Stable volume ကို အသုံးမပြုနိုင်ပါ</string>
+  <string name="morphe_spoof_video_streams_about_end_early">• ဖွင့်ပြမှုသည် ၁ စက္ကန့်စော၍ ပြီးဆုံးနိုင်သည်</string>
+  <string name="morphe_spoof_video_streams_about_js">• Deobfuscation မအောင်မြင်ပါက ပြန်ဖွင့်ခြင်း မအောင်မြင်နိုင်ပါ</string>
   <!-- "Force original audio" should match the language used in 'morphe_force_original_audio_title'. -->
+  <string name="morphe_spoof_video_streams_about_no_force_original_audio">• Force original audio ကို အသုံးမပြုနိုင်ပါ</string>
+  <string name="morphe_spoof_video_streams_about_sign_in_to_vr_required">• Android VR သို့ အကောင့်ဝင်ရန် လိုအပ်သည်</string>
   <!-- Quality refers to video quality -->
+  <string name="morphe_spoof_video_streams_about_720p_max">• အရည်အသွေးသည် 720p အထိသာ ကန့်သတ်နိုင်သည်</string>
+  <string name="morphe_spoof_video_streams_player_js_variant_title">Player JavaScript အမျိုးအစား</string>
+  <string name="morphe_spoof_video_streams_stats_for_nerds_title">\'Stats for nerds\' တွင် spoofing ကို ပြသရန်</string>
   <!-- misc.fix.videoactionbar.restoreOldVideoActionBarPatch -->
+  <string name="morphe_restore_old_video_action_bar_title">ဗီဒီယို လုပ်ဆောင်ချက်ဘား အဟောင်းကို ပြန်ယူပါ</string>
+  <string name="morphe_restore_old_video_action_bar_summary">"ဗီဒီယို လုပ်ဆောင်ချက်ခလုတ်များကို ဖျောက်၍မရသည့် ပြဿနာကို ဖြေရှင်းပေးသည်
+
+ကန့်သတ်ချက်- ပုံစံဟောင်း 'ဗီဒီယိုများ ပိုမိုကြည့်ရှုရန်' overlay သို့ ပြန်သွားမည်"</string>
   <!-- layout.player.icons.playerIconStylePatch -->
+  <string name="morphe_player_icon_style_title">Player အိုင်ကွန်ပုံစံ</string>
+  <string name="morphe_player_icon_style_entry_auto">အလိုအလျောက်</string>
+  <string name="morphe_player_icon_style_entry_default">ပုံသေ</string>
+  <string name="morphe_player_icon_style_entry_regular">ပါးလွှာသော</string>
+  <string name="morphe_player_icon_style_entry_bold">အထူ</string>
+  <string name="morphe_player_icon_style_entry_custom">စိတ်ကြိုက်</string>
+  <string name="morphe_shorts_icon_style_title">Shorts အိုင်ကွန်စတိုင်</string>
   <!-- video.series.seriesTrackerPatch -->
+  <string name="morphe_series_tracker_screen_title">စီးရီးခြေရာခံစနစ်</string>
+  <string name="morphe_series_tracker_screen_summary">ပလေလစ်များကို စီးရီးများအဖြစ် နောက်လိုက်ပြီး သင်ကြည့်ခဲ့သည့်နေရာကို မှတ်သားထားပါ</string>
+  <string name="morphe_series_tracker_title">စီးရီးခြေရာခံခြင်းကို အသုံးပြုရန်</string>
+  <string name="morphe_series_tracker_summary">History တွင် စီးရီးစာမျက်နှာတစ်ခုနှင့် ပလေလစ်များတွင် စီးရီးနောက်လိုက်ရန် ရွေးချယ်မှုကို ထည့်သွင်းပေးသည်</string>
+  <string name="morphe_series_tracker_show_navigation_button_title">သွားလာရေးဘားတွင် စီးရီးများကို ပြသရန်</string>
+  <string name="morphe_series_tracker_show_button_title">စီးရီးခြေရာခံခလုတ်ကို ပြသရန်</string>
+  <string name="morphe_series_tracker_show_button_summary">လက်ရှိဗီဒီယို၏ စီးရီးကို နောက်လိုက်ရန် သို့မဟုတ် ဖွင့်ရန် ပလေယာခလုတ်တစ်ခုကို ထည့်သွင်းပေးသည်</string>
+  <string name="morphe_series_tracker_record_followed_progress_title">နောက်လိုက်ထားသော စီးရီးတိုးတက်မှုကို မှတ်တမ်းတင်ရန်</string>
+  <string name="morphe_series_tracker_record_followed_progress_summary">သိမ်းဆည်းထားသော စီးရီးများနှင့် မှတ်သားချက်များအတွက် ဤဖုန်းတွင် ပြန်ဖွင့်မှုကို မှတ်တမ်းတင်ပါ</string>
+  <string name="morphe_series_tracker_ui_cancel">ပယ်ဖျက်ပါ</string>
+  <string name="morphe_series_tracker_ui_save">သိမ်းဆည်းပါ</string>
+  <string name="morphe_series_tracker_ui_save_bookmark">မှတ်သားချက်ကို သိမ်းဆည်းပါ</string>
+  <string name="morphe_series_tracker_ui_series_name">စီးရီးအမည်</string>
+  <string name="morphe_series_tracker_ui_series_options">စီးရီး ရွေးချယ်စရာများ</string>
+  <string name="morphe_series_tracker_ui_library_options">စာကြည့်တိုက် ရွေးချယ်စရာများ</string>
+  <string name="morphe_series_tracker_ui_refresh_episodes">အပိုင်းများကို အသစ်ပြန်နုပြီးဖတ်ပါ</string>
+  <string name="morphe_series_tracker_ui_rename">အမည်ပြောင်းပါ</string>
+  <string name="morphe_series_tracker_ui_open_playlist_in_youtube">YouTube တွင် ပလေးလစ်ကို ဖွင့်ပါ</string>
+  <string name="morphe_series_tracker_ui_remove_from_library">စာကြည့်တိုက်မှ ဖယ်ရှားပါ</string>
+  <string name="morphe_series_tracker_ui_playlist_link_or_id">Playlist လင့်ခ် သို့မဟုတ် ID</string>
+  <string name="morphe_series_tracker_ui_clear_all_local_progress">ဒေသတွင်း တိုးတက်မှုအားလုံးကို ရှင်းလင်းပါ</string>
+  <string name="morphe_series_tracker_ui_clear_history">မှတ်တမ်းကို ရှင်းလင်းပါ</string>
+  <string name="morphe_series_tracker_clear_progress_title">ဒေသတွင်း တိုးတက်မှုအားလုံးကို ရှင်းလင်းမလား?</string>
+  <string name="morphe_series_tracker_clear_progress_message">၎င်းသည် ဗီဒီယိုတိုင်းအတွက် ကြည့်ရှုပြီးသည့်နေရာများ၊ override ပြုလုပ်ထားမှုများနှင့် ပြန်လည်စတင်ကြည့်ရှုမည့် ရွေးချယ်မှုများကို ရှင်းလင်းပေးပါသည်။ သိမ်းဆည်းထားသော စီးရီးများနှင့် ၎င်းတို့၏ ကတ်တလော့များ ကျန်ရှိနေမည်ဖြစ်သည်။ မှတ်တမ်းတင်ခြင်းကို အသက်သွင်းထားပါက ဖွင့်ကြည့်မှုအသစ်များကို မှတ်တမ်းတင်မည်ဖြစ်သည်</string>
+  <string name="morphe_series_tracker_ui_mark_watched">ကြည့်ပြီးကြောင်း မှတ်သားရန်</string>
+  <string name="morphe_series_tracker_ui_mark_unwatched">မကြည့်ရသေးကြောင်း မှတ်သားရန်</string>
+  <string name="morphe_series_tracker_ui_use_automatic_status">အလိုအလျောက် အခြေအနေကို အသုံးပြုရန်</string>
+  <string name="morphe_series_tracker_ui_restart_from_0_00">0:00 မှ ပြန်စရန်</string>
+  <string name="morphe_series_tracker_ui_play_again_from_0_00">0:00 မှ ပြန်ဖွင့်ရန်</string>
+  <string name="morphe_series_tracker_ui_status_saved">အခြေအနေကို သိမ်းဆည်းပြီးပါပြီ</string>
+  <string name="morphe_series_tracker_ui_retry_saving">သိမ်းဆည်းမှုကို ပြန်ကြိုးစားပါ</string>
+  <string name="morphe_series_tracker_ui_previous_100">ယခင် ၁၀၀</string>
+  <string name="morphe_series_tracker_ui_next_100">နောက်ထပ် ၁၀၀</string>
+  <string name="morphe_series_tracker_ui_open_saved_video">သိမ်းဆည်းထားသော ဗီဒီယိုကို ဖွင့်ပါ</string>
+  <string name="morphe_series_tracker_ui_local_progress_cleared">ဒေသဆိုင်ရာ တိုးတက်မှုများကို ရှင်းလင်းပြီးပါပြီ</string>
+  <string name="morphe_series_tracker_ui_open_history_from_you_to_view_your_series">သင်၏ စီးရီးများကို ကြည့်ရှုရန် \"သင်\" မှ ကြည့်ရှုမှုမှတ်တမ်းကို ဖွင့်ပါ</string>
+  <string name="morphe_series_tracker_ui_watch_history">ကြည့်ရှုမှုမှတ်တမ်း</string>
+  <string name="morphe_series_tracker_ui_series">စီးရီးများ</string>
+  <string name="morphe_series_tracker_ui_loading_saved_series">သိမ်းဆည်းထားသော စီးရီးများကို တင်နေသည်…</string>
+  <string name="morphe_series_tracker_empty_library">အပိုင်းများကို ခြေရာခံရန် ပလေးလစ်တစ်ခုကို Follow ပြုလုပ်ပါ</string>
+  <string name="morphe_series_tracker_ui_playlist_bookmark">ပလေးလစ် မှတ်သားချက်</string>
+  <string name="morphe_series_tracker_ui_refreshing_episodes">အပိုင်းများကို အသစ်ပြန်လည်ဖတ်ရှုနေသည်…</string>
+  <string name="morphe_series_tracker_ui_all_series">စီးရီးအားလုံး</string>
+  <string name="morphe_series_tracker_watched">ကြည့်ပြီးပြီ</string>
+  <string name="morphe_series_tracker_ui_loading_episodes">အပိုင်းများကို တင်နေသည်…</string>
+  <string name="morphe_series_tracker_ui_more_options">ပိုသောရွေးချယ်စရာများ</string>
+  <string name="morphe_series_tracker_record_consent">"သင်သိမ်းဆည်းထားသော ဇာတ်လမ်းတွဲများနှင့် မှတ်သားထားသော ဗီဒီယိုများအတွက်သာ တိုးတက်မှုအခြေအနေကို မှတ်တမ်းတင်ပါ။
+
+ဤ library ကို ဤစက်ပစ္စည်းတွင် သိမ်းဆည်းထားပြီး YouTube အကောင့်များအားလုံးတွင် မျှဝေထားပါသည်။ YouTube ၏ ရပ်တန့်ခြင်းနှင့် ရာဇဝင်ကို ရှင်းလင်းခြင်း ထိန်းချုပ်မှုများသည် ၎င်းကို ပြောင်းလဲမည်မဟုတ်ပါ။ ၎င်းကို ဖျက်ရန် Series → More → Clear local progress ကို အသုံးပြုပါ။
+
+Incognito တွင်ဖြစ်စေ၊ အကောင့်အချက်အလက် မရရှိနိုင်ချိန်တွင်ဖြစ်စေ သို့မဟုတ် အခြားအကောင့်တစ်ခုသို့ ပြောင်းလဲချိန်တွင် အလိုအလျောက် မှတ်တမ်းတင်ခြင်း ရပ်တန့်သွားပါမည်။ ထိုအကောင့်နှင့် အသုံးပြုရန် tracking ကို ပြန်လည်ဖွင့်ပါ။"</string>
+  <string name="morphe_series_tracker_identity_unavailable">Incognito တွင် သို့မဟုတ် YouTube မှ လက်ရှိအကောင့်အခြေအနေကို မတင်ဆောင်ရသေးမီ tracking ကို ဖွင့်၍မရပါ။ ပင်မစာမျက်နှာသို့ ပြန်သွားပြီး ထပ်မံကြိုးစားပါ။ အကောင့်ဝင်ရန် မလိုအပ်ပါ</string>
+  <string name="morphe_series_tracker_enable">Local tracking ကို အသက်သွင်းပါ</string>
+  <string name="morphe_series_tracker_tracking_paused">တိုးတက်မှုမှတ်တမ်းတင်ခြင်းကို ပိတ်ထားသည်</string>
+  <string name="morphe_series_tracker_resume_at">%1$s တွင် ပြန်စမည်</string>
+  <string name="morphe_series_tracker_watched_count">အပိုင်း %1$s / %2$s ကြည့်ပြီးပြီ</string>
+  <string name="morphe_series_tracker_episode_position">အပိုင်း %1$s · %2$s</string>
+  <string name="morphe_series_tracker_episode_range">အပိုင်း %3$s ၏ %1$s-%2$s အပိုင်းများ</string>
+  <string name="morphe_series_tracker_catalog_unavailable">အပိုင်းများကို တင်ဆောင်ရန် Refresh လုပ်ပါ။ ပုဂ္ဂလိက ဖွင့်တိုက်စာရင်းများအတွက် အကောင့်ဝင်ရောက်ခွင့် လိုအပ်ပြီး ၎င်းတို့၏ bookmark များကို YouTube တွင် ဖွင့်နိုင်ပါသေးသည်</string>
+  <string name="morphe_series_tracker_open_failed">YouTube တွင် ဤအပိုင်းကို ဖွင့်၍မရပါ</string>
+  <string name="morphe_series_tracker_playlist_failed">YouTube တွင် ဤပလေလစ်ကို ဖွင့်၍မရပါ</string>
+  <string name="morphe_series_tracker_plan_changed">အပိုင်းတစ်ခုကို ရွေးချယ်ပါ</string>
+  <string name="morphe_series_tracker_plan_caught_up">နောက်ဆုံးအထိ ကြည့်ပြီးပြီ</string>
+  <string name="morphe_series_tracker_plan_none">ဖွင့်ကြည့်နိုင်သော အပိုင်းများမရှိပါ</string>
+  <string name="morphe_series_tracker_saved_position">သိမ်းဆည်းထားသော ဗီဒီယို · %1$s</string>
+  <string name="morphe_series_tracker_follow">စီးရီးကို ဖော်လိုလုပ်မည်</string>
+  <string name="morphe_series_tracker_view_series">စီးရီးကို ကြည့်မည်</string>
+  <string name="morphe_series_tracker_continue">ဆက်လက်လုပ်ဆောင်မည်</string>
+  <string name="morphe_series_tracker_start_here">ဤနေရာမှ စတင်မည်</string>
+  <string name="morphe_series_tracker_start_saved">စတင်မည့်နေရာကို သိမ်းဆည်းပြီးပါပြီ</string>
+  <string name="morphe_series_tracker_watched_to_here">ဤနေရာအထိ ကြည့်ပြီးပြီ</string>
+  <string name="morphe_series_tracker_marked">အပိုင်းများကို ကြည့်ပြီးကြောင်း မှတ်သားပြီးပါပြီ</string>
+  <string name="morphe_series_tracker_undo">နောက်ပြန်လုပ်မည်</string>
+  <string name="morphe_series_tracker_enable_short">ဖွင့်မည်</string>
+  <string name="morphe_series_tracker_new_episode">အပိုင်းအသစ် ၁ ပိုင်း</string>
+  <string name="morphe_series_tracker_new_episodes">အပိုင်းသစ် %1$s ပိုင်း</string>
+  <string name="morphe_series_tracker_record_short">ဤစက်တွင် တိုးတက်မှုအခြေအနေကို မှတ်တမ်းတင်မည်</string>
+  <string name="morphe_series_tracker_follow_consent">"သင်၏ စီးရီးများနှင့် တိုးတက်မှုများကို ဤစက်ပစ္စည်းတွင်သာ သိမ်းဆည်းထားမည်ဖြစ်ပြီး YouTube အကောင့်များအကြား မျှဝေမည်ဖြစ်သည်။ YouTube မှတ်တမ်းထိန်းချုပ်မှုများက ၎င်းတို့ကို ပြောင်းလဲမည်မဟုတ်ပါ။ စီးရီးမီနူးမှ တိုးတက်မှုများကို ရှင်းလင်းပါ။
+
+အလိုအလျောက် မှတ်တမ်းတင်ခြင်းသည် ရွေးချယ်နိုင်သော အချက်ဖြစ်သည်။ ၎င်းသည် လျှို့ဝှက်မုဒ်တွင်ဖြစ်စေ သို့မဟုတ် အကောင့်ပြောင်းလဲသွားသောအခါတွင်ဖြစ်စေ ရပ်တန့်သွားမည်ဖြစ်သည်"</string>
+  <string name="morphe_series_tracker_follow_unavailable">အပိုင်းများကို တင်၍မရပါ။ ပလေလစ်ကို မှတ်သားချက်အဖြစ် သိမ်းဆည်းနိုင်သည်</string>
+  <string name="morphe_series_tracker_error_pending_full">မသိမ်းရသေးသော အပြောင်းအလဲများ များလွန်းနေပါသည်။ ဦးစွာ သိမ်းဆည်းရန် ပြန်ကြိုးစားပါ</string>
+  <string name="morphe_series_tracker_error_storage_busy">သိမ်းဆည်းမှု လုပ်ဆောင်နေပါသည်။ ထပ်မံကြိုးစားပါ</string>
+  <string name="morphe_series_tracker_error_catalog_busy">အပိုင်းအားတင်နေပါသည်။ နောက်မှပြန်ကြိုးစားပါ</string>
+  <string name="morphe_series_tracker_error_storage_unavailable">သိုလှောင်မှုနေရာ အသုံးမပြုနိုင်ပါ။ သင်သိမ်းဆည်းထားသော ဒေတာများကို ထိန်းသိမ်းထားသည်</string>
+  <string name="morphe_series_tracker_error_storage_save">ပြောင်းလဲမှုများကို သိမ်းဆည်း၍မရပါ။ YouTube ကို မပိတ်မီ ပြန်လည်သိမ်းဆည်းရန် ကြိုးစားပါ</string>
+  <string name="morphe_series_tracker_error_conflict">ဤစီးရီးကို သိမ်းဆည်းပြီးဖြစ်သည် သို့မဟုတ် ၎င်း၏ playlist ပြောင်းလဲသွားသည်။ ၎င်းကို ပြန်ဖွင့်ပါ</string>
+  <string name="morphe_series_tracker_error_series_changed">ဤစီးရီး ပြောင်းလဲသွားသည် သို့မဟုတ် ဖယ်ရှားခံရသည်။ library ကို ပြန်ဖွင့်ပါ</string>
+  <string name="morphe_series_tracker_error_playlist_changed">Playlist ပြောင်းလဲသွားသည်။ အပိုင်းကို ထပ်မံရွေးချယ်ပါ</string>
+  <string name="morphe_series_tracker_error_episode_unavailable">ဤအပိုင်းကို အသုံးမပြုနိုင်ပါ။ အခြားတစ်ခုကို ရွေးချယ်ပါ</string>
+  <string name="morphe_series_tracker_error_name_required">စီးရီးအမည်ကို ထည့်ပါ</string>
+  <string name="morphe_series_tracker_error_playlist_input">YouTube playlist လင့်ခ် သို့မဟုတ် playlist ID ကို ထည့်ပါ</string>
+  <string name="morphe_series_tracker_error_retry_later">ထပ်မံ refresh မလုပ်မီ ခေတ္တစောင့်ဆိုင်းပါ</string>
+  <string name="morphe_series_tracker_error_catalog_unavailable">အပိုင်းများကို မတင်နိုင်ပါ။ နောက်မှ ထပ်မံကြိုးစားပါ</string>
+  <string name="morphe_series_tracker_error_operation">ပြောင်းလဲမှုကို မလုပ်ဆောင်နိုင်ပါ။ ထပ်မံကြိုးစားပါ</string>
+  <string name="morphe_series_tracker_error_resume">ဆက်လက်ကြည့်ရှုမှုကို အတည်မပြုနိုင်ပါ။ ပလေယာကို စစ်ဆေးပြီး ထပ်မံကြိုးစားပါ</string>
+  <string name="morphe_series_tracker_followed">ဖော်လိုလုပ်ထားသော စီးရီးများ</string>
+  <string name="morphe_series_tracker_video_not_in_playlist">ဤဗီဒီယိုသည် ဤပလေးလစ်တွင် မပါဝင်ပါ</string>
+  <string name="morphe_series_tracker_finding_playlists">Playlist များကို ရှာဖွေနေသည်…</string>
+  <string name="morphe_series_tracker_paste_playlist">Playlist လင့်ခ်ကို ပေးလိုက်ပါ</string>
+  <string name="morphe_series_tracker_discovery_unavailable">Playlist ကို ရှာမတွေ့ပါ</string>
+  <string name="morphe_series_tracker_no_available_episodes">အပိုင်းများ မရနိုင်ပါ</string>
+  <string name="morphe_series_tracker_hide_watched">ကြည့်ပြီးသားများကို ဖျောက်ထားရန်</string>
+  <string name="morphe_series_tracker_watch_previous">ယခင်အပိုင်းများကို ကြည့်ပြီးကြောင်း မှတ်သားရန်</string>
+  <string name="morphe_series_tracker_order_starts_with">ဤစာသားဖြင့် စတင်သည်- %1$s</string>
+  <string name="morphe_series_tracker_episode_order">အပိုင်း အစဉ်လိုက်</string>
+  <string name="morphe_series_tracker_playlist_order">Playlist အစဉ်လိုက်</string>
+  <string name="morphe_series_tracker_reverse_order">Playlist အစီအစဉ်ကို ပြောင်းပြန်လှန်ရန်</string>
+  <string name="morphe_series_tracker_view_count">ကြည့်ရှုမှု %1$s ကြိမ်</string>
+  <string name="morphe_series_tracker_view_count_one">ကြည့်ရှုမှု %1$s ကြိမ်</string>
+  <string name="morphe_series_tracker_completion_title">အပိုင်းများကို ကြည့်ပြီးကြောင်း မှတ်သားရန်</string>
+  <string name="morphe_series_tracker_completion_summary">အနည်းဆုံး %1$s%% ကြည့်ရှုပြီးဖြစ်ပြီး အများဆုံး စက္ကန့် ၉၀ သို့မဟုတ် %2$s စက္ကန့်သာ ကျန်ရှိသည်</string>
+  <string name="morphe_series_tracker_completion_explanation">သတ်မှတ်ချက်တစ်ခုခု ပြည့်မီပါက အပိုင်းတစ်ခုကို ကြည့်ရှုပြီးဖြစ်ကြောင်း အလိုအလျောက် မှတ်သားပါ။ ရာခိုင်နှုန်းစည်းမျဉ်းသည် စက္ကန့် ၉၀ ထက်မပိုဘဲ ကျန်ရှိရန် လိုအပ်ပြီး၊ သို့မှသာ အပိုင်းရှည်များ၏ အဆုံးသတ်ကို ကျော်မသွားမည် ဖြစ်သည်။ ကျန်ရှိချိန်စည်းမျဉ်းသည် တစ်မိနစ်ထက် ပိုရှည်သော ဗီဒီယိုများအတွက် အကျုံးဝင်ပြီး၊ ၎င်းကို ပိတ်ရန် 0 သတ်မှတ်ပါ။ ပြောင်းလဲမှုများသည် နောက်ပိုင်း တိုးတက်မှု အပ်ဒိတ်များတွင် အကျုံးဝင်မည်ဖြစ်သည်။ လက်ဖြင့် ရွေးချယ်ထားသော ကြည့်ရှုပြီး/မကြည့်ရသေးသည့် ရွေးချယ်မှုများကို ဆက်လက်ထိန်းသိမ်းထားမည်ဖြစ်သည်</string>
+  <string name="morphe_series_tracker_completion_percent">ကြည့်ရှုပြီး ရာခိုင်နှုန်း (၁-၁၀၀)</string>
+  <string name="morphe_series_tracker_completion_seconds">ကျန်ရှိသော စက္ကန့်များ (၀-၃၀၀၊ ၀ ဖြစ်ပါက ပိတ်ထားမည်)</string>
+  <string name="morphe_series_tracker_completion_range">%1$s မှ %2$s အထိ တန်ဖိုးတစ်ခုကို ထည့်ပါ</string>
+  <string name="morphe_series_tracker_youtube_progress_title">YouTube ကြည့်ရှုမှု အခြေအနေကို အသုံးပြုရန်</string>
+  <string name="morphe_series_tracker_youtube_progress_summary">အခြားစက်တစ်ခုတွင် ကြည့်ရှုပြီးနောက် ခြေရာခံထားသော စီးရီးများကို ဆက်လက်ကြည့်ရှုပါ</string>
+  <string name="morphe_series_tracker_sync_consent">လက်ရှိ YouTube အကောင့်မှ သင်လိုက်နာထားသော စီးရီးများအတွက် ကြည့်ရှုပြီးမှု အခြေအနေနှင့် ပြန်လည်စတင်မည့် နေရာများကို ဖတ်မည်။ ကိုက်ညီသော အပိုင်းများကိုသာ ဤဖုန်းတွင် သိမ်းဆည်းထားမည်။ စစ်ဆေးမှုများကို စီးရီးစာကြည့်တိုက် ဖွင့်ထားချိန်နှင့် \'ဆက်လက်ကြည့်ရှုရန်\' မနှိပ်မီ ပြုလုပ်မည်။ သင်၏ အခြားစက်ပစ္စည်းတွင် YouTube မှတ်တမ်းကို ဖွင့်ထားရမည်</string>
+  <string name="morphe_series_tracker_sync_checking">YouTube ကြည့်ရှုမှု အခြေအနေကို စစ်ဆေးနေသည်…</string>
+  <string name="morphe_series_tracker_sync_failed">YouTube တိုးတက်မှု အခြေအနေကို ရယူ၍မရပါ။ သိမ်းဆည်းထားသော တိုးတက်မှု အခြေအနေကို အသုံးပြုနေသည်</string>
+  <string name="morphe_series_tracker_sync_partial">YouTube တိုးတက်မှု အခြေအနေ အချို့ကို ရယူ၍မရပါ။ သိမ်းဆည်းထားသော နေရာများကို ထိန်းသိမ်းထားသည်</string>
+  <string name="morphe_series_tracker_backup_title">ဘက်ကပ်နှင့် ပြန်လည်ရယူခြင်း</string>
+  <string name="morphe_series_tracker_backup_summary">သင်၏ စီးရီးစာကြည့်တိုက်ကို ဖိုင်တစ်ခုအဖြစ် သိမ်းဆည်းပါ သို့မဟုတ် ဘက်ကပ်မှ ပြန်လည်ရယူပါ</string>
+  <string name="morphe_series_tracker_backup_explanation">လိုက်နာထားသော စီးရီးများ၊ အပိုင်းနေရာများနှင့် ကြည့်ရှုပြီးရွေးချယ်မှုများကို သိမ်းဆည်းသည်။ အသံသွင်းခြင်းနှင့် YouTube တိုးတက်မှု ခွင့်ပြုချက်များ မပါဝင်ပါ</string>
+  <string name="morphe_series_tracker_backup_save">ဘက်ကပ်ကို သိမ်းဆည်းရန်</string>
+  <string name="morphe_series_tracker_backup_restore">ဘက်ကပ်ကို ပြန်လည်ရယူရန်</string>
+  <string name="morphe_series_tracker_backup_preview">%1$s စီးရီးများကို ထည့်မည်။ သင့်စာကြည့်တိုက်တွင်ရှိပြီးသား %2$s စီးရီးများကို ဆက်လက်ထိန်းသိမ်းထားမည်ဖြစ်ပြီး လက်ရှိဗီဒီယိုကြည့်ရှုမှုအခြေအနေများကိုလည်း ထိန်းသိမ်းထားမည်</string>
+  <string name="morphe_series_tracker_backup_saved">စီးရီး backup ကို သိမ်းဆည်းပြီးပါပြီ</string>
+  <string name="morphe_series_tracker_backup_restored">စီးရီး %1$s ခုကို ပြန်လည်ရယူပြီးပါပြီ</string>
+  <string name="morphe_series_tracker_error_backup_invalid">ဤဖိုင်သည် ပံ့ပိုးထားသော စီးရီးဘတ်ကပ်မဟုတ်ပါ သို့မဟုတ် အရွယ်အစား ကြီးမားလွန်းနေပါသည်။ သင့်စာကြည့်တိုက်ကို ပြောင်းလဲခြင်းမရှိပါ</string>
+  <string name="morphe_series_tracker_error_backup_write">ဘတ်ကပ်ကို သိမ်းဆည်း၍မရပါ။ အခြားနေရာတစ်ခုကို စမ်းကြည့်ပါ</string>
+  <string name="morphe_series_tracker_removed">စီးရီးကို ဖယ်ရှားပြီးပါပြီ</string>
+  <string name="morphe_series_tracker_recovery_duplicate">ဤအပိုင်းသည် ယခု တစ်ကြိမ်ထက်ပို၍ ပေါ်နေပါသည်။ မည်သည့်အပိုင်းမှ ဆက်လက်ကြည့်ရှုမည်ကို ရွေးချယ်ပါ</string>
+  <string name="morphe_series_tracker_recovery_missing">သင်သိမ်းဆည်းထားသော အပိုင်းသည် ဤပလေလစ်တွင် မရှိတော့ပါ။ သင်သိမ်းဆည်းထားသော နေရာကိုတော့ ဆက်လက်ထိန်းသိမ်းထားပါသည်</string>
+  <string name="morphe_series_tracker_recovery_continue">အပိုင်း %1$s · %2$s နှင့် ဆက်လက်ကြည့်ရှုပါ</string>
+  <string name="morphe_series_tracker_recovery_choose">အောက်ပါ မည်သည့်အပိုင်းကိုမဆို ရွေးချယ်နိုင်ပါသည်။ အရင်အပိုင်းများကို ပြောင်းလဲထားခြင်းမရှိပါ</string>
+  <string name="morphe_series_tracker_playback_changed">ဤပလေလစ် ပြောင်းလဲသွားပါသည်။ မည်သည့်နေရာမှ ဆက်လက်ကြည့်ရှုမည်ကို ရွေးချယ်ရန် စီးရီးကို ဖွင့်ပါ</string>
+  <string name="morphe_series_tracker_playback_boundary">ဤဘက်တွင် အပိုင်းများ မရှိတော့ပါ</string>
+  <string name="morphe_series_tracker_continue_series">%1$s ကို ဆက်လက်ကြည့်ရှုပါ</string>
+  <string name="morphe_series_tracker_search_series">စီးရီးများကို ရှာဖွေပါ</string>
+  <string name="morphe_series_tracker_clear_search">ရှာဖွေမှုကို ရှင်းလင်းပါ</string>
+  <string name="morphe_series_tracker_no_search_results">စီးရီး တစ်စုံတစ်ရာ မတွေ့ရှိပါ</string>
+  <string name="morphe_series_tracker_untitled_episode">ခေါင်းစဉ်မရှိသော အပိုင်း</string>
+  <string name="morphe_series_tracker_unavailable_episode">ကြည့်ရှု၍မရသော အပိုင်း</string>
   <!-- layout.niconicocomments.niconicoCommentsPatch -->
+  <string name="morphe_niconico_comments_screen_title">Niconico မှတ်ချက်များ</string>
+  <string name="morphe_niconico_comments_screen_summary">တိုက်ရိုက်ချက်တင်စကားပြောဆိုမှုများနှင့် ပြန်လည်ဖွင့်ကြည့်မှုများကို ဗီဒီယိုပေါ်တွင် ဖြတ်သန်းစီးဆင်းသွားသော မှတ်ချက်များအဖြစ် ပြသပါ</string>
+  <string name="morphe_niconico_comments_summary">ဗီဒီယိုပလေယာတွင် အပေါ်ထပ်ခလုတ်တစ်ခုကို ပြသပေးပါသည်။ မှတ်ချက်များကို ပြရန် သို့မဟုတ် ဖျောက်ရန် နှိပ်ပါ၊ အမြန်ဆက်တင်များအတွက် နှိပ်ပြီး ဖိထားပါ</string>
+  <string name="morphe_niconico_comments_font_size_title">မှတ်ချက် ဖောင့်အရွယ်အစား</string>
+  <string name="morphe_niconico_comments_font_size_summary">မှတ်ချက်များ၏ စာသားအရွယ်အစား (12-40 sp)</string>
+  <string name="morphe_niconico_comments_opacity_title">မှတ်ချက် ပွင့်လင်းမြင်သာမှု</string>
+  <string name="morphe_niconico_comments_opacity_summary">မှတ်ချက်စာသားနှင့် နောက်ခံများ၏ ပွင့်လင်းမြင်သာမှု</string>
+  <string name="morphe_niconico_comments_travel_duration_title">ဖြတ်သန်းကြာချိန်</string>
+  <string name="morphe_niconico_comments_travel_duration_summary">မှတ်ချက်များ မျက်နှာပြင်ကို ဖြတ်သန်းရန် ကြာမြင့်မည့် စက္ကန့်အရေအတွက်။ တန်ဖိုးနည်းလေ ပိုမိုမြန်ဆန်လေဖြစ်သည်</string>
+  <string name="morphe_niconico_comments_max_length_title">မှတ်ချက် အရှည်ဆုံး သတ်မှတ်ချက်</string>
+  <string name="morphe_niconico_comments_max_length_summary">ဤပမာဏထက် စာလုံးရေပိုများသော မှတ်ချက်များကို ဖျောက်ထားမည်ဖြစ်သည်။ အီမိုဂျီတစ်ခုစီကို စာလုံးတစ်လုံးအဖြစ် သတ်မှတ်သည်</string>
+  <string name="morphe_niconico_comments_max_length_no_limit">ကန့်သတ်ချက်မရှိ</string>
 </resources>

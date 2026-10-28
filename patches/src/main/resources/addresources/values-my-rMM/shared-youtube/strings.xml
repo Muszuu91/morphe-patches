@@ -18,46 +18,298 @@ Second \"item\" text"</string>
 -->
 <resources>
   <!-- layout.theme.splashAnimationPatch -->
+  <string name="morphe_splash_screen_style_title">စတင်မှု အန်နီမေးရှင်း</string>
+  <string name="morphe_splash_screen_style_entry_1">ပိတ်ထားသည်</string>
+  <string name="morphe_splash_screen_style_entry_2">အရောင်</string>
+  <string name="morphe_splash_screen_style_entry_3">အရောင်ရှိ Morphe</string>
+  <string name="morphe_splash_screen_style_entry_4">မိုနိုခရွန်း</string>
+  <string name="morphe_splash_screen_style_entry_5">မိုနိုခရွန်း Morphe</string>
   <!-- misc.initialization.initializationPatch -->
+  <string name="morphe_restart_first_run">ဆက်တင်များကို အပြီးသတ်ရန် ပြန်လည်စတင်ပါ</string>
   <!-- layout.branding.baseCustomBrandingPatch -->
+  <string name="morphe_custom_branding_name_title">အက်ပ်အမည်</string>
   <!-- layout.theme.baseThemePatch -->
+  <string name="morphe_theme_color_dark_title">မှောင်သော theme နောက်ခံ</string>
+  <string name="morphe_theme_color_dark_entry_2">အနက်ရောင်စစ်စစ်</string>
+  <string name="morphe_theme_color_dark_entry_3">Material You (အနက်ရောင်စစ်စစ်)</string>
+  <string name="morphe_theme_color_dark_entry_9">Classic YouTube</string>
+  <string name="morphe_theme_color_dark_entry_10">ပန်းရောင်ရင့်</string>
+  <string name="morphe_theme_color_dark_entry_11">အပြာရောင်ရင့်</string>
+  <string name="morphe_theme_color_dark_entry_12">အစိမ်းရင့်</string>
+  <string name="morphe_theme_color_dark_entry_13">အဝါရင့်</string>
+  <string name="morphe_theme_color_dark_entry_14">လိမ္မော်ရင့်</string>
+  <string name="morphe_theme_color_dark_entry_15">အနီရင့်</string>
+  <string name="morphe_theme_color_dark_custom_title">စိတ်ကြိုက် အမှောင် နောက်ခံ</string>
+  <string name="morphe_theme_color_dark_custom_summary">အမှောင် သီမ်၏ နောက်ခံအရောင်ကို သတ်မှတ်ပါ</string>
+  <string name="morphe_theme_color_entry_1">အက်ပ်၏ မူလသတ်မှတ်ချက်</string>
+  <string name="morphe_theme_color_entry_4">Material You (ကြားနေ)</string>
+  <string name="morphe_theme_color_entry_5">Material You (အဓိက)</string>
+  <string name="morphe_theme_color_entry_6">Material You (ဒုတိယ)</string>
+  <string name="morphe_theme_color_entry_7">Material You (တတိယ)</string>
+  <string name="morphe_theme_color_custom_entry">စိတ်ကြိုက်</string>
   <!-- interaction.downloads.downloadsPatch -->
+  <string name="morphe_external_downloader_screen_title">ဒေါင်းလုဒ်များ</string>
+  <string name="morphe_download_mode_title">ဒေါင်းလုဒ်မုဒ်</string>
+  <string name="morphe_download_mode_entry_default">ပုံသေ</string>
+  <string name="morphe_download_mode_entry_in_app">အက်ပ်အတွင်း ဒေါင်းလုဒ်လုပ်ရန်</string>
+  <string name="morphe_download_mode_entry_external">ပြင်ပဒေါင်းလုဒ်ဆွဲစနစ်</string>
+  <string name="morphe_external_downloader_name_title">Downloader ပက်ကေ့ချ်အမည်</string>
+  <string name="morphe_external_downloader_name_summary">သင်ထည့်သွင်းထားသော ပြင်ပ downloader အက်ပ်၏ ပက်ကေ့ချ်အမည်</string>
+  <string name="morphe_external_downloader_other_item_hint">ပက်ကေ့ချ်အမည်ကို ရိုက်ထည့်ပါ</string>
+  <string name="morphe_external_downloader_other_item">အခြား</string>
+  <string name="morphe_external_downloader_not_found_title">အက်ပ်ကို ထည့်သွင်းထားခြင်းမရှိပါ</string>
+  <string name="morphe_external_downloader_not_installed_warning">%s ကို install လုပ်မထားပါ။ ကျေးဇူးပြု၍ install လုပ်ပါ</string>
+  <string name="morphe_external_downloader_package_not_found_warning">"ပက်ကေ့ဂျ်အမည် %s ဖြင့် ထည့်သွင်းထားသော အက်ပ်ကို ရှာမတွေ့ပါ
+
+ပက်ကေ့ဂျ်အမည် မှန်ကန်မှုရှိမရှိနှင့် အက်ပ်ကို ထည့်သွင်းထားခြင်း ရှိမရှိ စစ်ဆေးပါ"</string>
+  <string name="morphe_external_downloader_empty_warning">ပက်ကေ့ချ်အမည်သည် အလွတ်မဖြစ်စေရ</string>
   <!-- Translations of this should be identical to morphe_custom_branding_icon_entry_7 -->
+  <string name="morphe_custom_branding_name_entry_5">စိတ်ကြိုက်</string>
+  <string name="morphe_custom_branding_icon_title">အက်ပ်အိုင်ကွန်</string>
+  <string name="morphe_custom_branding_icon_entry_1">မူရင်း</string>
+  <string name="morphe_custom_branding_icon_entry_2">Morphe အမည်းရောင်</string>
+  <string name="morphe_custom_branding_icon_entry_3">Morphe အမှောင်</string>
+  <string name="morphe_custom_branding_icon_entry_4">Morphe အလင်း</string>
   <!-- Translation should match morphe_custom_branding_notification_icon_entry_3 -->
+  <string name="morphe_custom_branding_icon_entry_5">Morphe play light</string>
   <!-- Translation should match morphe_custom_branding_notification_icon_entry_3 -->
+  <string name="morphe_custom_branding_icon_entry_6">Morphe play black</string>
   <!-- Translations of this should be identical to morphe_custom_branding_name_entry_5 -->
+  <string name="morphe_custom_branding_icon_entry_7">စိတ်ကြိုက်</string>
+  <string name="morphe_custom_branding_icon_user_dialog_message">"၎င်းသည် သင့်အက်ပ်လောင်ချာတွင် ပြသထားသော အိုင်ကွန်ကို ပြောင်းလဲပေးပါသည်။
+
+ဤဆက်တင်သည် အောက်ပါနေရာများရှိ အိုင်ကွန်များကို ပြောင်းလဲမည်မဟုတ်ပါ
+• စက်ပစ္စည်းစနစ်ဆက်တင် အက်ပ်စာရင်း
+• အချို့သော ပွတ်ရှ်အကြောင်းကြားချက်များ
+• 'Open with' အက်ပ်ရွေးချယ်မှု
+• Android Auto အိုင်ကွန်
+
+နေရာတိုင်းတွင် အိုင်ကွန်ကို ပြောင်းလဲလိုပါက၊ patch ကို ထပ်မံလုပ်ဆောင်ပြီး 'App icon' patch ရွေးချယ်မှုကို ပြောင်းလဲပါ"</string>
+  <string name="morphe_custom_branding_notification_icon_title">အကြောင်းကြားချက် အိုင်ကွန်</string>
+  <string name="morphe_custom_branding_notification_icon_entry_1">အက်ပ်အိုင်ကွန်နှင့် တိုက်ဆိုင်စစ်ဆေးပါ</string>
+  <string name="morphe_custom_branding_notification_icon_entry_3">Morphe play</string>
   <!-- misc.dns.checkWatchHistoryDomainNameResolutionPatch -->
+  <string name="morphe_check_watch_history_domain_name_dialog_title">Morphe အသိပေးချက်</string>
+  <string name="morphe_check_watch_history_domain_name_dialog_message">သင်၏ ကြည့်ရှုမှုမှတ်တမ်းကို သိမ်းဆည်းမနေပါ။&lt;br&gt;&lt;br&gt;၎င်းသည် DNS ကြော်ငြာပိတ်ဆို့မှု သို့မဟုတ် network proxy ကြောင့် ဖြစ်နိုင်ခြေများပါသည်။&lt;br&gt;&lt;br&gt;ယင်းကို ဖြေရှင်းရန် &lt;b&gt;s.youtube.com&lt;/b&gt; ကို whitelist သို့ ထည့်ပါ သို့မဟုတ် DNS ပိတ်ဆို့မှုများနှင့် proxy အားလုံးကို ပိတ်ပါ</string>
+  <string name="morphe_check_watch_history_domain_name_dialog_ignore">နောက်တစ်ကြိမ် ထပ်မပြပါနှင့်</string>
   <!-- misc.spoof.spoofVideoStreamsPatch -->
+  <string name="morphe_spoof_video_streams_screen_title">ဗီဒီယို stream များကို အတုအယောင်ပြုလုပ်ပါ</string>
+  <string name="morphe_spoof_video_streams_screen_summary">ဗီဒီယိုဖွင့်ရာတွင် အခက်အခဲမရှိစေရန် client spoofing ကို သတ်မှတ်ပါ</string>
+  <string name="morphe_spoof_video_streams_summary">"ကိုက်ညီသော ဗီဒီယို stream တစ်ခုကို တောင်းဆိုခြင်းဖြင့် အသုံးပြုသူအများစုအတွက် ပြန်ဖွင့်ခြင်းဆိုင်ရာ ပြဿနာများကို ဖြေရှင်းပေးသည်
+
+အကယ်၍ သင်သည် YouTube Premium အသုံးပြုသူဖြစ်ပါက ဤဆက်တင်သည် မလိုအပ်နိုင်ပါ"</string>
+  <string name="morphe_spoof_video_streams_no_clients_toast">မည်သည့် client stream ကိုမျှ မရယူနိုင်ပါ</string>
   <!-- 'Default client' must use the same translation as morphe_spoof_video_streams_client_type_title -->
+  <string name="morphe_spoof_video_streams_client_failing_dialog_title">Default client အလုပ်မလုပ်ပါ</string>
+  <string name="morphe_spoof_video_streams_client_failing_dialog_message">"%1$s သည် အကြိမ်ကြိမ် အလုပ်မလုပ်ခဲ့သော်လည်း %2$s သည် အလုပ်လုပ်ပါသည်။
+
+%2$s ကို default client အဖြစ် သတ်မှတ်မလား?"</string>
+  <string name="morphe_spoof_video_streams_client_failing_dialog_switch">ပြောင်းလဲရန်</string>
+  <string name="morphe_spoof_video_streams_user_dialog_message">ဤဆက်တင်ကို ပိတ်လိုက်ပါက ဖွင့်ကြည့်ရာတွင် ပြဿနာများ ဖြစ်ပေါ်နိုင်သည်</string>
   <!-- 'Spoof video streams' must use the same translation as morphe_spoof_video_streams_title.
          "Sign in to Android VR" must use the same translation as morphe_spoof_video_streams_sign_in_android_vr_about_title -->
+  <string name="morphe_spoof_video_streams_no_clients_suggest_vr_toast">ဤအရာကို ဖွင့်ကြည့်ပါ- Spoof video streams &gt; Android VR sign in</string>
+  <string name="morphe_spoof_video_streams_client_type_title">ပုံမှန် client</string>
   <!-- Ensure this translation matches the translation of morphe_spoof_video_streams_no_clients_suggest_vr_toast -->
+  <string name="morphe_spoof_video_streams_sign_in_android_vr_about_title">Android VR တွင် အကောင့်ဝင်ရန်</string>
+  <string name="morphe_spoof_video_streams_sign_in_android_vr_about_summary">Android VR သို့ အကောင့်ဝင်မထားပါ။ အကောင့်ဝင်ရန် ဤနေရာကို နှိပ်ပါ</string>
+  <string name="morphe_spoof_video_streams_sign_in_android_vr_about_summary_signed_in">လက်ရှိတွင် Android VR သို့ အကောင့်ဝင်ထားသည်</string>
   <!-- "Default client" must be the same translated text as morphe_spoof_video_streams_client_type_title -->
+  <string name="morphe_spoof_video_streams_sign_in_android_vr_about_summary_disabled">ဤအင်္ဂါရပ်ကို အသုံးပြုရန် \'Default client\' ကို Android VR သို့ ပြောင်းလဲပါ</string>
+  <string name="morphe_spoof_video_streams_sign_in_android_vr_dialog_title">Android VR သို့ အကောင့်ဝင်ပါ</string>
+  <string name="morphe_spoof_video_streams_sign_in_android_vr_dialog_not_signed_in_message">"Android VR သို့ sign in ဝင်ခြင်းသည် အချို့သောအသုံးပြုသူများအတွက် ပြန်ဖွင့်ကြည့်ရှုမှုဆိုင်ရာ ပြဿနာများကို ဖြေရှင်းပေးနိုင်သည်
+
+sign in ဝင်ရန် အောက်ပါ continue ကို နှိပ်ပါ"</string>
+  <string name="morphe_spoof_video_streams_sign_in_android_vr_dialog_reset">အကောင့်မှ ထွက်ပါ</string>
+  <string name="morphe_spoof_video_streams_sign_in_android_vr_activation_code_dialog_title">ညွှန်ကြားချက်များ</string>
   <!-- "Open website" must use the same translation as gms_core_dialog_open_website_text -->
+  <string name="morphe_spoof_video_streams_sign_in_android_vr_activation_code_dialog_message">"အသက်သွင်းကုတ်- %s
+
+၁။ 'ဝဘ်ဆိုဒ်ကိုဖွင့်ပါ' ကိုနှိပ်ပြီး 'စက်ပစ္စည်းတစ်ခုကို ချိတ်ဆက်ပါ' ဝဘ်ဆိုဒ်ကို ဖွင့်ပါ
+၂။ အထက်တွင် ဖော်ပြထားသော အသက်သွင်းကုတ်ကို ကလစ်ဘုတ်မှ ကူးယူပါ (သို့မဟုတ် ရိုက်ထည့်ပါ)
+၃။ တောင်းဆိုပါက Google တွင် လော့ဂ်အင်ဝင်ပါ။ သင့်တွင် အကောင့်များစွာရှိပါက ဤ YouTube အကောင့်ကို ရွေးချယ်ပါ
+၄။ 'YouTube VR' ကို ခွင့်ပြုရန် နှိပ်ပါ
+၅။ 'စက်ပစ္စည်း ချိတ်ဆက်ပြီးပါပြီ' ဆိုသော မက်ဆေ့ဂျ် ပေါ်လာပြီးနောက် ဤအက်ပ်သို့ ပြန်သွားပါ"</string>
+  <string name="morphe_spoof_video_streams_sign_in_android_vr_toast_get_activation_code_failed">အသက်သွင်းကုတ် ထုတ်ပေး၍ မရပါ</string>
+  <string name="morphe_spoof_video_streams_sign_in_android_vr_toast_get_authorization_code_failed">အတည်ပြုချက်တိုကင် ထုတ်ပေး၍ မရပါ</string>
+  <string name="morphe_spoof_video_streams_sign_in_android_vr_success_dialog_title">လော့ဂ်အင်ဝင်ခြင်း အောင်မြင်သည်</string>
+  <string name="morphe_spoof_video_streams_sign_in_android_vr_success_dialog_message">"အထောက်အထားပြုခြင်းကို သိမ်းဆည်းပြီးပါပြီ
+
+• သင်၏ Morphe ဆက်တင်များသည် Android VR အထောက်အထားပြုခြင်းကို import/export လုပ်မည်မဟုတ်ပါ
+• ဤအက်ပ်ကို ၆ လကြာ အသုံးမပြုပါက Google သည် ဤအထောက်အထားပြုခြင်းကို ဖယ်ရှားမည်ဖြစ်သည်
+• သင်၏ Google စကားဝှက်ကို ပြောင်းလဲပါက သို့မဟုတ် သင်၏ Google ဆက်တင်များမှ ဤစက်ပစ္စည်းကို ပယ်ဖျက်ပါက တစ်ဖန်ပြန်၍ sign in ဝင်ရန် လိုအပ်မည်ဖြစ်သည်"</string>
+  <string name="morphe_oauth2_connection_failure_timeout">OAuth2 ကို ယာယီအသုံးပြု၍မရပါ (API timed out ဖြစ်သွားသည်)</string>
+  <string name="morphe_oauth2_connection_failure_status_400">Android VR sign in သက်တမ်းကုန်ဆုံးသွားပါပြီ၊ VR သို့ ထပ်မံ sign in ဝင်ကြည့်ပါ</string>
+  <string name="morphe_oauth2_connection_failure_status">OAuth2 ကို ခေတ္တအသုံးပြု၍မရပါ (အခြေအနေ %s)</string>
+  <string name="morphe_oauth2_connection_failure_generic">OAuth2 ကို ယာယီအသုံးပြု၍မရပါ</string>
+  <string name="morphe_oauth2_connection_failure_auth_not_approved">VR သို့ sign in ဝင်၍မရပါ၊ ဝဘ်ဆိုဒ် authentication ကို ခွင့်ပြုချက်မရရှိပါ</string>
+  <string name="morphe_oauth2_connection_failure_auth_error">VR သို့ sign in ဝင်၍မရပါ- %s</string>
+  <string name="morphe_oauth2_toast_reset">Android VR မှ Log out လုပ်ပြီးပါပြီ</string>
+  <string name="morphe_oauth2_toast_invalid">VR sign in token မှားယွင်းနေပါသည်၊ VR သို့ ထပ်မံ sign in ဝင်ကြည့်ပါ</string>
   <!-- misc.medianotification.mediaNotificationControlsPatch -->
+  <string name="morphe_notification_media_screen_title">အကြောင်းကြားချက် မီဒီယာထိန်းချုပ်မှုများ</string>
+  <string name="morphe_notification_media_screen_summary">သင်၏ lock screen နှင့် အကြောင်းကြားချက် panel တွင် ပြသထားသော ပြန်ဖွင့်မှုထိန်းချုပ်မှုများကို စိတ်ကြိုက်ပြင်ဆင်ပါ</string>
+  <string name="morphe_hide_notification_media_prev_next_title">ယခင် &amp; နောက်ခလုတ်များကို ဖျောက်ပါ</string>
+  <string name="morphe_hide_notification_media_prev_next_summary">မီဒီယာအကြောင်းကြားချက်၊ lock screen နှင့် နားကြပ်ထိန်းချုပ်မှုများရှိ ယခင် နှင့် နောက်ခလုတ်များကို ဖျောက်ထားပါမည်</string>
+  <string name="morphe_disable_notification_media_seekbar_title">Seekbar ကို ပိတ်ပါ</string>
+  <string name="morphe_disable_notification_media_seekbar_summary">Lock screen နှင့် အကြောင်းကြားချက် panel ရှိ seekbar ကို ဆွဲရွှေ့ခြင်းမှ တားဆီးပါသည်</string>
+  <string name="morphe_seek_notification_media_prev_next_title">ရှေ့သို့ &amp; နောက်သို့ ခလုတ်များဖြင့် ရှာဖွေရန်</string>
+  <string name="morphe_seek_notification_media_prev_next_summary">မီဒီယာအသိပေးချက်၊ လော့ခ်စခရင်နှင့် နားကြပ်ခလုတ်များကို ဗီဒီယိုပြောင်းလဲမည့်အစား ရှာဖွေမှုပြုလုပ်ရန် ထိန်းချုပ်မှုများကို ပြောင်းလဲသည်</string>
+  <string name="morphe_seek_notification_media_rewind_length_title">နောက်ပြန်ဆွဲသည့် အရှည်</string>
+  <string name="morphe_seek_notification_media_rewind_length_summary">နောက်သို့ခလုတ်ဖြင့် နောက်ပြန်ဆွဲမည့် စက္ကန့်များ</string>
+  <string name="morphe_seek_notification_media_fast_forward_length_title">ရှေ့သို့အမြန်ကျော်သည့် အရှည်</string>
+  <string name="morphe_seek_notification_media_fast_forward_length_summary">ရှေ့သို့ခလုတ်ဖြင့် ရှေ့သို့အမြန်ကျော်မည့် စက္ကန့်များ</string>
+  <string name="morphe_seek_notification_media_length_invalid">ရှာဖွေမှုကြာချိန်သည် ၁ စက္ကန့်နှင့် %s စက္ကန့်ကြား ဖြစ်ရပါမည်။ ပုံသေတန်ဖိုးကို အသုံးပြုနေသည်</string>
   <!-- misc.quic.disableQUICProtocolPatch -->
+  <string name="morphe_disable_quic_protocol_title">QUIC protocol ကို ပိတ်ပါ</string>
   <!-- misc.audio.drc.disableDRCAudioPatch  -->
+  <string name="morphe_disable_drc_audio_title">DRC audio ကို ပိတ်ပါ</string>
   <!-- misc.audio.tracks.forceOriginalAudioPatch -->
+  <string name="morphe_force_original_audio_title">မူရင်း အသံဘာသာစကားကို အတင်းအကျပ် သတ်မှတ်ပါ</string>
+  <string name="morphe_force_original_audio_summary">အသံသွင်းထားသော ဗားရှင်းအစား ဗီဒီယို၏ မူရင်းအသံလမ်းကြောင်းကို အမြဲတမ်း ဖွင့်ပေးပါမည်</string>
   <!-- misc.audio.silence.skipSilencePatch -->
+  <string name="morphe_skip_silence_title">တိတ်ဆိတ်မှုများကို ကျော်ပါ</string>
+  <string name="morphe_skip_silence_summary">ဗီဒီယိုအသံရှိ တိတ်ဆိတ်သော အနားယူမှုများကို အလိုအလျောက် ကျော်ဖြတ်ပါမည်</string>
+  <string name="morphe_skip_silence_minimum_pause_title">အနည်းဆုံး အနားယူမှုကြာချိန်</string>
+  <string name="morphe_skip_silence_minimum_pause_summary">အနည်းဆုံး ဤမျှကြာသော တိတ်ဆိတ်မှုများကိုသာ တိုတောင်းစေမည်ဖြစ်သည်။ နောက်ဗီဒီယိုစတင်ချိန်တွင် အကျိုးသက်ရောက်မည် ဖြစ်သည်</string>
   <!-- misc.proxy.networkProxyPatch -->
+  <string name="morphe_proxy_screen_title">ကွန်ရက် ပရော့ကစီ</string>
+  <string name="morphe_proxy_screen_summary">ပံ့ပိုးထားသော ကွန်ရက်တောင်းဆိုမှုများကို ပရော့ကစီမှတစ်ဆင့် လမ်းကြောင်းပြောင်းပါ</string>
+  <string name="morphe_proxy_enabled_title">ပရောက်စီကို အသုံးပြုရန်</string>
+  <string name="morphe_proxy_enabled_summary">ပံ့ပိုးထားသော ကွန်ရက်တောင်းဆိုမှုများကို သတ်မှတ်ထားသော HTTP သို့မဟုတ် HTTPS ပရောက်စီမှတစ်ဆင့် လမ်းကြောင်းပြောင်းပေးသည်</string>
+  <string name="morphe_proxy_host_title">ပရော့ကစီ ဟို့စ်</string>
+  <string name="morphe_proxy_host_summary">ပရောက်စီဆာဗာ၏ ဟို့စ်အမည် သို့မဟုတ် IP လိပ်စာ</string>
+  <string name="morphe_proxy_port_title">ပရောက်စီ ပေါ့စ်</string>
+  <string name="morphe_proxy_port_summary">ပရောက်စီဆာဗာ၏ ပေါ့စ်နံပါတ်</string>
+  <string name="morphe_proxy_https_title">HTTPS ပရောက်စီကို အသုံးပြုရန်</string>
+  <string name="morphe_proxy_https_summary">ပရောက်စီဆာဗာသို့ ချိတ်ဆက်ရန် HTTP အစား HTTPS ကို အသုံးပြုမည်</string>
+  <string name="morphe_proxy_auth_enabled_title">ပရောက်စီ အထောက်အထား စစ်ဆေးခြင်း</string>
+  <string name="morphe_proxy_auth_enabled_summary">ပရောက်စီတောင်းဆိုမှုများနှင့်အတူ Basic authentication ကို ပေးပို့မည်</string>
+  <string name="morphe_proxy_auth_username_title">Proxy အသုံးပြုသူအမည်</string>
+  <string name="morphe_proxy_auth_username_summary">အခြေခံ Proxy အတည်ပြုချက်အတွက် အသုံးပြုသူအမည်</string>
+  <string name="morphe_proxy_auth_password_title">Proxy လျှို့ဝှက်နံပါတ်</string>
+  <string name="morphe_proxy_auth_password_summary">အခြေခံ Proxy အတည်ပြုချက်အတွက် လျှို့ဝှက်နံပါတ်</string>
+  <string name="morphe_proxy_allow_direct_fallback_title">တိုက်ရိုက်အသုံးပြုမှုကို ခွင့်ပြုရန်</string>
+  <string name="morphe_proxy_allow_direct_fallback_summary">Proxy အလုပ်မလုပ်ပါက တိုက်ရိုက်ချိတ်ဆက်ပါ</string>
   <!-- ad.hideFullscreenAdsPatch -->
+  <string name="morphe_hide_fullscreen_ads_title">ဖန်သားပြင်အပြည့် ကြော်ငြာများကို ဖျောက်ထားပါ</string>
   <!-- 'Spoof video streams' must use the same translation as morphe_spoof_video_streams_title.
           'Android Studio' and 'Android VR Downgraded' must be kept untranslated. -->
+  <string name="morphe_force_original_audio_not_available">ဤအင်္ဂါရပ်ကို အသုံးပြုရန် \'Spoof video streams\' ကို \'Android Studio\' နှင့် \'Android VR Downgraded\' မှလွဲ၍ အခြားမည်သည့် client တွင်မဆို ပြောင်းလဲပါ</string>
   <!-- misc.privacy.sanitizeSharingLinksPatch -->
+  <string name="morphe_sanitize_sharing_links_title">မျှဝေမှုလင့်ခ်များကို သန့်စင်ပါ</string>
+  <string name="morphe_sanitize_sharing_links_summary">မျှဝေထားသော လင့်ခ်များမှ tracking query parameters များကို ဖယ်ရှားပါသည်</string>
+  <string name="morphe_replace_music_with_youtube_title">မျှဝေမှုလင့်ခ်များကို youtube.com သို့ ပြောင်းလဲပါ</string>
+  <string name="morphe_replace_music_with_youtube_summary">မျှဝေထားသော လင့်ခ်များတွင် music.youtube.com ကို youtube.com ဖြင့် အစားထိုးသည်</string>
+  <string name="morphe_replace_links_with_shortener_title">မျှဝေသည့်လင့်ခ်များကို youtu.be သို့ ပြောင်းလဲပါ</string>
+  <string name="morphe_replace_links_with_shortener_summary">ဗီဒီယိုများကို တိုတောင်းသော youtu.be URL ပုံစံအသုံးပြုရန် အတင်းအကျပ်လုပ်ဆောင်သည်</string>
   <!-- misc.debugging.enableDebuggingPatch -->
+  <string name="morphe_debug_protobuffer_title">Debug log protocol buffer</string>
+  <string name="morphe_debug_protobuffer_summary">အက်ပ်အစိတ်အပိုင်းများကို ခွဲခြားသိရှိနိုင်ရန် developer များအတွက် နောက်ထပ် logging အချက်အလက်များကို ထည့်သွင်းပေးသည်</string>
+  <string name="morphe_debug_protobuffer_user_dialog_message">"ဤဆက်တင်ကို ဖွင့်ခြင်းဖြင့် အချို့သော UI အစိတ်အပိုင်းများအတွက် မျက်နှာပြင်ပေါ်ရှိ စာသားများအပါအဝင် အပိုဆောင်း layout အချက်အလက်များကို မှတ်တမ်းတင်မည်ဖြစ်သည်။
+
+၎င်းသည် စိတ်ကြိုက် filter များ ဖန်တီးရာတွင် အစိတ်အပိုင်းများကို ခွဲခြားသိရှိရန် ကူညီပေးနိုင်သည်။
+
+သို့သော် ဤအချက်ကို ဖွင့်ခြင်းဖြင့် သင်၏ IP လိပ်စာကဲ့သို့သော အသုံးပြုသူ အချက်အလက်အချို့ကိုလည်း မှတ်တမ်းတင်မည်ဖြစ်သည်"</string>
   <!-- Custom filter -->
+  <string name="morphe_custom_filter_screen_title">စိတ်ကြိုက်စစ်ထုတ်မှု</string>
+  <string name="morphe_custom_filter_screen_summary">မည်သည့် အစိတ်အပိုင်းကိုမဆို ဖျောက်ထားရန် စိတ်ကြိုက်စစ်ထုတ်မှုများကို သတ်မှတ်ပါ</string>
+  <string name="morphe_custom_filter_title">စိတ်ကြိုက်စစ်ထုတ်မှုကို အသုံးပြုမည်</string>
   <!-- 'Component path builder strings' is the technical name for identifying the Litho UI layout items to hide. This is an advanced feature and most users will never use this. -->
+  <string name="morphe_custom_filter_strings_summary">စစ်ထုတ်ရန် အစိတ်အပိုင်းလမ်းကြောင်း တည်ဆောက်သူ စာသားများစာရင်းကို စာကြောင်းအသစ်များဖြင့် ခြားပြီး ဖော်ပြပါ</string>
+  <string name="morphe_custom_filter_toast_invalid_syntax">မမှန်ကန်သော စိတ်ကြိုက်စစ်ထုတ်မှု- %s</string>
   <!-- layout.hide.settingsmenu.hideSettingsMenuFilterPatch -->
+  <string name="morphe_settings_menu_filter_screen_title">ဆက်တင်မီနူး စစ်ထုတ်မှု</string>
+  <string name="morphe_settings_menu_filter_screen_summary">စံသုံးအက်ပ်ဆက်တင်မျက်နှာပြင်ရှိ အကြောင်းအရာများကို ၎င်းတို့၏ မြင်တွေ့ရသော အမည်ဖြင့် ဖျောက်ထားပါ</string>
+  <string name="morphe_settings_menu_filter_picker_empty">စာရင်းကို ဖြည့်သွင်းရန် စံသုံးအက်ပ်ဆက်တင်မျက်နှာပြင်ကို တစ်ကြိမ်ဖွင့်ပါ</string>
   <!-- interaction.dialog.removeViewerDiscretionDialogPatch -->
+  <string name="morphe_remove_viewer_discretion_dialog_title">ကြည့်ရှုသူ သတိပေးချက် ဒိုင်ယာလော့ဂ်ကို ဖယ်ရှားပါ</string>
+  <string name="morphe_remove_viewer_discretion_dialog_summary">ဒါဟာ အသက်ကန့်သတ်ချက်ကို ကျော်ဖြတ်တာ မဟုတ်ပါဘူး။ ၎င်းကို အလိုအလျောက် လက်ခံပေးရုံသာ ဖြစ်ပါတယ်</string>
   <!-- misc.potoken.poTokenProviderPatch -->
+  <string name="morphe_potoken_provider_screen_title">PoToken ပံ့ပိုးပေးသူ</string>
+  <string name="morphe_potoken_provider_screen_summary">ဖွင့်ပြမှုဆိုင်ရာ ပြဿနာများကို ကာကွယ်ရန် PoToken ပံ့ပိုးပေးသူကို ပုံဖော်ပါ</string>
+  <string name="morphe_external_potoken_provider_title">ပြင်ပ PoToken ပံ့ပိုးပေးသူ</string>
+  <string name="morphe_external_potoken_provider_summary">"ပြင်ပ PoToken minter ကို အသုံးပြု၍ ဖွင့်ခြင်းဆိုင်ရာ ပြဿနာများကို ဖြေရှင်းပေးသည် (စမ်းသပ်ဆဲ)
+
+သင်သည် YouTube Premium အသုံးပြုသူဖြစ်ပါက ဤဆက်တင်သည် မလိုအပ်နိုင်ပါ"</string>
   <!-- "Fixes playback issues using an external PoToken minter (Experimental)" should use the same wording as morphe_external_potoken_provider_summary
          'Spoof video streams' must use the same translation as morphe_spoof_video_streams_title -->
+  <string name="morphe_external_potoken_provider_unavailable_summary">"ပြင်ပ PoToken minter တစ်ခုကို အသုံးပြု၍ ဖွင့်ပြမှု ပြဿနာများကို ဖြေရှင်းသည် (စမ်းသပ်ဆဲ)
+
+ဤအင်္ဂါရပ်ကို အသုံးပြုရန် 'ဗီဒီယို စတြီများကို အတုပြုလုပ်ရန်' ကို ပိတ်ပါ"</string>
+  <string name="morphe_external_potoken_provider_user_dialog_message">အကယ်၍ အလုပ်မလုပ်ပါက MicroG ကို အတင်းအကျပ်ပိတ်၍ ပြန်စမ်းကြည့်ပါ</string>
+  <string name="morphe_external_potoken_provider_settings_summary">PotHelper ဆက်တင်များကို ဖွင့်ပါ</string>
+  <string name="morphe_external_potoken_provider_about_summary">"ဤအင်္ဂါရပ်သည် လက်ရှိတွင် တည်ဆောက်ဆဲဖြစ်ပြီး အလုပ်မလုပ်နိုင်ပါ
+
+PotHelper ကို ဒေါင်းလုဒ်လုပ်ရန် ဤနေရာကို နှိပ်ပါ"</string>
+  <string name="morphe_external_potoken_provider_expired_dialog_title">PotHelper အလုပ်မလုပ်တော့ပါ</string>
   <!-- 'Spoof video streams' must use the same translation as morphe_spoof_video_streams_title -->
+  <string name="morphe_external_potoken_provider_expired_dialog_message">"PotHelper ၏ ဤဗားရှင်းတွင် ပါဝင်သော token သည် အလုပ်မလုပ်တော့ပါ
+
+ပြန်ဖွင့်နိုင်ရန် 'ဗီဒီယိုစတြမ်းများကို အတုအယောင်ပြုလုပ်ရန်' ကို ဖွင့်ပါ"</string>
+  <string name="morphe_external_potoken_provider_expired_dialog_turn_on">ဖွင့်ပါ</string>
   <!-- misc.spoof.appversion.spoofAppVersionPatch -->
+  <string name="morphe_spoof_app_version_title">အက်ပ်ဗားရှင်းကို အတုအယောင်ပြုလုပ်ပါ</string>
+  <string name="morphe_spoof_app_version_summary">ဟောင်းနွမ်းသော UI လုပ်ဆောင်ချက်များကို ပြန်လည်ရရှိရန်အတွက် သင်သည် အက်ပ်ဗားရှင်းအဟောင်းကို အသုံးပြုနေသည်ဟု ဆာဗာက ထင်မှတ်စေရန် လှည့်စားခြင်းဖြစ်သည်</string>
+  <string name="morphe_spoof_app_version_user_dialog_message">"အက်ပ်ဗားရှင်းကို ဗားရှင်းအဟောင်းတစ်ခုအဖြစ် အတုအယောင်ပြောင်းလဲပါမည်
+
+၎င်းသည် အက်ပ်၏ ပုံစံနှင့် လုပ်ဆောင်ချက်များကို ပြောင်းလဲစေမည်ဖြစ်သော်လည်း မသိရှိနိုင်သော ဘေးထွက်ဆိုးကျိုးများ ဖြစ်ပေါ်လာနိုင်ပါသည်။
+
+နောက်ပိုင်းတွင် ပြန်ပိတ်ပါက UI အမှားအယွင်းများကို ကာကွယ်ရန် အက်ပ်ဒေတာများကို ရှင်းလင်းရန် အကြံပြုပါသည်။"</string>
+  <string name="morphe_spoof_app_version_target_title">အတုအယောင်ပြုလုပ်မည့် အက်ပ်ဗားရှင်း ရည်မှန်းချက်</string>
   <!-- misc.framerate.baseAppRefreshRatePatch -->
+  <string name="morphe_app_refresh_rate_title">အက်ပ် ပြန်လည်လတ်ဆတ်မှုနှုန်း</string>
+  <string name="morphe_app_refresh_rate_default">မူလအတိုင်း</string>
+  <string name="morphe_app_refresh_rate_fps">%s FPS</string>
+  <string name="morphe_app_refresh_rate_type_title">ပြန်လည်လတ်ဆတ်မှုနှုန်းကို ကျော်လွန်သတ်မှတ်ရန်</string>
+  <string name="morphe_app_refresh_rate_type_entry_1">အမြဲတမ်း</string>
+  <string name="morphe_app_refresh_rate_type_entry_2">ဒေါင်လိုက် ဖွင့်ပြမှု</string>
+  <string name="morphe_app_refresh_rate_type_entry_3">ဖွင့်ကြည့်ခြင်း အပြည့်မျက်နှာပြင်</string>
+  <string name="morphe_app_refresh_rate_type_entry_4">ဖွင့်ကြည့်ခြင်း ပုံစံတည့်နှင့် အပြည့်မျက်နှာပြင်</string>
   <!-- layout.font.baseCustomFontPatch -->
+  <string name="morphe_custom_font_type_title">ဖောင့်</string>
+  <string name="morphe_custom_font_type_entry_default">ပုံသေ</string>
+  <string name="morphe_custom_font_type_entry_system">စက်၏ စနစ်ဖောင့်</string>
+  <string name="morphe_custom_font_type_entry_custom">စိတ်ကြိုက်ဖောင့်ဖိုင်</string>
+  <string name="morphe_custom_font_file_title">စိတ်ကြိုက်ဖောင့်ဖိုင်</string>
+  <string name="morphe_custom_font_file_summary">TTF သို့မဟုတ် OTF ဖောင့်ဖိုင်တစ်ခုကို ရွေးချယ်ပါ</string>
+  <string name="morphe_custom_font_file_invalid">ရွေးချယ်ထားသောဖိုင်သည် TTF သို့မဟုတ် OTF ဖောင့်မဟုတ်ပါ</string>
+  <string name="morphe_custom_font_failed_to_load">စိတ်ကြိုက်ဖောင့်ကို load လုပ်၍မရသောကြောင့် ပိတ်ထားသည်</string>
   <!-- layout.returnyoutubedislike.returnYouTubeDislikePatch -->
   <!-- Brief notification (toast) shown if network connection times out. Translations of this should not be longer than the original English text, otherwise the text can be clipped and not entirely shown. -->
+  <string name="morphe_ryd_failure_connection_timeout">မနှစ်သက်မှုများကို ယာယီအသုံးပြု၍မရပါ (API အချိန်ကုန်သွားသည်)</string>
+  <string name="morphe_ryd_failure_connection_status_code">မကြိုက်သည်များကို အသုံးပြု၍မရပါ (အခြေအနေ %s)</string>
+  <string name="morphe_ryd_failure_client_rate_limit_requested">မနှစ်သက်မှုများကို ရယူ၍မရပါ (client API ကန့်သတ်ချက်)</string>
+  <string name="morphe_ryd_failure_generic">မနှစ်သက်မှုများကို ရယူ၍မရပါ (%s)</string>
   <!-- Video likes have been set to hidden by the video uploader. -->
+  <string name="morphe_ryd_video_likes_hidden_by_video_owner">ပိုင်ရှင်မှ ဖျောက်ထားသည်</string>
+  <string name="morphe_ryd_accessibility_dislike_count">ဤဗီဒီယိုကို အခြားလူ %s ဦးနှင့်အတူ မနှစ်သက်ပါ</string>
+  <string name="morphe_ryd_accessibility_dislike_percentage">ဤဗီဒီယိုကို မနှစ်သက်ပါ၊ မဲပေးသူများ၏ %s သည် မနှစ်သက်မှုများဖြစ်သည်</string>
+  <string name="morphe_ryd_enabled_title">Return YouTube Dislike ကို အသက်သွင်းရန်</string>
+  <string name="morphe_ryd_dislike_percentage_title">မနှစ်သက်မှုများကို ရာခိုင်နှုန်းဖြင့် ပြရန်</string>
+  <string name="morphe_ryd_dislike_percentage_summary">မနှစ်သက်မှုများကို အရေအတွက်အစား Like ပေးသူများ၏ ရာခိုင်နှုန်းအဖြစ် ပြသပေးသည်</string>
+  <string name="morphe_ryd_estimated_like_title">ခန့်မှန်းခြေ Like များကို ပြရန်</string>
+  <string name="morphe_ryd_estimated_like_summary">ဖန်တီးသူမှ Like များကို ပိတ်ထားသော ဗီဒီယိုများတွင် ခန့်မှန်းခြေ Like အရေအတွက်ကို ပြသပေးသည်</string>
+  <string name="morphe_ryd_toast_on_connection_error_title">ချိတ်ဆက်မှု အမှားသတိပေးချက်များကို ပြသပါ</string>
+  <string name="morphe_ryd_toast_on_connection_error_summary">Return YouTube Dislike ဆာဗာကို အသုံးပြု၍မရသောအခါ အကြောင်းကြားချက်တစ်ခုကို ပြသပေးပါမည်</string>
+  <string name="morphe_ryd_attribution_summary">"Return YouTube Dislike သည် ၂၀၂၁ ခုနှစ်တွင် YouTube မှ ဖျောက်ထားခဲ့သော dislike အရေအတွက်များကို ပြန်လည်ဖော်ပြပေးပါသည်။ အရေအတွက်များသည် ဖယ်ရှားခြင်းမပြုမီ သိမ်းဆည်းထားသော အချက်အလက်များမှ ရရှိခြင်းဖြစ်ပြီး၊ ဗီဒီယိုအသစ်များအတွက်မူ အသုံးပြုသူများ၏ မဲပေးမှုများအပေါ် အခြေခံ၍ ခန့်မှန်းထားခြင်းဖြစ်သောကြောင့် အနီးစပ်ဆုံးသာဖြစ်ပြီး ရက်အနည်းငယ်တိုင်းတွင် အပ်ဒိတ်လုပ်ပေးပါသည်။
+
+သင်ကြည့်ရှုသော ဗီဒီယို၏ ID ကို Return YouTube Dislike API သို့ ပေးပို့ပြီး၊ ခန့်မှန်းခြေများကို ပိုမိုကောင်းမွန်စေရန် သင်၏ like နှင့် dislike များကို အမည်မဖော်ဘဲ ပေးပို့ပါသည်။"</string>
   <!-- Statistic strings are shown in the settings only when Morphe debug mode is enabled. Typical users will never see these. -->
+  <string name="morphe_ryd_statistics_category_title">ဤစက်၏ Return YouTube Dislike API စာရင်းအင်းများ</string>
+  <string name="morphe_ryd_statistics_getFetchCallResponseTimeAverage_title">API တုံ့ပြန်မှုကြာချိန်၊ ပျမ်းမျှ</string>
+  <string name="morphe_ryd_statistics_getFetchCallResponseTimeMin_title">API တုံ့ပြန်မှုကြာချိန်၊ အနည်းဆုံး</string>
+  <string name="morphe_ryd_statistics_getFetchCallResponseTimeMax_title">API တုံ့ပြန်မှုကြာချိန်၊ အများဆုံး</string>
+  <string name="morphe_ryd_statistics_getFetchCallResponseTimeLast_title">နောက်ဆုံးမီဒီယာအတွက် API တုံ့ပြန်မှုကြာချိန်</string>
+  <string name="morphe_ryd_statistics_getFetchCallResponseTimeLast_rate_limit_summary">မကြိုက်သည်များကို ယာယီအသုံးမပြုနိုင်ပါ - Client API နှုန်းကန့်သတ်ချက် သက်ရောက်နေသည်</string>
+  <string name="morphe_ryd_statistics_getFetchCallCount_title">API မဲဆန္ဒများကို ရယူမှု၊ ခေါ်ဆိုမှုအရေအတွက်</string>
+  <string name="morphe_ryd_statistics_getFetchCallCount_zero_summary">ကွန်ရက်ခေါ်ဆိုမှု တစ်စုံတစ်ရာ မပြုလုပ်ခဲ့ပါ</string>
+  <string name="morphe_ryd_statistics_getFetchCallCount_non_zero_summary">ကွန်ရက်ခေါ်ဆိုမှု %s ကြိမ် ပြုလုပ်ခဲ့သည်</string>
+  <string name="morphe_ryd_statistics_getFetchCallNumberOfFailures_title">API မဲဆန္ဒများကို ရယူမှု၊ အချိန်ကုန်ဆုံးမှု အရေအတွက်</string>
+  <string name="morphe_ryd_statistics_getFetchCallNumberOfFailures_zero_summary">ကွန်ရက်ခေါ်ဆိုမှု တစ်စုံတစ်ရာ အချိန်ကုန်ဆုံးခြင်း မရှိခဲ့ပါ</string>
+  <string name="morphe_ryd_statistics_getFetchCallNumberOfFailures_non_zero_summary">ကွန်ရက်ခေါ်ဆိုမှု %s ကြိမ် အချိန်ကုန်ဆုံးခဲ့သည်</string>
+  <string name="morphe_ryd_statistics_getNumberOfRateLimitRequestsEncountered_title">API client နှုန်းကန့်သတ်ချက်များ</string>
+  <string name="morphe_ryd_statistics_getNumberOfRateLimitRequestsEncountered_zero_summary">Client နှုန်းကန့်သတ်ချက် တစ်စုံတစ်ရာ မကြုံတွေ့ခဲ့ရပါ</string>
+  <string name="morphe_ryd_statistics_getNumberOfRateLimitRequestsEncountered_non_zero_summary">Client rate limit ကို %s ကြိမ် ကြုံတွေ့ခဲ့သည်</string>
+  <string name="morphe_ryd_statistics_millisecond_text">%s မီလီစက္ကန့်</string>
 </resources>

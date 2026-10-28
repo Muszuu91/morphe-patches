@@ -80,6 +80,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_surveys_title">Скриј ги анкетите</string>
   <string name="morphe_hide_surveys_summary">Ги крие анкетите и поттикнувањата за прецизноста на препораките за фид</string>
   <string name="morphe_hide_ticket_shelf_title">Скриј ја полицата за билети</string>
+  <!-- 'Unavailable videos are hidden' should be translated using the same localized wording YouTube displays for the banner in playlists. -->
   <string name="morphe_hide_upload_time_title">Скриј го времето на објавување</string>
   <!-- Translations should match the language used in 'morphe_hide_view_count_summary'. -->
   <!-- 'Auto-dubbed', 'Earns commission', 'Hyped', 'People also watched' and 'You might also like' should be translated using the same localized wording YouTube displays for the label. -->

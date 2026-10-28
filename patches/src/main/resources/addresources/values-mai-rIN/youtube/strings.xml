@@ -61,6 +61,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_subscribed_channels_bar_title">सदस्यता लिइएको च्यानल बार लुकाउनुहोस्</string>
   <string name="morphe_hide_surveys_title">चिकित्सा पैनल छिपाएं</string>
   <string name="morphe_hide_ticket_shelf_title">टिकट शेल्फ छिपाएं</string>
+  <!-- 'Unavailable videos are hidden' should be translated using the same localized wording YouTube displays for the banner in playlists. -->
   <string name="morphe_hide_upload_time_title">खोज परिणाम कीवर्ड द्वारा फ़िल्टर नहीं किए गए हैं</string>
   <!-- Translations should match the language used in 'morphe_hide_view_count_summary'. -->
   <!-- 'Auto-dubbed', 'Earns commission', 'Hyped', 'People also watched' and 'You might also like' should be translated using the same localized wording YouTube displays for the label. -->

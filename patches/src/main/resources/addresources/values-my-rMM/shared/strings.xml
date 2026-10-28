@@ -18,21 +18,218 @@ Second \"item\" text"</string>
 <resources>
   <!-- misc.settings.settingsResourcePatch -->
   <string name="morphe_settings_submenu_title">မ်ားလာေၞး</string>
+  <string name="morphe_settings_confirm_user_dialog_title">ရှေ့ဆက်ရန် သေချာပါသလား?</string>
+  <string name="morphe_settings_save">သိမ်းဆည်းမည်</string>
+  <string name="morphe_settings_reset">ပြန်လည်သတ်မှတ်မည်</string>
+  <string name="morphe_settings_reset_color">အရောင်ပြန်သတ်မှတ်မည်</string>
+  <string name="morphe_settings_color_invalid">မမှန်ကန်သော အရောင်ဖြစ်သည်</string>
+  <string name="morphe_settings_restart_title">ပြန်လည်စတင်ရန် လိုအပ်သည်</string>
+  <string name="morphe_settings_restart_dialog_message">ဤအပြောင်းအလဲ အသက်ဝင်စေရန် အက်ပ်ကို ပြန်ဖွင့်ပါ</string>
+  <string name="morphe_settings_restart">ပြန်လည်စတင်မည်</string>
   <!-- String is also duplicated in Reddit import / export preference -->
+  <string name="morphe_settings_import">သွင်းမည်</string>
+  <string name="morphe_settings_import_copy">ကူးယူမည်</string>
+  <string name="morphe_settings_import_reset">Morphe ဆက်တင်များကို မူလအတိုင်း ပြန်လည်သတ်မှတ်ပြီးပါပြီ</string>
+  <string name="morphe_settings_import_success">%s ဆက်တင်များကို တင်သွင်းပြီးပါပြီ</string>
+  <string name="morphe_settings_import_failure_parse">သွင်းခြင်း မအောင်မြင်ပါ- %s</string>
+  <string name="morphe_settings_navigate_up">အထက်သို့ သွားရန်</string>
+  <string name="morphe_settings_search_hint">ဆက်တင်များကို ရှာဖွေပါ</string>
+  <string name="morphe_settings_screen_info_title">အကြောင်းအရာ</string>
+  <string name="morphe_settings_search_no_results_title">\'%s\' အတွက် ရလဒ်များ မတွေ့ရှိပါ</string>
+  <string name="morphe_settings_search_no_results_summary">အခြားသော သော့ချက်စကားလုံးတစ်ခုဖြင့် ထပ်မံကြိုးစားကြည့်ပါ</string>
+  <string name="morphe_settings_search_recent_searches">လတ်တလော ရှာဖွေမှုများ</string>
+  <string name="morphe_settings_search_remove_message">ရှာဖွေမှုမှတ်တမ်းမှ ဖယ်ရှားလိုပါသလား?</string>
+  <string name="morphe_settings_search_remove">ရှာဖွေမှုမှတ်တမ်းမှ ဖယ်ရှားရန်</string>
+  <string name="morphe_settings_search_clear_history">ရှာဖွေမှုမှတ်တမ်းကို ရှင်းလင်းပါ</string>
+  <string name="morphe_settings_search_clear_history_message">ရှာဖွေမှုမှတ်တမ်းအားလုံးကို ရှင်းလင်းရန် သေချာပါသလား?</string>
+  <string name="morphe_settings_search_tips_title">ရှာဖွေမှုဆိုင်ရာ အကြံပြုချက်များ</string>
+  <string name="morphe_settings_search_tips_summary">"• ၎င်းသို့ရောက်ရှိရန် လမ်းကြောင်းတစ်ခုကို နှိပ်ပါ
+• ၎င်းသို့ရောက်ရှိရန် ဆက်တင်တစ်ခုကို ဖိထားပါ
+• ရှာဖွေမှုတစ်ခုကို မှတ်တမ်းတွင် သိမ်းဆည်းရန် Enter ကို နှိပ်ပါ
+• ရှာဖွေမှုသည် အကြီးအသေးစာလုံးနှင့် ပုဒ်ဖြတ်ပုဒ်ရပ်များကို ထည့်သွင်းစဉ်းစားမည်မဟုတ်ပါ
+• ပင်မဆက်တင်များသည် ပိတ်ထားသော လက်အောက်ခံဆက်တင်များ၏ အထက်တွင် ပေါ်လာမည်ဖြစ်သည်"</string>
+  <string name="morphe_settings_search_empty_history_title">ရှာဖွေမှုမှတ်တမ်းသည် အလွတ်ဖြစ်နေသည်</string>
+  <string name="morphe_settings_search_empty_history_summary">ရှာဖွေမှုမှတ်တမ်းကို သိမ်းဆည်းရန် ရှာဖွေလိုသည်များကို ရိုက်ထည့်ပြီး Enter ကိုနှိပ်ပါ</string>
+  <string name="morphe_settings_search_history_title">ဆက်တင်ရှာဖွေမှုမှတ်တမ်းကို ပြရန်</string>
+  <string name="morphe_settings_name_title">Morphe ဆက်တင်များ အမည်</string>
+  <string name="morphe_settings_name_default_item">ပုံသေ</string>
+  <string name="morphe_settings_name_entry_2">အပိုများ</string>
+  <string name="morphe_settings_name_entry_3">ညှိနှိုင်းမှုများ</string>
+  <string name="morphe_settings_name_entry_4">ပြောင်းလဲမှုကြာချိန်</string>
+  <string name="morphe_settings_name_custom_item">စိတ်ကြိုက်</string>
+  <string name="morphe_settings_name_custom_item_hint">အမည်တစ်ခု ရိုက်ထည့်ပါ</string>
+  <string name="morphe_settings_name_empty_warning">အမည်သည် အလွတ်မဖြစ်စေရ</string>
+  <string name="morphe_show_menu_icons_title">Morphe ဆက်တင်အိုင်ကွန်များကို ပြရန်</string>
+  <string name="morphe_settings_menu_copy_path">ကူးယူပြီးပါသည်- %s</string>
+  <string name="morphe_language_title">Morphe ဘာသာစကား</string>
+  <string name="morphe_language_user_dialog_message">"အချို့သောဘာသာစကားများအတွက် ဘာသာပြန်ဆိုမှုများ ပျောက်ဆုံးနေခြင်း သို့မဟုတ် မပြည့်စုံခြင်းများ ရှိနိုင်ပါသည်။
+
+ဘာသာစကားအသစ်များကို ဘာသာပြန်ဆိုရန် သို့မဟုတ် ရှိပြီးသားဘာသာပြန်ဆိုမှုများကို ပိုမိုကောင်းမွန်အောင် ပြုလုပ်ရန် morphe.software/translate သို့ ဝင်ရောက်ပါ"</string>
+  <string name="morphe_language_DEFAULT">အက်ပ်ဘာသာစကား</string>
+  <string name="morphe_pref_import_export_title">ထည့်သွင်းခြင်း / ထုတ်ယူခြင်း</string>
+  <string name="morphe_pref_import_export_summary">Morphe ဆက်တင်များကို ထည့်သွင်းခြင်း / ထုတ်ယူခြင်း</string>
+  <string name="morphe_settings_import_file">ဖိုင်မှ ထည့်သွင်းပါ</string>
+  <string name="morphe_settings_import_file_success">ဆက်တင်များကို အောင်မြင်စွာ ထည့်သွင်းပြီးပါပြီ၊ အကျိုးသက်ရောက်စေရန် Save ကို နှိပ်ပါ</string>
+  <string name="morphe_settings_import_file_failed">ဆက်တင်များကို ထည့်သွင်း၍ မရပါ</string>
+  <string name="morphe_settings_export_file">ဖိုင်သို့ ပို့ထုတ်ပါ</string>
+  <string name="morphe_settings_export_file_success">ဆက်တင်များကို အောင်မြင်စွာ ပို့ထုတ်ပြီးပါပြီ</string>
+  <string name="morphe_settings_export_file_failed">ဆက်တင်များကို ပို့ထုတ်၍ မရပါ</string>
   <!-- String is also duplicated in Reddit about preference -->
+  <string name="morphe_settings_about_links_body_version_current">သင်သည် နောက်ဆုံးထွက် Morphe Patches ဗားရှင်း &lt;i&gt;%s&lt;/i&gt; ကို အသုံးပြုနေသည်</string>
+  <string name="morphe_settings_about_links_body_version_outdated">သင်သည် Morphe Patches ဗားရှင်း &lt;i&gt;%1$s&lt;/i&gt; ကို အသုံးပြုနေပါသည်။&lt;br&gt;&lt;br&gt;&lt;b&gt;အသစ်တင်ရန်ရှိသည်- &lt;i&gt;%2$s&lt;/i&gt;&lt;/b&gt;&lt;br&gt;&lt;br&gt;သင့် patch များကို အပ်ဒိတ်လုပ်ရန် ဤအက်ပ်ကို ပြန်လည် patch လုပ်ရန် Morphe ကို အသုံးပြုပါ</string>
+  <string name="morphe_settings_about_links_dev_header">မှတ်ချက်</string>
+  <string name="morphe_settings_about_links_dev_body">ဤဗားရှင်းသည် ကြိုတင်ထုတ်ဝေမှုဖြစ်ပြီး မျှော်လင့်မထားသော ပြဿနာများ ကြုံတွေ့ရနိုင်သည်</string>
+  <string name="morphe_settings_about_links_header">တရားဝင်လင့်ခ်များ</string>
+  <string name="morphe_settings_about_links_website">ဝက်ဘ်ဆိုက်</string>
+  <string name="morphe_settings_about_links_donate">လှူဒါန်းပါ</string>
+  <string name="morphe_settings_about_links_translations">ဘာသာပြန်ဆိုချက်များ</string>
+  <string name="morphe_settings_about_links_credits">ဂုဏ်ပြုမှတ်တမ်း</string>
+  <string name="morphe_settings_about_links_dev_header_up_to_date">နောက်ဆုံးဗားရှင်းဖြစ်သည်</string>
+  <string name="morphe_settings_about_links_dev_header_update_available">အပ်ဒိတ်ရရှိနိုင်သည်</string>
+  <string name="morphe_settings_about_contributors_current">လက်ရှိဖွံ့ဖြိုးတိုးတက်မှု</string>
+  <string name="morphe_settings_about_contributors_prior">ယခင်ဖွံ့ဖြိုးတိုးတက်မှု</string>
+  <string name="morphe_settings_about_links_morphe">တက်ကြွသောဖွံ့ဖြိုးတိုးတက်မှု</string>
+  <string name="morphe_settings_about_links_rvx">2022 &#8209; 2025</string>
+  <string name="morphe_settings_about_links_rv">2022 &#8209; 2025</string>
+  <string name="morphe_settings_about_links_vanced">2019 &#8209; 2022</string>
+  <string name="morphe_settings_about_links_licenses">လိုင်စင် သတိပေးချက်များ</string>
+  <string name="morphe_settings_about_licenses_loading">တင်နေပါသည်…</string>
   <!-- misc.debugging.enableDebuggingPatch -->
+  <string name="morphe_debug_screen_title">Debugging ပြုလုပ်ခြင်း</string>
+  <string name="morphe_debug_screen_summary">အဆင့်မြင့် developer options များနှင့် diagnostic logs များကို သတ်မှတ်ပါ</string>
+  <string name="morphe_debug_title">Debug logging ကို အသုံးပြုရန်</string>
+  <string name="morphe_debug_stacktrace_title">Debug log stack trace ကို စစ်ဆေးပါ</string>
+  <string name="morphe_debug_stacktrace_summary">အမှားများကို ရှာဖွေဖော်ထုတ်နိုင်ရန် debug log များတွင် stack traces များကို ထည့်သွင်းပါသည်</string>
+  <string name="morphe_debug_toast_on_error_title">Morphe အမှားဖြစ်ပေါ်ပါက notification ပြပါ</string>
+  <string name="morphe_debug_toast_on_error_user_dialog_message">"Error toast များကို ပိတ်လိုက်ခြင်းသည် Morphe ၏ error အကြောင်းကြားချက် အားလုံးကို ဖျောက်ထားမည် ဖြစ်ပါသည်။
+
+မျှော်လင့်မထားသော ဖြစ်ရပ်များအတွက် သင့်အား အကြောင်းကြားမည်မဟုတ်ပါ"</string>
+  <string name="morphe_debug_export_logs_title">Debug log များကို ပို့ထုတ်ပါ</string>
+  <string name="morphe_debug_export_logs_summary">Morphe debug log များကို ပို့ထုတ်ပါ</string>
+  <string name="morphe_debug_export_logs_success">Debug log များကို အောင်မြင်စွာ ပို့ထုတ်ပြီးပါပြီ</string>
+  <string name="morphe_debug_export_logs_failed">Debug log များကို ပို့ထုတ်၍မရပါ</string>
+  <string name="morphe_debug_logs_search_hint">Debug log များတွင် ရှာပါ…</string>
+  <string name="morphe_debug_export_logs_clear">ရှင်းလင်းပါ</string>
+  <string name="morphe_debug_logs_disabled">Debug logging ကို ပိတ်ထားသည်</string>
+  <string name="morphe_debug_logs_none_found">Debug log တစ်စုံတစ်ရာ မတွေ့ရှိပါ</string>
+  <string name="morphe_debug_logs_copied_to_clipboard">Debug log များကို ကူးယူပြီးပါပြီ</string>
+  <string name="morphe_debug_logs_failed_to_export">Debug log များကို ပို့ထုတ်၍မရပါ- %s</string>
+  <string name="morphe_debug_logs_clear_toast">Debug log များကို ရှင်းလင်းပြီးပါပြီ</string>
+  <string name="morphe_debug_feature_flags_manager_title">Feature flags မန်နေဂျာ</string>
+  <string name="morphe_debug_feature_flags_manager_summary">Boolean feature flags များကို စီမံခန့်ခွဲရန်</string>
+  <string name="morphe_debug_feature_flags_manager_search_hint">Feature flag များတွင် ရှာပါ…</string>
   <!-- Keep short, four of these are shown in one row. -->
+  <string name="morphe_debug_feature_flags_manager_filter_inactive">အသက်မဝင်ပါ (%s)</string>
   <!-- Keep short, four of these are shown in one row. -->
+  <string name="morphe_debug_feature_flags_manager_filter_active">အသက်ဝင်နေသည် (%s)</string>
   <!-- Keep short, four of these are shown in one row. -->
+  <string name="morphe_debug_feature_flags_manager_filter_blocked">ပိတ်ထားသည် (%s)</string>
   <!-- Keep short, four of these are shown in one row. -->
+  <string name="morphe_debug_feature_flags_manager_filter_forced">အတင်းအကြပ်ဖွင့်ထားသည် (%s)</string>
   <!-- Keep short, shown as a badge and as a button. -->
+  <string name="morphe_debug_feature_flags_manager_state_auto">အလိုအလျောက်</string>
   <!-- Keep short, shown as a badge and as a button. -->
+  <string name="morphe_debug_feature_flags_manager_state_blocked">ပိတ်သည်</string>
   <!-- Keep short, shown as a badge and as a button. -->
+  <string name="morphe_debug_feature_flags_manager_state_forced">ဖွင့်သည်</string>
+  <string name="morphe_debug_feature_flags_manager_action_force_on">အတင်းအကြပ်ဖွင့်ပါ</string>
+  <string name="morphe_debug_feature_flags_manager_action_force_off">ပိတ်ပါ</string>
+  <string name="morphe_debug_feature_flags_manager_action_remove">ဖယ်ရှားပါ</string>
+  <string name="morphe_debug_feature_flags_manager_toast_saved">Feature flag များကို သိမ်းဆည်းပြီးပါပြီ</string>
+  <string name="morphe_debug_feature_flags_manager_toast_reset">Feature flag များကို ပြန်လည်သတ်မှတ်ပြီးပါပြီ</string>
+  <string name="morphe_debug_feature_flags_manager_toast_copied">Feature flag များကို clipboard သို့ ကူးယူပြီးပါပြီ</string>
+  <string name="morphe_debug_feature_flags_manager_toast_no_flags">ဤဆက်တင်ကို အသုံးပြုရန် အက်ပ်ကို ပြန်လည်စတင်ပါ</string>
+  <string name="morphe_debug_feature_flags_manager_import_export_title">တင်ပို့ခြင်းနှင့် ပြန်သွင်းခြင်း</string>
+  <string name="morphe_debug_feature_flags_manager_import_success">Feature flag %s ခုကို ပြန်သွင်းပြီးပါပြီ</string>
+  <string name="morphe_debug_feature_flags_manager_import_failed">Feature flag တစ်ခုမျှ မတွေ့ရှိပါ</string>
+  <string name="morphe_debug_feature_flags_manager_export_file_success">Feature flag များကို အောင်မြင်စွာ တင်ပို့ပြီးပါပြီ</string>
+  <string name="morphe_debug_feature_flags_manager_export_file_failed">Feature flag များကို တင်ပို့၍ မရပါ</string>
+  <string name="morphe_debug_feature_flags_manager_import_file_success">Feature flag များကို တင်ပြပြီးပါပြီ၊ အကျိုးသက်ရောက်စေရန် Save ကို နှိပ်ပါ</string>
+  <string name="morphe_debug_feature_flags_manager_import_file_failed">ဖိုင်ကို ဖတ်၍ မရပါ</string>
+  <string name="morphe_debug_feature_flags_manager_bisect_title">Binary search</string>
+  <string name="morphe_debug_feature_flags_manager_bisect_start_message">"အက်ပ်၏ အပြုအမူတစ်ခုကို မည်သည့် feature flag က ဖြစ်ပေါ်စေသည်ကို ရှာဖွေပါ
+
+%s flags များ၏ တစ်ဝက်ကို ပိတ်ထားပြီး၊ ပြန်လည်စတင်မှုတစ်ခုစီပြီးနောက် အဆိုပါအပြုအမူ ရှိနေသေးခြင်း ရှိ၊ မရှိကို သင်ပြောပြရမည်ဖြစ်သည်
+
+မစတင်မီ အပြုအမူကို တစ်ကြိမ် ပြန်လည်ဖော်ထုတ်ပါ၊ သို့မဟုတ်ပါက အက်ပ်မှ မတောင်းဆိုရသေးသော flags များသည် ရှာဖွေမှုမှ ပျောက်ဆုံးနေပါမည်"</string>
+  <string name="morphe_debug_feature_flags_manager_bisect_start_button">စတင်ရန်</string>
+  <string name="morphe_debug_feature_flags_manager_bisect_no_candidates">"ရှာဖွေရန် feature flags များမရှိပါ
+
+အက်ပ်မှ အသုံးပြုထားပြီး လက်ရှိတွင် အတင်းအကျပ် ဖွင့်မထားသော flags များကိုသာ binary search တွင် အသုံးပြုနိုင်ပါသည်"</string>
+  <string name="morphe_debug_feature_flags_manager_bisect_status">"အဆင့် %1$s
+
+ကျန်ရှိသော flags %2$s ခု၊ ဤအဆင့်အတွက် ၎င်းတို့အနက် %3$s ခုကို ပိတ်ထားပါသည်။
+
+အက်ပ်ကို ပြန်လည်စတင်ပါ၊ အပြုအမူ ရှိ၊ မရှိ စစ်ဆေးပါ၊ ထို့နောက် အောက်တွင် ဖြေဆိုပါ"</string>
+  <string name="morphe_debug_feature_flags_manager_bisect_in_progress">Feature flag ရှာဖွေမှု လုပ်ဆောင်နေသည်</string>
+  <string name="morphe_debug_feature_flags_manager_bisect_present">အပြုအမူ ရှိနေသည်</string>
+  <string name="morphe_debug_feature_flags_manager_bisect_absent">အပြုအမူ မရှိပါ</string>
+  <string name="morphe_debug_feature_flags_manager_bisect_cancel">Binary search ကို ပယ်ဖျက်ပါ</string>
+  <string name="morphe_debug_feature_flags_manager_bisect_canceled">Binary search ကို ပယ်ဖျက်လိုက်ပါပြီ</string>
+  <string name="morphe_debug_feature_flags_manager_bisect_found">"Feature flag %s ကြောင့် ဤအပြုအမူ ဖြစ်ပေါ်နေခြင်းဖြစ်သည်။
+
+ယခုအခါ ၎င်းကို ပိတ်ပင်ထားပြီး ဖြစ်သည်"</string>
+  <string name="morphe_debug_feature_flags_manager_bisect_exhausted">"Feature flag တစ်ခုကို ရှာမတွေ့ပါ။
+
+အက်ပ်၏ အပြုအမူသည် feature flag တစ်ခုခုမှ ထိန်းချုပ်ထားခြင်း မရှိပုံရသည်"</string>
+  <string name="morphe_debug_feature_flags_manager_bisect_exhausted_multiple">"Feature flag တစ်ခုတည်းကို ရှာမတွေ့ပါ။
+
+ရှာဖွေမှု အစောပိုင်းတွင် အပြုအမူ ပျောက်ကွယ်သွားခဲ့သဖြင့် flag တစ်ခုထက်ပို၍ ပါဝင်နေခြင်း သို့မဟုတ် အဖြေတစ်ခုခု မှားယွင်းနေခြင်း ဖြစ်နိုင်သည်"</string>
   <!-- Could be its own resource file, but for simplicity it's shared among all apps. -->
   <!-- misc.gms.gmsCoreSupportResourcePatch -->
+  <string name="microg_settings_summary">MicroG ဆက်တင်များကို ဖွင့်ပါ</string>
   <!-- Translations of this should not be longer than the original English text, otherwise the text can be clipped and not entirely shown. -->
+  <string name="gms_core_toast_not_installed_message">MicroG ကို install မလုပ်ထားပါ။ Install ပြုလုပ်ပါ</string>
+  <string name="gms_core_dialog_title">ဆောင်ရွက်ရန် လိုအပ်သည်</string>
+  <string name="gms_core_dialog_outdated_message">"သင်၏ MicroG v%1s သည် ဗားရှင်းဟောင်းဖြစ်နေပြီး ပြဿနာများ ဖြစ်ပေါ်စေနိုင်ပါသည်။
+
+ကျေးဇူးပြု၍ MicroG ကို နောက်ဆုံးဗားရှင်း v%2s သို့ update ပြုလုပ်ပါ"</string>
+  <string name="gms_core_dialog_update_text">အပ်ဒိတ်လုပ်ရန်</string>
+  <string name="gms_core_dialog_ignore_text">လျစ်လျူရှုရန်</string>
+  <string name="gms_core_dialog_conflict_message">"တပ်ဆင်ထားသော MicroG ကို Morphe မှ အကြံပြုထားခြင်းမရှိပါ
+
+%1s
+
+၎င်းကို ဖယ်ရှားရန် နှိပ်ပါ၊ ထို့နောက် ဤအက်ပ်ကို ပြန်ဖွင့်ပြီး MicroG RE ကို တပ်ဆင်ပါ"</string>
+  <string name="gms_core_dialog_uninstall_text">ပယ်ဖျက်ရန်</string>
   <!-- "Don't kill my app" should be kept in English and not translated -->
+  <string name="gms_core_dialog_not_whitelisted_not_allowed_in_background_message">"MicroG သည် နောက်ကွယ်တွင် အလုပ်လုပ်ရန် ခွင့်ပြုချက်မရှိပါ
+
+သင့်ဖုန်းအတွက် \"Don't kill my app\" လမ်းညွှန်ချက်ကို လိုက်နာပြီး သင်၏ MicroG တပ်ဆင်မှုတွင် ညွှန်ကြားချက်များကို အသုံးချပါ
+
+၎င်းသည် အက်ပ် အလုပ်လုပ်ရန် လိုအပ်ပါသည်"</string>
+  <string name="gms_core_dialog_open_website_text">ဝဘ်ဆိုဒ်ကို ဖွင့်ပါ</string>
+  <string name="gms_core_dialog_not_whitelisted_using_battery_optimizations_message">"ပြဿနာများကို ကာကွယ်ရန် MicroG ဘက်ထရီ အကောင်းဆုံးဖြစ်အောင် ပြုပြင်မှုများကို ပိတ်ထားရပါမည်။
+
+MicroG အတွက် ဘက်ထရီ အကောင်းဆုံးဖြစ်အောင် ပြုပြင်မှုများကို ပိတ်ခြင်းသည် ဘက်ထရီ အသုံးပြုမှုအပေါ် ဆိုးကျိုးသက်ရောက်မည်မဟုတ်ပါ။
+
+ဆက်လက်လုပ်ဆောင်ရန် ခလုတ်ကို နှိပ်ပြီး အကောင်းဆုံးပြုပြင်မှု အပြောင်းအလဲများကို ခွင့်ပြုပါ"</string>
+  <string name="gms_core_dialog_continue_text">ဆက်လက်လုပ်ဆောင်ပါ</string>
+  <string name="morphe_gms_core_battery_optimization_dialog_title">MicroG ဘက်ထရီ အကောင်းဆုံးဖြစ်စေရေး dialogue ကို ပြရန်</string>
+  <string name="morphe_gms_core_battery_optimization_dialog_user_dialog_message">"ယင်းကို ပိတ်ထားခြင်းဖြင့် MicroG ဘက်ထရီ အကောင်းဆုံးဖြစ်အောင် ပြုလုပ်ရန် တိုက်တွန်းချက်ကို ဖျောက်ထားမည်ဖြစ်သည်။
+
+ဘက်ထရီ အကောင်းဆုံးဖြစ်အောင် ပြုလုပ်မှုများကို မပြောင်းလဲပါက အောက်ပါတို့ ဖြစ်ပေါ်လာနိုင်သည်- 
+• အက်ပ်သည် အကြောင်းရင်းမရှိဘဲ ပိတ်သွားနိုင်သည်
+• အသိပေးချက်များ အလုပ်မလုပ်နိုင်ပါ
+• နောက်ခံတွင် ဖွင့်ထားခြင်းများ အလုပ်မလုပ်နိုင်ပါ"</string>
   <!-- misc.gms.linkHandlingPatch -->
+  <string name="morphe_link_handling_title">အက်ပ်လင့်ခ် ကိုင်တွယ်မှု</string>
+  <string name="morphe_link_handling_summary">လင့်ခ်များကို ဤအက်ပ်တွင် ဖွင့်ရန် သတ်မှတ်ပါ</string>
+  <string name="morphe_link_handling_step1_title">အဆင့် ၁- မူရင်းအက်ပ်လင့်ခ်များကို ပိတ်ပါ</string>
+  <string name="morphe_link_handling_step1_message">မူရင်းအက်ပ်၏ settings ကိုဖွင့်ပြီး domain လင့်ခ်အားလုံးကို ပိတ်ပါ</string>
+  <string name="morphe_link_handling_step2_title">အဆင့် ၂- Patch လုပ်ထားသော အက်ပ်လင့်ခ်များကို ဖွင့်ပါ</string>
+  <string name="morphe_link_handling_step2_message">Patch လုပ်ထားသော အက်ပ်၏ settings ကိုဖွင့်ပြီး domain လင့်ခ်အားလုံးကို ဖွင့်ပါ</string>
+  <string name="morphe_link_handling_open">Settings ကိုဖွင့်ပါ</string>
   <!-- misc.checks.experimentalAppNoticePatch -->
+  <string name="morphe_experimental_app_version_dialog_title">🚨 စမ်းသပ်ဆဲအဆင့် သတိပေးချက် 🚨</string>
+  <string name="morphe_experimental_app_version_dialog_message">"သင်သည် ⚠️ &lt;b&gt;%1$s&lt;/b&gt; ၏ စမ်းသပ်ဆော့ဖ်ဝဲဗားရှင်းကို အသုံးပြုနေပါသည်
+&lt;br/&gt;&lt;br/&gt;
+🔧 ဤဗားရှင်းအတွက် patch များကို အနုစိတ်ညှိနှိုင်းနေဆဲဖြစ်သောကြောင့် ပုံမှန်မဟုတ်သော အပြုအမူများ သို့မဟုတ် မဖော်ပြနိုင်သော bug များ ရှိနိုင်ပါသည်
+&lt;br/&gt;&lt;br/&gt;
+အဆင်ပြေချောမွေ့ဆုံး အတွေ့အကြုံကို လိုချင်ပါက ဤဗားရှင်းကို &lt;b&gt;uninstall&lt;/b&gt; လုပ်ပြီး အကြံပြုထားသော ✅ &lt;b&gt;%2$s&lt;/b&gt; ဗားရှင်းကို patch လုပ်ပါ"</string>
+  <string name="morphe_experimental_app_version_dialog_confirm">⚠️ ကျွန်ုပ်သည် စမ်းသပ်ဆဲဗားရှင်းကို အသုံးပြုလိုသည်</string>
+  <string name="morphe_experimental_app_version_dialog_open_homepage">✅ ကျွန်ုပ်သည် တည်ငြိမ်သောဗားရှင်းကို အသုံးပြုလိုသည်</string>
   <!-- misc.crashlog.crashLogPatch -->
+  <string name="morphe_crash_log_saved_documents">Crash log ကို အသုံးပြုသူ၏ စာရွက်စာတမ်းများတွင် သိမ်းဆည်းပြီးပါပြီ- %s</string>
+  <string name="morphe_crash_log_saved">Crash log ကို သိမ်းဆည်းပြီးပါသည်- %s</string>
 </resources>

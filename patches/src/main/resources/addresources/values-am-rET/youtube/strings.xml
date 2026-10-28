@@ -113,6 +113,9 @@ Second \"item\" text"</string>
   <string name="morphe_hide_surveys_title">የዳሰሳ ጥናቶችን ደብቅ</string>
   <string name="morphe_hide_surveys_summary">ስለ ፊድ የጥቆማ ትክክለኛነት የሚጠይቁ ጥናቶችን እና ማሳሰቢያዎችን ደብቅ</string>
   <string name="morphe_hide_ticket_shelf_title">የትኬት መደርደሪያውን ደብቅ</string>
+  <!-- 'Unavailable videos are hidden' should be translated using the same localized wording YouTube displays for the banner in playlists. -->
+  <string name="morphe_hide_unavailable_videos_hidden_banner_title">\'ያልተገኙ ቪዲዮዎች ተደብቀዋል\' የሚለውን ባነር ደብቅ</string>
+  <string name="morphe_hide_unavailable_videos_hidden_banner_summary">በየመጫወቻ ዝርዝሮች ውስጥ \'ያልተገኙ ቪዲዮዎች ተደብቀዋል\' የሚለውን ባነር ይደብቃል</string>
   <string name="morphe_hide_upload_time_title">የተጫነበትን ጊዜ ደብቅ</string>
   <!-- Translations should match the language used in 'morphe_hide_view_count_summary'. -->
   <string name="morphe_hide_upload_time_summary">"ገደቦች፦
@@ -1249,6 +1252,7 @@ OpenRouter.aiን ለመክፈት እዚህ ይጫኑ"</string>
   <string name="morphe_fix_status_bar_layout_summary">የሁኔታ ማሳወቂያ ስትሪክ አቀማመጥ ወጥ እንዲሆን በማድረግ የላይኞቹን ባሮች እንዳይሸፍን እና ከቪዲዮ ማጫወቻው በላይ ምንም ባዶ ቦታ እንዳይኖር ያደርጋል። መተግበሪያው ካቆመ ወይም የላይኞቹ ባሮች የተሳሳተ አቀማመጥ ካሳዩ ይህንን ያጥፉት</string>
   <!-- layout.theme.themePatch -->
   <string name="morphe_splash_screen_style_entry_6">ብልጭታ</string>
+  <string name="morphe_splash_screen_style_glow_not_supported">ይህ መሣሪያ የGlow ስፕላሽ ስክሪንን አይደግፍም</string>
   <string name="morphe_theme_color_light_title">የቀላል ጭብጥ ዳራ</string>
   <string name="morphe_theme_color_light_entry_2">ነጭ</string>
   <string name="morphe_theme_color_light_entry_3">Material You (ነጭ)</string>

@@ -87,6 +87,7 @@ Second \"item\" text"</string>
   <string name="morphe_hide_surveys_title">सर्वेक्षणे लपवा</string>
   <string name="morphe_hide_surveys_summary">फीड शिफारस अचूकतेबद्दल सर्वेक्षण आणि सूचना लपवा</string>
   <string name="morphe_hide_ticket_shelf_title">तिकीट शेल्फ लपवा</string>
+  <!-- 'Unavailable videos are hidden' should be translated using the same localized wording YouTube displays for the banner in playlists. -->
   <string name="morphe_hide_upload_time_title">अपलोड वेळ लपवा</string>
   <!-- Translations should match the language used in 'morphe_hide_view_count_summary'. -->
   <string name="morphe_hide_upload_time_summary">"मर्यादा:
