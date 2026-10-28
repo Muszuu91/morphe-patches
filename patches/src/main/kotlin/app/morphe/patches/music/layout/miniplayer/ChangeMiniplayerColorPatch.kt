@@ -71,7 +71,7 @@ val changeMiniplayerColorPatch = bytecodePatch(
                             method.returnType == "V" &&
                             method.parameters == it.originalMethod.parameters
                 }.apply {
-                    val insertIndex = indexOfFirstInstructionReversedOrThrow(Opcode.INVOKE_DIRECT)
+                    val insertIndex = 0
                     val freeRegister = findFreeRegister(insertIndex)
 
                     // Publish the resolved color so the navigation bar can reuse it.
@@ -81,6 +81,7 @@ val changeMiniplayerColorPatch = bytecodePatch(
                             invoke-static {}, $EXTENSION_CLASS->changeMiniplayerColor()Z
                             move-result v$freeRegister
                             if-eqz v$freeRegister, :off
+                            if-eqz p1, :off
                             iget-object v$freeRegister, p1, $colorMathPlayerFieldReference
                             check-cast v$freeRegister, ${colorMathPlayerIGetReference.definingClass}
                             iget v$freeRegister, v$freeRegister, $colorMathPlayerIGetReference
@@ -114,7 +115,7 @@ val changeMiniplayerColorPatch = bytecodePatch(
                             method.returnType == "V" &&
                             method.parameters == it.originalMethod.parameters
                 }.apply {
-                    val insertIndex = indexOfFirstInstructionReversedOrThrow(Opcode.INVOKE_DIRECT)
+                    val insertIndex = 0
                     val freeRegister = findFreeRegister(insertIndex)
 
                     // Publish the resolved color so the navigation bar can reuse it.
@@ -124,6 +125,7 @@ val changeMiniplayerColorPatch = bytecodePatch(
                             invoke-static {}, $EXTENSION_CLASS->changeMiniplayerColor()Z
                             move-result v$freeRegister
                             if-eqz v$freeRegister, :off
+                            if-eqz p1, :off
                             invoke-virtual { p1 }, $colorMathPlayerInvokeVirtualReference
                             move-result-object v$freeRegister
                             check-cast v$freeRegister, ${colorMathPlayerIGetReference.definingClass}
