@@ -46,14 +46,32 @@ public class ToolBarPatch {
     }
 
     private static void hookToolBar(String enumString, View parentView, ImageView imageView) {
-        // Avoid changing other toolbar buttons. The enum name varies between YouTube builds.
-        if (!enumString.toUpperCase(java.util.Locale.ROOT).contains("CAST")) return;
+        // YouTube versions differ: sometimes the icon enum is not named CAST.
+        // Prefer the enum, but also check the visible accessibility descriptions.
+        String enumName = enumString == null ? "" : enumString.toUpperCase(java.util.Locale.ROOT);
+        String iconDescription = String.valueOf(imageView.getContentDescription())
+                .toUpperCase(java.util.Locale.ROOT);
+        String parentDescription = String.valueOf(parentView.getContentDescription())
+                .toUpperCase(java.util.Locale.ROOT);
+        boolean isCast = enumName.contains("CAST")
+                || iconDescription.contains("CAST")
+                || iconDescription.contains("CHROMECAST")
+                || parentDescription.contains("CAST")
+                || parentDescription.contains("CHROMECAST");
+        if (!isCast) return;
 
-        imageView.setLongClickable(true);
-        imageView.setOnLongClickListener(view -> {
+        View.OnLongClickListener listener = view -> {
             showSecondaryCastPicker(view.getContext());
             return true;
-        });
+        };
+
+        // In YouTube the parent menu item often owns the touch/click handling.
+        // Hook both views; neither listener replaces the normal click listener.
+        imageView.setLongClickable(true);
+        imageView.setOnLongClickListener(listener);
+        parentView.setLongClickable(true);
+        parentView.setOnLongClickListener(listener);
+
         imageView.setContentDescription(
                 String.valueOf(imageView.getContentDescription()) + ". " +
                 "Przytrzymaj, aby otworzyć dodatkowe Cast V2");
