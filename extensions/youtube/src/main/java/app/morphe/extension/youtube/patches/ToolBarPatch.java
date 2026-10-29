@@ -6,13 +6,6 @@ package app.morphe.extension.youtube.patches;
 
 import android.app.AlertDialog;
 import android.content.Context;
-import android.graphics.Canvas;
-import android.graphics.Color;
-import android.graphics.Paint;
-import android.graphics.PixelFormat;
-import android.graphics.RectF;
-import android.graphics.drawable.Drawable;
-import android.view.MotionEvent;
 import android.net.nsd.NsdManager;
 import android.net.nsd.NsdServiceInfo;
 import android.os.Handler;
@@ -20,7 +13,6 @@ import android.os.Looper;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewConfiguration;
-import android.widget.ImageView;
 import android.widget.ArrayAdapter;
 import android.widget.Toast;
 
@@ -30,80 +22,66 @@ import java.util.ArrayList;
 import java.util.List;
 
 import app.morphe.extension.shared.Logger;
+import app.morphe.extension.shared.ResourceType;
+import app.morphe.extension.shared.ResourceUtils;
 import app.morphe.extension.youtube.settings.Settings;
 
 /**
- * Entry point for the optional secondary Cast V2 picker.
- *
- * A long press is intentionally used so YouTube's native Cast button and native
- * MediaRouter session remain untouched on a normal tap.
+ * Replaces the action of the Cast button shown over a video while Cast V2 is enabled.
+ * Touch events are only consumed when enabled, so the native Cast action remains available
+ * when the setting is switched off, without requiring an app restart.
  */
 @SuppressWarnings("unused")
 public class ToolBarPatch {
-    private static final ThreadLocal<String> pendingIconEnum = new ThreadLocal<>();
     private static final Handler MAIN = new Handler(Looper.getMainLooper());
 
-    public static void setToolbarIconEnum(@Nullable Enum<?> iconEnum) {
-        pendingIconEnum.set(iconEnum == null ? null : iconEnum.name());
-    }
+    public static void hookPlayerCastButton(View controlsRoot) {
+        if (controlsRoot == null) return;
 
-    public static void setToolbarImageView(ImageView imageView) {
-        String enumName = pendingIconEnum.get();
-        pendingIconEnum.remove();
-        if (enumName != null && imageView.getParent() instanceof View parentView) {
-            hookToolBar(enumName, parentView, imageView);
-        }
-    }
+        int castId = ResourceUtils.getIdentifier(ResourceType.ID, "media_route_button");
+        if (castId == 0) return;
 
-    private static void hookToolBar(String enumString, View parentView, ImageView imageView) {
-        // YouTube versions differ: sometimes the icon enum is not named CAST.
-        // Prefer the enum, but also check the visible accessibility descriptions.
-        String enumName = enumString == null ? "" : enumString.toUpperCase(java.util.Locale.ROOT);
-        String iconDescription = String.valueOf(imageView.getContentDescription())
-                .toUpperCase(java.util.Locale.ROOT);
-        String parentDescription = String.valueOf(parentView.getContentDescription())
-                .toUpperCase(java.util.Locale.ROOT);
-        boolean isCast = enumName.contains("CAST")
-                || iconDescription.contains("CAST")
-                || iconDescription.contains("CHROMECAST")
-                || parentDescription.contains("CAST")
-                || parentDescription.contains("CHROMECAST");
-        if (!isCast) return;
+        View castButton = controlsRoot.findViewById(castId);
+        if (castButton == null) return;
 
-        // Preserve the native tap. Only a genuine long press opens the secondary picker.
-        // Do not install an OnTouchListener: consuming ACTION_DOWN/ACTION_UP breaks native Cast.
-        parentView.setOnLongClickListener(view -> {
-            if (!Settings.SECONDARY_CAST_V2_ENABLED.get()) return false;
-            showSecondaryCastPicker(view.getContext());
-            return true;
+        castButton.setOnTouchListener(new View.OnTouchListener() {
+            private float downX;
+            private float downY;
+            private boolean moved;
+            private final int touchSlop = ViewConfiguration.get(
+                    castButton.getContext()).getScaledTouchSlop();
+
+            @Override
+            public boolean onTouch(View view, MotionEvent event) {
+                // Returning false preserves the original MediaRouter behavior when disabled.
+                if (!Settings.SECONDARY_CAST_V2_ENABLED.get()) return false;
+
+                switch (event.getActionMasked()) {
+                    case MotionEvent.ACTION_DOWN:
+                        downX = event.getX();
+                        downY = event.getY();
+                        moved = false;
+                        return true;
+                    case MotionEvent.ACTION_MOVE:
+                        if (Math.abs(event.getX() - downX) > touchSlop
+                                || Math.abs(event.getY() - downY) > touchSlop) {
+                            moved = true;
+                        }
+                        return true;
+                    case MotionEvent.ACTION_UP:
+                        if (!moved && view.isEnabled()) {
+                            showSecondaryCastPicker(view.getContext());
+                        }
+                        return true;
+                    case MotionEvent.ACTION_CANCEL:
+                        return true;
+                    default:
+                        return true;
+                }
+            }
         });
-        parentView.setLongClickable(true);
 
-        imageView.setForeground(new CastV2BadgeDrawable());
-        imageView.setContentDescription(String.valueOf(imageView.getContentDescription())
-                + ". Cast V2 — długie przytrzymanie");
-    }
-
-    /** Small V2 badge over the existing Cast icon. */
-    private static final class CastV2BadgeDrawable extends Drawable {
-        private final Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
-
-        @Override public void draw(Canvas canvas) {
-            RectF badge = new RectF(getBounds().right - 23f, getBounds().bottom - 15f,
-                    getBounds().right, getBounds().bottom);
-            paint.setColor(Color.rgb(35, 117, 245));
-            canvas.drawRoundRect(badge, 4f, 4f, paint);
-            paint.setColor(Color.WHITE);
-            paint.setTextSize(10f);
-            paint.setFakeBoldText(true);
-            paint.setTextAlign(Paint.Align.CENTER);
-            canvas.drawText("V2", badge.centerX(), badge.centerY() + 3.5f, paint);
-            paint.setFakeBoldText(false);
-        }
-
-        @Override public void setAlpha(int alpha) { }
-        @Override public void setColorFilter(android.graphics.ColorFilter colorFilter) { }
-        @Override public int getOpacity() { return PixelFormat.TRANSLUCENT; }
+        castButton.setContentDescription("Cast V2");
     }
 
     private static void showSecondaryCastPicker(Context context) {
