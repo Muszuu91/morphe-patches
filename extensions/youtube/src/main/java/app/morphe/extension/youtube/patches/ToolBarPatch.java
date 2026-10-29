@@ -69,7 +69,9 @@ public class ToolBarPatch {
 
         // Keep the native click untouched when the option is disabled. When enabled,
         // consume the tap before YouTube's native Cast handler receives it.
-        parentView.setOnTouchListener((view, event) -> {
+        // Attach to the actual icon view, not its parent container. In some YouTube
+        // layouts the parent does not receive the complete touch sequence.
+        imageView.setOnTouchListener((view, event) -> {
             if (!app.morphe.extension.youtube.settings.Settings.SECONDARY_CAST_V2_ENABLED.get()) {
                 return false;
             }
