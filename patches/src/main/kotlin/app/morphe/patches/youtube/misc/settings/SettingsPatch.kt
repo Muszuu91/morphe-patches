@@ -275,6 +275,7 @@ val settingsPatch = bytecodePatch(
         )
 
         PreferenceScreen.MISC.addPreferences(
+            SwitchPreference("morphe_secondary_cast_v2_enabled"),
             TextPreference(
                 key = null,
                 titleKey = "morphe_pref_import_export_title",
