@@ -66,22 +66,18 @@ public class ToolBarPatch {
                 || parentDescription.contains("CHROMECAST");
         if (!isCast) return;
 
-        // The native action remains unchanged unless the user enables Cast V2 in Morphe settings.
-        parentView.setOnTouchListener((view, event) -> {
+        // Preserve the native tap. Only a genuine long press opens the secondary picker.
+        // Do not install an OnTouchListener: consuming ACTION_DOWN/ACTION_UP breaks native Cast.
+        parentView.setOnLongClickListener(view -> {
             if (!Settings.SECONDARY_CAST_V2_ENABLED.get()) return false;
-            int action = event.getActionMasked();
-            if (action == MotionEvent.ACTION_UP) {
-                showSecondaryCastPicker(view.getContext());
-                return true;
-            }
-            return action == MotionEvent.ACTION_DOWN
-                    || action == MotionEvent.ACTION_MOVE
-                    || action == MotionEvent.ACTION_CANCEL;
+            showSecondaryCastPicker(view.getContext());
+            return true;
         });
+        parentView.setLongClickable(true);
 
         imageView.setForeground(new CastV2BadgeDrawable());
         imageView.setContentDescription(String.valueOf(imageView.getContentDescription())
-                + ". Cast V2 — przełączane w ustawieniach Morphe");
+                + ". Cast V2 — długie przytrzymanie");
     }
 
     /** Small V2 badge over the existing Cast icon. */
