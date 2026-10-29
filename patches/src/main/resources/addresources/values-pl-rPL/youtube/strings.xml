@@ -1650,5 +1650,5 @@ Ograniczenie: Przywraca stary wygląd nakładki \"Więcej filmów\""</string>
   <string name="morphe_niconico_comments_max_length_summary">Ukrywa komentarze, które mają więcej znaków niż ta wartość. Każdy emoji liczy się jako jeden znak</string>
   <string name="morphe_niconico_comments_max_length_no_limit">Bez limitu</string>
   <string name="morphe_secondary_cast_v2_enabled_title">Używaj dodatkowego Cast V2</string>
-  <string name="morphe_secondary_cast_v2_enabled_summary">Zastępuje oryginalny przycisk Cast YouTube niezależnym wyborem urządzeń Cast V2. Wyłącz, aby przywrócić oryginalny Cast.</string>
+  <string name="morphe_secondary_cast_v2_enabled_summary">Długie przytrzymanie przycisku Cast otwiera dodatkowy wybór urządzeń Cast V2. Krótkie dotknięcie nadal uruchamia natywny Cast YouTube.</string>
 </resources>

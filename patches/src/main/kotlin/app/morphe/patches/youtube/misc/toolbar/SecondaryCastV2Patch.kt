@@ -10,6 +10,8 @@ package app.morphe.patches.youtube.misc.toolbar
 import app.morphe.patcher.extensions.InstructionExtensions.getInstruction
 import app.morphe.patcher.patch.bytecodePatch
 import app.morphe.patches.youtube.misc.extension.sharedExtensionPatch
+import app.morphe.patches.youtube.misc.settings.settingsPatch
+import app.morphe.patches.youtube.shared.startVideoInformerPatch
 import app.morphe.patches.youtube.shared.ToolBarButtonFingerprint
 import app.morphe.patches.youtube.shared.startVideoInformerPatch
 import app.morphe.util.addInstructionsAtControlFlowLabel
@@ -28,7 +30,8 @@ val secondaryCastV2Patch = bytecodePatch(
     // This patch has no explicit compatibility metadata, so it must not default to enabled.
     default = false,
 ) {
-    dependsOn(sharedExtensionPatch, startVideoInformerPatch)
+    // This dependency injects the Morphe settings screen and registers the Cast V2 switch.
+    dependsOn(sharedExtensionPatch, settingsPatch, startVideoInformerPatch)
 
     execute {
         ToolBarButtonFingerprint.let {

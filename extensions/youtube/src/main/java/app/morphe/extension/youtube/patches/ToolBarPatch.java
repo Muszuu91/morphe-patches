@@ -12,6 +12,7 @@ import android.graphics.Paint;
 import android.graphics.PixelFormat;
 import android.graphics.RectF;
 import android.graphics.drawable.Drawable;
+import android.view.MotionEvent;
 import android.net.nsd.NsdManager;
 import android.net.nsd.NsdServiceInfo;
 import android.os.Handler;
@@ -29,6 +30,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import app.morphe.extension.shared.Logger;
+import app.morphe.extension.youtube.settings.Settings;
 
 /**
  * Entry point for the optional secondary Cast V2 picker.
@@ -68,67 +70,21 @@ public class ToolBarPatch {
                 || parentDescription.contains("CHROMECAST");
         if (!isCast) return;
 
-        // Intercept only a real long-press. A short tap is explicitly forwarded to
-        // performClick() so YouTube's native Cast handler continues to work.
-        final boolean[] longPressTriggered = {false};
-        final boolean[] gestureCancelled = {false};
-        final float[] downX = {0f};
-        final float[] downY = {0f};
-        final Runnable[] longPressAction = {null};
-
-        imageView.setOnTouchListener((view, event) -> {
-            if (!app.morphe.extension.youtube.settings.Settings.SECONDARY_CAST_V2_ENABLED.get()) {
-                return false;
-            }
-
-            switch (event.getActionMasked()) {
-                case MotionEvent.ACTION_DOWN: {
-                    downX[0] = event.getX();
-                    downY[0] = event.getY();
-                    longPressTriggered[0] = false;
-                    gestureCancelled[0] = false;
-                    Runnable action = () -> {
-                        if (!gestureCancelled[0]) {
-                            longPressTriggered[0] = true;
-                            showSecondaryCastPicker(view.getContext());
-                        }
-                    };
-                    longPressAction[0] = action;
-                    MAIN.postDelayed(action, ViewConfiguration.getLongPressTimeout());
-                    return true;
-                }
-                case MotionEvent.ACTION_MOVE: {
-                    float slop = ViewConfiguration.get(view.getContext()).getScaledTouchSlop();
-                    if (Math.abs(event.getX() - downX[0]) > slop
-                            || Math.abs(event.getY() - downY[0]) > slop) {
-                        gestureCancelled[0] = true;
-                        if (longPressAction[0] != null) MAIN.removeCallbacks(longPressAction[0]);
-                    }
-                    return true;
-                }
-                case MotionEvent.ACTION_UP: {
-                    if (longPressAction[0] != null) MAIN.removeCallbacks(longPressAction[0]);
-                    if (!longPressTriggered[0] && !gestureCancelled[0]) {
-                        view.performClick();
-                    }
-                    return true;
-                }
-                case MotionEvent.ACTION_CANCEL: {
-                    gestureCancelled[0] = true;
-                    if (longPressAction[0] != null) MAIN.removeCallbacks(longPressAction[0]);
-                    return true;
-                }
-                default:
-                    return true;
-            }
+        // Preserve the native tap. Only a genuine long press opens the secondary picker.
+        // Do not install an OnTouchListener: consuming ACTION_DOWN/ACTION_UP breaks native Cast.
+        parentView.setOnLongClickListener(view -> {
+            if (!Settings.SECONDARY_CAST_V2_ENABLED.get()) return false;
+            showSecondaryCastPicker(view.getContext());
+            return true;
         });
+        parentView.setLongClickable(true);
+
         imageView.setForeground(new CastV2BadgeDrawable());
-        imageView.setContentDescription(
-                String.valueOf(imageView.getContentDescription()) + ". " +
-                "Cast V2 — przełączane w ustawieniach Morphe");
+        imageView.setContentDescription(String.valueOf(imageView.getContentDescription())
+                + ". Cast V2 — długie przytrzymanie");
     }
 
-    /** Small V2 marker drawn over the existing native Cast icon. */
+    /** Small V2 badge over the existing Cast icon. */
     private static final class CastV2BadgeDrawable extends Drawable {
         private final Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
 
