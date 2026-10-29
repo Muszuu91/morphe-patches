@@ -29,17 +29,35 @@ jobs:
       - name: Test
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: ./gradlew :patches:test :extensions:youtube:testDebugUnitTest :extensions:music:testDebugUnitTest --no-daemon
+        run: |
+          mkdir -p reports
+          set -o pipefail
+          ./gradlew :patches:test :extensions:youtube:testDebugUnitTest :extensions:music:testDebugUnitTest --no-daemon --stacktrace 2>&1 | tee reports/tests.log
 
       # buildAndroid adds DEX to the jar in place. A later JVM task can recreate
       # that same archive without DEX, so Android packaging must run last.
       - name: Build Android bundle
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: ./gradlew :patches:buildAndroid --no-daemon
+        run: |
+          mkdir -p reports
+          set -o pipefail
+          ./gradlew :patches:buildAndroid --no-daemon --stacktrace 2>&1 | tee reports/build-android.log
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v7
         with:
           archive: false
           path: patches/build/libs
+
+      # Always preserve diagnostics, including when Gradle fails or its daemon exits.
+      - name: Upload build diagnostics
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: cast-build-diagnostics-${{ github.run_id }}
+          path: |
+            reports/*.log
+            ~/.gradle/daemon/**/*.out.log
+          if-no-files-found: warn
+          retention-days: 7
