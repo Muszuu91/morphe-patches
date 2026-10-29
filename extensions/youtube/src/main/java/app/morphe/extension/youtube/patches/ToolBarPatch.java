@@ -139,10 +139,14 @@ public class ToolBarPatch {
             dialog.setItems(labels, (d, which) -> {
                 NsdServiceInfo selected = devices.get(which);
                 stop();
-                // The transport/YouTube MDX handshake is intentionally not faked here.
-                // Do not claim playback started until Cast V2 + Lounge binding is implemented.
-                toast(context, "Wykryto " + selected.getServiceName()
-                        + ", ale połączenie YouTube MDX/Lounge nie jest jeszcze gotowe.");
+                toast(context, "Łączenie z " + selected.getServiceName() + "…");
+                CastV2Client.connect(selected, (message, ready) -> {
+                    new AlertDialog.Builder(context)
+                            .setTitle("Dodatkowy Cast V2")
+                            .setMessage(message)
+                            .setPositiveButton("OK", null)
+                            .show();
+                });
             });
         }
 
