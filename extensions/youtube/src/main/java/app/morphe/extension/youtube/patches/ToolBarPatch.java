@@ -6,6 +6,13 @@ package app.morphe.extension.youtube.patches;
 
 import android.app.AlertDialog;
 import android.content.Context;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.PixelFormat;
+import android.graphics.RectF;
+import android.graphics.drawable.Drawable;
+import android.view.MotionEvent;
 import android.net.nsd.NsdManager;
 import android.net.nsd.NsdServiceInfo;
 import android.os.Handler;
@@ -21,6 +28,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import app.morphe.extension.shared.Logger;
+import app.morphe.extension.youtube.settings.Settings;
 
 /**
  * Entry point for the optional secondary Cast V2 picker.
@@ -46,17 +54,56 @@ public class ToolBarPatch {
     }
 
     private static void hookToolBar(String enumString, View parentView, ImageView imageView) {
-        // Avoid changing other toolbar buttons. The enum name varies between YouTube builds.
-        if (!enumString.toUpperCase(java.util.Locale.ROOT).contains("CAST")) return;
+        String enumName = enumString == null ? "" : enumString.toUpperCase(java.util.Locale.ROOT);
+        String iconDescription = String.valueOf(imageView.getContentDescription())
+                .toUpperCase(java.util.Locale.ROOT);
+        String parentDescription = String.valueOf(parentView.getContentDescription())
+                .toUpperCase(java.util.Locale.ROOT);
+        boolean isCast = enumName.contains("CAST")
+                || iconDescription.contains("CAST")
+                || iconDescription.contains("CHROMECAST")
+                || parentDescription.contains("CAST")
+                || parentDescription.contains("CHROMECAST");
+        if (!isCast) return;
 
-        imageView.setLongClickable(true);
-        imageView.setOnLongClickListener(view -> {
-            showSecondaryCastPicker(view.getContext());
-            return true;
+        // The native action remains unchanged unless the user enables Cast V2 in Morphe settings.
+        parentView.setOnTouchListener((view, event) -> {
+            if (!Settings.SECONDARY_CAST_V2_ENABLED.get()) return false;
+            int action = event.getActionMasked();
+            if (action == MotionEvent.ACTION_UP) {
+                showSecondaryCastPicker(view.getContext());
+                return true;
+            }
+            return action == MotionEvent.ACTION_DOWN
+                    || action == MotionEvent.ACTION_MOVE
+                    || action == MotionEvent.ACTION_CANCEL;
         });
-        imageView.setContentDescription(
-                String.valueOf(imageView.getContentDescription()) + ". " +
-                "Przytrzymaj, aby otworzyć dodatkowe Cast V2");
+
+        imageView.setForeground(new CastV2BadgeDrawable());
+        imageView.setContentDescription(String.valueOf(imageView.getContentDescription())
+                + ". Cast V2 — przełączane w ustawieniach Morphe");
+    }
+
+    /** Small V2 badge over the existing Cast icon. */
+    private static final class CastV2BadgeDrawable extends Drawable {
+        private final Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
+
+        @Override public void draw(Canvas canvas) {
+            RectF badge = new RectF(getBounds().right - 23f, getBounds().bottom - 15f,
+                    getBounds().right, getBounds().bottom);
+            paint.setColor(Color.rgb(35, 117, 245));
+            canvas.drawRoundRect(badge, 4f, 4f, paint);
+            paint.setColor(Color.WHITE);
+            paint.setTextSize(10f);
+            paint.setFakeBoldText(true);
+            paint.setTextAlign(Paint.Align.CENTER);
+            canvas.drawText("V2", badge.centerX(), badge.centerY() + 3.5f, paint);
+            paint.setFakeBoldText(false);
+        }
+
+        @Override public void setAlpha(int alpha) { }
+        @Override public void setColorFilter(android.graphics.ColorFilter colorFilter) { }
+        @Override public int getOpacity() { return PixelFormat.TRANSLUCENT; }
     }
 
     private static void showSecondaryCastPicker(Context context) {
