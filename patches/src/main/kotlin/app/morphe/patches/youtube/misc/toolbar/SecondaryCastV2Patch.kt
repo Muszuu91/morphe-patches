@@ -21,8 +21,10 @@ private const val SECONDARY_CAST_EXTENSION =
  * Adds the optional long-press Cast V2 picker without enabling it as a side effect
  * of unrelated patches that use the shared toolbar hook.
  */
+@Suppress("unused")
 val secondaryCastV2Patch = bytecodePatch(
-    description = "Secondary Cast V2"
+    name = "Secondary Cast V2",
+    description = "Adds a separate Cast V2 device picker on long-press of YouTube's Cast button.",
 ) {
     dependsOn(
         sharedExtensionPatch,
