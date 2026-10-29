@@ -101,9 +101,10 @@ final class CastV2Client {
             send(out, RECEIVER, CONNECTION, "{\"type\":\"LAUNCH\",\"appId\":\"" + YOUTUBE_APP_ID + "\",\"requestId\":1}");
             long deadline = System.currentTimeMillis() + 15000;
             long nextStatusRequest = 0;
+            String appSessionId = null;
             while (System.currentTimeMillis() < deadline) {
-                if (System.currentTimeMillis() >= nextStatusRequest) {
-                    send(out, RECEIVER, YOUTUBE_MDX,
+                if (appSessionId != null && System.currentTimeMillis() >= nextStatusRequest) {
+                    send(out, appSessionId, YOUTUBE_MDX,
                             "{\\"type\\":\\"getMdxSessionStatus\\",\\"requestId\\":2}");
                     nextStatusRequest = System.currentTimeMillis() + 2000;
                 }
@@ -120,6 +121,19 @@ final class CastV2Client {
                     }
                     if ("CLOSE".equals(p.optString("type"))) {
                         throw new IllegalStateException("Odbiornik zamknął połączenie Cast");
+                    }
+                    if ("RECEIVER_STATUS".equals(p.optString("type"))) {
+                        JSONObject status = p.optJSONObject("status");
+                        JSONArray applications = status == null ? null : status.optJSONArray("applications");
+                        if (applications != null) {
+                            for (int i = 0; i < applications.length(); i++) {
+                                JSONObject app = applications.optJSONObject(i);
+                                if (app != null && YOUTUBE_APP_ID.equals(app.optString("appId"))) {
+                                    appSessionId = app.optString("sessionId", null);
+                                    break;
+                                }
+                            }
+                        }
                     }
                 }
                 if (HEARTBEAT.equals(namespace)) {
