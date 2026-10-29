@@ -95,6 +95,8 @@ import app.morphe.extension.youtube.videoplayer.PlayAllButton.PlaylistIDPrefix;
 import app.morphe.extension.youtube.videoplayer.PlayerIcons;
 
 public class Settings extends SharedYouTubeSettings {
+    // Replaces the native YouTube Cast button with the independent Cast V2 picker when enabled.
+    public static final BooleanSetting SECONDARY_CAST_V2_ENABLED = new BooleanSetting("morphe_secondary_cast_v2_enabled", FALSE);
     // Video
     public static final EnumSetting<PlaybackBufferSize> PLAYBACK_BUFFER_SIZE = new EnumSetting<>("morphe_playback_buffer_size", PlaybackBufferSize.DEFAULT, true);
     public static final IntegerSetting VIDEO_DELAY = new IntegerSetting("morphe_video_delay", 0);
