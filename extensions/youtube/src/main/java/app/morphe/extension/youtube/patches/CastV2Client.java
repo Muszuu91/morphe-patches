@@ -17,6 +17,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.InputStream;
+import java.io.ByteArrayOutputStream;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.InetSocketAddress;
@@ -102,8 +103,13 @@ final class CastV2Client {
             send(out, RECEIVER, CONNECTION, "{\"type\":\"CONNECT\",\"origin\":{},\"userAgent\":\"Morphe secondary Cast V2\"}");
             send(out, RECEIVER, CONNECTION, "{\"type\":\"LAUNCH\",\"appId\":\"" + YOUTUBE_APP_ID + "\",\"requestId\":1}");
             long deadline = System.currentTimeMillis() + 15000;
-            boolean requestSent = false;
+            long nextStatusRequest = 0;
             while (System.currentTimeMillis() < deadline) {
+                if (System.currentTimeMillis() >= nextStatusRequest) {
+                    send(out, RECEIVER, YOUTUBE_MDX,
+                            "{\\"type\\":\\"getMdxSessionStatus\\",\\"requestId\\":2}");
+                    nextStatusRequest = System.currentTimeMillis() + 2000;
+                }
                 JSONObject message;
                 try { message = readMessage(in); }
                 catch (java.net.SocketTimeoutException timeout) { continue; }
@@ -191,10 +197,18 @@ final class CastV2Client {
         try (OutputStream out = connection.getOutputStream()) { out.write(data); }
         int status = connection.getResponseCode();
         InputStream input = status >= 200 && status < 400 ? connection.getInputStream() : connection.getErrorStream();
-        String response = input == null ? "" : new String(input.readAllBytes(), StandardCharsets.UTF_8);
+        String response = input == null ? "" : readText(input);
         connection.disconnect();
         if (status < 200 || status >= 300) throw new IllegalStateException("YouTube Lounge HTTP " + status + ": " + response);
         return response;
+    }
+
+    private static String readText(InputStream input) throws Exception {
+        ByteArrayOutputStream output = new ByteArrayOutputStream();
+        byte[] buffer = new byte[4096];
+        int count;
+        while ((count = input.read(buffer)) != -1) output.write(buffer, 0, count);
+        return new String(output.toByteArray(), StandardCharsets.UTF_8);
     }
 
     private static String findSessionValue(String response, String key) {
