@@ -140,11 +140,6 @@ final class CastV2Client {
                     JSONObject p = new JSONObject(payload);
                     if ("PING".equals(p.optString("type"))) send(out, RECEIVER, HEARTBEAT, "{\"type\":\"PONG\"}");
                 }
-                if (!requestSent) {
-                    send(out, RECEIVER, YOUTUBE_MDX,
-                            "{\"type\":\"getMdxSessionStatus\",\"requestId\":2}");
-                    requestSent = true;
-                }
                 if (YOUTUBE_MDX.equals(namespace)) {
                     JSONObject p = new JSONObject(payload);
                     if ("mdxSessionStatus".equals(p.optString("type"))) {
