@@ -11,6 +11,7 @@ import app.morphe.patcher.extensions.InstructionExtensions.getInstruction
 import app.morphe.patcher.patch.bytecodePatch
 import app.morphe.patches.youtube.misc.extension.sharedExtensionPatch
 import app.morphe.patches.youtube.shared.ToolBarButtonFingerprint
+import app.morphe.patches.youtube.shared.startVideoInformerPatch
 import app.morphe.util.addInstructionsAtControlFlowLabel
 import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
 
@@ -27,7 +28,7 @@ val secondaryCastV2Patch = bytecodePatch(
     // This patch has no explicit compatibility metadata, so it must not default to enabled.
     default = false,
 ) {
-    dependsOn(sharedExtensionPatch)
+    dependsOn(sharedExtensionPatch, startVideoInformerPatch)
 
     execute {
         ToolBarButtonFingerprint.let {

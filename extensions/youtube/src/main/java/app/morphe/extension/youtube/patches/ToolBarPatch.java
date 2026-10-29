@@ -18,6 +18,7 @@ import android.os.Handler;
 import android.os.Looper;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewConfiguration;
 import android.widget.ImageView;
 import android.widget.ArrayAdapter;
 import android.widget.Toast;
@@ -67,22 +68,59 @@ public class ToolBarPatch {
                 || parentDescription.contains("CHROMECAST");
         if (!isCast) return;
 
-        // Keep the native click untouched when the option is disabled. When enabled,
-        // consume the tap before YouTube's native Cast handler receives it.
-        // Attach to the actual icon view, not its parent container. In some YouTube
-        // layouts the parent does not receive the complete touch sequence.
+        // Intercept only a real long-press. A short tap is explicitly forwarded to
+        // performClick() so YouTube's native Cast handler continues to work.
+        final boolean[] longPressTriggered = {false};
+        final boolean[] gestureCancelled = {false};
+        final float[] downX = {0f};
+        final float[] downY = {0f};
+        final Runnable[] longPressAction = {null};
+
         imageView.setOnTouchListener((view, event) -> {
             if (!app.morphe.extension.youtube.settings.Settings.SECONDARY_CAST_V2_ENABLED.get()) {
                 return false;
             }
-            if (event.getActionMasked() == MotionEvent.ACTION_UP) {
-                showSecondaryCastPicker(view.getContext());
-                // Do not forward this tap to YouTube's native Cast click handler.
-                return true;
+
+            switch (event.getActionMasked()) {
+                case MotionEvent.ACTION_DOWN: {
+                    downX[0] = event.getX();
+                    downY[0] = event.getY();
+                    longPressTriggered[0] = false;
+                    gestureCancelled[0] = false;
+                    Runnable action = () -> {
+                        if (!gestureCancelled[0]) {
+                            longPressTriggered[0] = true;
+                            showSecondaryCastPicker(view.getContext());
+                        }
+                    };
+                    longPressAction[0] = action;
+                    MAIN.postDelayed(action, ViewConfiguration.getLongPressTimeout());
+                    return true;
+                }
+                case MotionEvent.ACTION_MOVE: {
+                    float slop = ViewConfiguration.get(view.getContext()).getScaledTouchSlop();
+                    if (Math.abs(event.getX() - downX[0]) > slop
+                            || Math.abs(event.getY() - downY[0]) > slop) {
+                        gestureCancelled[0] = true;
+                        if (longPressAction[0] != null) MAIN.removeCallbacks(longPressAction[0]);
+                    }
+                    return true;
+                }
+                case MotionEvent.ACTION_UP: {
+                    if (longPressAction[0] != null) MAIN.removeCallbacks(longPressAction[0]);
+                    if (!longPressTriggered[0] && !gestureCancelled[0]) {
+                        view.performClick();
+                    }
+                    return true;
+                }
+                case MotionEvent.ACTION_CANCEL: {
+                    gestureCancelled[0] = true;
+                    if (longPressAction[0] != null) MAIN.removeCallbacks(longPressAction[0]);
+                    return true;
+                }
+                default:
+                    return true;
             }
-            return event.getActionMasked() == MotionEvent.ACTION_DOWN
-                    || event.getActionMasked() == MotionEvent.ACTION_MOVE
-                    || event.getActionMasked() == MotionEvent.ACTION_CANCEL;
         });
         imageView.setForeground(new CastV2BadgeDrawable());
         imageView.setContentDescription(
