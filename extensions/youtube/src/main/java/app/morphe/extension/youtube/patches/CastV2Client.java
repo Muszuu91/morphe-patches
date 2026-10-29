@@ -106,7 +106,7 @@ final class CastV2Client {
             while (System.currentTimeMillis() < deadline) {
                 if (appSessionId != null && System.currentTimeMillis() >= nextStatusRequest) {
                     send(out, appSessionId, YOUTUBE_MDX,
-                            "{\\"type\\":\\"getMdxSessionStatus\\",\\"requestId\\":2}");
+                            "{\"type\":\"getMdxSessionStatus\",\"requestId\":2}");
                     nextStatusRequest = System.currentTimeMillis() + 2000;
                 }
                 JSONObject message;
