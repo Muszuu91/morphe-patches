@@ -75,7 +75,7 @@ public class ToolBarPatch {
             }
             if (event.getActionMasked() == MotionEvent.ACTION_UP) {
                 showSecondaryCastPicker(view.getContext());
-                view.performClick();
+                // Do not forward this tap to YouTube's native Cast click handler.
                 return true;
             }
             return event.getActionMasked() == MotionEvent.ACTION_DOWN
