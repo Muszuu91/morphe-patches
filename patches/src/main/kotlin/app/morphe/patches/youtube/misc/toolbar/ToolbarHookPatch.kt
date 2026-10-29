@@ -14,6 +14,8 @@ import app.morphe.patches.youtube.misc.extension.sharedExtensionPatch
 import app.morphe.patches.youtube.shared.ToolBarButtonFingerprint
 import java.lang.ref.WeakReference
 
+internal const val EXTENSION_CLASS = "Lapp/morphe/extension/youtube/patches/ToolBarPatch;"
+
 private lateinit var toolbarMethod: WeakReference<MutableMethod>
 
 /**
