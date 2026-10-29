@@ -7,6 +7,7 @@
 
 package app.morphe.patches.youtube.misc.toolbar
 
+import app.morphe.patcher.extensions.InstructionExtensions.addInstructions
 import app.morphe.patcher.patch.bytecodePatch
 import app.morphe.patcher.util.proxy.mutableTypes.MutableMethod
 import app.morphe.patches.youtube.shared.ToolBarButtonFingerprint
@@ -24,10 +25,8 @@ val toolBarHookPatch = bytecodePatch(
     description = "toolBarHookPatch"
 ) {
     execute {
-        ToolBarButtonFingerprint.let {
-            it.clearMatch()
-            toolbarMethod = WeakReference(it.method)
-        }
+        ToolBarButtonFingerprint.clearMatch()
+        toolbarMethod = WeakReference(ToolBarPatchFingerprint.method)
     }
 }
 
