@@ -18,18 +18,14 @@ private const val SECONDARY_CAST_EXTENSION =
     "Lapp/morphe/extension/youtube/patches/ToolBarPatch;"
 
 /**
- * Adds the optional long-press Cast V2 picker without enabling it as a side effect
- * of unrelated patches that use the shared toolbar hook.
+ * Adds the optional long-press Cast V2 picker as an independently selectable patch.
  */
 @Suppress("unused")
 val secondaryCastV2Patch = bytecodePatch(
     name = "Secondary Cast V2",
     description = "Adds a separate Cast V2 device picker on long-press of YouTube's Cast button.",
 ) {
-    dependsOn(
-        sharedExtensionPatch,
-        toolBarHookPatch,
-    )
+    dependsOn(sharedExtensionPatch)
 
     execute {
         ToolBarButtonFingerprint.let {
