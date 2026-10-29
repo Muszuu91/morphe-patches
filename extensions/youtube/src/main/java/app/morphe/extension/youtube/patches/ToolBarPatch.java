@@ -81,7 +81,6 @@ public class ToolBarPatch {
             }
         });
 
-        castButton.setContentDescription("Cast V2");
     }
 
     private static void showSecondaryCastPicker(Context context) {
