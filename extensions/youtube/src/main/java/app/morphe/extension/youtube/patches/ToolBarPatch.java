@@ -11,7 +11,8 @@ import android.net.nsd.NsdServiceInfo;
 import android.os.Handler;
 import android.os.Looper;
 import android.view.View;
-import android.widget.ImageView;\nimport android.widget.ArrayAdapter;
+import android.widget.ImageView;
+import android.widget.ArrayAdapter;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
@@ -82,7 +83,8 @@ public class ToolBarPatch {
         private final NsdManager nsd;
         private final List<NsdServiceInfo> devices = new ArrayList<>();
         private boolean stopped;
-        private AlertDialog dialog;\n        private ArrayAdapter<String> adapter;
+        private AlertDialog dialog;
+        private ArrayAdapter<String> adapter;
 
         DevicePicker(Context context, NsdManager nsd) {
             this.context = context;
@@ -153,7 +155,7 @@ public class ToolBarPatch {
         }
 
         @Override public void onServiceLost(NsdServiceInfo service) {
-            devices.removeIf(d -> d.getServiceName().equals(service.getServiceName()));
+            devices.removeIf(d -> java.util.Objects.equals(d.getServiceName(), service.getServiceName()));
             MAIN.post(this::refreshDialog);
         }
         @Override public void onDiscoveryStopped(String type) { }
