@@ -74,9 +74,15 @@ final class CastV2Client {
 
                     send(out, RECEIVER, CONNECTION, "{\"type\":\"CONNECT\",\"origin\":{},\"userAgent\":\"Morphe secondary Cast V2\"}");
                     send(out, RECEIVER, CONNECTION, "{\"type\":\"LAUNCH\",\"appId\":\"" + YOUTUBE_APP_ID + "\",\"requestId\":1}");
-                    boolean launched = false;
+                    boolean statusReceived = false;
+                    boolean statusRequestSent = false;
                     long deadline = System.currentTimeMillis() + 9000;
                     while (System.currentTimeMillis() < deadline) {
+                        if (!statusRequestSent) {
+                            send(out, RECEIVER, YOUTUBE_MDX,
+                                    "{\\"type\\":\\"getMdxSessionStatus\\",\\"requestId\\":2}");
+                            statusRequestSent = true;
+                        }
                         JSONObject message = readMessage(in);
                         if (message == null) continue;
                         String ns = message.optString("namespace");
@@ -84,29 +90,26 @@ final class CastV2Client {
                         if (CONNECTION.equals(ns)) {
                             JSONObject p = new JSONObject(payload);
                             if ("CLOSE".equals(p.optString("type"))) break;
+                            if ("LAUNCH_ERROR".equals(p.optString("type"))) {
+                                throw new IllegalStateException("Odbiornik YouTube odrzucił uruchomienie");
+                            }
                         }
                         if (HEARTBEAT.equals(ns)) {
                             JSONObject p = new JSONObject(payload);
-                            if ("PING".equals(p.optString("type"))) send(out, RECEIVER, HEARTBEAT, "{\"type\":\"PONG\"}");
-                        }
-                        if (CONNECTION.equals(ns) && payload.contains("LAUNCH_ERROR")) {
-                            throw new IllegalStateException("Odbiornik YouTube odrzucił uruchomienie");
+                            if ("PING".equals(p.optString("type"))) {
+                                send(out, RECEIVER, HEARTBEAT, "{\\"type\\":\\"PONG\\"}");
+                            }
                         }
                         if (YOUTUBE_MDX.equals(ns)) {
                             JSONObject p = new JSONObject(payload);
                             if ("mdxSessionStatus".equals(p.optString("type"))) {
-                                launched = true;
+                                statusReceived = true;
                                 break;
                             }
                         }
-                        // After app launch, ask the YouTube receiver for its MDX screen/session.
-                        if (!launched && System.currentTimeMillis() + 1500 < deadline) {
-                            send(out, RECEIVER, YOUTUBE_MDX, "{\"type\":\"getMdxSessionStatus\",\"requestId\":2}");
-                            launched = true;
-                        }
                     }
-                    if (launched) {
-                        result = "Połączono z odbiornikiem YouTube. Transport Cast V2 działa; przekazanie filmu wymaga jeszcze autoryzacji Lounge.";
+                    if (statusReceived) {
+                        result = "Odbiornik YouTube odpowiedział na MDX. Transport Cast V2 działa; przekazanie filmu wymaga jeszcze autoryzacji Lounge.";
                         ready = false;
                     } else {
                         result = "Urządzenie przyjęło połączenie, ale nie zwróciło sesji YouTube MDX.";
