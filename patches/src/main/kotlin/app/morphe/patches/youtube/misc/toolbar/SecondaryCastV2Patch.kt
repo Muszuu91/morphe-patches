@@ -10,6 +10,7 @@ package app.morphe.patches.youtube.misc.toolbar
 import app.morphe.patcher.extensions.InstructionExtensions.getInstruction
 import app.morphe.patcher.patch.bytecodePatch
 import app.morphe.patches.youtube.misc.extension.sharedExtensionPatch
+import app.morphe.patches.youtube.misc.settings.settingsPatch
 import app.morphe.patches.youtube.shared.ToolBarButtonFingerprint
 import app.morphe.util.addInstructionsAtControlFlowLabel
 import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
@@ -25,7 +26,8 @@ val secondaryCastV2Patch = bytecodePatch(
     name = "Secondary Cast V2",
     description = "Adds a separate Cast V2 device picker on long-press of YouTube's Cast button.",
 ) {
-    dependsOn(sharedExtensionPatch)
+    // This dependency injects the Morphe settings screen and registers the Cast V2 switch.
+    dependsOn(sharedExtensionPatch, settingsPatch)
 
     execute {
         ToolBarButtonFingerprint.let {
