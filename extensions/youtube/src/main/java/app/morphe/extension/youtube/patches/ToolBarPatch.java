@@ -11,7 +11,7 @@ import android.net.nsd.NsdServiceInfo;
 import android.os.Handler;
 import android.os.Looper;
 import android.view.View;
-import android.widget.ImageView;
+import android.widget.ImageView;\nimport android.widget.ArrayAdapter;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
@@ -82,7 +82,7 @@ public class ToolBarPatch {
         private final NsdManager nsd;
         private final List<NsdServiceInfo> devices = new ArrayList<>();
         private boolean stopped;
-        private AlertDialog dialog;
+        private AlertDialog dialog;\n        private ArrayAdapter<String> adapter;
 
         DevicePicker(Context context, NsdManager nsd) {
             this.context = context;
@@ -90,9 +90,23 @@ public class ToolBarPatch {
         }
 
         void start() {
+            adapter = new ArrayAdapter<>(context, android.R.layout.select_dialog_item);
             AlertDialog.Builder builder = new AlertDialog.Builder(context)
                     .setTitle("Dodatkowy Cast V2")
                     .setMessage("Wyszukiwanie urządzeń Chromecast / Google Cast…")
+                    .setAdapter(adapter, (d, which) -> {
+                        if (which < 0 || which >= devices.size()) return;
+                        NsdServiceInfo selected = devices.get(which);
+                        stop();
+                        toast(context, "Łączenie z " + selected.getServiceName() + "…");
+                        CastV2Client.connect(selected, (message, ready) -> {
+                            new AlertDialog.Builder(context)
+                                    .setTitle("Dodatkowy Cast V2")
+                                    .setMessage(message)
+                                    .setPositiveButton("OK", null)
+                                    .show();
+                        });
+                    })
                     .setNegativeButton("Zamknij", (d, w) -> stop());
             dialog = builder.create();
             dialog.setOnDismissListener(d -> stop());
@@ -128,26 +142,14 @@ public class ToolBarPatch {
         private void refreshDialog() {
             if (stopped || dialog == null || !dialog.isShowing()) return;
             if (devices.isEmpty()) return;
-            CharSequence[] labels = new CharSequence[devices.size()];
-            for (int i = 0; i < devices.size(); i++) {
-                NsdServiceInfo device = devices.get(i);
+            adapter.clear();
+            for (NsdServiceInfo device : devices) {
                 String name = device.getServiceName();
-                labels[i] = (name == null || name.isEmpty() ? "Google Cast" : name)
-                        + "  (" + device.getHost().getHostAddress() + ")";
+                adapter.add((name == null || name.isEmpty() ? "Google Cast" : name)
+                        + "  (" + device.getHost().getHostAddress() + ")");
             }
+            adapter.notifyDataSetChanged();
             dialog.setMessage("Wybierz urządzenie. Ta sesja jest niezależna od natywnego Cast.");
-            dialog.setItems(labels, (d, which) -> {
-                NsdServiceInfo selected = devices.get(which);
-                stop();
-                toast(context, "Łączenie z " + selected.getServiceName() + "…");
-                CastV2Client.connect(selected, (message, ready) -> {
-                    new AlertDialog.Builder(context)
-                            .setTitle("Dodatkowy Cast V2")
-                            .setMessage(message)
-                            .setPositiveButton("OK", null)
-                            .show();
-                });
-            });
         }
 
         @Override public void onServiceLost(NsdServiceInfo service) {
