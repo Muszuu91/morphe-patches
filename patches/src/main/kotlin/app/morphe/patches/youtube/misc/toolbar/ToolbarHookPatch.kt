@@ -10,7 +10,7 @@ package app.morphe.patches.youtube.misc.toolbar
 import app.morphe.patcher.extensions.InstructionExtensions.addInstructions
 import app.morphe.patcher.patch.bytecodePatch
 import app.morphe.patcher.util.proxy.mutableTypes.MutableMethod
-import app.morphe.patches.youtube.shared.ToolBarButtonFingerprint
+import app.morphe.patches.youtube.misc.extension.sharedExtensionPatch
 import java.lang.ref.WeakReference
 
 internal const val EXTENSION_CLASS = "Lapp/morphe/extension/youtube/patches/ToolBarPatch;"
@@ -18,16 +18,16 @@ internal const val EXTENSION_CLASS = "Lapp/morphe/extension/youtube/patches/Tool
 private lateinit var toolbarMethod: WeakReference<MutableMethod>
 
 /**
- * Shared infrastructure used by existing toolbar patches.
- *
- * The optional secondary Cast V2 feature is deliberately injected by
- * secondaryCastV2Patch instead of this shared hook, so it is independently selectable.
+ * Shared infrastructure for other toolbar patches.
+ * Secondary Cast V2 has its own independently selectable patch.
  */
 val toolBarHookPatch = bytecodePatch(
     description = "toolBarHookPatch"
 ) {
+    dependsOn(sharedExtensionPatch)
+
     execute {
-        ToolBarButtonFingerprint.clearMatch()
+        ToolBarPatchFingerprint.clearMatch()
         toolbarMethod = WeakReference(ToolBarPatchFingerprint.method)
     }
 }
