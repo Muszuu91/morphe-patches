@@ -8,52 +8,26 @@
 package app.morphe.patches.youtube.misc.toolbar
 
 import app.morphe.patcher.extensions.InstructionExtensions.addInstructions
-import app.morphe.patcher.extensions.InstructionExtensions.getInstruction
 import app.morphe.patcher.patch.bytecodePatch
 import app.morphe.patcher.util.proxy.mutableTypes.MutableMethod
 import app.morphe.patches.youtube.misc.extension.sharedExtensionPatch
-import app.morphe.patches.youtube.shared.ToolBarButtonFingerprint
-import app.morphe.util.addInstructionsAtControlFlowLabel
-import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
 import java.lang.ref.WeakReference
 
 internal const val EXTENSION_CLASS = "Lapp/morphe/extension/youtube/patches/ToolBarPatch;"
 
-private lateinit var toolbarMethod : WeakReference<MutableMethod>
+private lateinit var toolbarMethod: WeakReference<MutableMethod>
 
+/**
+ * Shared infrastructure for other toolbar patches.
+ * Secondary Cast V2 has its own independently selectable patch.
+ */
 val toolBarHookPatch = bytecodePatch(
     description = "toolBarHookPatch"
 ) {
-    dependsOn(
-        sharedExtensionPatch,
-    )
+    dependsOn(sharedExtensionPatch)
 
     execute {
-        ToolBarButtonFingerprint.let {
-            it.clearMatch()
-            it.method.apply {
-                val enumIndex = it.instructionMatches[3].index
-                val enumRegister = getInstruction<OneRegisterInstruction>(enumIndex).registerA
-
-                val imageViewIndex = it.instructionMatches[6].index
-                val imageViewRegister = getInstruction<OneRegisterInstruction>(imageViewIndex).registerA
-
-                // Capture each value at the instruction where its type is known. YouTube reuses
-                // the enum register before the ImageView load, and free locals can be live on
-                // another verifier path in newer builds, so do not carry either through a temp.
-                addInstructionsAtControlFlowLabel(
-                    imageViewIndex + 1,
-                    """
-                        invoke-static { v$imageViewRegister }, $EXTENSION_CLASS->setToolbarImageView(Landroid/widget/ImageView;)V
-                    """
-                )
-                addInstructionsAtControlFlowLabel(
-                    enumIndex + 1,
-                    "invoke-static { v$enumRegister }, $EXTENSION_CLASS->setToolbarIconEnum(Ljava/lang/Enum;)V"
-                )
-            }
-        }
-
+        ToolBarPatchFingerprint.clearMatch()
         toolbarMethod = WeakReference(ToolBarPatchFingerprint.method)
     }
 }
