@@ -25,6 +25,7 @@ import app.morphe.patches.shared.CurrentAudioVideoFormatToStringFingerprint
 import com.android.tools.smali.dexlib2.AccessFlags
 import com.android.tools.smali.dexlib2.Opcode
 import com.android.tools.smali.dexlib2.iface.reference.FieldReference
+import com.android.tools.smali.dexlib2.iface.reference.MethodReference
 
 internal const val FIXED_RESOLUTION_STRING = ", initialPlaybackVideoQualityFixedResolution="
 
@@ -209,6 +210,87 @@ internal object AsyncMediaFetchControllerSetVideoFormatsFingerprint : Fingerprin
     )
 )
 
+internal const val BUFFER_MANAGER_CLASS =
+    "Lcom/google/android/libraries/youtube/media/player/exo2/platypus/mediapush/BufferManagerImpl;"
+
+/**
+ * The method of the player that clears the buffered media of a track, and buffers it again
+ * from the time the video started or was last seeked to.
+ */
+internal object PlaybackControllerClearBufferFingerprint : Fingerprint(
+    definingClass = "Lcom/google/android/libraries/youtube/media/player/exo2/platypus/PlaybackControllerWrapper;",
+    returnType = "V",
+    filters = listOf(
+        // Stops the media requests.
+        methodCall(definingClass = "this", returnType = "V", parameters = listOf()),
+        fieldAccess(
+            opcode = Opcode.IGET_OBJECT,
+            definingClass = "this",
+            type = BUFFER_MANAGER_CLASS
+        ),
+        string("setStartTimeUs with disposed BufferManager")
+    )
+)
+
+/**
+ * The method of the buffer manager that clears the buffered media of a track
+ * after the segment that contains a time.
+ */
+internal object BufferManagerDiscardBufferAfterSegmentFingerprint : Fingerprint(
+    definingClass = BUFFER_MANAGER_CLASS,
+    returnType = "V",
+    parameters = listOf("L", "J"),
+    filters = listOf(
+        string("discardBufferAfterCurrentSegment with disposed BufferManager")
+    )
+)
+
+internal const val SAMPLE_HOLDER_CLASS =
+    "Lcom/google/android/libraries/youtube/media/player/exo2/platypus/mediapush/SampleHolder;"
+
+/**
+ * The method of the buffer manager that returns the buffered media of a track.
+ */
+internal object BufferManagerGetMediaSegmentHolderFingerprint : Fingerprint(
+    definingClass = BUFFER_MANAGER_CLASS,
+    accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.FINAL),
+    returnType = "Lcom/google/android/libraries/youtube/media/player/exo2/platypus/mediapush/MediaSegmentHolder;",
+    parameters = listOf("L")
+)
+
+/**
+ * 21.17 - 21.42
+ *
+ * The method of the buffered media of an audio or video track that clears
+ * the media before the segment that contains a time.
+ */
+internal object SampleHolderDiscardBufferBeforeSegmentLegacyFingerprint : Fingerprint(
+    definingClass = SAMPLE_HOLDER_CLASS,
+    returnType = "V",
+    parameters = listOf("J"),
+    filters = listOf(
+        methodCall(smali = "Ljava/lang/Math;->min(JJ)J"),
+        methodCall(smali = "Ljava/util/List;->subList(II)Ljava/util/List;"),
+        methodCall(smali = "Ljava/util/List;->clear()V")
+    )
+)
+
+/**
+ * 21.43+
+ *
+ * Same as [SampleHolderDiscardBufferBeforeSegmentLegacyFingerprint],
+ * with the parameters: time, playback time and size of the media kept before the playback time.
+ */
+internal object SampleHolderDiscardBufferBeforeSegmentFingerprint : Fingerprint(
+    definingClass = SAMPLE_HOLDER_CLASS,
+    returnType = "V",
+    parameters = listOf("J", "J", "J"),
+    filters = listOf(
+        methodCall(definingClass = "this", returnType = "Z", parameters = listOf("J", "J", "J")),
+        methodCall(definingClass = "this", returnType = "V", parameters = listOf("J", "J", "J"))
+    )
+)
+
 internal fun getCurrentVideoFormatConstructorFingerprint(
     videoQualityArray: String
 ) = object : Fingerprint(
@@ -307,7 +389,7 @@ internal fun getSetVideoQualityResolutionFingerprint(videoQualityMenuType: Strin
  * The item click listener of the Shorts quality menu, which sets the selected quality by its resolution.
  * The listener is either the menu of [VideoQualityItemOnClickFingerprint] or a class it calls.
  */
-internal fun getVideoQualityItemSetResolutionFingerprint(setResolutionMethod: String) = Fingerprint(
+internal fun getVideoQualityItemSetResolutionFingerprint(setResolutionMethod: MethodReference) = Fingerprint(
     name = "onItemClick",
     returnType = "V",
     parameters = listOf(
@@ -317,7 +399,7 @@ internal fun getVideoQualityItemSetResolutionFingerprint(setResolutionMethod: St
         "J"
     ),
     filters = listOf(
-        methodCall(smali = setResolutionMethod)
+        methodCall(reference = setResolutionMethod)
     )
 )
 

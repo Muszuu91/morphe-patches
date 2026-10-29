@@ -10,13 +10,18 @@
 
 package app.morphe.patches.youtube.video.quality
 
-import app.morphe.patcher.extensions.InstructionExtensions.addInstruction
 import app.morphe.patcher.extensions.InstructionExtensions.addInstructions
 import app.morphe.patcher.extensions.InstructionExtensions.addInstructionsWithLabels
 import app.morphe.patcher.extensions.InstructionExtensions.getInstruction
+import app.morphe.patcher.fieldAccess
 import app.morphe.patcher.patch.bytecodePatch
+import app.morphe.patcher.util.findFreeRegister
+import app.morphe.patcher.util.getFreeRegisterProvider
+import app.morphe.patcher.util.getReference
+import app.morphe.patcher.util.matchSingle
 import app.morphe.patcher.util.proxy.mutableTypes.MutableMethod.Companion.toMutable
 import app.morphe.patcher.util.smali.ExternalLabel
+import app.morphe.patches.shared.FormatStreamModelToStringFingerprint
 import app.morphe.patches.shared.misc.fix.proto.fixProtoLibraryPatch
 import app.morphe.patches.shared.misc.fix.proto.parseByteArrayMethodRef
 import app.morphe.patches.shared.misc.settings.preference.ListPreference
@@ -24,22 +29,24 @@ import app.morphe.patches.shared.misc.settings.preference.SwitchPreference
 import app.morphe.patches.youtube.misc.extension.sharedExtensionPatch
 import app.morphe.patches.youtube.misc.playertype.playerTypeHookPatch
 import app.morphe.patches.youtube.misc.playservice.is_21_17_or_greater
+import app.morphe.patches.youtube.misc.playservice.is_21_43_or_greater
 import app.morphe.patches.youtube.misc.playservice.versionCheckPatch
 import app.morphe.patches.youtube.misc.settings.settingsPatch
 import app.morphe.patches.youtube.shared.VideoQualityChangedFingerprint
 import app.morphe.patches.youtube.shared.hookVideoIntent
 import app.morphe.patches.youtube.shared.openVideoIntentPatch
+import app.morphe.patches.youtube.video.format.hookAdaptiveFormat
+import app.morphe.patches.youtube.video.format.videoFormatPatch
 import app.morphe.patches.youtube.video.information.EXTENSION_VIDEO_QUALITY_INTERFACE
 import app.morphe.patches.youtube.video.information.EXTENSION_VIDEO_QUALITY_MENU_INTERFACE
 import app.morphe.patches.youtube.video.information.SetVideoQualityFingerprint
+import app.morphe.patches.youtube.video.information.VideoQualityFingerprint
 import app.morphe.patches.youtube.video.information.videoInformationPatch
 import app.morphe.util.addInstructionsAtControlFlowLabel
 import app.morphe.util.findFieldFromToString
-import app.morphe.patcher.util.findFreeRegister
 import app.morphe.util.findInstructionIndicesReversedOrThrow
-import app.morphe.patcher.util.getFreeRegisterProvider
-import app.morphe.patcher.util.getReference
-import app.morphe.patcher.util.matchSingle
+import app.morphe.util.findMethodFromToString
+import app.morphe.util.indexOfFirstInstructionOrThrow
 import app.morphe.util.indexOfFirstInstructionReversedOrThrow
 import app.morphe.util.insertLiteralOverride
 import com.android.tools.smali.dexlib2.AccessFlags
@@ -47,6 +54,7 @@ import com.android.tools.smali.dexlib2.Opcode
 import com.android.tools.smali.dexlib2.builder.MutableMethodImplementation
 import com.android.tools.smali.dexlib2.iface.instruction.FiveRegisterInstruction
 import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
+import com.android.tools.smali.dexlib2.iface.instruction.ReferenceInstruction
 import com.android.tools.smali.dexlib2.iface.instruction.TwoRegisterInstruction
 import com.android.tools.smali.dexlib2.iface.reference.FieldReference
 import com.android.tools.smali.dexlib2.immutable.ImmutableMethod
@@ -64,6 +72,7 @@ val rememberVideoQualityPatch = bytecodePatch {
         versionCheckPatch,
         openVideoIntentPatch,
         fixProtoLibraryPatch,
+        videoFormatPatch,
     )
 
     execute {
@@ -277,9 +286,13 @@ val rememberVideoQualityPatch = bytecodePatch {
 
         // Inject a call to remember the selected quality for Shorts.
         VideoQualityItemOnClickFingerprint.method.apply {
-            addInstruction(
+            // A quality the player can play is set instead of a quality it cannot play.
+            addInstructions(
                 0,
-                "invoke-static { p3 }, $EXTENSION_CLASS->userChangedShortsQuality(I)V"
+                """
+                    invoke-static { p3 }, $EXTENSION_CLASS->userChangedShortsQuality(I)I
+                    move-result p3
+                """
             )
 
             findInstructionIndicesReversedOrThrow(Opcode.RETURN_VOID).forEach { index ->
@@ -297,10 +310,11 @@ val rememberVideoQualityPatch = bytecodePatch {
             SetVideoQualityFingerprint.instructionMatches[1].getFieldAccessed().type
         ).matchSingle().method
 
-        getVideoQualityItemSetResolutionFingerprint(setResolutionMethod.toString()).matchAll().forEach {
+        getVideoQualityItemSetResolutionFingerprint(setResolutionMethod).matchAll().forEach {
             it.method.apply {
-                val index = it.instructionMatches.first().index
-                val setResolutionInstruction = getInstruction<FiveRegisterInstruction>(index)
+                val setResolutionMatch = it.instructionMatches.first()
+                val index = setResolutionMatch.index
+                val setResolutionInstruction = setResolutionMatch.getInstruction<FiveRegisterInstruction>()
                 val menuRegister = setResolutionInstruction.registerC
                 val qualitySetRegister = findFreeRegister(
                     index,
@@ -322,19 +336,49 @@ val rememberVideoQualityPatch = bytecodePatch {
 
         // Inject a call to remember the user selected quality for regular videos.
         // The quality object is used, as its name is needed to get the fixed resolution.
+        // A quality the player can play is set instead of a quality it cannot play.
         VideoQualityChangedFingerprint.let {
             it.method.apply {
-                val qualityRegister = getInstruction<OneRegisterInstruction>(
-                    it.instructionMatches[3].index
-                ).registerA
+                val qualityMatch = it.instructionMatches[3]
+                val qualityRegister = qualityMatch.getInstruction<OneRegisterInstruction>().registerA
+                val qualityType = qualityMatch.getInstruction<ReferenceInstruction>().reference
                 val constructorIndex = it.instructionMatches.last().index
 
-                addInstruction(
+                addInstructions(
                     constructorIndex + 1,
-                    "invoke-static/range { v$qualityRegister .. v$qualityRegister }, " +
-                            "$EXTENSION_CLASS->userChangedQuality($EXTENSION_VIDEO_QUALITY_INTERFACE)V",
+                    """
+                        invoke-static/range { v$qualityRegister .. v$qualityRegister }, $EXTENSION_CLASS->userChangedQuality($EXTENSION_VIDEO_QUALITY_INTERFACE)$EXTENSION_VIDEO_QUALITY_INTERFACE
+                        move-result-object v$qualityRegister
+                        check-cast v$qualityRegister, $qualityType
+                    """
                 )
             }
+        }
+
+        // The codecs of the video formats and the video format playing,
+        // to know the qualities the player can play.
+        hookAdaptiveFormat("$EXTENSION_CLASS->setVideoFormats")
+
+        val formatIdMethod = FormatStreamModelToStringFingerprint.originalMethod.findMethodFromToString("itag")
+        getCurrentVideoFormatConstructorFingerprint("[${VideoQualityFingerprint.classDef.type}").method.apply {
+            // The first video format field set is the video format playing. The constructor
+            // has no free register, so the register of the video format is used once it is set.
+            val videoFormatIndex = indexOfFirstInstructionOrThrow(
+                fieldAccess(opcode = Opcode.IPUT_OBJECT, type = formatIdMethod.definingClass)
+            )
+            val videoFormatRegister = getInstruction<TwoRegisterInstruction>(videoFormatIndex).registerA
+
+            addInstructionsWithLabels(
+                videoFormatIndex + 1,
+                """
+                    if-eqz v$videoFormatRegister, :no_video_format
+                    invoke-virtual/range { v$videoFormatRegister .. v$videoFormatRegister }, $formatIdMethod
+                    move-result v$videoFormatRegister
+                    invoke-static/range { v$videoFormatRegister .. v$videoFormatRegister }, $EXTENSION_CLASS->setCurrentVideoFormat(I)V
+                    :no_video_format
+                    nop
+                """
+            )
         }
 
         // If this flag is enabled, Shorts restart whenever the quality changes.
@@ -385,6 +429,85 @@ val rememberVideoQualityPatch = bytecodePatch {
                     move-result p2
                 """
             )
+
+            // The player buffers the video again from the time the video started, such as the
+            // start of a Short, so the video plays from there faster until it reaches the audio.
+            // The buffered video is cleared after and before the segment that is playing.
+            val videoTrackTypeField = PlaybackControllerSetVideoFormatsFingerprint.instructionMatches
+                .last().getFieldAccessed()
+            val discardBufferAfterSegmentMethod = BufferManagerDiscardBufferAfterSegmentFingerprint.method
+            val getMediaSegmentHolderMethod = BufferManagerGetMediaSegmentHolderFingerprint.method
+
+            // The video buffered before the segment that is playing is cleared too,
+            // otherwise a Short plays the previous quality from its start when it loops.
+            // The method of the player is not public before 21.26, so a public method calls it.
+            val sampleHolderDiscardBufferMethod = if (is_21_43_or_greater) {
+                SampleHolderDiscardBufferBeforeSegmentFingerprint
+            } else {
+                SampleHolderDiscardBufferBeforeSegmentLegacyFingerprint
+            }.let {
+                val discardBufferBeforeSegmentMethod = ImmutableMethod(
+                    it.classDef.type,
+                    "patch_discardBufferBeforeSegment",
+                    listOf(ImmutableMethodParameter("J", null, null)),
+                    "V",
+                    AccessFlags.PUBLIC.value or AccessFlags.FINAL.value,
+                    null,
+                    null,
+                    MutableMethodImplementation(10),
+                ).toMutable().apply {
+                    addInstructions(
+                        0,
+                        if (is_21_43_or_greater) {
+                            // No media is kept before the playback time.
+                            """
+                                move-object v0, p0
+                                move-wide v1, p1
+                                move-wide v3, p1
+                                const-wide/16 v5, 0x0
+                                invoke-virtual/range { v0 .. v6 }, ${it.method}
+                                return-void
+                            """
+                        } else {
+                            """
+                                invoke-virtual { p0, p1, p2 }, ${it.method}
+                                return-void
+                            """
+                        }
+                    )
+                }
+                it.classDef.methods.add(discardBufferBeforeSegmentMethod)
+
+                discardBufferBeforeSegmentMethod
+            }
+
+            PlaybackControllerClearBufferFingerprint.let {
+                val stopRequestsMethod = it.instructionMatches[0].getMethodCalled()
+                val bufferManagerField = it.instructionMatches[1].getFieldAccessed()
+
+                it.method.addInstructionsWithLabels(
+                    0,
+                    """
+                        sget-object v0, $videoTrackTypeField
+                        if-ne p1, v0, :clear_buffer
+                        invoke-static { }, $EXTENSION_CLASS->getClearVideoBufferTime()J
+                        move-result-wide v0
+                        const-wide/16 v2, 0x0
+                        cmp-long v2, v0, v2
+                        if-ltz v2, :clear_buffer
+                        invoke-virtual { p0 }, $stopRequestsMethod
+                        iget-object v2, p0, $bufferManagerField
+                        invoke-virtual { v2, p1, v0, v1 }, $discardBufferAfterSegmentMethod
+                        invoke-virtual { v2, p1 }, $getMediaSegmentHolderMethod
+                        move-result-object v2
+                        check-cast v2, $SAMPLE_HOLDER_CLASS
+                        invoke-virtual { v2, v0, v1 }, $sampleHolderDiscardBufferMethod
+                        return-void
+                        :clear_buffer
+                        nop
+                    """
+                )
+            }
         }
     }
 }

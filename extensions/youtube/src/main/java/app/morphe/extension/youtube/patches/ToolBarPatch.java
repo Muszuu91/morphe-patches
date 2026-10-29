@@ -17,7 +17,9 @@ import android.net.nsd.NsdManager;
 import android.net.nsd.NsdServiceInfo;
 import android.os.Handler;
 import android.os.Looper;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewConfiguration;
 import android.widget.ImageView;
 import android.widget.ArrayAdapter;
 import android.widget.Toast;
@@ -54,6 +56,8 @@ public class ToolBarPatch {
     }
 
     private static void hookToolBar(String enumString, View parentView, ImageView imageView) {
+        // YouTube versions differ: sometimes the icon enum is not named CAST.
+        // Prefer the enum, but also check the visible accessibility descriptions.
         String enumName = enumString == null ? "" : enumString.toUpperCase(java.util.Locale.ROOT);
         String iconDescription = String.valueOf(imageView.getContentDescription())
                 .toUpperCase(java.util.Locale.ROOT);
