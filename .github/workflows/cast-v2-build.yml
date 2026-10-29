@@ -1,9 +1,9 @@
 name: Cast V2 build artifact
 
 on:
-  push:
+  pull_request:
     branches:
-      - feature/cast-v2-standalone-build
+      - dev
   workflow_dispatch:
 
 permissions:
