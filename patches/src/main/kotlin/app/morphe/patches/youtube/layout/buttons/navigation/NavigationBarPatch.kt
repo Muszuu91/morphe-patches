@@ -859,11 +859,13 @@ val navigationBarPatch = bytecodePatch(
         CastMenuItemInitializeFingerprint.let {
             it.method.apply {
                 val index = it.instructionMatches.last().index
-                val menuItemRegister = getInstruction<FiveRegisterInstruction>(index).registerC
-
+                // This method receives MenuItem as its first parameter (p1).
+                // The matched setShowAsAction invoke receiver is not guaranteed to be
+                // the MenuItem; on YouTube 21.30 it is the owning qfp instance.
+                // Passing that receiver causes a DEX VerifyError at runtime.
                 addInstruction(
                     index,
-                    "invoke-static { v$menuItemRegister }, $EXTENSION_CLASS->hideCastButton(Landroid/view/MenuItem;)V"
+                    "invoke-static { p1 }, $EXTENSION_CLASS->hideCastButton(Landroid/view/MenuItem;)V"
                 )
             }
         }
