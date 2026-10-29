@@ -6,10 +6,17 @@ package app.morphe.extension.youtube.patches;
 
 import android.app.AlertDialog;
 import android.content.Context;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.PixelFormat;
+import android.graphics.RectF;
+import android.graphics.drawable.Drawable;
 import android.net.nsd.NsdManager;
 import android.net.nsd.NsdServiceInfo;
 import android.os.Handler;
 import android.os.Looper;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ArrayAdapter;
@@ -60,21 +67,47 @@ public class ToolBarPatch {
                 || parentDescription.contains("CHROMECAST");
         if (!isCast) return;
 
-        View.OnLongClickListener listener = view -> {
-            showSecondaryCastPicker(view.getContext());
-            return true;
-        };
-
-        // In YouTube the parent menu item often owns the touch/click handling.
-        // Hook both views; neither listener replaces the normal click listener.
-        imageView.setLongClickable(true);
-        imageView.setOnLongClickListener(listener);
-        parentView.setLongClickable(true);
-        parentView.setOnLongClickListener(listener);
-
+        // Keep the native click untouched when the option is disabled. When enabled,
+        // consume the tap before YouTube's native Cast handler receives it.
+        parentView.setOnTouchListener((view, event) -> {
+            if (!app.morphe.extension.youtube.settings.Settings.SECONDARY_CAST_V2_ENABLED.get()) {
+                return false;
+            }
+            if (event.getActionMasked() == MotionEvent.ACTION_UP) {
+                showSecondaryCastPicker(view.getContext());
+                view.performClick();
+                return true;
+            }
+            return event.getActionMasked() == MotionEvent.ACTION_DOWN
+                    || event.getActionMasked() == MotionEvent.ACTION_MOVE
+                    || event.getActionMasked() == MotionEvent.ACTION_CANCEL;
+        });
+        imageView.setForeground(new CastV2BadgeDrawable());
         imageView.setContentDescription(
                 String.valueOf(imageView.getContentDescription()) + ". " +
-                "Przytrzymaj, aby otworzyć dodatkowe Cast V2");
+                "Cast V2 — przełączane w ustawieniach Morphe");
+    }
+
+    /** Small V2 marker drawn over the existing native Cast icon. */
+    private static final class CastV2BadgeDrawable extends Drawable {
+        private final Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
+
+        @Override public void draw(Canvas canvas) {
+            RectF badge = new RectF(getBounds().right - 23f, getBounds().bottom - 15f,
+                    getBounds().right, getBounds().bottom);
+            paint.setColor(Color.rgb(35, 117, 245));
+            canvas.drawRoundRect(badge, 4f, 4f, paint);
+            paint.setColor(Color.WHITE);
+            paint.setTextSize(10f);
+            paint.setFakeBoldText(true);
+            paint.setTextAlign(Paint.Align.CENTER);
+            canvas.drawText("V2", badge.centerX(), badge.centerY() + 3.5f, paint);
+            paint.setFakeBoldText(false);
+        }
+
+        @Override public void setAlpha(int alpha) { }
+        @Override public void setColorFilter(android.graphics.ColorFilter colorFilter) { }
+        @Override public int getOpacity() { return PixelFormat.TRANSLUCENT; }
     }
 
     private static void showSecondaryCastPicker(Context context) {
