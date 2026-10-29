@@ -99,6 +99,7 @@ final class CastV2Client {
             DataOutputStream out = new DataOutputStream(new BufferedOutputStream(socket.getOutputStream()));
             send(out, RECEIVER, CONNECTION, "{\"type\":\"CONNECT\",\"origin\":{},\"userAgent\":\"Morphe secondary Cast V2\"}");
             send(out, RECEIVER, CONNECTION, "{\"type\":\"LAUNCH\",\"appId\":\"" + YOUTUBE_APP_ID + "\",\"requestId\":1}");
+            send(out, RECEIVER, CONNECTION, "{\"type\":\"GET_STATUS\",\"requestId\":3}");
             long deadline = System.currentTimeMillis() + 15000;
             long nextStatusRequest = 0;
             String appSessionId = null;
@@ -165,7 +166,7 @@ final class CastV2Client {
     private static LoungeSession bindLounge(String token) throws Exception {
         String query = "CVER=1&RID=1&VER=8&app=youtube-desktop&device=REMOTE_CONTROL&id=remote"
                 + "&loungeIdToken=" + enc(token) + "&name=" + enc("Morphe secondary Cast");
-        String response = postRaw(LOUNGE + "/bc/bind?" + query, "");
+        String response = postRaw(LOUNGE + "/bc/bind?" + query, "count=0");
         String sid = findSessionValue(response, "c");
         String gsession = findSessionValue(response, "S");
         if (sid.isEmpty() || gsession.isEmpty()) {
