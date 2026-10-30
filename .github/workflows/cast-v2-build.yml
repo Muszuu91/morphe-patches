@@ -27,9 +27,23 @@ jobs:
       - name: Cache Gradle
         uses: burrunan/gradle-cache-action@v3
       - name: Build patch bundle
-        run: ./gradlew :patches:buildAndroid --no-daemon --stacktrace
+        run: |
+          mkdir -p reports
+          set -o pipefail
+          ./gradlew :patches:buildAndroid --no-daemon --stacktrace 2>&1 | tee reports/cast-build.log
       - name: Upload build artifact
+        if: success()
         uses: actions/upload-artifact@v7
         with:
           archive: false
           path: patches/build/libs/*.mpp
+      - name: Upload build diagnostics
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: cast-v2-build-diagnostics-${{ github.run_id }}
+          path: |
+            reports/cast-build.log
+            ~/.gradle/daemon/**/*.out.log
+          if-no-files-found: warn
+          retention-days: 14
