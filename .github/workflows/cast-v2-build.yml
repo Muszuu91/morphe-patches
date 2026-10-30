@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - dev
+      - feature/secondary-cast-v2
   workflow_dispatch:
 
 permissions:
