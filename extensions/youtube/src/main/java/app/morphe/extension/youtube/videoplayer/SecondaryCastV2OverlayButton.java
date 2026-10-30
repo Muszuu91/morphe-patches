@@ -9,11 +9,10 @@ import android.widget.ImageView;
 
 import app.morphe.extension.shared.Logger;
 import app.morphe.extension.youtube.patches.ToolBarPatch;
-import app.morphe.extension.youtube.settings.Settings;
 
 /**
- * Experimental independent Cast V2 entry point in the video overlay.
- * It is visible only while the Secondary Cast V2 setting is enabled.
+ * Independent Cast V2 entry point in the video overlay.
+ * This button is always visible; it does not depend on the experimental setting.
  */
 @SuppressWarnings("unused")
 public final class SecondaryCastV2OverlayButton {
@@ -24,12 +23,14 @@ public final class SecondaryCastV2OverlayButton {
             ImageView button = PlayerOverlayButton.addButton(
                     controlsView,
                     "yt_outline_experimental_chromecast_black_24",
-                    () -> Settings.SECONDARY_CAST_V2_ENABLED.get(),
                     view -> ToolBarPatch.openSecondaryCastPicker(view.getContext()),
                     null
             );
             if (button != null) {
                 button.setContentDescription("Cast V2");
+                button.setVisibility(View.VISIBLE);
+            } else {
+                Logger.printDebug(() -> "Secondary Cast V2 overlay button was not added: source view unavailable");
             }
         } catch (Throwable error) {
             Logger.printException(() -> "Secondary Cast V2 overlay button initialization failed", error);
