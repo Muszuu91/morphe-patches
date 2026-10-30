@@ -121,9 +121,9 @@ val videoFormatPatch = bytecodePatch(
                 val adaptiveFormatsRegister = lastStreamingDataInstruction.registerA
                 val videoIdField = getInstruction<ReferenceInstruction>(videoIdIndex).reference
 
-                // cloneMutable reserves the first added registers for copied parameters.
-                // Scratch registers therefore start after those parameter copies.
-                val scratchStart = originalRegisterCount + originalMethod.numberOfParameterRegisters
+                // cloneMutable copies parameters back into their original register slots.
+                // The newly allocated free registers start at the original register count.
+                val scratchStart = originalRegisterCount
                 val insertIndex = adaptiveFormatsIndex + 1
 
                 // Capture the last source, video ID and adaptive list into a contiguous range.
