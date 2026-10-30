@@ -7,8 +7,6 @@ package app.morphe.extension.youtube.videoplayer;
 import android.view.View;
 import android.widget.ImageView;
 
-import androidx.annotation.Nullable;
-
 import app.morphe.extension.shared.Logger;
 import app.morphe.extension.youtube.patches.ToolBarPatch;
 import app.morphe.extension.youtube.settings.Settings;
