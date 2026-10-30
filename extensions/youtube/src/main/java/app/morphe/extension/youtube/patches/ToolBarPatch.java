@@ -14,8 +14,6 @@ import android.graphics.Rect;
 import android.graphics.RectF;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
-import android.net.nsd.NsdManager;
-import android.net.nsd.NsdServiceInfo;
 import android.os.Handler;
 import android.os.Looper;
 import android.view.MotionEvent;
@@ -28,12 +26,13 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.LinkedHashMap;
+import java.util.Map;
 import java.util.WeakHashMap;
 
 import app.morphe.extension.shared.Logger;
 import app.morphe.extension.youtube.settings.Settings;
+import org.fcast.sender_sdk.DeviceInfo;
 
 /**
  * Entry point for the optional secondary Cast V2 picker.
@@ -298,12 +297,7 @@ public class ToolBarPatch {
 
     private static void showSecondaryCastPicker(Context context) {
         try {
-            NsdManager nsd = (NsdManager) context.getSystemService(Context.NSD_SERVICE);
-            if (nsd == null) {
-                toast(context, "Usługa wykrywania urządzeń Cast jest niedostępna");
-                return;
-            }
-            new DevicePicker(context, nsd).start();
+            new DevicePicker(context.getApplicationContext()).start();
         } catch (Throwable error) {
             Logger.printException(() -> "Secondary Cast picker failed", error);
             toast(context, "Nie udało się uruchomić dodatkowego Cast V2");
@@ -315,94 +309,108 @@ public class ToolBarPatch {
                 Toast.LENGTH_LONG).show());
     }
 
-    private static final class DevicePicker implements NsdManager.DiscoveryListener {
+    /**
+     * Discovery and connection use the FCast sender SDK also used by Grayjay.
+     * No YouTube Lounge or custom mDNS implementation is used here.
+     */
+    private static final class DevicePicker {
         private final Context context;
-        private final NsdManager nsd;
-        private final List<NsdServiceInfo> devices = new ArrayList<>();
+        private final Map<String, DeviceInfo> devices = new LinkedHashMap<>();
         private boolean stopped;
         private AlertDialog dialog;
         private ArrayAdapter<String> adapter;
+        private SecondaryCastDiscovery discovery;
+        private SecondaryCastSession activeSession;
 
-        DevicePicker(Context context, NsdManager nsd) {
+        DevicePicker(Context context) {
             this.context = context;
-            this.nsd = nsd;
         }
 
         void start() {
             adapter = new ArrayAdapter<>(context, android.R.layout.select_dialog_item);
-            AlertDialog.Builder builder = new AlertDialog.Builder(context)
+            dialog = new AlertDialog.Builder(context)
                     .setTitle("Dodatkowy Cast V2")
-                    .setMessage("Wyszukiwanie urządzeń Chromecast / Google Cast…")
-                    .setAdapter(adapter, (d, which) -> {
-                        if (which < 0 || which >= devices.size()) return;
-                        NsdServiceInfo selected = devices.get(which);
-                        stop();
-                        toast(context, "Łączenie z " + selected.getServiceName() + "…");
-                        CastV2Client.connect(selected, (message, ready) -> {
-                            new AlertDialog.Builder(context)
-                                    .setTitle("Dodatkowy Cast V2")
-                                    .setMessage(message)
-                                    .setPositiveButton("OK", null)
-                                    .show();
-                        });
-                    })
-                    .setNegativeButton("Zamknij", (d, w) -> stop());
-            dialog = builder.create();
+                    .setMessage("Wyszukiwanie urządzeń przez FCast sender SDK…")
+                    .setAdapter(adapter, (d, which) -> connectSelected(which))
+                    .setNegativeButton("Zamknij", (d, w) -> stop())
+                    .create();
             dialog.setOnDismissListener(d -> stop());
             dialog.show();
-            try {
-                nsd.discoverServices("_googlecast._tcp.", NsdManager.PROTOCOL_DNS_SD, this);
-            } catch (Throwable error) {
-                stop();
-                toast(context, "Nie można rozpocząć wyszukiwania Cast");
-            }
-        }
 
-        @Override public void onDiscoveryStarted(String type) { }
-
-        @Override public void onServiceFound(NsdServiceInfo service) {
-            if (stopped) return;
-            if (!"_googlecast._tcp.".equals(service.getServiceType())) return;
-            nsd.resolveService(service, new NsdManager.ResolveListener() {
-                @Override public void onResolveFailed(NsdServiceInfo info, int code) {
-                    Logger.printDebug(() -> "Cast resolve failed: " + code);
+            discovery = new SecondaryCastDiscovery(context, new SecondaryCastDiscovery.Callback() {
+                @Override public void onDeviceAvailable(String name, DeviceInfo info) {
+                    MAIN.post(() -> updateDevice(name, info));
                 }
-                @Override public void onServiceResolved(NsdServiceInfo info) {
-                    if (stopped || info.getHost() == null || info.getPort() <= 0) return;
-                    for (NsdServiceInfo existing : devices) {
-                        if (existing.getHost().equals(info.getHost())) return;
-                    }
-                    devices.add(info);
-                    MAIN.post(DevicePicker.this::refreshDialog);
+
+                @Override public void onDeviceChanged(String name, DeviceInfo info) {
+                    MAIN.post(() -> updateDevice(name, info));
+                }
+
+                @Override public void onDeviceRemoved(String name) {
+                    MAIN.post(() -> {
+                        devices.remove(name);
+                        refreshDialog();
+                    });
                 }
             });
         }
 
-        private void refreshDialog() {
-            if (stopped || dialog == null || !dialog.isShowing()) return;
-            if (devices.isEmpty()) return;
-            adapter.clear();
-            for (NsdServiceInfo device : devices) {
-                String name = device.getServiceName();
-                adapter.add((name == null || name.isEmpty() ? "Google Cast" : name)
-                        + "  (" + device.getHost().getHostAddress() + ")");
-            }
-            adapter.notifyDataSetChanged();
-            dialog.setMessage("Wybierz urządzenie. Ta sesja jest niezależna od natywnego Cast.");
+        private void updateDevice(String name, DeviceInfo info) {
+            if (stopped || name == null || info == null) return;
+            devices.put(name, info);
+            Logger.printDebug(() -> "Secondary Cast V2 SDK device: " + name
+                    + ", protocol=" + info.getProtocol());
+            refreshDialog();
         }
 
-        @Override public void onServiceLost(NsdServiceInfo service) {
-            devices.removeIf(d -> java.util.Objects.equals(d.getServiceName(), service.getServiceName()));
-            MAIN.post(this::refreshDialog);
+        private void refreshDialog() {
+            if (stopped || dialog == null || !dialog.isShowing()) return;
+            adapter.clear();
+            for (Map.Entry<String, DeviceInfo> entry : devices.entrySet()) {
+                adapter.add(entry.getKey() + "  (" + entry.getValue().getProtocol() + ")");
+            }
+            adapter.notifyDataSetChanged();
+            dialog.setMessage(devices.isEmpty()
+                    ? "Wyszukiwanie urządzeń przez FCast sender SDK…"
+                    : "Wybierz odbiornik");
         }
-        @Override public void onDiscoveryStopped(String type) { }
-        @Override public void onStartDiscoveryFailed(String type, int code) { stop(); }
-        @Override public void onStopDiscoveryFailed(String type, int code) { stop(); }
+
+        private void connectSelected(int which) {
+            if (which < 0 || which >= devices.size()) return;
+            DeviceInfo selected = new java.util.ArrayList<>(devices.values()).get(which);
+            String name = selected.getName();
+            stopDiscoveryOnly();
+            toast(context, "Łączenie z " + name + "…");
+            try {
+                activeSession = new SecondaryCastSession(selected, new SecondaryCastSession.Listener() {
+                    @Override public void onConnectionStateChanged(String state) {
+                        Logger.printDebug(() -> "Secondary Cast V2 connection state: " + state);
+                        toast(context, "Cast V2 " + name + ": " + state);
+                    }
+
+                    @Override public void onPlaybackError(String message) {
+                        Logger.printDebug(() -> "Secondary Cast V2 receiver error: " + message);
+                        toast(context, "Cast V2: " + message);
+                    }
+                });
+                activeSession.connect();
+            } catch (Throwable error) {
+                Logger.printException(() -> "Secondary Cast V2 connect failed", error);
+                toast(context, "Nie udało się połączyć: " + error.getMessage());
+            }
+        }
+
+        private void stopDiscoveryOnly() {
+            if (discovery != null) {
+                discovery.stop();
+                discovery = null;
+            }
+        }
 
         private void stop() {
             if (stopped) return;
             stopped = true;
-            try { nsd.stopServiceDiscovery(this); } catch (Throwable ignored) { }
+            stopDiscoveryOnly();
         }
     }
 }
