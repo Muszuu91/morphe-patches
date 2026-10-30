@@ -31,20 +31,27 @@ jobs:
         run: |
           mkdir -p reports
           set -o pipefail
-          ./gradlew :patches:buildAndroid --no-daemon --stacktrace 2>&1 | tee reports/cast-build.log
+          ./gradlew :patches:buildAndroid --no-daemon --stacktrace 2>&1 | tee reports/castV2-0.3-build.log
+      - name: Prepare versioned artifact
+        if: success()
+        run: |
+          bundle="$(find patches/build/libs -maxdepth 1 -type f -name '*.mpp' -print -quit)"
+          test -n "$bundle"
+          cp "$bundle" patches/build/libs/castV2-0.3.mpp
       - name: Upload build artifact
         if: success()
         uses: actions/upload-artifact@v7
         with:
+          name: castV2-0.3
           archive: false
-          path: patches/build/libs/*.mpp
+          path: patches/build/libs/castV2-0.3.mpp
       - name: Upload build diagnostics
         if: always()
         uses: actions/upload-artifact@v7
         with:
-          name: cast-v2-build-diagnostics-${{ github.run_id }}
+          name: castV2-0.3-build-diagnostics-${{ github.run_id }}
           path: |
-            reports/cast-build.log
+            reports/castV2-0.3-build.log
             ~/.gradle/daemon/**/*.out.log
           if-no-files-found: warn
           retention-days: 14
