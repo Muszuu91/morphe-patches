@@ -77,6 +77,8 @@ public class ToolBarPatch {
         }
     }
 
+    private static final WeakHashMap<ImageView, View> secondaryToolbarButtons = new WeakHashMap<>();
+
     private static void hookToolBar(String enumString, View parentView, ImageView imageView) {
         String enumName = enumString == null ? "" : enumString.toUpperCase(java.util.Locale.ROOT);
         String iconDescription = String.valueOf(imageView.getContentDescription())
@@ -89,74 +91,79 @@ public class ToolBarPatch {
                 || parentDescription.contains("CAST")
                 || parentDescription.contains("CHROMECAST");
 
-        Logger.printDebug(() -> "Secondary Cast V2: detection enum=" + enumName
-                + ", iconDescription=" + iconDescription
-                + ", parentDescription=" + parentDescription
-                + ", isCast=" + isCast);
-
         if (!isCast) return;
 
-        Drawable original = originalCastIcons.get(imageView);
-        Logger.printDebug(() -> "Secondary Cast V2: Cast matched; originalDrawable="
-                + (original == null ? "null" : original.getClass().getName())
-                + ", enabled=" + Settings.SECONDARY_CAST_V2_ENABLED.get());
+        // Do not replace, badge, or intercept the native YouTube Cast control.
+        // Add a separate sibling control immediately after it.
+        if (!(parentView.getParent() instanceof ViewGroup toolbarRow)) {
+            Logger.printDebug(() -> "Secondary Cast V2: toolbar parent is not a ViewGroup");
+            return;
+        }
 
-        // OFF keeps the exact YouTube drawable; ON adds a small, visible V2 badge to it.
-        updateCastIconBadge(imageView, Settings.SECONDARY_CAST_V2_ENABLED.get());
+        View existing = secondaryToolbarButtons.get(imageView);
+        if (existing != null && existing.getParent() == toolbarRow) {
+            existing.setVisibility(View.VISIBLE);
+            return;
+        }
 
-        /*
-         * Read the setting at the beginning of every touch gesture:
-         * OFF  -> return false and let YouTube handle its original Cast click.
-         * ON   -> consume the tap and open the independent Cast V2 picker.
-         *
-         * This keeps the setting runtime-switchable without rebuilding the APK.
-         */
-        parentView.setOnTouchListener(new View.OnTouchListener() {
-            private boolean useSecondaryCast;
-            private boolean moved;
-            private float downX;
-            private float downY;
-            private final int touchSlop =
-                    ViewConfiguration.get(parentView.getContext()).getScaledTouchSlop();
+        try {
+            Context context = imageView.getContext();
+            android.widget.FrameLayout button = new android.widget.FrameLayout(context);
+            button.setContentDescription("Cast V2");
+            button.setClickable(true);
+            button.setFocusable(true);
 
-            @Override
-            public boolean onTouch(View view, MotionEvent event) {
-                switch (event.getActionMasked()) {
-                    case MotionEvent.ACTION_DOWN:
-                        useSecondaryCast = Settings.SECONDARY_CAST_V2_ENABLED.get();
-                        updateCastIconBadge(imageView, useSecondaryCast);
-                        moved = false;
-                        downX = event.getX();
-                        downY = event.getY();
-                        return useSecondaryCast;
-
-                    case MotionEvent.ACTION_MOVE:
-                        if (!useSecondaryCast) return false;
-                        if (Math.abs(event.getX() - downX) > touchSlop
-                                || Math.abs(event.getY() - downY) > touchSlop) {
-                            moved = true;
-                        }
-                        return true;
-
-                    case MotionEvent.ACTION_UP:
-                        if (!useSecondaryCast) return false;
-                        boolean launchPicker = !moved;
-                        useSecondaryCast = false;
-                        if (launchPicker) showSecondaryCastPicker(view.getContext());
-                        return true;
-
-                    case MotionEvent.ACTION_CANCEL:
-                        boolean consumed = useSecondaryCast;
-                        useSecondaryCast = false;
-                        return consumed;
-
-                    default:
-                        return useSecondaryCast;
-                }
+            Drawable sourceBackground = parentView.getBackground();
+            if (sourceBackground != null) {
+                Drawable.ConstantState backgroundState = sourceBackground.getConstantState();
+                button.setBackground(backgroundState != null
+                        ? backgroundState.newDrawable(context.getResources()).mutate()
+                        : sourceBackground.getConstantState() == null ? sourceBackground : null);
             }
-        });
-    }
 
+            ImageView icon = new ImageView(context);
+            Drawable sourceDrawable = imageView.getDrawable();
+            if (sourceDrawable != null) {
+                Drawable.ConstantState iconState = sourceDrawable.getConstantState();
+                icon.setImageDrawable(iconState != null
+                        ? iconState.newDrawable(context.getResources()).mutate()
+                        : sourceDrawable);
+            }
+            icon.setScaleType(imageView.getScaleType());
+            icon.setPadding(imageView.getPaddingLeft(), imageView.getPaddingTop(),
+                    imageView.getPaddingRight(), imageView.getPaddingBottom());
+            icon.setImageTintList(imageView.getImageTintList());
+            icon.setContentDescription("Cast V2");
+            button.addView(icon, new android.widget.FrameLayout.LayoutParams(
+                    ViewGroup.LayoutParams.MATCH_PARENT,
+                    ViewGroup.LayoutParams.MATCH_PARENT,
+                    android.view.Gravity.CENTER));
+
+            button.setOnClickListener(view -> showSecondaryCastPicker(view.getContext()));
+
+            ViewGroup.LayoutParams sourceParams = parentView.getLayoutParams();
+            ViewGroup.LayoutParams buttonParams;
+            if (sourceParams instanceof ViewGroup.MarginLayoutParams) {
+                buttonParams = new ViewGroup.MarginLayoutParams(
+                        (ViewGroup.MarginLayoutParams) sourceParams);
+            } else if (sourceParams != null) {
+                buttonParams = new ViewGroup.LayoutParams(sourceParams);
+            } else {
+                buttonParams = new ViewGroup.LayoutParams(
+                        ViewGroup.LayoutParams.WRAP_CONTENT,
+                        ViewGroup.LayoutParams.MATCH_PARENT);
+            }
+
+            int sourceIndex = toolbarRow.indexOfChild(parentView);
+            int insertIndex = sourceIndex < 0 ? toolbarRow.getChildCount()
+                    : Math.min(sourceIndex + 1, toolbarRow.getChildCount());
+            toolbarRow.addView(button, insertIndex, buttonParams);
+            secondaryToolbarButtons.put(imageView, button);
+            Logger.printDebug(() -> "Secondary Cast V2: independent toolbar button added");
+        } catch (Throwable error) {
+            Logger.printException(() -> "Secondary Cast V2 toolbar button initialization failed", error);
+        }
+    }
 
     private static void updateCastIconBadge(ImageView imageView, boolean enabled) {
         Drawable original = originalCastIcons.get(imageView);
