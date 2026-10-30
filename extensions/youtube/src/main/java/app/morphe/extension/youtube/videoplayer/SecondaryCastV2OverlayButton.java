@@ -21,8 +21,7 @@ import app.morphe.extension.youtube.settings.Settings;
 public final class SecondaryCastV2OverlayButton {
     private SecondaryCastV2OverlayButton() {}
 
-    @Nullable
-    public static ImageView initializeButton(View controlsView) {
+    public static void initializeButton(View controlsView) {
         try {
             ImageView button = PlayerOverlayButton.addButton(
                     controlsView,
@@ -34,10 +33,8 @@ public final class SecondaryCastV2OverlayButton {
             if (button != null) {
                 button.setContentDescription("Cast V2");
             }
-            return button;
         } catch (Throwable error) {
             Logger.printException(() -> "Secondary Cast V2 overlay button initialization failed", error);
-            return null;
         }
     }
 }
