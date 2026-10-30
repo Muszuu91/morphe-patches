@@ -10,6 +10,8 @@ package app.morphe.patches.youtube.misc.toolbar
 import app.morphe.patcher.extensions.InstructionExtensions.getInstruction
 import app.morphe.patcher.patch.bytecodePatch
 import app.morphe.patches.youtube.misc.extension.sharedExtensionPatch
+import app.morphe.patches.youtube.layout.player.buttons.addPlayerBottomButton
+import app.morphe.patches.youtube.layout.player.buttons.playerOverlayButtonsHookPatch
 import app.morphe.patches.youtube.misc.settings.settingsPatch
 import app.morphe.patches.youtube.shared.ToolBarButtonFingerprint
 import app.morphe.patches.youtube.shared.startVideoInformerPatch
@@ -31,9 +33,12 @@ val secondaryCastV2Patch = bytecodePatch(
     default = false,
 ) {
     // This dependency injects the Morphe settings screen and registers the Cast V2 switch.
-    dependsOn(sharedExtensionPatch, settingsPatch, startVideoInformerPatch)
+    dependsOn(sharedExtensionPatch, settingsPatch, startVideoInformerPatch, playerOverlayButtonsHookPatch)
 
     execute {
+        // Experimental independent button on the video overlay. The existing YouTube Cast button is untouched.
+        addPlayerBottomButton("Lapp/morphe/extension/youtube/videoplayer/SecondaryCastV2OverlayButton;")
+
         ToolBarButtonFingerprint.let {
             it.clearMatch()
             it.method.apply {
