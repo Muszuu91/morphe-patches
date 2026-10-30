@@ -40,8 +40,10 @@ val secondaryCastV2Patch = bytecodePatch(
                 val enumIndex = it.instructionMatches[3].index
                 val enumRegister = getInstruction<OneRegisterInstruction>(enumIndex).registerA
 
-                val imageViewIndex = it.instructionMatches[6].index
-                val imageViewRegister = getInstruction<OneRegisterInstruction>(imageViewIndex).registerA
+                // Capture the ImageView only after YouTube has assigned its Cast drawable.
+                // Match 6 is the ImageView field read; match 8 is ImageView.setImageDrawable().
+                val imageViewIndex = it.instructionMatches[8].index
+                val imageViewRegister = getInstruction<OneRegisterInstruction>(it.instructionMatches[6].index).registerA
 
                 addInstructionsAtControlFlowLabel(
                     imageViewIndex + 1,
