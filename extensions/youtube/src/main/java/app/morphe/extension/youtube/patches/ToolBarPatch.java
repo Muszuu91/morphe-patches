@@ -6,6 +6,14 @@ package app.morphe.extension.youtube.patches;
 
 import android.app.AlertDialog;
 import android.content.Context;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.PixelFormat;
+import android.graphics.Rect;
+import android.graphics.RectF;
+import android.graphics.Typeface;
+import android.graphics.drawable.Drawable;
 import android.net.nsd.NsdManager;
 import android.net.nsd.NsdServiceInfo;
 import android.os.Handler;
@@ -21,6 +29,7 @@ import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.WeakHashMap;
 
 import app.morphe.extension.shared.Logger;
 import app.morphe.extension.youtube.settings.Settings;
@@ -34,6 +43,7 @@ import app.morphe.extension.youtube.settings.Settings;
 public class ToolBarPatch {
     private static final ThreadLocal<String> pendingIconEnum = new ThreadLocal<>();
     private static final Handler MAIN = new Handler(Looper.getMainLooper());
+    private static final WeakHashMap<ImageView, Drawable> originalCastIcons = new WeakHashMap<>();
 
     public static void setToolbarIconEnum(@Nullable Enum<?> iconEnum) {
         pendingIconEnum.set(iconEnum == null ? null : iconEnum.name());
@@ -43,6 +53,9 @@ public class ToolBarPatch {
         String enumName = pendingIconEnum.get();
         pendingIconEnum.remove();
         if (enumName != null && imageView.getParent() instanceof View parentView) {
+            if (!originalCastIcons.containsKey(imageView)) {
+                originalCastIcons.put(imageView, imageView.getDrawable());
+            }
             hookToolBar(enumName, parentView, imageView);
         }
     }
@@ -59,6 +72,9 @@ public class ToolBarPatch {
                 || parentDescription.contains("CAST")
                 || parentDescription.contains("CHROMECAST");
         if (!isCast) return;
+
+        // OFF keeps the exact YouTube drawable; ON adds a small, visible V2 badge to it.
+        updateCastIconBadge(imageView, Settings.SECONDARY_CAST_V2_ENABLED.get());
 
         /*
          * Read the setting at the beginning of every touch gesture:
@@ -80,6 +96,7 @@ public class ToolBarPatch {
                 switch (event.getActionMasked()) {
                     case MotionEvent.ACTION_DOWN:
                         useSecondaryCast = Settings.SECONDARY_CAST_V2_ENABLED.get();
+                        updateCastIconBadge(imageView, useSecondaryCast);
                         moved = false;
                         downX = event.getX();
                         downY = event.getY();
@@ -110,6 +127,132 @@ public class ToolBarPatch {
                 }
             }
         });
+    }
+
+
+    private static void updateCastIconBadge(ImageView imageView, boolean enabled) {
+        Drawable original = originalCastIcons.get(imageView);
+        if (original == null) return;
+
+        Drawable current = imageView.getDrawable();
+        if (enabled) {
+            if (!(current instanceof CastV2BadgeDrawable)) {
+                imageView.setImageDrawable(new CastV2BadgeDrawable(original));
+            }
+        } else if (current instanceof CastV2BadgeDrawable) {
+            imageView.setImageDrawable(original);
+        }
+    }
+
+    /**
+     * Draws a compact V2 pill over the original Cast artwork without replacing or tinting it.
+     */
+    private static final class CastV2BadgeDrawable extends Drawable implements Drawable.Callback {
+        private final Drawable original;
+        private final Paint backgroundPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+        private final Paint textPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+        private final Rect textBounds = new Rect();
+        private final RectF badgeBounds = new RectF();
+
+        CastV2BadgeDrawable(Drawable original) {
+            this.original = original.mutate();
+            this.original.setCallback(this);
+            backgroundPaint.setColor(Color.rgb(210, 35, 45));
+            textPaint.setColor(Color.WHITE);
+            textPaint.setTypeface(Typeface.create(Typeface.DEFAULT, Typeface.BOLD));
+            textPaint.setTextAlign(Paint.Align.CENTER);
+        }
+
+        @Override
+        public void draw(Canvas canvas) {
+            Rect bounds = getBounds();
+            original.setBounds(bounds);
+            original.draw(canvas);
+
+            float density = getDensity();
+            float textSize = Math.max(6f * density, bounds.width() * 0.29f);
+            textPaint.setTextSize(textSize);
+            textPaint.getTextBounds("V2", 0, 2, textBounds);
+
+            float horizontalPadding = 2f * density;
+            float verticalPadding = 0.8f * density;
+            float badgeWidth = textPaint.measureText("V2") + horizontalPadding * 2f;
+            float badgeHeight = textBounds.height() + verticalPadding * 2f;
+            float right = bounds.right + 1f * density;
+            float bottom = bounds.bottom + 1f * density;
+            badgeBounds.set(right - badgeWidth, bottom - badgeHeight,
+                    right, bottom);
+            canvas.drawRoundRect(badgeBounds, 2f * density, 2f * density, backgroundPaint);
+            canvas.drawText("V2", badgeBounds.centerX(),
+                    badgeBounds.centerY() - textBounds.exactCenterY(), textPaint);
+        }
+
+        private float getDensity() {
+            return getBounds().width() > 0
+                    ? getBounds().width() / 24f
+                    : 1f;
+        }
+
+        @Override public void setAlpha(int alpha) {
+            original.setAlpha(alpha);
+            backgroundPaint.setAlpha(alpha);
+            textPaint.setAlpha(alpha);
+            invalidateSelf();
+        }
+
+        @Override public void setColorFilter(android.graphics.ColorFilter colorFilter) {
+            original.setColorFilter(colorFilter);
+            invalidateSelf();
+        }
+
+        @Override public int getOpacity() {
+            return PixelFormat.TRANSLUCENT;
+        }
+
+        @Override public int getIntrinsicWidth() {
+            return original.getIntrinsicWidth();
+        }
+
+        @Override public int getIntrinsicHeight() {
+            return original.getIntrinsicHeight();
+        }
+
+        @Override protected void onBoundsChange(Rect bounds) {
+            original.setBounds(bounds);
+        }
+
+        @Override public boolean isStateful() {
+            return original.isStateful();
+        }
+
+        @Override protected boolean onStateChange(int[] state) {
+            return original.setState(state);
+        }
+
+        @Override protected boolean onLevelChange(int level) {
+            return original.setLevel(level);
+        }
+
+        @Override public boolean setVisible(boolean visible, boolean restart) {
+            original.setVisible(visible, restart);
+            return super.setVisible(visible, restart);
+        }
+
+        @Override public void jumpToCurrentState() {
+            original.jumpToCurrentState();
+        }
+
+        @Override public void invalidateDrawable(Drawable who) {
+            invalidateSelf();
+        }
+
+        @Override public void scheduleDrawable(Drawable who, Runnable what, long when) {
+            scheduleSelf(what, when);
+        }
+
+        @Override public void unscheduleDrawable(Drawable who, Runnable what) {
+            unscheduleSelf(what);
+        }
     }
 
     private static void showSecondaryCastPicker(Context context) {
