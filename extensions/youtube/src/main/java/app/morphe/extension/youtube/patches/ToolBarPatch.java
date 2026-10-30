@@ -297,7 +297,7 @@ public class ToolBarPatch {
 
     private static void showSecondaryCastPicker(Context context) {
         try {
-            new DevicePicker(context.getApplicationContext()).start();
+            new DevicePicker(context).start();
         } catch (Throwable error) {
             Logger.printException(() -> "Secondary Cast picker failed", error);
             toast(context, "Nie udało się uruchomić dodatkowego Cast V2");
