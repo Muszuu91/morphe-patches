@@ -46,17 +46,34 @@ public class ToolBarPatch {
     private static final WeakHashMap<ImageView, Drawable> originalCastIcons = new WeakHashMap<>();
 
     public static void setToolbarIconEnum(@Nullable Enum<?> iconEnum) {
-        pendingIconEnum.set(iconEnum == null ? null : iconEnum.name());
+        String enumName = iconEnum == null ? null : iconEnum.name();
+        pendingIconEnum.set(enumName);
+        Logger.printDebug(() -> "Secondary Cast V2: toolbar enum=" + enumName);
     }
 
     public static void setToolbarImageView(ImageView imageView) {
         String enumName = pendingIconEnum.get();
         pendingIconEnum.remove();
-        if (enumName != null && imageView.getParent() instanceof View parentView) {
+
+        if (imageView == null) {
+            Logger.printDebug(() -> "Secondary Cast V2: toolbar ImageView is null");
+            return;
+        }
+
+        Object parent = imageView.getParent();
+        Logger.printDebug(() -> "Secondary Cast V2: ImageView callback; enum=" + enumName
+                + ", parent=" + (parent == null ? "null" : parent.getClass().getName())
+                + ", drawable=" + (imageView.getDrawable() == null
+                ? "null" : imageView.getDrawable().getClass().getName())
+                + ", contentDescription=" + imageView.getContentDescription());
+
+        if (enumName != null && parent instanceof View parentView) {
             if (!originalCastIcons.containsKey(imageView)) {
                 originalCastIcons.put(imageView, imageView.getDrawable());
             }
             hookToolBar(enumName, parentView, imageView);
+        } else {
+            Logger.printDebug(() -> "Secondary Cast V2: hook skipped; enum missing or parent is not a View");
         }
     }
 
@@ -71,7 +88,18 @@ public class ToolBarPatch {
                 || iconDescription.contains("CHROMECAST")
                 || parentDescription.contains("CAST")
                 || parentDescription.contains("CHROMECAST");
+
+        Logger.printDebug(() -> "Secondary Cast V2: detection enum=" + enumName
+                + ", iconDescription=" + iconDescription
+                + ", parentDescription=" + parentDescription
+                + ", isCast=" + isCast);
+
         if (!isCast) return;
+
+        Drawable original = originalCastIcons.get(imageView);
+        Logger.printDebug(() -> "Secondary Cast V2: Cast matched; originalDrawable="
+                + (original == null ? "null" : original.getClass().getName())
+                + ", enabled=" + Settings.SECONDARY_CAST_V2_ENABLED.get());
 
         // OFF keeps the exact YouTube drawable; ON adds a small, visible V2 badge to it.
         updateCastIconBadge(imageView, Settings.SECONDARY_CAST_V2_ENABLED.get());
