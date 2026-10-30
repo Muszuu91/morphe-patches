@@ -17,6 +17,8 @@ dependencies {
 
     implementation(libs.collections4)
     implementation(libs.protobuf.javalite)
+    // Same discovery and Cast device SDK used by Grayjay.
+    implementation("org.fcast:sender-sdk:0.6.1")
 }
 
 configure<ApplicationExtension> {
