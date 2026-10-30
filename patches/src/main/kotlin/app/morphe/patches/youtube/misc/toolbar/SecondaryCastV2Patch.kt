@@ -21,12 +21,13 @@ private const val SECONDARY_CAST_EXTENSION =
     "Lapp/morphe/extension/youtube/patches/ToolBarPatch;"
 
 /**
- * Adds the optional long-press Cast V2 picker as an independently selectable patch.
+ * Adds the optional Cast V2 replacement for the existing Cast button.
+ * The runtime setting controls whether taps use native Cast or the independent V2 picker.
  */
 @Suppress("unused")
 val secondaryCastV2Patch = bytecodePatch(
     name = "Secondary Cast V2",
-    description = "Adds a separate Cast V2 device picker on long-press of YouTube's Cast button.",
+    description = "Allows the existing Cast button to use the independent Cast V2 picker when enabled in Morphe settings.",
     // This patch has no explicit compatibility metadata, so it must not default to enabled.
     default = false,
 ) {
