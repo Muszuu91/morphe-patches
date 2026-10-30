@@ -26,7 +26,7 @@ private const val SECONDARY_CAST_EXTENSION =
 @Suppress("unused")
 val secondaryCastV2Patch = bytecodePatch(
     name = "Secondary Cast V2",
-    description = "Allows the existing Cast button to use the independent Cast V2 picker when enabled in Morphe settings.",
+    description = "Routes taps on the existing Cast button to the independent Cast V2 picker when enabled in Morphe settings; otherwise YouTube native Cast is preserved.",
     // This patch has no explicit compatibility metadata, so it must not default to enabled.
     default = false,
 ) {
