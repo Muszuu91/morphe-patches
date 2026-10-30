@@ -11,7 +11,6 @@ import app.morphe.patcher.extensions.InstructionExtensions.getInstruction
 import app.morphe.patcher.patch.bytecodePatch
 import app.morphe.patches.youtube.misc.extension.sharedExtensionPatch
 import app.morphe.patches.youtube.misc.settings.settingsPatch
-import app.morphe.patches.youtube.shared.startVideoInformerPatch
 import app.morphe.patches.youtube.shared.ToolBarButtonFingerprint
 import app.morphe.patches.youtube.shared.startVideoInformerPatch
 import app.morphe.util.addInstructionsAtControlFlowLabel
