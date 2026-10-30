@@ -22,21 +22,21 @@ private const val SECONDARY_CAST_EXTENSION =
     "Lapp/morphe/extension/youtube/patches/ToolBarPatch;"
 
 /**
- * Adds the optional Cast V2 replacement for the existing Cast button.
- * The runtime setting controls whether taps use native Cast or the independent V2 picker.
+ * Adds independent Cast V2 entry points to the YouTube toolbar and player overlay.
+ * The native YouTube Cast control is left untouched; the added buttons are always visible.
  */
 @Suppress("unused")
 val secondaryCastV2Patch = bytecodePatch(
     name = "Secondary Cast V2",
-    description = "Routes taps on the existing Cast button to the independent Cast V2 picker when enabled in Morphe settings; otherwise YouTube native Cast is preserved.",
+    description = "Adds always-visible independent Cast V2 buttons to the toolbar and player overlay. The original YouTube Cast button remains unchanged.",
     // This patch has no explicit compatibility metadata, so it must not default to enabled.
     default = false,
 ) {
-    // This dependency injects the Morphe settings screen and registers the Cast V2 switch.
+    // settingsPatch remains temporarily for compatibility with the existing patch bundle setting.
     dependsOn(sharedExtensionPatch, settingsPatch, startVideoInformerPatch, playerOverlayButtonsHookPatch)
 
     execute {
-        // Experimental independent button on the video overlay. The existing YouTube Cast button is untouched.
+        // Always-visible independent button on the video overlay.
         addPlayerBottomButton("Lapp/morphe/extension/youtube/videoplayer/SecondaryCastV2OverlayButton;")
 
         ToolBarButtonFingerprint.let {
