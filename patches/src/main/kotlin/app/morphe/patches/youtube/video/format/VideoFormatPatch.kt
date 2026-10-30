@@ -10,14 +10,14 @@ package app.morphe.patches.youtube.video.format
 import app.morphe.patcher.extensions.InstructionExtensions.addInstructions
 import app.morphe.patcher.extensions.InstructionExtensions.getInstruction
 import app.morphe.patcher.patch.bytecodePatch
-import app.morphe.patcher.util.cloneParameters
-import app.morphe.patcher.util.findFreeRegister
+import app.morphe.patcher.util.numberOfParameterRegisters
 import app.morphe.patcher.util.getReference
 import app.morphe.patcher.util.numberOfParameterRegistersLogical
 import app.morphe.patcher.util.proxy.mutableTypes.MutableMethod
 import app.morphe.patcher.util.proxy.mutableTypes.MutableMethod.Companion.toMutable
 import app.morphe.patches.shared.FormatStreamModelToStringFingerprint
 import app.morphe.patches.youtube.misc.extension.sharedExtensionPatch
+import app.morphe.util.cloneMutable
 import app.morphe.util.findMethodFromToString
 import com.android.tools.smali.dexlib2.AccessFlags
 import com.android.tools.smali.dexlib2.builder.MutableMethodImplementation
@@ -89,28 +89,63 @@ val videoFormatPatch = bytecodePatch(
         }
 
         VideoStreamingDataConstructorFingerprint.let {
-            // Clone method to preserve parameters.
-            it.method.cloneParameters().apply {
-                // Must offset match indexes since cloning adds additional move instructions.
-                val matchIndexOffset = numberOfParameterRegistersLogical
-                val videoIdIndex = it.instructionMatches[1].index + matchIndexOffset
-                val videoIdField = getInstruction<ReferenceInstruction>(videoIdIndex).reference
-                val adaptiveFormatsIndex = it.instructionMatches.last().index + matchIndexOffset
-                val adaptiveFormatsRegister = getInstruction<TwoRegisterInstruction>(adaptiveFormatsIndex).registerA
-                val insertIndex = adaptiveFormatsIndex + 1
-                val videoIdRegister = findFreeRegister(insertIndex, adaptiveFormatsRegister)
+            val originalMethod = it.method
+            val originalRegisterCount = originalMethod.implementation!!.registerCount
 
+            // Keep the original register layout and add four contiguous scratch registers.
+            // cloneMutable also preserves the original parameter values after register growth.
+            val clonedMethod = originalMethod.cloneMutable(
+                additionalRegisters = originalMethod.numberOfParameterRegisters + 4
+            )
+            mutableClassDefBy(originalMethod.definingClass).methods.apply {
+                remove(originalMethod)
+                add(clonedMethod)
+            }
+
+            clonedMethod.apply {
+                // cloneMutable inserts one move per logical parameter at the method start.
+                val matchIndexOffset = numberOfParameterRegistersLogical
+                val firstStreamingDataIndex = it.instructionMatches.first().index + matchIndexOffset
+                val videoIdIndex = it.instructionMatches[1].index + matchIndexOffset
+                val adaptiveFormatsIndex = it.instructionMatches.last().index + matchIndexOffset
+
+                check(firstStreamingDataIndex < adaptiveFormatsIndex) {
+                    "StreamingData field reads are not in the expected order"
+                }
+
+                val firstStreamingDataRegister =
+                    getInstruction<TwoRegisterInstruction>(firstStreamingDataIndex).registerB
+                val lastStreamingDataInstruction =
+                    getInstruction<TwoRegisterInstruction>(adaptiveFormatsIndex)
+                val lastStreamingDataRegister = lastStreamingDataInstruction.registerB
+                val adaptiveFormatsRegister = lastStreamingDataInstruction.registerA
+                val videoIdField = getInstruction<ReferenceInstruction>(videoIdIndex).reference
+
+                // cloneMutable places the new registers after all original registers.
+                val scratchStart = originalRegisterCount
+                val insertIndex = adaptiveFormatsIndex + 1
+
+                // Capture the last source, video ID and adaptive list into a contiguous range.
                 addInstructions(
                     insertIndex,
                     """
-                        # Get video ID.
-                        move-object/from16 v$videoIdRegister, p0
-                        iget-object v$videoIdRegister, v$videoIdRegister, $videoIdField
-                        
-                        # Override adaptive formats.
-                        invoke-static { v$videoIdRegister, v$adaptiveFormatsRegister }, $EXTENSION_CLASS->hookAdaptiveFormats(Ljava/lang/String;Ljava/util/List;)Ljava/util/List;
-                        move-result-object v$adaptiveFormatsRegister
+                        move-object/16 v${scratchStart + 1}, v$lastStreamingDataRegister
+                        move-object/16 v${scratchStart + 2}, p0
+                        iget-object v${scratchStart + 2}, v${scratchStart + 2}, $videoIdField
+                        move-object/16 v${scratchStart + 3}, v$adaptiveFormatsRegister
+
+                        invoke-static/range { v$scratchStart .. v${scratchStart + 3} }, $EXTENSION_CLASS->diagnoseStreamingData(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/String;Ljava/util/List;)V
+
+                        invoke-static { v${scratchStart + 2}, v${scratchStart + 3} }, $EXTENSION_CLASS->hookAdaptiveFormats(Ljava/lang/String;Ljava/util/List;)Ljava/util/List;
+                        move-result-object v${scratchStart + 3}
+                        move-object/16 v$adaptiveFormatsRegister, v${scratchStart + 3}
                     """
+                )
+
+                // Save the object read by the first StreamingData field access.
+                addInstructions(
+                    firstStreamingDataIndex + 1,
+                    "move-object/16 v$scratchStart, v$firstStreamingDataRegister"
                 )
             }
         }
