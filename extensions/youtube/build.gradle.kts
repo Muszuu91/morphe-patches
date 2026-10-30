@@ -1,6 +1,7 @@
 import com.android.build.api.dsl.ApplicationExtension
 
 plugins {
+    id("org.jetbrains.kotlin.android")
     alias(libs.plugins.protobuf)
 }
 
