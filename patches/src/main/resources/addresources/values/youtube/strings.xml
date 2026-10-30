@@ -1818,5 +1818,5 @@ Automatic recording is optional. It stops in incognito or when the account chang
     <string name="morphe_niconico_comments_max_length_summary">Hides comments with more characters than this. Each emoji counts as one character</string>
     <string name="morphe_niconico_comments_max_length_no_limit">No limit</string>
     <string name="morphe_secondary_cast_v2_enabled_title">Use secondary Cast V2</string>
-    <string name="morphe_secondary_cast_v2_enabled_summary">Long-press the Cast button to open the secondary Cast V2 device picker. A normal tap still uses YouTube's native Cast.</string>
+    <string name="morphe_secondary_cast_v2_enabled_summary">When enabled, tapping the Cast button opens the independent Cast V2 device picker. When disabled, YouTube\'s native Cast is used.</string>
 </resources>
