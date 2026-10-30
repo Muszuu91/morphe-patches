@@ -283,6 +283,11 @@ public class ToolBarPatch {
         }
     }
 
+    /** Opens the independent picker from other Morphe UI entry points. */
+    public static void openSecondaryCastPicker(Context context) {
+        showSecondaryCastPicker(context);
+    }
+
     private static void showSecondaryCastPicker(Context context) {
         try {
             NsdManager nsd = (NsdManager) context.getSystemService(Context.NSD_SERVICE);
