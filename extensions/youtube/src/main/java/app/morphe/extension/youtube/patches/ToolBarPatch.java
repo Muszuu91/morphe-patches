@@ -13,7 +13,6 @@ import android.os.Looper;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewConfiguration;
-import android.view.ViewConfiguration;
 import android.widget.ImageView;
 import android.widget.ArrayAdapter;
 import android.widget.Toast;
@@ -29,8 +28,7 @@ import app.morphe.extension.youtube.settings.Settings;
 /**
  * Entry point for the optional secondary Cast V2 picker.
  *
- * A long press is intentionally used so YouTube's native Cast button and native
- * MediaRouter session remain untouched on a normal tap.
+ * A runtime setting chooses between YouTube's native Cast action and the independent V2 picker.
  */
 @SuppressWarnings("unused")
 public class ToolBarPatch {
