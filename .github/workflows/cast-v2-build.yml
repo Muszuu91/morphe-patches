@@ -1,10 +1,9 @@
-name: Cast V2 build artifact
+name: Cast V2 isolated test build
 
 on:
   push:
     branches:
-      - dev
-      - feature/secondary-cast-v2
+      - cast-v2-isolated-test
   workflow_dispatch:
 
 permissions:
@@ -31,27 +30,34 @@ jobs:
         run: |
           mkdir -p reports
           set -o pipefail
-          ./gradlew :patches:buildAndroid --no-daemon --stacktrace 2>&1 | tee reports/castV2-0.4-build.log
-      - name: Prepare versioned artifact
+          ./gradlew :patches:buildAndroid --no-daemon --stacktrace 2>&1 | tee reports/castV2-isolated-build.log
+      - name: Generate patch catalog
+        if: success()
+        run: ./gradlew :patches:generatePatchesList --no-daemon
+      - name: Prepare Cast V2-only test metadata
         if: success()
         run: |
           bundle="$(find patches/build/libs -maxdepth 1 -type f -name '*.mpp' -print -quit)"
           test -n "$bundle"
-          cp "$bundle" patches/build/libs/castV2-0.4.mpp
-      - name: Upload build artifact
+          cp "$bundle" patches/build/libs/castV2-isolated-test.mpp
+          jq '{NOTE: "Cast V2 isolated test catalog. The .mpp contains the compiled Morphe patch runtime; this catalog exposes only the Cast V2 patch entry.", version: .version, patches: [.patches[] | select(.name == "Secondary Cast V2")]}' patches-list.json > patches/build/libs/castV2-isolated-patches-list.json
+          test "$(jq '.patches | length' patches/build/libs/castV2-isolated-patches-list.json)" -eq 1
+      - name: Upload isolated Cast V2 test bundle
         if: success()
         uses: actions/upload-artifact@v7
         with:
-          name: castV2-0.4
-          archive: false
-          path: patches/build/libs/castV2-0.4.mpp
+          name: castV2-isolated-test
+          path: |
+            patches/build/libs/castV2-isolated-test.mpp
+            patches/build/libs/castV2-isolated-patches-list.json
+          retention-days: 14
       - name: Upload build diagnostics
         if: always()
         uses: actions/upload-artifact@v7
         with:
-          name: castV2-0.4-build-diagnostics-${{ github.run_id }}
+          name: castV2-isolated-build-diagnostics-${{ github.run_id }}
           path: |
-            reports/castV2-0.4-build.log
+            reports/castV2-isolated-build.log
             ~/.gradle/daemon/**/*.out.log
           if-no-files-found: warn
           retention-days: 14
