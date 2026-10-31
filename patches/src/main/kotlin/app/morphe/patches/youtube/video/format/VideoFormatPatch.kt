@@ -118,7 +118,7 @@ val videoFormatPatch = bytecodePatch(
                     getInstruction<TwoRegisterInstruction>(firstStreamingDataIndex).registerA
                 val lastStreamingDataInstruction =
                     getInstruction<TwoRegisterInstruction>(adaptiveFormatsIndex)
-                val lastStreamingDataRegister = lastStreamingDataInstruction.registerA
+                val lastStreamingDataRegister = lastStreamingDataInstruction.registerB
                 val adaptiveFormatsRegister = lastStreamingDataInstruction.registerA
                 val videoIdRegister =
                     getInstruction<TwoRegisterInstruction>(videoIdIndex).registerA
