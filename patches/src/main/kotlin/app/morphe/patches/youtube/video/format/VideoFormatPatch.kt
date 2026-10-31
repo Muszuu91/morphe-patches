@@ -119,6 +119,8 @@ val videoFormatPatch = bytecodePatch(
                     getInstruction<TwoRegisterInstruction>(adaptiveFormatsIndex)
                 val lastStreamingDataRegister = lastStreamingDataInstruction.registerB
                 val adaptiveFormatsRegister = lastStreamingDataInstruction.registerA
+                val videoIdInstruction = getInstruction<TwoRegisterInstruction>(videoIdIndex)
+                val videoIdRegister = videoIdInstruction.registerB
                 val videoIdField = getInstruction<ReferenceInstruction>(videoIdIndex).reference
 
                 // cloneMutable copies parameters back into their original register slots.
@@ -131,8 +133,7 @@ val videoFormatPatch = bytecodePatch(
                     insertIndex,
                     """
                         move-object/16 v${scratchStart + 1}, v$lastStreamingDataRegister
-                        move-object/16 v${scratchStart + 2}, p0
-                        iget-object v${scratchStart + 2}, v${scratchStart + 2}, $videoIdField
+                        iget-object v${scratchStart + 2}, v$videoIdRegister, $videoIdField
                         move-object/16 v${scratchStart + 3}, v$adaptiveFormatsRegister
 
                         invoke-static/range { v$scratchStart .. v${scratchStart + 3} }, $EXTENSION_CLASS->diagnoseStreamingData(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/String;Ljava/util/List;)V
