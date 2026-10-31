@@ -92,13 +92,11 @@ val videoFormatPatch = bytecodePatch(
         VideoStreamingDataConstructorFingerprint.let {
             val originalMethod = it.method
             val originalRegisterCount = originalMethod.implementation!!.registerCount
-            // Keep the matched videoId field reference before cloning changes instruction positions.
-            val videoIdField = it.instructionMatches[1].instruction.getReference<FieldReference>()!!
 
-            // Keep the original register layout and add four contiguous scratch registers.
-            // cloneMutable also preserves the original parameter values after register growth.
+            // Preserve the original videoId immediately after its field read.
+            // Do not re-read the field later, where control flow may skip initialization.
             val clonedMethod = originalMethod.cloneMutable(
-                additionalRegisters = originalMethod.numberOfParameterRegisters + 4
+                additionalRegisters = originalMethod.numberOfParameterRegisters + 2
             )
             mutableClassDefBy(originalMethod.definingClass).methods.apply {
                 remove(originalMethod)
@@ -108,45 +106,39 @@ val videoFormatPatch = bytecodePatch(
             clonedMethod.apply {
                 // cloneMutable inserts one move per logical parameter at the method start.
                 val matchIndexOffset = numberOfParameterRegistersLogical
-                val firstStreamingDataIndex = it.instructionMatches.first().index + matchIndexOffset
+                val videoIdIndex = it.instructionMatches[1].index + matchIndexOffset
                 val adaptiveFormatsIndex = it.instructionMatches.last().index + matchIndexOffset
 
-                check(firstStreamingDataIndex < adaptiveFormatsIndex) {
-                    "StreamingData field reads are not in the expected order"
+                check(videoIdIndex < adaptiveFormatsIndex) {
+                    "videoId field read must precede adaptiveFormats field read"
                 }
 
-                // For iget-object, registerA is the field value; registerB is the receiver.
-                val firstStreamingDataRegister =
-                    getInstruction<TwoRegisterInstruction>(firstStreamingDataIndex).registerA
-                val lastStreamingDataInstruction =
+                // For iget-object, registerA receives the field value.
+                val videoIdRegister =
+                    getInstruction<TwoRegisterInstruction>(videoIdIndex).registerA
+                val adaptiveFormatsInstruction =
                     getInstruction<TwoRegisterInstruction>(adaptiveFormatsIndex)
-                val lastStreamingDataRegister = lastStreamingDataInstruction.registerB
-                val adaptiveFormatsRegister = lastStreamingDataInstruction.registerA
-                // cloneMutable copies parameters back into their original register slots.
-                // The newly allocated free registers start at the original register count.
+                val adaptiveFormatsRegister = adaptiveFormatsInstruction.registerA
+
+                // The new scratch registers start at the original register count.
                 val scratchStart = originalRegisterCount
-                val insertIndex = adaptiveFormatsIndex + 1
 
-                // Capture the actual field values into a contiguous range.
+                // Replace adaptiveFormats only after its original field read has completed.
                 addInstructionsAtControlFlowLabel(
-                    insertIndex,
+                    adaptiveFormatsIndex + 1,
                     """
-                        move-object/16 v${scratchStart + 1}, v$lastStreamingDataRegister
-                        iget-object v${scratchStart + 2}, p0, $videoIdField
-                        move-object/16 v${scratchStart + 3}, v$adaptiveFormatsRegister
-
-                        invoke-static/range { v$scratchStart .. v${scratchStart + 3} }, $EXTENSION_CLASS->diagnoseStreamingData(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/String;Ljava/util/List;)V
-
-                        invoke-static { v${scratchStart + 2}, v${scratchStart + 3} }, $EXTENSION_CLASS->hookAdaptiveFormats(Ljava/lang/String;Ljava/util/List;)Ljava/util/List;
-                        move-result-object v${scratchStart + 3}
-                        move-object/16 v$adaptiveFormatsRegister, v${scratchStart + 3}
+                        move-object/16 v${scratchStart + 1}, v$adaptiveFormatsRegister
+                        invoke-static/range { v$scratchStart .. v${scratchStart + 1} }, $EXTENSION_CLASS->hookAdaptiveFormats(Ljava/lang/String;Ljava/util/List;)Ljava/util/List;
+                        move-result-object v${scratchStart + 1}
+                        move-object/16 v$adaptiveFormatsRegister, v${scratchStart + 1}
                     """
                 )
 
-                // Save the actual StreamingData field value read by the first field access.
+                // Save videoId immediately after the original iget-object instruction.
+                // This insertion is earlier than the hook insertion above, so the saved index remains valid.
                 addInstructionsAtControlFlowLabel(
-                    firstStreamingDataIndex + 1,
-                    "move-object/16 v$scratchStart, v$firstStreamingDataRegister"
+                    videoIdIndex + 1,
+                    "move-object/16 v$scratchStart, v$videoIdRegister"
                 )
             }
         }
