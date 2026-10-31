@@ -113,27 +113,27 @@ val videoFormatPatch = bytecodePatch(
                     "StreamingData field reads are not in the expected order"
                 }
 
+                // For iget-object, registerA is the field value; registerB is the receiver.
                 val firstStreamingDataRegister =
-                    getInstruction<TwoRegisterInstruction>(firstStreamingDataIndex).registerB
+                    getInstruction<TwoRegisterInstruction>(firstStreamingDataIndex).registerA
                 val lastStreamingDataInstruction =
                     getInstruction<TwoRegisterInstruction>(adaptiveFormatsIndex)
-                val lastStreamingDataRegister = lastStreamingDataInstruction.registerB
+                val lastStreamingDataRegister = lastStreamingDataInstruction.registerA
                 val adaptiveFormatsRegister = lastStreamingDataInstruction.registerA
-                val videoIdInstruction = getInstruction<TwoRegisterInstruction>(videoIdIndex)
-                val videoIdRegister = videoIdInstruction.registerB
-                val videoIdField = getInstruction<ReferenceInstruction>(videoIdIndex).reference
+                val videoIdRegister =
+                    getInstruction<TwoRegisterInstruction>(videoIdIndex).registerA
 
                 // cloneMutable copies parameters back into their original register slots.
                 // The newly allocated free registers start at the original register count.
                 val scratchStart = originalRegisterCount
                 val insertIndex = adaptiveFormatsIndex + 1
 
-                // Capture the last source, video ID and adaptive list into a contiguous range.
+                // Capture the actual field values into a contiguous range.
                 addInstructions(
                     insertIndex,
                     """
                         move-object/16 v${scratchStart + 1}, v$lastStreamingDataRegister
-                        iget-object v${scratchStart + 2}, v$videoIdRegister, $videoIdField
+                        move-object/16 v${scratchStart + 2}, v$videoIdRegister
                         move-object/16 v${scratchStart + 3}, v$adaptiveFormatsRegister
 
                         invoke-static/range { v$scratchStart .. v${scratchStart + 3} }, $EXTENSION_CLASS->diagnoseStreamingData(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/String;Ljava/util/List;)V
@@ -144,7 +144,7 @@ val videoFormatPatch = bytecodePatch(
                     """
                 )
 
-                // Save the object read by the first StreamingData field access.
+                // Save the actual StreamingData field value read by the first field access.
                 addInstructions(
                     firstStreamingDataIndex + 1,
                     "move-object/16 v$scratchStart, v$firstStreamingDataRegister"
