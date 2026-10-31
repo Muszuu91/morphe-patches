@@ -12,6 +12,7 @@ import app.morphe.patcher.extensions.InstructionExtensions.getInstruction
 import app.morphe.patcher.patch.bytecodePatch
 import app.morphe.patcher.util.numberOfParameterRegisters
 import app.morphe.patcher.util.getReference
+import app.morphe.patcher.util.addInstructionsAtControlFlowLabel
 import app.morphe.patcher.util.numberOfParameterRegistersLogical
 import app.morphe.patcher.util.proxy.mutableTypes.MutableMethod
 import app.morphe.patcher.util.proxy.mutableTypes.MutableMethod.Companion.toMutable
@@ -127,7 +128,7 @@ val videoFormatPatch = bytecodePatch(
                 val insertIndex = adaptiveFormatsIndex + 1
 
                 // Capture the actual field values into a contiguous range.
-                addInstructions(
+                addInstructionsAtControlFlowLabel(
                     insertIndex,
                     """
                         move-object/16 v${scratchStart + 1}, v$lastStreamingDataRegister
@@ -143,7 +144,7 @@ val videoFormatPatch = bytecodePatch(
                 )
 
                 // Save the actual StreamingData field value read by the first field access.
-                addInstructions(
+                addInstructionsAtControlFlowLabel(
                     firstStreamingDataIndex + 1,
                     "move-object/16 v$scratchStart, v$firstStreamingDataRegister"
                 )
