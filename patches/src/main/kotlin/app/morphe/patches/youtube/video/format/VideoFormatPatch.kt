@@ -91,6 +91,8 @@ val videoFormatPatch = bytecodePatch(
         VideoStreamingDataConstructorFingerprint.let {
             val originalMethod = it.method
             val originalRegisterCount = originalMethod.implementation!!.registerCount
+            // Keep the matched videoId field reference before cloning changes instruction positions.
+            val videoIdField = it.instructionMatches[1].instruction.getReference<FieldReference>()!!
 
             // Keep the original register layout and add four contiguous scratch registers.
             // cloneMutable also preserves the original parameter values after register growth.
@@ -106,7 +108,6 @@ val videoFormatPatch = bytecodePatch(
                 // cloneMutable inserts one move per logical parameter at the method start.
                 val matchIndexOffset = numberOfParameterRegistersLogical
                 val firstStreamingDataIndex = it.instructionMatches.first().index + matchIndexOffset
-                val videoIdIndex = it.instructionMatches[1].index + matchIndexOffset
                 val adaptiveFormatsIndex = it.instructionMatches.last().index + matchIndexOffset
 
                 check(firstStreamingDataIndex < adaptiveFormatsIndex) {
@@ -120,9 +121,6 @@ val videoFormatPatch = bytecodePatch(
                     getInstruction<TwoRegisterInstruction>(adaptiveFormatsIndex)
                 val lastStreamingDataRegister = lastStreamingDataInstruction.registerB
                 val adaptiveFormatsRegister = lastStreamingDataInstruction.registerA
-                val videoIdRegister =
-                    getInstruction<TwoRegisterInstruction>(videoIdIndex).registerA
-
                 // cloneMutable copies parameters back into their original register slots.
                 // The newly allocated free registers start at the original register count.
                 val scratchStart = originalRegisterCount
@@ -133,7 +131,7 @@ val videoFormatPatch = bytecodePatch(
                     insertIndex,
                     """
                         move-object/16 v${scratchStart + 1}, v$lastStreamingDataRegister
-                        move-object/16 v${scratchStart + 2}, v$videoIdRegister
+                        iget-object v${scratchStart + 2}, p0, $videoIdField
                         move-object/16 v${scratchStart + 3}, v$adaptiveFormatsRegister
 
                         invoke-static/range { v$scratchStart .. v${scratchStart + 3} }, $EXTENSION_CLASS->diagnoseStreamingData(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/String;Ljava/util/List;)V
