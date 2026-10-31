@@ -10,15 +10,14 @@ package app.morphe.patches.youtube.video.format
 import app.morphe.patcher.extensions.InstructionExtensions.addInstructions
 import app.morphe.patcher.extensions.InstructionExtensions.getInstruction
 import app.morphe.patcher.patch.bytecodePatch
-import app.morphe.patcher.util.numberOfParameterRegisters
 import app.morphe.patcher.util.getReference
-import app.morphe.patcher.util.addInstructionsAtControlFlowLabel
+import app.morphe.patcher.util.cloneParameters
+import app.morphe.patcher.util.findFreeRegister
 import app.morphe.patcher.util.numberOfParameterRegistersLogical
 import app.morphe.patcher.util.proxy.mutableTypes.MutableMethod
 import app.morphe.patcher.util.proxy.mutableTypes.MutableMethod.Companion.toMutable
 import app.morphe.patches.shared.FormatStreamModelToStringFingerprint
 import app.morphe.patches.youtube.misc.extension.sharedExtensionPatch
-import app.morphe.util.cloneMutable
 import app.morphe.util.findMethodFromToString
 import com.android.tools.smali.dexlib2.AccessFlags
 import com.android.tools.smali.dexlib2.builder.MutableMethodImplementation
@@ -90,55 +89,28 @@ val videoFormatPatch = bytecodePatch(
         }
 
         VideoStreamingDataConstructorFingerprint.let {
-            val originalMethod = it.method
-            val originalRegisterCount = originalMethod.implementation!!.registerCount
-
-            // Preserve the original videoId immediately after its field read.
-            // Do not re-read the field later, where control flow may skip initialization.
-            val clonedMethod = originalMethod.cloneMutable(
-                additionalRegisters = originalMethod.numberOfParameterRegisters + 2
-            )
-            mutableClassDefBy(originalMethod.definingClass).methods.apply {
-                remove(originalMethod)
-                add(clonedMethod)
-            }
-
-            clonedMethod.apply {
-                // cloneMutable inserts one move per logical parameter at the method start.
+            // Clone method to preserve parameters.
+            it.method.cloneParameters().apply {
+                // Must offset match indexes since cloning adds additional move instructions.
                 val matchIndexOffset = numberOfParameterRegistersLogical
                 val videoIdIndex = it.instructionMatches[1].index + matchIndexOffset
+                val videoIdField = getInstruction<ReferenceInstruction>(videoIdIndex).reference
                 val adaptiveFormatsIndex = it.instructionMatches.last().index + matchIndexOffset
+                val adaptiveFormatsRegister = getInstruction<TwoRegisterInstruction>(adaptiveFormatsIndex).registerA
+                val insertIndex = adaptiveFormatsIndex + 1
+                val videoIdRegister = findFreeRegister(insertIndex, adaptiveFormatsRegister)
 
-                check(videoIdIndex < adaptiveFormatsIndex) {
-                    "videoId field read must precede adaptiveFormats field read"
-                }
-
-                // For iget-object, registerA receives the field value.
-                val videoIdRegister =
-                    getInstruction<TwoRegisterInstruction>(videoIdIndex).registerA
-                val adaptiveFormatsInstruction =
-                    getInstruction<TwoRegisterInstruction>(adaptiveFormatsIndex)
-                val adaptiveFormatsRegister = adaptiveFormatsInstruction.registerA
-
-                // The new scratch registers start at the original register count.
-                val scratchStart = originalRegisterCount
-
-                // Replace adaptiveFormats only after its original field read has completed.
-                addInstructionsAtControlFlowLabel(
-                    adaptiveFormatsIndex + 1,
+                addInstructions(
+                    insertIndex,
                     """
-                        move-object/16 v${scratchStart + 1}, v$adaptiveFormatsRegister
-                        invoke-static/range { v$scratchStart .. v${scratchStart + 1} }, $EXTENSION_CLASS->hookAdaptiveFormats(Ljava/lang/String;Ljava/util/List;)Ljava/util/List;
-                        move-result-object v${scratchStart + 1}
-                        move-object/16 v$adaptiveFormatsRegister, v${scratchStart + 1}
-                    """
-                )
+                        # Get video ID.
+                        move-object/from16 v$videoIdRegister, p0
+                        iget-object v$videoIdRegister, v$videoIdRegister, $videoIdField
 
-                // Save videoId immediately after the original iget-object instruction.
-                // This insertion is earlier than the hook insertion above, so the saved index remains valid.
-                addInstructionsAtControlFlowLabel(
-                    videoIdIndex + 1,
-                    "move-object/16 v$scratchStart, v$videoIdRegister"
+                        # Override adaptive formats.
+                        invoke-static { v$videoIdRegister, v$adaptiveFormatsRegister }, $EXTENSION_CLASS->hookAdaptiveFormats(Ljava/lang/String;Ljava/util/List;)Ljava/util/List;
+                        move-result-object v$adaptiveFormatsRegister
+                    """
                 )
             }
         }
